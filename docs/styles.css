@@ -2,7 +2,7 @@
   --paper: #f6f3ef;
   --paper-soft: #ffffff;
   --ink: #1e1e20;
-  --muted: #666666;
+  --muted: #555555;
   --line: #ded8d0;
   --burgundy: #9d2235;
   --burgundy-dark: #681624;
@@ -104,7 +104,10 @@ a {
   padding: clamp(52px, 9vw, 108px) clamp(20px, 5vw, 72px);
   background:
     linear-gradient(90deg, rgba(30, 30, 32, 0.86) 0%, rgba(30, 30, 32, 0.66) 44%, rgba(30, 30, 32, 0.28) 78%),
-    url("assets/estrategia-hero.png") center right / cover no-repeat;
+    image-set(
+      url("assets/estrategia-hero.webp") type("image/webp"),
+      url("assets/estrategia-hero.png") type("image/png")
+    ) center right / cover no-repeat;
   color: #fff;
 }
 
@@ -210,6 +213,10 @@ h3 {
   color: #fff;
 }
 
+.button.tertiary {
+  color: #fff;
+}
+
 .subscribe .button.secondary {
   color: #fff;
 }
@@ -229,21 +236,6 @@ h3 {
 .band {
   background: var(--paper-soft);
   border-block: 1px solid var(--line);
-}
-
-.brand-strip {
-  padding: clamp(34px, 6vw, 68px) clamp(20px, 5vw, 72px);
-  background: var(--black-red);
-}
-
-.brand-strip img {
-  display: block;
-  width: min(620px, 100%);
-  height: auto;
-  margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
 }
 
 .content-grid {
@@ -276,6 +268,14 @@ h3 {
   max-width: 780px;
   color: var(--muted);
   font-size: 1.08rem;
+}
+
+.lab-note {
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 4px solid var(--burgundy);
+  color: var(--graphite);
+  font-weight: 700;
 }
 
 .feature-grid {
@@ -389,6 +389,26 @@ h3 {
 
 .project-card .project-type {
   color: var(--burgundy);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.project-meta span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid rgba(157, 34, 53, 0.22);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--graphite);
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .project-actions {
@@ -531,6 +551,33 @@ h3 {
   color: #fff;
 }
 
+.error-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--paper);
+}
+
+.error-shell {
+  width: min(720px, 100%);
+  padding: clamp(34px, 7vw, 72px);
+  border-top: 6px solid var(--burgundy);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.error-shell h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.error-shell p:not(.section-kicker) {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
 @media (max-width: 1020px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -554,7 +601,10 @@ h3 {
     min-height: 680px;
     background:
       linear-gradient(180deg, rgba(30, 30, 32, 0.88) 0%, rgba(30, 30, 32, 0.64) 54%, rgba(30, 30, 32, 0.42) 100%),
-      url("assets/estrategia-hero.png") center / cover no-repeat;
+      image-set(
+        url("assets/estrategia-hero.webp") type("image/webp"),
+        url("assets/estrategia-hero.png") type("image/png")
+      ) center / cover no-repeat;
   }
 
   .content-grid,

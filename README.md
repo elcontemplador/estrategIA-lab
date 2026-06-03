@@ -17,6 +17,8 @@ La web está disponible en:
 
 https://elcontemplador.github.io/estrategIA-lab/
 
+El sitio se sirve desde la carpeta `docs/` mediante GitHub Pages.
+
 ## Proyectos enlazados
 
 - App estoica: https://github.com/elcontemplador/estoicismo_diario
@@ -32,3 +34,7 @@ https://elcontemplador.github.io/estrategIA-lab/
 ## Autoría editorial
 
 estrategIA fue creada y está dirigida por Fernando Nieto Lobato, editada por Pablo Martín Diez e impulsada por la Institución Educativa ALEPH.
+
+## Licencia y cita
+
+El contenido de este repositorio se publica bajo licencia Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Consulte `LICENSE` y `CITATION.cff` para los detalles de uso y citación.

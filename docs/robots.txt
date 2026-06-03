@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elcontemplador.github.io/estrategIA-lab/sitemap.xml

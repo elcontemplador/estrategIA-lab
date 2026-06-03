@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "estrategIA lab"
+message: "Si utiliza este repositorio o sus materiales, cite estrategIA lab."
+type: website
+authors:
+  - family-names: "Nieto Lobato"
+    given-names: "Fernando"
+  - family-names: "Martín Diez"
+    given-names: "Pablo"
+url: "https://elcontemplador.github.io/estrategIA-lab/"
+repository-code: "https://github.com/elcontemplador/estrategIA-lab"
+abstract: "Repositorio público de prototipos, proyectos prácticos y recursos vinculados a la newsletter estrategIA sobre inteligencia artificial, política y gobierno."
+keywords:
+  - inteligencia artificial
+  - política
+  - gobierno
+  - comunicación pública
+  - ALEPH
+license: "CC-BY-NC-4.0"

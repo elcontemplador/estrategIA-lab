@@ -4,34 +4,76 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>estrategIA lab | repositorios y prototipos de IA, política y gobierno</title>
+    <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/">
     <meta
       name="description"
       content="estrategIA lab reúne repositorios, prototipos y proyectos prácticos vinculados a la newsletter estrategIA."
     >
-    <meta property="og:title" content="estrategIA">
+    <meta name="author" content="Fernando Nieto Lobato">
+    <meta name="theme-color" content="#9d2235">
+    <meta property="og:title" content="estrategIA lab">
     <meta
       property="og:description"
       content="Repositorios, prototipos y proyectos prácticos de estrategIA, la newsletter pionera en español sobre inteligencia artificial, política y gobierno."
     >
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/estrategia-hero.png">
+    <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/">
+    <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="estrategIA lab">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="estrategIA lab">
+    <meta
+      name="twitter:description"
+      content="Repositorios, prototipos y proyectos prácticos de estrategIA."
+    >
+    <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "estrategIA lab",
+        "url": "https://elcontemplador.github.io/estrategIA-lab/",
+        "inLanguage": "es",
+        "description": "Repositorios, prototipos y proyectos prácticos vinculados a la newsletter estrategIA.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Institución Educativa ALEPH",
+          "url": "https://institucioneducativaaleph.com/"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Fernando Nieto Lobato",
+          "url": "https://www.fernandonieto.es/"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Cabecera principal">
       <a class="brand" href="#inicio" aria-label="Inicio de estrategIA">
-        <img src="assets/estrategia-substack-header.png" alt="estrategIA">
+        <picture>
+          <source srcset="assets/estrategia-substack-header.webp" type="image/webp">
+          <img src="assets/estrategia-substack-header.png" alt="estrategIA" width="756" height="502">
+        </picture>
       </a>
       <nav class="site-nav" aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
         <a href="#enfoque">Enfoque</a>
         <a href="#recursos">Recursos</a>
         <a href="#equipo">Equipo</a>
+        <a href="#suscripcion">Suscripción</a>
       </nav>
       <a class="nav-cta" href="https://estrategiabyaleph.substack.com/subscribe">Suscribirse</a>
     </header>
 
-    <main id="inicio">
+    <main id="inicio" role="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Newsletter pionera en español sobre IA, política y gobierno</p>
@@ -46,6 +88,9 @@
             </a>
             <a class="button secondary" href="https://www.linkedin.com/newsletters/estrategia-7201868200244834304/">
               Seguir en LinkedIn
+            </a>
+            <a class="button tertiary" href="https://estrategiabyaleph.substack.com/">
+              Leer la newsletter
             </a>
           </div>
         </div>
@@ -79,10 +124,6 @@
         </div>
       </section>
 
-      <section class="brand-strip" aria-label="Identidad visual de estrategIA">
-        <img src="assets/estrategia-substack-header.png" alt="estrategIA">
-      </section>
-
       <section id="proyectos" class="section projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="section-kicker">estrategIA lab</p>
@@ -97,6 +138,10 @@
             presentaron en
             <a href="https://open.substack.com/pub/estrategiabyaleph/p/estrategia-128-adios-al-chatbot-la?r=gp8ei&utm_campaign=post-expanded-share&utm_medium=web">estrategIA #128</a>.
           </p>
+          <p class="lab-note">
+            Este espacio irá creciendo a medida que la newsletter publique
+            nuevos experimentos, herramientas y casos de uso abiertos.
+          </p>
         </div>
 
         <div class="project-list">
@@ -105,17 +150,18 @@
               <p class="project-type">Aplicación cívica y filosófica</p>
               <h3>App estoica</h3>
               <p>
-                Un proyecto propio que explora cómo la IA puede acompañar una
-                práctica cotidiana del estoicismo, con una mirada serena sobre
-                tecnología, vida pública y cultivo personal.
+                Explora cómo la IA puede acompañar una práctica cotidiana del
+                estoicismo, con una mirada serena sobre tecnología, vida pública
+                y cultivo personal.
               </p>
+              <div class="project-meta" aria-label="Datos del proyecto">
+                <span>Estado: prototipo activo</span>
+                <span>Ámbito: IA aplicada y filosofía práctica</span>
+              </div>
             </div>
             <div class="project-actions">
               <a class="text-link" href="https://github.com/elcontemplador/estoicismo_diario">
                 Ver repositorio
-              </a>
-              <a class="text-link subtle" href="https://open.substack.com/pub/estrategiabyaleph/p/estrategia-128-adios-al-chatbot-la?r=gp8ei&utm_campaign=post-expanded-share&utm_medium=web">
-                Número relacionado
               </a>
             </div>
           </article>
@@ -129,13 +175,14 @@
                 identificar marcos argumentales y convertir el trabajo textual
                 en una herramienta útil para la comunicación institucional.
               </p>
+              <div class="project-meta" aria-label="Datos del proyecto">
+                <span>Estado: prototipo público</span>
+                <span>Ámbito: Codex, análisis político y discurso</span>
+              </div>
             </div>
             <div class="project-actions">
               <a class="text-link" href="https://github.com/elcontemplador/analizador-discurso-politico">
                 Ver repositorio
-              </a>
-              <a class="text-link subtle" href="https://open.substack.com/pub/estrategiabyaleph/p/estrategia-128-adios-al-chatbot-la?r=gp8ei&utm_campaign=post-expanded-share&utm_medium=web">
-                Número relacionado
               </a>
             </div>
           </article>
@@ -158,7 +205,7 @@
         <div class="feature-grid">
           <article>
             <span class="feature-number">01</span>
-            <h3>Qué está cambiando</h3>
+            <h3>Qué cambia</h3>
             <p>
               Señales relevantes sobre IA, poder, instituciones, opinión
               pública y transformación administrativa.
@@ -174,7 +221,7 @@
           </article>
           <article>
             <span class="feature-number">03</span>
-            <h3>Cómo afecta a las organizaciones</h3>
+            <h3>Cómo afecta</h3>
             <p>
               Capacidades, criterios, herramientas y riesgos para gobiernos,
               administraciones, equipos de comunicación y consultores.
@@ -182,7 +229,7 @@
           </article>
           <article>
             <span class="feature-number">04</span>
-            <h3>Qué se puede hacer ya</h3>
+            <h3>Qué hacer ya</h3>
             <p>
               Casos de uso, prototipos, prompts, lecturas y recursos para pasar
               del diagnóstico a la experimentación responsable.
@@ -320,7 +367,7 @@
             </div>
           </div>
           <a class="aleph-card" href="https://institucioneducativaaleph.com/">
-            <img src="assets/aleph-logo.png" alt="ALEPH">
+            <img src="assets/aleph-logo.png" alt="ALEPH" width="1264" height="646" loading="lazy">
             <span>Análisis, Liderazgo, Estudios Políticos y Humanismo</span>
           </a>
         </div>
@@ -337,7 +384,7 @@
           </p>
           <div class="hero-actions center" aria-label="Opciones de suscripción">
             <a class="button primary" href="https://estrategiabyaleph.substack.com/subscribe">
-              Suscribirse en Substack
+              Recibe el próximo número
             </a>
             <a class="button secondary" href="https://www.linkedin.com/newsletters/estrategia-7201868200244834304/">
               Seguir en LinkedIn
@@ -347,10 +394,10 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div>
-        <img src="assets/aleph-logo-white.png" alt="ALEPH">
-        <p>estrategIA, inteligencia artificial, política y gobierno.</p>
+        <img src="assets/aleph-logo-white.png" alt="ALEPH" width="1264" height="646" loading="lazy">
+        <p>estrategIA lab, prototipos y repositorios abiertos de la newsletter.</p>
       </div>
       <p>
         <a href="https://github.com/elcontemplador/estrategIA-lab">Repositorio de estrategIA lab</a>
