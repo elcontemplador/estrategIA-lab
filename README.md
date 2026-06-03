@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# estrategIA lab
 
-# Run and deploy your AI Studio app
+Repositorio público de la página **estrategIA lab**, el espacio en GitHub de la newsletter estrategIA para reunir prototipos, repositorios y proyectos prácticos vinculados a inteligencia artificial, política y gobierno.
 
-This contains everything you need to run your app locally.
+## Qué es
 
-View your app in AI Studio: https://ai.studio/apps/drive/17kWZi4i8DUG_L4CVS0Cal_2ryQEHZoaG
+estrategIA lab no sustituye a la newsletter ni a la página institucional de ALEPH. Su función es ordenar la parte más práctica y experimental del proyecto:
 
-## Run Locally
+- repositorios comentados o presentados en estrategIA;
+- prototipos creados con herramientas de IA;
+- proyectos aplicados a comunicación pública, análisis político, gobierno y cultura institucional;
+- enlaces a recursos complementarios de ALEPH, Substack y LinkedIn.
 
-**Prerequisites:**  Node.js
+## Página publicada
 
+La web está disponible en:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+https://elcontemplador.github.io/estrategIA-lab/
+
+## Proyectos enlazados
+
+- App estoica: https://github.com/elcontemplador/estoicismo_diario
+- Analizador de discursos: https://github.com/elcontemplador/analizador-discurso-politico
+
+## Canales de estrategIA
+
+- Substack: https://estrategiabyaleph.substack.com/
+- Suscripción: https://estrategiabyaleph.substack.com/subscribe
+- LinkedIn Newsletter: https://www.linkedin.com/newsletters/estrategia-7201868200244834304/
+- Página en ALEPH: https://institucioneducativaaleph.com/investigacion-y-publicaciones/estrategia-newsletter-sobre-inteligencia-artificial-en-la-politica-y-el-gobierno-de-la-institucion-educativa-aleph/
+
+## Autoría editorial
+
+estrategIA fue creada y está dirigida por Fernando Nieto Lobato, editada por Pablo Martín Diez e impulsada por la Institución Educativa ALEPH.
