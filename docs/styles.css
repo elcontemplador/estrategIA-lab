@@ -258,9 +258,25 @@ h3 {
 }
 
 .feature-grid p,
-.project-card p {
+.project-card p,
+.perspective-grid p {
   margin: 0;
   color: var(--muted);
+}
+
+.perspective-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.perspective-grid article {
+  min-height: 310px;
+  padding: 30px;
+  border-left: 4px solid var(--teal);
+  background: var(--paper-soft);
 }
 
 .projects {
@@ -308,6 +324,10 @@ h3 {
 }
 
 .archive {
+  background: var(--paper);
+}
+
+.team {
   background: var(--paper);
 }
 
@@ -393,6 +413,7 @@ h3 {
   }
 
   .feature-grid,
+  .perspective-grid,
   .topic-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -423,11 +444,13 @@ h3 {
   }
 
   .feature-grid,
+  .perspective-grid,
   .topic-grid {
     grid-template-columns: 1fr;
   }
 
-  .feature-grid article {
+  .feature-grid article,
+  .perspective-grid article {
     min-height: auto;
   }
 
