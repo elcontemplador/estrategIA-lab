@@ -207,45 +207,6 @@ h3 {
   line-height: 1.25;
 }
 
-.clarity-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.clarity-word {
-  padding: 7px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.52);
-  filter: blur(1.8px);
-  transition: color 500ms ease, filter 500ms ease, background 500ms ease;
-}
-
-.hero.is-visible .clarity-word {
-  color: #fff;
-  filter: blur(0);
-}
-
-.hero.is-visible .clarity-word:nth-child(2) {
-  transition-delay: 110ms;
-}
-
-.hero.is-visible .clarity-word:nth-child(3) {
-  transition-delay: 220ms;
-}
-
-.hero.is-visible .clarity-word:nth-child(4) {
-  transition-delay: 330ms;
-}
-
-.hero.is-visible .clarity-word:nth-child(5) {
-  transition-delay: 440ms;
-  background: rgba(157, 34, 53, 0.68);
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -309,6 +270,7 @@ h3 {
 .editorial-lead,
 .prompt-section,
 .power-section,
+.future-section,
 .editorial-control {
   background: var(--paper-soft);
   border-bottom: 1px solid var(--line);
@@ -322,6 +284,49 @@ h3 {
   gap: 16px;
   width: min(1120px, 100%);
   margin: 0 auto;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.future-grid article {
+  min-height: 320px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(30, 30, 32, 0.08);
+}
+
+.future-grid span {
+  display: inline-flex;
+  margin-bottom: 44px;
+  color: var(--burgundy);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.future-grid p {
+  color: var(--muted);
+}
+
+.future-principle {
+  width: min(920px, 100%);
+  margin: 18px auto 0;
+  padding: 26px;
+  border-color: var(--line);
+  background: rgba(30, 30, 32, 0.92);
+  color: #fff;
+}
+
+.future-principle p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .model-cards article,
@@ -845,6 +850,7 @@ h3 {
 
   .model-cards,
   .paradigm-grid,
+  .future-grid,
   .flashcards,
   .prompt-before-after,
   .checklist {
@@ -871,6 +877,7 @@ h3 {
 
   .model-cards,
   .paradigm-grid,
+  .future-grid,
   .flashcards,
   .prompt-before-after,
   .checklist,
