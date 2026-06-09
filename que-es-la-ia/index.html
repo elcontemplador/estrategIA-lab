@@ -60,7 +60,7 @@
           <p class="hero-lede">
             Una explicación visual para personas que no quieren convertirse en técnicas,
             pero sí necesitan criterio para trabajar, decidir, comunicar o gobernar en un
-            entorno atravesado por la IA.
+            mundo donde la IA ya aparece en su trabajo, sus herramientas y sus decisiones.
           </p>
           <div class="clarity-strip" aria-label="Ideas que conviene aclarar">
             <span class="clarity-word">hype</span>
@@ -77,9 +77,10 @@
         <aside class="hero-panel glass-panel" aria-label="Idea principal">
           <span class="panel-label">tesis de la guía</span>
           <p>
-            La IA no es una mente escondida en una máquina. Es una infraestructura de
-            predicción, generación y acción que convierte datos en resultados. Su valor
-            depende tanto del modelo como del contexto, la supervisión y la responsabilidad.
+            La IA no es una inteligencia escondida en un ordenador. Es un sistema que ha
+            aprendido de muchos textos, imágenes o datos y que calcula qué respuesta encaja
+            mejor con lo que le pides. Puede ser muy útil, pero no entiende como una persona:
+            su calidad depende de cómo la uses, qué información le das y quién revisa lo que produce.
           </p>
         </aside>
       </section>
@@ -89,29 +90,42 @@
           <p class="section-kicker">01 · punto de partida</p>
           <h2 id="lead-title">La pregunta importante no es si la IA es inteligente, sino qué hace con la información</h2>
           <p>
-            Una buena forma de empezar es abandonar dos extremos: ni la IA es magia ni es
-            una simple calculadora. Es una familia de sistemas que detectan patrones,
-            generan contenido, proponen decisiones y, cada vez más, pueden usar herramientas
-            para completar tareas. En una organización pública o institucional, eso cambia
-            la productividad, pero también la trazabilidad, la confianza y la distribución
-            de responsabilidad. <span class="editorial-mark">[interpretacion propia]</span>
+            Piensa en el autocompletar de tu móvil. Si escribes "Nos vemos a las...", el teclado
+            te sugiere "ocho" o "siete" porque ha aprendido qué palabras suelen venir después.
+            Un modelo como ChatGPT, Claude o Gemini funciona con una idea parecida, pero a una
+            escala enorme: no solo sugiere una palabra, sino que puede construir párrafos,
+            resumir documentos, traducir, programar o ayudarte a ordenar una decisión.
+          </p>
+          <p>
+            Eso no significa que "entienda" el mundo como tú. Significa que reconoce patrones
+            en información previa y calcula continuaciones plausibles. La diferencia entre
+            "plausible" y "verdadero" es una de las claves de toda esta guía.
           </p>
         </div>
         <div class="model-cards" aria-label="Tres ideas esenciales">
           <article>
             <span>1</span>
             <h3>Aprende de ejemplos</h3>
-            <p>No se programa cada respuesta: se entrena con datos para reconocer relaciones.</p>
+            <p>
+              Si le muestras millones de fotos etiquetadas como "gato", extrae rasgos comunes:
+              orejas, bigotes, ojos, formas. No sabe qué es un gato; aprende qué suele parecerse a uno.
+            </p>
           </article>
           <article>
             <span>2</span>
             <h3>Genera probabilidades</h3>
-            <p>Produce la salida que parece más adecuada según el patrón, el contexto y la instrucción.</p>
+            <p>
+              Si escribes "Buenos días, ¿qué tal...", calcula que "estás" encaja mejor que
+              "ministerio" o "bicicleta". Esa lógica, repetida miles de veces, crea una respuesta.
+            </p>
           </article>
           <article>
             <span>3</span>
             <h3>Necesita criterio</h3>
-            <p>Puede ser útil y fallar a la vez. La revisión humana no es un trámite: es parte del sistema.</p>
+            <p>
+              Puede redactar un buen borrador y equivocarse en una fecha. La revisión humana
+              no es un trámite: es la diferencia entre una ayuda y un riesgo.
+            </p>
           </article>
         </div>
       </section>
@@ -121,10 +135,20 @@
           <p class="section-kicker">02 · el motor de patrones</p>
           <h2 id="patterns-title">El autocompletar gigante</h2>
           <p>
-            En un modelo de lenguaje, cada respuesta se construye pieza a pieza. El sistema
-            calcula qué continuación encaja mejor con lo anterior. Eso no significa que solo
-            "complete frases": cuando se entrena a gran escala, esa predicción permite resumir,
-            traducir, comparar argumentos, escribir código o proponer planes.
+            Un modelo de lenguaje es un programa entrenado con cantidades enormes de texto:
+            páginas web, libros, artículos, código, conversaciones y documentos. De toda esa lectura
+            no sale una biblioteca exacta de frases memorizadas, sino un mapa estadístico de cómo
+            suelen combinarse las palabras, los argumentos y las ideas.
+          </p>
+          <p>
+            Cuando tú le escribes algo, el modelo genera la respuesta palabra a palabra. Parece
+            que "contesta", pero por debajo está calculando qué continuación encaja mejor con
+            lo anterior. A gran escala, predecir bien la siguiente palabra obliga a reflejar gramática,
+            hechos del mundo, estilos, razonamientos sencillos y convenciones sociales.
+          </p>
+          <p>
+            ¿Por qué falla? Porque lo más probable no siempre es lo correcto. Si una fecha,
+            una ley o un nombre "suena" bien en una frase, el modelo puede colocarlo aunque sea falso.
           </p>
         </div>
         <div class="autocomplete-lab glass-panel" data-autocomplete-lab>
@@ -133,7 +157,6 @@
             <p>
               Elige un inicio y observa cómo cambian las probabilidades. La cifra no es una
               medición real: es una simulación didáctica para hacer visible la lógica probabilística.
-              <span class="editorial-mark">[interpretacion propia]</span>
             </p>
             <select data-completion-select aria-label="Elegir ejemplo de autocompletado">
               <option value="cielo">El cielo es...</option>
@@ -155,9 +178,8 @@
           <p>
             El salto conceptual que conviene entender no es solo que los modelos escriban mejor.
             Es que empiezan a combinar lenguaje, visión, voz, razonamiento paso a paso y uso de
-            herramientas. Esta lectura resume tendencias generales del ecosistema de IA y debe
-            actualizarse si se citan productos, fechas o cifras concretas.
-            <span class="editorial-mark">[fuente pendiente]</span>
+            herramientas. En términos sencillos: pasamos de pedir respuestas a diseñar procesos
+            donde la IA puede ayudar a pensar, buscar, comparar y preparar una acción.
           </p>
         </div>
         <div class="paradigm-grid">
@@ -165,24 +187,27 @@
             <span>razonar</span>
             <h3>Modelos de razonamiento</h3>
             <p>
-              No se limitan a responder de inmediato: pueden descomponer problemas, revisar pasos
-              y producir respuestas más deliberadas en tareas complejas.
+              Ante "¿cuánto es 17 × 23?", un modelo básico puede responder de golpe. Uno de
+              razonamiento tiende a descomponer: 17 × 20 = 340; 17 × 3 = 51; total, 391.
+              En tareas complejas, esa pausa reduce errores y hace más visible el camino.
             </p>
           </article>
           <article class="pillar-card">
             <span>actuar</span>
             <h3>Agentes</h3>
             <p>
-              Conectan el modelo con herramientas: buscar información, leer archivos, ejecutar
-              pasos, comparar resultados y pedir confirmación cuando el riesgo lo exige.
+              Antes la IA sobre todo hablaba. Un agente puede hacer pasos: buscar subvenciones,
+              filtrar convocatorias abiertas, comparar requisitos con tu organización y preparar
+              un borrador de solicitud para que tú lo revises.
             </p>
           </article>
           <article class="pillar-card">
             <span>percibir</span>
             <h3>Multimodalidad</h3>
             <p>
-              Trabajan con texto, imagen, audio, vídeo o datos. Para una institución, eso acerca
-              la IA a expedientes, reuniones, documentos, mapas, gráficos y atención ciudadana.
+              Puedes enviar una foto de una factura y pedir que extraiga los datos. Puedes dictar
+              una instrucción por voz y recibir una tabla. La IA se acerca a los formatos reales
+              del trabajo: documentos escaneados, reuniones, gráficos, mapas o imágenes de campo.
             </p>
           </article>
         </div>
@@ -207,6 +232,20 @@
             formato y criterio de calidad. En la práctica, usar bien IA se parece menos a hablar
             con una máquina y más a dirigir un pequeño proyecto.
           </p>
+          <div class="prompt-before-after" aria-label="Ejemplo de prompt débil y prompt fuerte">
+            <article>
+              <span>débil</span>
+              <p>Hazme un resumen.</p>
+            </article>
+            <article>
+              <span>fuerte</span>
+              <p>
+                Actúa como analista de políticas públicas. Resume este documento para un público
+                no especializado. Incluye los 5 puntos principales, obligaciones municipales,
+                plazos y dudas por verificar. Formato: viñetas, máximo 300 palabras.
+              </p>
+            </article>
+          </div>
         </div>
         <div class="prompt-builder glass-panel" data-prompt-builder>
           <div class="builder-bank" aria-label="Bloques de prompt disponibles">
@@ -228,6 +267,9 @@
             <p data-prompt-diagnosis>
               Un prompt débil obliga al modelo a adivinar. Un prompt fuerte reduce ambigüedad y facilita la revisión.
             </p>
+            <p class="block-explainer" data-block-explainer>
+              Pulsa un bloque para ver por qué mejora el encargo.
+            </p>
           </div>
         </div>
       </section>
@@ -241,18 +283,25 @@
             Para perfiles institucionales, el riesgo no está solo en el error, sino en que el error
             viaje con apariencia de autoridad.
           </p>
+          <p>
+            La IA no miente: no tiene intención. Alucina porque su trabajo básico es producir
+            texto que suene coherente, no comprobar por sí sola que cada dato sea verdadero.
+            Por eso hay que vigilar fechas, cifras, citas, normas, fuentes y razonamientos que
+            encajan demasiado bien.
+          </p>
         </div>
         <div class="hallucination-game glass-panel" data-hallucination-game>
+          <div class="scenario-tabs" role="group" aria-label="Tipos de alucinación">
+            <button class="is-active" data-scenario="legal">Dato inventado</button>
+            <button data-scenario="fuente">Fuente falsa</button>
+            <button data-scenario="logica">Lógica incorrecta</button>
+            <button data-scenario="sesgo">Confirmación</button>
+          </div>
           <div class="generated-note">
             <span>texto generado para revisar</span>
-            <p>
-              "El Reglamento Europeo de IA obliga a todas las administraciones locales a publicar
-              cada semana un informe automático de uso de algoritmos desde enero de 2026.
-              Por tanto, cualquier ayuntamiento que use un chatbot debe registrar todas las
-              conversaciones en abierto."
-            </p>
+            <p data-scenario-text></p>
           </div>
-          <div class="claim-list" aria-label="Seleccionar afirmación problemática">
+          <div class="claim-list" aria-label="Seleccionar afirmación problemática" data-claim-list>
             <button data-claim="normal">"Reglamento Europeo de IA"</button>
             <button data-claim="hallucination">"cada semana" y "desde enero de 2026"</button>
             <button data-claim="normal">"ayuntamiento que use un chatbot"</button>
@@ -271,6 +320,12 @@
             La misma tecnología puede ser razonable para resumir una reunión y problemática para
             ordenar expedientes sensibles. La pregunta no es "¿puede hacerlo?", sino qué pasa si
             se equivoca, qué datos usa, quién responde y qué persona queda afectada.
+          </p>
+          <p>
+            En el ámbito institucional, el primer riesgo suele ser invisible: introducir datos
+            personales, expedientes, contratos o información confidencial en un servicio externo
+            sin haber revisado condiciones, permisos y garantías. Antes de automatizar, hay que
+            saber qué datos entran y dónde van.
           </p>
         </div>
         <div class="risk-tool" data-risk-tool>
@@ -336,6 +391,36 @@
             <strong>Reglas y responsables</strong>
             <p>Quién decide, quién supervisa, qué se permite y qué se audita.</p>
           </button>
+          <button class="flashcard" data-term="llm">
+            <span>LLM</span>
+            <strong>Modelo de lenguaje grande</strong>
+            <p>El tipo de modelo que trabaja con lenguaje y genera respuestas largas.</p>
+          </button>
+          <button class="flashcard" data-term="prompt">
+            <span>Prompt</span>
+            <strong>La instrucción</strong>
+            <p>Lo que le pides al sistema, con tarea, contexto, límites y formato.</p>
+          </button>
+          <button class="flashcard" data-term="agente">
+            <span>Agente</span>
+            <strong>IA que ejecuta pasos</strong>
+            <p>No solo responde: planifica, usa herramientas y pide revisión.</p>
+          </button>
+          <button class="flashcard" data-term="alucinacion">
+            <span>Alucinación</span>
+            <strong>Error plausible</strong>
+            <p>Una respuesta falsa que suena convincente y exige verificación.</p>
+          </button>
+          <button class="flashcard" data-term="api">
+            <span>API</span>
+            <strong>Puerta de conexión</strong>
+            <p>Permite que una aplicación use un modelo o servicio de IA.</p>
+          </button>
+          <button class="flashcard" data-term="entrenamiento">
+            <span>Datos de entrenamiento</span>
+            <strong>Lo que vio para aprender</strong>
+            <p>La base de ejemplos que condiciona capacidades, sesgos y límites.</p>
+          </button>
         </div>
       </section>
 
@@ -351,26 +436,27 @@
         <div class="checklist glass-panel" data-checklist>
           <label><input type="checkbox"> ¿Qué problema concreto queremos resolver?</label>
           <label><input type="checkbox"> ¿Qué datos entran y qué datos no deberían entrar?</label>
+          <label><input type="checkbox"> ¿Contienen información personal, sensible o confidencial?</label>
           <label><input type="checkbox"> ¿Quién revisa el resultado antes de usarlo?</label>
           <label><input type="checkbox"> ¿Qué ocurre si el sistema se equivoca?</label>
           <label><input type="checkbox"> ¿Afecta a derechos, recursos públicos o decisiones sobre personas?</label>
+          <label><input type="checkbox"> ¿Qué dependencia crea respecto al proveedor o la herramienta?</label>
           <label><input type="checkbox"> ¿Cómo sabremos que mejora el trabajo y no solo lo acelera?</label>
           <div class="checklist-progress" aria-live="polite">
-            <span data-checklist-progress>0 de 6 preguntas marcadas</span>
+            <span data-checklist-progress>0 de 8 preguntas marcadas</span>
           </div>
         </div>
       </section>
 
       <section class="section editorial-control reveal" aria-labelledby="control-title">
         <div class="section-heading">
-          <p class="section-kicker">control editorial</p>
-          <h2 id="control-title">Marcas usadas</h2>
+          <p class="section-kicker">nota editorial</p>
+          <h2 id="control-title">Cómo leer esta guía</h2>
           <p>
-            Se ha usado <span class="editorial-mark">[interpretacion propia]</span> donde la página
-            propone marcos conceptuales o ejemplos didácticos, y <span class="editorial-mark">[fuente pendiente]</span>
-            donde la caracterización del ecosistema de 2026 debería actualizarse con fuentes externas
-            si se convierte en una pieza editorial fechada. La página evita cifras, citas y obligaciones
-            normativas concretas no verificadas.
+            Esta guía ofrece marcos conceptuales y ejemplos didácticos elaborados por estrategIA.
+            Cuando se describen tendencias del ecosistema de IA en 2026, la información debe
+            contrastarse con fuentes actualizadas antes de tomar decisiones concretas, especialmente
+            en materia legal, contractual, tecnológica o de protección de datos.
           </p>
         </div>
       </section>

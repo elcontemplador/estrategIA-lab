@@ -68,7 +68,7 @@ if (completionSelect) {
 const flowData = {
   reactivo: {
     caption:
-      "Un flujo reactivo transforma una pregunta en una respuesta. Es útil, pero deja al usuario casi todo el trabajo de verificación y ejecución.",
+      "Ejemplo: preguntas qué subvenciones hay para digitalización de pymes y recibes una explicación general. Puede orientar, pero tú tendrás que buscar convocatorias, comprobar plazos y preparar la solicitud.",
     steps: [
       ["entrada", "El usuario pregunta."],
       ["modelo", "El sistema genera una respuesta."],
@@ -77,7 +77,7 @@ const flowData = {
   },
   agentico: {
     caption:
-      "Un flujo agéntico supervisado divide el problema, usa herramientas y deja puntos de control. No elimina la responsabilidad humana: la hace más explícita.",
+      "Ejemplo: le pides que busque subvenciones; consulta fuentes autorizadas, filtra convocatorias abiertas, compara requisitos con tu organización y prepara un borrador. Tú revisas antes de enviar nada.",
     steps: [
       ["objetivo", "Define la tarea y los límites."],
       ["plan", "Divide el trabajo en pasos."],
@@ -127,10 +127,20 @@ const promptBlocks = {
   criterio: "Prioriza claridad, trazabilidad y utilidad para decidir."
 };
 
+const blockExplanations = {
+  rol: "El rol orienta el criterio: no es lo mismo responder como jurista, docente, técnico municipal o periodista.",
+  tarea: "La tarea evita que el modelo improvise: resumir, comparar, redactar, detectar riesgos o preparar una decisión no son lo mismo.",
+  contexto: "El contexto adapta el nivel, el tono y la utilidad. Una nota para ciudadanía no se escribe igual que un informe interno.",
+  limites: "Los límites reducen errores: puedes prohibir inventar datos, pedir cautelas o exigir que marque dudas.",
+  formato: "El formato convierte la respuesta en algo usable: tabla, viñetas, checklist, correo, informe o guion.",
+  criterio: "El criterio define qué es una buena salida: claridad, trazabilidad, brevedad, prudencia, rigor o utilidad práctica."
+};
+
 const blockButtons = document.querySelectorAll("[data-block]");
 const assembledPrompt = document.querySelector("[data-assembled-prompt]");
 const promptScore = document.querySelector("[data-prompt-score]");
 const promptDiagnosis = document.querySelector("[data-prompt-diagnosis]");
+const blockExplainer = document.querySelector("[data-block-explainer]");
 const activeBlocks = new Set();
 
 function renderPrompt() {
@@ -161,45 +171,118 @@ blockButtons.forEach((button) => {
       activeBlocks.add(key);
       button.classList.add("is-active");
     }
+    blockExplainer.textContent = blockExplanations[key];
     renderPrompt();
   });
 });
 
-const hallucinationButtons = document.querySelectorAll("[data-claim]");
+const scenarioData = {
+  legal: {
+    text:
+      '"El Reglamento Europeo de IA obliga a todas las administraciones locales a publicar cada semana un informe automático de uso de algoritmos desde enero de 2026. Por tanto, cualquier ayuntamiento que use un chatbot debe registrar todas las conversaciones en abierto."',
+    claims: [
+      ["normal", '"Reglamento Europeo de IA"'],
+      ["hallucination", '"cada semana" y "desde enero de 2026"'],
+      ["normal", '"ayuntamiento que use un chatbot"']
+    ],
+    success:
+      "Bien detectado: fechas, periodicidades y obligaciones legales concretas deben verificarse. Son detalles que suenan precisos y por eso mismo pueden colarse con facilidad.",
+    miss:
+      "Esa parte puede necesitar contexto, pero no es la señal más sospechosa. Busca cifras, fechas, obligaciones absolutas o formulaciones legales demasiado seguras."
+  },
+  fuente: {
+    text:
+      '"Según un estudio de la Universidad de Oxford de 2024, el 83% de los municipios europeos que usan IA redujeron sus tiempos de tramitación a la mitad en menos de seis meses."',
+    claims: [
+      ["normal", '"Universidad de Oxford"'],
+      ["hallucination", '"83%" y "a la mitad en menos de seis meses"'],
+      ["normal", '"municipios europeos que usan IA"']
+    ],
+    success:
+      "Correcto: una fuente prestigiosa más una cifra exacta no bastan. Hay que localizar el estudio, comprobar metodología y ver si esa cifra existe.",
+    miss:
+      "La pista fuerte está en la combinación de fuente prestigiosa, porcentaje exacto y conclusión llamativa sin enlace o referencia verificable."
+  },
+  logica: {
+    text:
+      '"Como la IA puede resumir expedientes con rapidez, cualquier decisión administrativa basada en IA será más objetiva que una decisión humana."',
+    claims: [
+      ["normal", '"puede resumir expedientes con rapidez"'],
+      ["hallucination", '"será más objetiva que una decisión humana"'],
+      ["normal", '"decisión administrativa basada en IA"']
+    ],
+    success:
+      "Bien visto: la rapidez no implica objetividad. Un sistema puede acelerar una tarea y reproducir sesgos, errores de datos o criterios mal definidos.",
+    miss:
+      "La trampa no es técnica, es lógica: salta de una capacidad real, resumir rápido, a una conclusión que no se deduce, decidir mejor."
+  },
+  sesgo: {
+    text:
+      '"Si quieres demostrar que la IA siempre mejora la atención ciudadana, basta con comparar ejemplos de chatbots exitosos y excluir los casos fallidos por mala implantación."',
+    claims: [
+      ["hallucination", '"excluir los casos fallidos"'],
+      ["normal", '"comparar ejemplos de chatbots exitosos"'],
+      ["normal", '"atención ciudadana"']
+    ],
+    success:
+      "Exacto: aquí la IA refuerza una conclusión deseada en vez de cuestionar el planteamiento. Es sesgo de confirmación convertido en método.",
+    miss:
+      "El problema es metodológico: si solo miras casos que confirman la tesis, la respuesta puede parecer sólida aunque esté sesgada desde el encargo."
+  }
+};
+
+const scenarioButtons = document.querySelectorAll("[data-scenario]");
+const scenarioText = document.querySelector("[data-scenario-text]");
+const claimList = document.querySelector("[data-claim-list]");
 const hallucinationFeedback = document.querySelector("[data-hallucination-feedback]");
 
-hallucinationButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    hallucinationButtons.forEach((item) => item.classList.remove("is-active"));
-    button.classList.add("is-active");
-    if (button.dataset.claim === "hallucination") {
+function renderScenario(key) {
+  const data = scenarioData[key];
+  scenarioText.textContent = data.text;
+  claimList.innerHTML = data.claims
+    .map(([type, label]) => `<button data-claim="${type}">${label}</button>`)
+    .join("");
+  hallucinationFeedback.textContent =
+    "Pulsa la parte más sospechosa. El objetivo no es memorizar normas, sino entrenar el reflejo de verificación.";
+  claimList.querySelectorAll("[data-claim]").forEach((button) => {
+    button.addEventListener("click", () => {
+      claimList.querySelectorAll("[data-claim]").forEach((item) => item.classList.remove("is-active"));
+      button.classList.add("is-active");
       hallucinationFeedback.textContent =
-        "Bien detectado: el texto introduce una obligación semanal y una fecha concreta sin fuente. Es el tipo de detalle plausible que debe verificarse antes de publicarse o aplicarse.";
-    } else {
-      hallucinationFeedback.textContent =
-        "Esa parte puede necesitar contexto, pero no es la señal más sospechosa. Busca cifras, fechas, obligaciones absolutas o afirmaciones legales formuladas con demasiada seguridad.";
-    }
+        button.dataset.claim === "hallucination" ? data.success : data.miss;
+    });
   });
-});
+}
+
+if (scenarioText) {
+  renderScenario("legal");
+  scenarioButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      scenarioButtons.forEach((item) => item.classList.remove("is-active"));
+      button.classList.add("is-active");
+      renderScenario(button.dataset.scenario);
+    });
+  });
+}
 
 const riskData = {
   bajo: {
     title: "Riesgo bajo",
-    copy: "Buen caso para acelerar trabajo si no incluye datos sensibles y una persona revisa el resultado.",
+    copy: "Ejemplo: redactar un primer borrador de nota interna o resumir una reunión sin datos sensibles. El coste de un error es bajo si alguien revisa.",
     width: "28%",
     color: "#59614c",
     controls: ["Revisión humana", "No introducir información sensible", "Trazabilidad mínima"]
   },
   medio: {
     title: "Riesgo medio",
-    copy: "Conviene definir tono, fuentes, registro de decisiones y límites claros antes de desplegarlo.",
+    copy: "Ejemplo: un chatbot que responde dudas sobre trámites. Si informa mal de un plazo, puede perjudicar a una persona. Necesita fuentes, registro y escalado humano.",
     width: "62%",
     color: "#c39a57",
     controls: ["Base documental aprobada", "Registro de respuestas", "Circuito de escalado humano"]
   },
   alto: {
     title: "Riesgo alto",
-    copy: "Debe tratarse como una decisión sensible: requiere garantías, auditoría y responsables identificables.",
+    copy: "Ejemplo: priorizar solicitudes de ayuda social. Hay que comprobar sesgos por código postal, edad, renta, nacionalidad u otras variables sensibles.",
     width: "94%",
     color: "#9d2235",
     controls: ["Evaluación previa", "Auditoría", "Explicación a personas afectadas", "Supervisión reforzada"]

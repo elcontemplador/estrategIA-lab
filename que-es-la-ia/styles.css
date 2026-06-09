@@ -469,7 +469,8 @@ h3 {
 .demo-tabs,
 .builder-bank,
 .risk-options,
-.claim-list {
+.claim-list,
+.scenario-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -478,7 +479,8 @@ h3 {
 .demo-tabs button,
 .builder-bank button,
 .risk-options button,
-.claim-list button {
+.claim-list button,
+.scenario-tabs button {
   border: 1px solid var(--line);
   border-radius: 4px;
   background: #fff;
@@ -491,7 +493,8 @@ h3 {
 .demo-tabs button.is-active,
 .builder-bank button.is-active,
 .risk-options button.is-active,
-.claim-list button.is-active {
+.claim-list button.is-active,
+.scenario-tabs button.is-active {
   border-color: var(--burgundy);
   background: var(--burgundy);
   color: #fff;
@@ -526,6 +529,36 @@ h3 {
 .flow-caption {
   margin: 18px 0 0;
   color: var(--muted);
+}
+
+.prompt-before-after {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: 14px;
+  max-width: 920px;
+  margin-top: 24px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(30, 30, 32, 0.08);
+}
+
+.prompt-before-after article {
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.prompt-before-after span {
+  color: var(--burgundy);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.prompt-before-after p {
+  margin: 8px 0 0;
+  color: var(--ink);
 }
 
 .prompt-builder {
@@ -576,12 +609,22 @@ h3 {
   color: var(--muted);
 }
 
+.block-explainer {
+  min-height: 48px;
+  color: var(--burgundy);
+  font-weight: 900;
+}
+
 .hallucination-game {
   display: grid;
   grid-template-columns: minmax(290px, 1fr) minmax(260px, 0.72fr);
   gap: 20px;
   padding: 24px;
   background: rgba(255, 255, 255, 0.08);
+}
+
+.scenario-tabs {
+  grid-column: 1 / -1;
 }
 
 .generated-note {
@@ -803,6 +846,7 @@ h3 {
   .model-cards,
   .paradigm-grid,
   .flashcards,
+  .prompt-before-after,
   .checklist {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -828,6 +872,7 @@ h3 {
   .model-cards,
   .paradigm-grid,
   .flashcards,
+  .prompt-before-after,
   .checklist,
   .flow-visual,
   .site-footer {
