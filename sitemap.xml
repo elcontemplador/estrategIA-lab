@@ -4,4 +4,8 @@
     <loc>https://elcontemplador.github.io/estrategIA-lab/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
