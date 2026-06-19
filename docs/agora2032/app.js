@@ -21,15 +21,19 @@ const navToggle = document.querySelector(".nav-toggle");
 
 function routeTo(route, updateHash = true) {
   const valid = views.some((view) => view.dataset.view === route) ? route : "inicio";
+  if (archiveDialog?.open) archiveDialog.close();
   views.forEach((view) => { view.hidden = view.dataset.view !== valid; });
   navLinks.forEach((link) => link.classList.toggle("active", link.dataset.route === valid));
   if (updateHash) history.replaceState(null, "", `#${valid}`);
   nav?.classList.remove("open");
   navToggle?.setAttribute("aria-expanded", "false");
-  window.scrollTo({ top: 0, behavior: updateHash ? "smooth" : "auto" });
+  window.scrollTo({ top: 0, left: 0, behavior: updateHash ? "smooth" : "auto" });
   if (updateHash) {
     const heading = document.querySelector(`[data-view="${valid}"] h1`);
-    if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+    if (heading) {
+      heading.tabIndex = -1;
+      requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+    }
   }
 }
 
@@ -63,7 +67,12 @@ function showModule(name) {
     panel.hidden = panel.dataset.modulePanel !== name;
     panel.classList.toggle("active", panel.dataset.modulePanel === name);
   });
-  document.querySelector(".module-stage")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const stage = document.querySelector(".module-stage");
+  if (stage) {
+    const headerHeight = document.querySelector(".site-header")?.offsetHeight || 76;
+    const top = stage.getBoundingClientRect().top + window.scrollY - headerHeight - 22;
+    window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "smooth" });
+  }
 }
 
 document.querySelectorAll("[data-module]").forEach((button) => button.addEventListener("click", () => showModule(button.dataset.module)));
