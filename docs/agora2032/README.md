@@ -5,9 +5,12 @@ Demo narrativa estática vinculada a las historias veraniegas de `estrategIA`.
 ## Experiencias
 
 - revisión del expediente ficticio de Samira Haddad;
+- ponderación de objetivos incompatibles en la antigua escuela de Valdearenas;
 - reparto de cómputo durante una emergencia;
+- auditoría de tres explicaciones personalizadas de una misma ley;
+- reconstrucción y catalogación de la Jota del Puente;
 - archivo temático de los nueve relatos;
-- perfil final construido a partir de las decisiones del visitante.
+- perfil final construido a partir de las cinco decisiones del visitante.
 
 ## Principios
 
