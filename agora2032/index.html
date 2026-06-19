@@ -5,10 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17324d">
   <meta name="description" content="Portal ciudadano Ágora 2032, una simulación narrativa de estrategIA sobre inteligencia artificial, política y gobierno.">
+  <meta name="author" content="estrategIA">
+  <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/agora2032/">
+  <meta property="og:title" content="Portal ciudadano Ágora 2032">
+  <meta property="og:description" content="Entra en una simulación narrativa sobre inteligencia artificial, política y gobierno. Revisa un expediente, distribuye cómputo y descubre qué has priorizado.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/">
+  <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/agora2032-social.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="estrategIA lab">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portal ciudadano Ágora 2032">
+  <meta name="twitter:description" content="Una experiencia narrativa interactiva de estrategIA sobre la democracia agéntica.">
+  <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/agora2032-social.png">
   <title>Portal ciudadano Ágora 2032</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Portal ciudadano Ágora 2032",
+      "description": "Simulación narrativa interactiva sobre inteligencia artificial, política y gobierno.",
+      "url": "https://elcontemplador.github.io/estrategIA-lab/agora2032/",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "estrategIA lab",
+        "url": "https://elcontemplador.github.io/estrategIA-lab/"
+      }
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -54,7 +82,9 @@
         <div class="hero-actions">
           <button class="button button-primary" type="button" data-go="expediente">Comenzar la simulación</button>
           <button class="button button-secondary" type="button" data-go="archivo">Explorar los expedientes</button>
+          <button class="button button-secondary" type="button" data-share>Compartir</button>
         </div>
+        <p id="share-status" class="share-status" aria-live="polite"></p>
       </div>
 
       <div class="hero-system" aria-label="Estado simulado de Ágora">

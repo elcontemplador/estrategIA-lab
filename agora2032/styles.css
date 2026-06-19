@@ -127,6 +127,7 @@ main { min-height: calc(100vh - 170px); }
 .notice p { margin: 0; color: #52606a; font-size: .9rem; }
 .notice-icon { flex: 0 0 auto; display: grid; place-items: center; width: 24px; height: 24px; color: white; background: var(--navy); border-radius: 50%; font-family: Georgia, serif; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.share-status { min-height: 1.4em; margin: 9px 0 0; color: var(--green); font-size: .78rem; font-weight: 700; }
 .button {
   display: inline-flex;
   justify-content: center;
@@ -307,3 +308,4 @@ footer a { color: white; }
 }
 
 :focus-visible { outline: 3px solid #f1b7c0; outline-offset: 3px; }
+h1[tabindex="-1"]:focus { outline: 0; }

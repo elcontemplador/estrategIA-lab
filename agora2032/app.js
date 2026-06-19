@@ -20,6 +20,13 @@ function routeTo(route, updateHash = true) {
   nav?.classList.remove("open");
   navToggle?.setAttribute("aria-expanded", "false");
   window.scrollTo({ top: 0, behavior: "smooth" });
+  if (updateHash) {
+    const heading = document.querySelector(`[data-view="${validRoute}"] h1`);
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
+  }
 }
 
 window.addEventListener("hashchange", () => routeTo(location.hash.slice(1), false));
@@ -35,6 +42,26 @@ navLinks.forEach((link) => {
 navToggle?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(open));
+});
+
+document.querySelector("[data-share]")?.addEventListener("click", async () => {
+  const share = {
+    title: "Portal ciudadano Ágora 2032",
+    text: "Entra en una simulación narrativa de estrategIA sobre inteligencia artificial, política y gobierno.",
+    url: "https://elcontemplador.github.io/estrategIA-lab/agora2032/",
+  };
+  const status = document.getElementById("share-status");
+  try {
+    if (navigator.share) {
+      await navigator.share(share);
+      status.textContent = "Experiencia compartida.";
+    } else {
+      await navigator.clipboard.writeText(share.url);
+      status.textContent = "Enlace copiado.";
+    }
+  } catch (error) {
+    if (error.name !== "AbortError") status.textContent = "Puedes copiar la dirección desde el navegador.";
+  }
 });
 
 const disclosure = document.querySelector(".disclosure");
