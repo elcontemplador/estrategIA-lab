@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <meta name="description" content="Portal ciudadano Ágora 2032, una simulación narrativa de estrategIA sobre inteligencia artificial, política y gobierno.">
+  <title>Portal ciudadano Ágora 2032</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ágora 2032, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span>
+        <strong>Ágora</strong>
+        <small>Portal ciudadano · 2032</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navegacion">
+      <span aria-hidden="true">☰</span>
+      <span>Menú</span>
+    </button>
+
+    <nav id="navegacion" class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio" data-route="inicio">Inicio</a>
+      <a href="#expediente" data-route="expediente">Revisar expediente</a>
+      <a href="#computo" data-route="computo">Distribuir cómputo</a>
+      <a href="#archivo" data-route="archivo">Archivo 2032</a>
+    </nav>
+
+    <span class="system-status"><span aria-hidden="true"></span>Sistema operativo</span>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="view hero-view" data-view="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Simulación narrativa · estrategIA</p>
+        <h1>Entrar en Ágora también es tomar decisiones</h1>
+        <p class="hero-lead">En 2032, una red pública de agentes coordina servicios, expedientes y recursos. No decide sola, pero la forma en que presenta cada opción cambia lo que parece posible.</p>
+
+        <div class="notice" role="note">
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <p><strong>Esta experiencia es ficción.</strong> No utiliza inteligencia artificial, no solicita datos personales y no representa a ninguna Administración.</p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-go="expediente">Comenzar la simulación</button>
+          <button class="button button-secondary" type="button" data-go="archivo">Explorar los expedientes</button>
+        </div>
+      </div>
+
+      <div class="hero-system" aria-label="Estado simulado de Ágora">
+        <div class="system-card">
+          <div class="card-topline">
+            <span>ÁGORA / RED FEDERADA</span>
+            <span>17:06 CET</span>
+          </div>
+          <div class="orbital" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="core">A</span>
+            <span class="node node-one"></span>
+            <span class="node node-two"></span>
+            <span class="node node-three"></span>
+          </div>
+          <dl class="system-metrics">
+            <div><dt>Servicios conectados</dt><dd>1.284</dd></div>
+            <div><dt>Revisiones humanas</dt><dd>43</dd></div>
+            <div><dt>Alertas activas</dt><dd>7</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="principles-strip" aria-label="Principios de la experiencia">
+        <div><span>01</span><p><strong>Comprender</strong> qué datos utiliza el sistema.</p></div>
+        <div><span>02</span><p><strong>Decidir</strong> entre bienes incompatibles.</p></div>
+        <div><span>03</span><p><strong>Responder</strong> por las consecuencias.</p></div>
+      </div>
+    </section>
+
+    <section id="expediente" class="view" data-view="expediente" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Simulación 01 · Supervisión humana</p>
+          <h1>Expediente de ayuda urgente</h1>
+        </div>
+        <span class="case-chip">AG-VM-2032-0486</span>
+      </div>
+
+      <div class="workspace">
+        <aside class="case-sidebar" aria-label="Resumen del expediente">
+          <p class="sidebar-label">Solicitante</p>
+          <h2>Samira Haddad</h2>
+          <dl class="case-facts">
+            <div><dt>Ayuda</dt><dd>Emergencia de alquiler</dd></div>
+            <div><dt>Vencimiento</dt><dd>Viernes, 18:00</dd></div>
+            <div><dt>Menores a cargo</dt><dd>2</dd></div>
+            <div><dt>Recomendación</dt><dd><span class="status-denied">Denegar</span></dd></div>
+          </dl>
+          <div class="confidence">
+            <div><span>Confianza del sistema</span><strong>96 %</strong></div>
+            <div class="confidence-bar"><span style="width: 96%"></span></div>
+          </div>
+        </aside>
+
+        <div class="case-main">
+          <div class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Recomendación de Ágora</p>
+                <h2>Denegación por propiedad alternativa</h2>
+              </div>
+              <span class="trace-id">Traza 8F-221</span>
+            </div>
+
+            <p>La solicitante figura como copropietaria de una vivienda habitable. La ordenanza municipal excluye a quienes disponen de una propiedad residencial alternativa.</p>
+
+            <button class="disclosure" type="button" aria-expanded="false" aria-controls="fuentes-expediente">
+              <span>Consultar datos y fuentes utilizadas</span>
+              <span aria-hidden="true">＋</span>
+            </button>
+
+            <div id="fuentes-expediente" class="sources" hidden>
+              <article>
+                <span class="source-state source-ok">Vigente</span>
+                <h3>Registro catastral</h3>
+                <p>Participación del 12,5 % en una vivienda de Villaseca.</p>
+              </article>
+              <article class="source-warning">
+                <span class="source-state source-review">Revisar</span>
+                <h3>Certificado técnico</h3>
+                <p>La vivienda carece de cubierta. El documento caducó hace un mes.</p>
+              </article>
+              <article>
+                <span class="source-state source-ok">Vigente</span>
+                <h3>Ordenanza municipal</h3>
+                <p>Exclusión por disponibilidad de otra propiedad habitable.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel decision-panel">
+            <div>
+              <p class="panel-kicker">Tu revisión</p>
+              <h2>¿Qué debería ocurrir ahora?</h2>
+              <p>La remesa contiene 374 concesiones y 112 denegaciones. Detenerla retrasará todas las ayudas.</p>
+            </div>
+            <div class="decision-grid">
+              <button type="button" data-case-choice="confirmar">
+                <span class="decision-number">A</span>
+                <strong>Confirmar la remesa</strong>
+                <small>Prioriza rapidez y continuidad del servicio.</small>
+              </button>
+              <button type="button" data-case-choice="urgente">
+                <span class="decision-number">B</span>
+                <strong>Revisión urgente individual</strong>
+                <small>Corrige el caso sin detener el lote completo.</small>
+              </button>
+              <button type="button" data-case-choice="detener">
+                <span class="decision-number">C</span>
+                <strong>Detener y revisar</strong>
+                <small>Prioriza supervisión sustantiva sobre velocidad.</small>
+              </button>
+            </div>
+          </div>
+
+          <div id="case-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="computo" class="view" data-view="computo" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Simulación 02 · Infraestructura crítica</p>
+          <h1>Distribuir capacidad durante una emergencia</h1>
+        </div>
+        <span class="case-chip alert-chip">Capacidad disponible: 100</span>
+      </div>
+
+      <div class="compute-layout">
+        <div class="panel allocation-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Centro Nacional de Cómputo Público</p>
+              <h2>Prioridades de servicio</h2>
+            </div>
+            <div class="total-allocation" aria-live="polite">
+              <span>Asignado</span>
+              <strong id="total-value">100</strong>
+            </div>
+          </div>
+          <p>Una ola de calor ha reducido la capacidad. Reparte 100 unidades. No existe una distribución sin costes.</p>
+
+          <div class="sliders">
+            <label>
+              <span><strong>Hospitales</strong><output id="hospital-output">35</output></span>
+              <small>Pruebas, camas y apoyo diagnóstico.</small>
+              <input id="hospital" type="range" min="5" max="60" value="35" data-allocation>
+            </label>
+            <label>
+              <span><strong>Incendios</strong><output id="fire-output">30</output></span>
+              <small>Predicción, rutas y simulación del viento.</small>
+              <input id="fire" type="range" min="5" max="60" value="30" data-allocation>
+            </label>
+            <label>
+              <span><strong>Agua y energía</strong><output id="utilities-output">20</output></span>
+              <small>Equilibrio de red y demanda.</small>
+              <input id="utilities" type="range" min="5" max="50" value="20" data-allocation>
+            </label>
+            <label>
+              <span><strong>Atención ciudadana</strong><output id="citizen-output">15</output></span>
+              <small>Traducción, accesibilidad, refugios y transporte.</small>
+              <input id="citizen" type="range" min="0" max="50" value="15" data-allocation>
+            </label>
+          </div>
+
+          <div id="allocation-warning" class="allocation-warning" role="status"></div>
+          <button id="simulate-allocation" class="button button-primary full-width" type="button">Aplicar distribución</button>
+        </div>
+
+        <div class="panel impact-panel">
+          <p class="panel-kicker">Impacto estimado</p>
+          <h2>Dependencias visibles</h2>
+          <div class="impact-map" aria-hidden="true">
+            <span class="impact-center">Ciudadanía</span>
+            <span class="impact-node node-hospital">Hospitales</span>
+            <span class="impact-node node-fire">Incendios</span>
+            <span class="impact-node node-utilities">Red básica</span>
+            <span class="impact-node node-citizen">Acceso</span>
+            <svg viewBox="0 0 420 260" preserveAspectRatio="none">
+              <path d="M210 130 L90 55"></path>
+              <path d="M210 130 L330 55"></path>
+              <path d="M210 130 L95 215"></path>
+              <path d="M210 130 L330 215"></path>
+            </svg>
+          </div>
+          <ul class="dependency-list">
+            <li><span></span>Un servicio puede estar operativo y seguir siendo inaccesible.</li>
+            <li><span></span>Las capacidades locales reducen dependencia, pero son desiguales.</li>
+            <li><span></span>Declararlo todo crítico vuelve inútil cualquier prioridad.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="compute-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+    </section>
+
+    <section id="archivo" class="view archive-view" data-view="archivo" hidden>
+      <div class="section-heading archive-heading">
+        <div>
+          <p class="eyebrow">Archivo narrativo · estrategIA</p>
+          <h1>Nueve expedientes sobre la democracia agéntica</h1>
+          <p>Cada historia explora una decisión distinta. El sistema cambia; la responsabilidad sigue teniendo nombre.</p>
+        </div>
+        <div class="archive-filter" aria-label="Filtrar expedientes">
+          <button type="button" class="active" data-filter="todos">Todos</button>
+          <button type="button" data-filter="instituciones">Instituciones</button>
+          <button type="button" data-filter="vida">Vida cotidiana</button>
+          <button type="button" data-filter="cultura">Cultura</button>
+        </div>
+      </div>
+
+      <div class="archive-grid">
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">01</span><span class="archive-tag">Supervisión</span>
+          <h2>La última firma</h2>
+          <p>Una decisión correcta según las reglas puede seguir siendo injusta.</p>
+          <blockquote>«Tiempo de revisión: 11 segundos»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">02</span><span class="archive-tag">Legitimidad</span>
+          <h2>El alcalde de los jueves</h2>
+          <p>Optimizar objetivos incompatibles no evita tener que gobernar.</p>
+          <blockquote>«Defina beneficio social»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">03</span><span class="archive-tag">Memoria</span>
+          <h2>La memoria del ministro</h2>
+          <p>Separar lo público de lo privado puede destruir aquello que los conectaba.</p>
+          <blockquote>«Estará ordenado»</blockquote>
+        </article>
+        <article class="archive-card" data-category="vida">
+          <span class="archive-number">04</span><span class="archive-tag">Cuidados</span>
+          <h2>El cuidador que aprendió a llamar</h2>
+          <p>La tecnología ayuda mejor cuando sabe cuándo debe apartarse.</p>
+          <blockquote>«Mis rutinas son mías»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">05</span><span class="archive-tag">Infraestructura</span>
+          <h2>Cero cómputo</h2>
+          <p>Lo aparentemente secundario puede conectar a las personas con lo esencial.</p>
+          <blockquote>«Infraestructura social crítica»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">06</span><span class="archive-tag">Responsabilidad</span>
+          <h2>La empresa que no estaba allí</h2>
+          <p>Una organización puede funcionar y, aun así, no tener a nadie que responda.</p>
+          <blockquote>«Responsable de lo no previsto»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">07</span><span class="archive-tag">Fiscalización</span>
+          <h2>La oposición automática</h2>
+          <p>Encontrar más irregularidades no crea más capacidad para investigarlas.</p>
+          <blockquote>«Ordena por alcance»</blockquote>
+        </article>
+        <article class="archive-card" data-category="instituciones">
+          <span class="archive-number">08</span><span class="archive-tag">Comunicación</span>
+          <h2>La ley que todos apoyaban</h2>
+          <p>Varias explicaciones verdaderas pueden destruir una realidad compartida.</p>
+          <blockquote>«No han visto la habitación»</blockquote>
+        </article>
+        <article class="archive-card" data-category="cultura">
+          <span class="archive-number">09</span><span class="archive-tag">Patrimonio</span>
+          <h2>La canción que nunca existió</h2>
+          <p>Una reconstrucción honesta puede convertirse en una tradición nueva.</p>
+          <blockquote>«Mañana ya será tradición»</blockquote>
+        </article>
+      </div>
+
+      <div class="profile-panel">
+        <div>
+          <p class="panel-kicker">Tu paso por Ágora</p>
+          <h2 id="profile-title">Aún no has tomado suficientes decisiones</h2>
+          <p id="profile-copy">Completa las dos simulaciones para descubrir qué criterios has priorizado.</p>
+        </div>
+        <div class="profile-bars" aria-label="Perfil de decisión">
+          <div><span>Garantías</span><div><i id="bar-guarantees"></i></div></div>
+          <div><span>Eficiencia</span><div><i id="bar-efficiency"></i></div></div>
+          <div><span>Resiliencia</span><div><i id="bar-resilience"></i></div></div>
+        </div>
+        <button id="reset-demo" class="button button-secondary" type="button">Reiniciar experiencia</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Portal ciudadano Ágora 2032</strong>
+      <p>Una experiencia narrativa de <a href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">estrategIA</a> sobre inteligencia artificial, política y gobierno.</p>
+    </div>
+    <p>Ficción prospectiva · Sin datos personales · Sin IA real</p>
+  </footer>
+</body>
+</html>
