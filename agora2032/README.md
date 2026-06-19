@@ -9,8 +9,10 @@ Demo narrativa estática vinculada a las historias veraniegas de `estrategIA`.
 - reparto de cómputo durante una emergencia;
 - auditoría de tres explicaciones personalizadas de una misma ley;
 - reconstrucción y catalogación de la Jota del Puente;
-- archivo temático de los nueve relatos;
-- perfil final construido a partir de las cinco decisiones del visitante.
+- archivo interactivo de los nueve relatos, con sus preguntas de Ágora;
+- perfil final construido a partir de las cinco decisiones del visitante;
+- conservación local del progreso y resultado compartible;
+- auditoría final de los valores por defecto y decisiones de diseño de la propia interfaz.
 
 ## Principios
 

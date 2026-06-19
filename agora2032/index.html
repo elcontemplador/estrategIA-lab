@@ -78,7 +78,7 @@
           </div>
           <dl class="system-metrics">
             <div><dt>Simulaciones</dt><dd>5</dd></div>
-            <div><dt>Dilemas</dt><dd>9</dd></div>
+            <div><dt>Relatos del archivo</dt><dd>9</dd></div>
             <div><dt>Respuestas correctas</dt><dd>0</dd></div>
           </dl>
         </div>
@@ -157,9 +157,9 @@
               <div class="panel">
                 <p class="panel-kicker">Pondera los criterios</p>
                 <div class="weight-controls">
-                  <label><span><b>Vulnerabilidad inmediata</b><output id="vulnerability-output">60</output></span><input id="vulnerability" type="range" min="0" max="100" value="60" data-school-weight></label>
-                  <label><span><b>Futuro demográfico</b><output id="future-output">60</output></span><input id="future" type="range" min="0" max="100" value="60" data-school-weight></label>
-                  <label><span><b>Número de personas</b><output id="reach-output">50</output></span><input id="reach" type="range" min="0" max="100" value="50" data-school-weight></label>
+                  <label><span><b>Vulnerabilidad inmediata</b><output id="vulnerability-output" for="vulnerability">60</output></span><input id="vulnerability" type="range" min="0" max="100" value="60" data-school-weight></label>
+                  <label><span><b>Futuro demográfico</b><output id="future-output" for="future">60</output></span><input id="future" type="range" min="0" max="100" value="60" data-school-weight></label>
+                  <label><span><b>Número de personas</b><output id="reach-output" for="reach">50</output></span><input id="reach" type="range" min="0" max="100" value="50" data-school-weight></label>
                 </div>
               </div>
               <div class="recommendation-card">
@@ -193,12 +193,13 @@
               <div class="panel allocation-panel">
                 <div class="panel-heading"><h3>Prioridades de servicio</h3><div class="total-allocation"><span>Asignado</span><strong id="total-value">100</strong></div></div>
                 <div class="sliders">
-                  <label><span><b>Hospitales</b><output id="hospital-output">35</output></span><small>Pruebas, camas y apoyo diagnóstico.</small><input id="hospital" type="range" min="5" max="60" value="35" data-allocation></label>
-                  <label><span><b>Incendios</b><output id="fire-output">30</output></span><small>Predicción, rutas y simulación.</small><input id="fire" type="range" min="5" max="60" value="30" data-allocation></label>
-                  <label><span><b>Agua y energía</b><output id="utilities-output">20</output></span><small>Equilibrio de red y demanda.</small><input id="utilities" type="range" min="5" max="50" value="20" data-allocation></label>
-                  <label><span><b>Atención ciudadana</b><output id="citizen-output">15</output></span><small>Traducción, refugios y transporte.</small><input id="citizen" type="range" min="0" max="50" value="15" data-allocation></label>
+                  <label><span><b>Hospitales</b><output id="hospital-output" for="hospital">35</output></span><small>Pruebas, camas y apoyo diagnóstico.</small><input id="hospital" type="range" min="5" max="60" value="35" data-allocation></label>
+                  <label><span><b>Incendios</b><output id="fire-output" for="fire">30</output></span><small>Predicción, rutas y simulación.</small><input id="fire" type="range" min="5" max="60" value="30" data-allocation></label>
+                  <label><span><b>Agua y energía</b><output id="utilities-output" for="utilities">20</output></span><small>Equilibrio de red y demanda.</small><input id="utilities" type="range" min="5" max="50" value="20" data-allocation></label>
+                  <label><span><b>Atención ciudadana</b><output id="citizen-output" for="citizen">15</output></span><small>Traducción, refugios y transporte.</small><input id="citizen" type="range" min="0" max="50" value="15" data-allocation></label>
                 </div>
                 <div id="allocation-warning" class="allocation-warning" role="status"></div>
+                <button id="normalize-allocation" class="text-action" type="button">Ajustar automáticamente a 100</button>
                 <button id="simulate-allocation" class="button button-primary full-width" type="button">Aplicar distribución</button>
               </div>
               <div class="panel dependency-panel">
@@ -223,10 +224,10 @@
               <span class="case-chip">APOYO INICIAL · 74 %</span>
             </header>
             <p class="module-intro">Ágora adapta el orden, los ejemplos y el título de la Ley de Movilidad Cotidiana. Elige un perfil para ver qué recibe.</p>
-            <div class="persona-tabs" role="tablist" aria-label="Perfiles ciudadanos">
-              <button class="active" type="button" data-persona="teresa" role="tab">Teresa · Alcaldesa rural</button>
-              <button type="button" data-persona="oscar" role="tab">Óscar · Repartidor</button>
-              <button type="button" data-persona="beatriz" role="tab">Beatriz · Fisioterapeuta</button>
+            <div class="persona-tabs" aria-label="Perfiles ciudadanos">
+              <button class="active" type="button" data-persona="teresa" aria-pressed="true">Teresa · Alcaldesa rural</button>
+              <button type="button" data-persona="oscar" aria-pressed="false">Óscar · Repartidor</button>
+              <button type="button" data-persona="beatriz" aria-pressed="false">Beatriz · Fisioterapeuta</button>
             </div>
             <div class="law-screen">
               <div class="law-phone">
@@ -275,6 +276,7 @@
                   <label><input type="radio" name="ending" value="comunitario"> Final comunitario nuevo</label>
                 </fieldset>
                 <button id="play-mix" class="button button-secondary full-width" type="button">Escuchar esquema rítmico</button>
+                <div id="provenance-preview" class="provenance-preview" aria-live="polite"></div>
               </div>
               <div class="record-card">
                 <p class="panel-kicker">Ficha provisional</p>
@@ -301,7 +303,21 @@
               <div><span>Resiliencia</span><div><i id="bar-resilience"></i></div></div>
               <div><span>Comunidad</span><div><i id="bar-community"></i></div></div>
             </div>
-            <button id="reset-demo" class="button button-secondary" type="button">Reiniciar decisiones</button>
+            <div class="profile-actions">
+              <button id="share-profile" class="button button-primary" type="button" hidden>Compartir mi perfil</button>
+              <button id="reset-demo" class="button button-secondary" type="button">Reiniciar decisiones</button>
+            </div>
+          </section>
+          <section id="interface-reveal" class="interface-reveal" hidden>
+            <p class="panel-kicker">Auditoría de la propia interfaz</p>
+            <h2>Ágora también ha decidido por dónde empezabas</h2>
+            <p>Mientras elegías, la interfaz ordenó opciones, fijó valores iniciales y ocultó información tras acciones secundarias. Este laboratorio no es neutral: ninguna interfaz lo es.</p>
+            <div id="interface-findings" class="interface-findings"></div>
+            <p class="reveal-close">Tu perfil describe tus elecciones, pero también las posibilidades que el diseño hizo visibles.</p>
+          </section>
+          <section class="newsletter-cta">
+            <div><p class="panel-kicker">La ficción completa</p><h2>Ágora nació en las historias veraniegas de estrategIA</h2><p>El portal condensa sus dilemas. Los relatos desarrollan las personas, los costes y las instituciones que hay detrás de cada decisión.</p></div>
+            <div class="cta-actions"><a class="button button-primary" href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">Leer estrategIA</a><a class="button button-secondary" href="https://estrategiabyaleph.substack.com/subscribe" target="_blank" rel="noreferrer">Suscribirme</a></div>
           </section>
         </div>
       </div>
@@ -322,18 +338,31 @@
         </div>
       </div>
       <div class="archive-grid">
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">01</span><span class="archive-tag">Supervisión</span><h2>La última firma</h2><p>Una decisión correcta según las reglas puede seguir siendo injusta.</p><blockquote>«Tiempo de revisión: 11 segundos»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">02</span><span class="archive-tag">Legitimidad</span><h2>El alcalde de los jueves</h2><p>Optimizar objetivos incompatibles no evita tener que gobernar.</p><blockquote>«Defina beneficio social»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">03</span><span class="archive-tag">Memoria</span><h2>La memoria del ministro</h2><p>Separar lo público de lo privado puede destruir aquello que los conectaba.</p><blockquote>«Estará ordenado»</blockquote></article>
-        <article class="archive-card" data-category="vida"><span class="archive-number">04</span><span class="archive-tag">Cuidados</span><h2>El cuidador que aprendió a llamar</h2><p>La tecnología ayuda mejor cuando sabe cuándo debe apartarse.</p><blockquote>«Mis rutinas son mías»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">05</span><span class="archive-tag">Infraestructura</span><h2>Cero cómputo</h2><p>Lo aparentemente secundario puede conectar a las personas con lo esencial.</p><blockquote>«Infraestructura social crítica»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">06</span><span class="archive-tag">Responsabilidad</span><h2>La empresa que no estaba allí</h2><p>Una organización puede funcionar y no tener a nadie que responda.</p><blockquote>«Responsable de lo no previsto»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">07</span><span class="archive-tag">Fiscalización</span><h2>La oposición automática</h2><p>Encontrar más irregularidades no crea más capacidad para investigarlas.</p><blockquote>«Ordena por alcance»</blockquote></article>
-        <article class="archive-card" data-category="instituciones"><span class="archive-number">08</span><span class="archive-tag">Comunicación</span><h2>La ley que todos apoyaban</h2><p>Varias explicaciones verdaderas pueden destruir una realidad compartida.</p><blockquote>«No han visto la habitación»</blockquote></article>
-        <article class="archive-card" data-category="cultura"><span class="archive-number">09</span><span class="archive-tag">Patrimonio</span><h2>La canción que nunca existió</h2><p>Una reconstrucción honesta puede convertirse en una tradición nueva.</p><blockquote>«Mañana ya será tradición»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="firma"><span class="archive-number">01</span><span class="archive-tag">Simulación</span><h2>La última firma</h2><p>Una decisión correcta según las reglas puede seguir siendo injusta.</p><button type="button" data-open-archive="firma">Abrir expediente</button><blockquote>«Tiempo de revisión: 11 segundos»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="escuela"><span class="archive-number">02</span><span class="archive-tag">Simulación</span><h2>El alcalde de los jueves</h2><p>Optimizar objetivos incompatibles no evita tener que gobernar.</p><button type="button" data-open-archive="escuela">Abrir expediente</button><blockquote>«Defina beneficio social»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="memoria"><span class="archive-number">03</span><span class="archive-tag">Relato</span><h2>La memoria del ministro</h2><p>Separar lo público de lo privado puede destruir aquello que los conectaba.</p><button type="button" data-open-archive="memoria">Examinar dilema</button><blockquote>«Estará ordenado»</blockquote></article>
+        <article class="archive-card" data-category="vida" data-archive="cuidador"><span class="archive-number">04</span><span class="archive-tag">Relato</span><h2>El cuidador que aprendió a llamar</h2><p>La tecnología ayuda mejor cuando sabe cuándo debe apartarse.</p><button type="button" data-open-archive="cuidador">Examinar dilema</button><blockquote>«Mis rutinas son mías»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="computo"><span class="archive-number">05</span><span class="archive-tag">Simulación</span><h2>Cero cómputo</h2><p>Lo aparentemente secundario puede conectar a las personas con lo esencial.</p><button type="button" data-open-archive="computo">Abrir expediente</button><blockquote>«Infraestructura social crítica»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="empresa"><span class="archive-number">06</span><span class="archive-tag">Relato</span><h2>La empresa que no estaba allí</h2><p>Una organización puede funcionar y no tener a nadie que responda.</p><button type="button" data-open-archive="empresa">Examinar dilema</button><blockquote>«Responsable de lo no previsto»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="oposicion"><span class="archive-number">07</span><span class="archive-tag">Relato</span><h2>La oposición automática</h2><p>Encontrar más irregularidades no crea más capacidad para investigarlas.</p><button type="button" data-open-archive="oposicion">Examinar dilema</button><blockquote>«Ordena por alcance»</blockquote></article>
+        <article class="archive-card" data-category="instituciones" data-archive="ley"><span class="archive-number">08</span><span class="archive-tag">Simulación</span><h2>La ley que todos apoyaban</h2><p>Varias explicaciones verdaderas pueden destruir una realidad compartida.</p><button type="button" data-open-archive="ley">Abrir expediente</button><blockquote>«No han visto la habitación»</blockquote></article>
+        <article class="archive-card" data-category="cultura" data-archive="cancion"><span class="archive-number">09</span><span class="archive-tag">Simulación</span><h2>La canción que nunca existió</h2><p>Una reconstrucción honesta puede convertirse en una tradición nueva.</p><button type="button" data-open-archive="cancion">Abrir expediente</button><blockquote>«Mañana ya será tradición»</blockquote></article>
       </div>
+      <section class="newsletter-cta archive-cta">
+        <div><p class="panel-kicker">estrategIA</p><h2>Lee la serie completa</h2><p>Los enlaces individuales se incorporarán al archivo conforme se publique cada historia. La newsletter reúne todos los números y el análisis final.</p></div>
+        <div class="cta-actions"><a class="button button-primary" href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">Ir a la newsletter</a><a class="button button-secondary" href="https://estrategiabyaleph.substack.com/subscribe" target="_blank" rel="noreferrer">Suscribirme</a></div>
+      </section>
     </section>
   </main>
+
+  <dialog id="archive-dialog" class="archive-dialog" aria-labelledby="archive-dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button>
+    <p id="archive-dialog-kicker" class="panel-kicker"></p>
+    <h2 id="archive-dialog-title"></h2>
+    <p id="archive-dialog-copy"></p>
+    <div class="agora-question"><span>La pregunta de Ágora</span><strong id="archive-dialog-question"></strong></div>
+    <div id="archive-dialog-actions" class="dialog-actions"></div>
+  </dialog>
 
   <footer>
     <div><strong>Portal ciudadano Ágora 2032</strong><p>Una experiencia narrativa de <a href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">estrategIA</a>.</p></div>
