@@ -8,7 +8,7 @@
   <meta name="author" content="estrategIA">
   <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/agora2032/">
   <meta property="og:title" content="Portal ciudadano Ágora 2032">
-  <meta property="og:description" content="Entra en una simulación narrativa sobre inteligencia artificial, política y gobierno. Revisa un expediente, distribuye cómputo y descubre qué has priorizado.">
+  <meta property="og:description" content="Cinco simulaciones narrativas sobre inteligencia artificial, política y gobierno.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/">
   <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/agora2032-social.png">
@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="estrategIA lab">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portal ciudadano Ágora 2032">
-  <meta name="twitter:description" content="Una experiencia narrativa interactiva de estrategIA sobre la democracia agéntica.">
+  <meta name="twitter:description" content="Entra en el laboratorio de decisiones de la democracia agéntica.">
   <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/agora2032/agora2032-social.png">
   <title>Portal ciudadano Ágora 2032</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -30,11 +30,7 @@
       "description": "Simulación narrativa interactiva sobre inteligencia artificial, política y gobierno.",
       "url": "https://elcontemplador.github.io/estrategIA-lab/agora2032/",
       "inLanguage": "es",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "estrategIA lab",
-        "url": "https://elcontemplador.github.io/estrategIA-lab/"
-      }
+      "isPartOf": {"@type": "WebSite", "name": "estrategIA lab", "url": "https://elcontemplador.github.io/estrategIA-lab/"}
     }
   </script>
 </head>
@@ -42,45 +38,31 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Ágora 2032, inicio">
-      <span class="brand-mark" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </span>
-      <span>
-        <strong>Ágora</strong>
-        <small>Portal ciudadano · 2032</small>
-      </span>
+    <a class="brand" href="#inicio" data-route="inicio" aria-label="Ágora 2032, inicio">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><strong>Ágora</strong><small>Portal ciudadano · 2032</small></span>
     </a>
-
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navegacion">
-      <span aria-hidden="true">☰</span>
-      <span>Menú</span>
-    </button>
-
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navegacion"><span aria-hidden="true">☰</span><span>Menú</span></button>
     <nav id="navegacion" class="main-nav" aria-label="Navegación principal">
       <a href="#inicio" data-route="inicio">Inicio</a>
-      <a href="#expediente" data-route="expediente">Revisar expediente</a>
-      <a href="#computo" data-route="computo">Distribuir cómputo</a>
+      <a href="#laboratorio" data-route="laboratorio">Laboratorio</a>
       <a href="#archivo" data-route="archivo">Archivo 2032</a>
     </nav>
-
     <span class="system-status"><span aria-hidden="true"></span>Sistema operativo</span>
   </header>
 
   <main id="contenido">
-    <section id="inicio" class="view hero-view" data-view="inicio">
+    <section id="vista-inicio" class="view hero-view" data-view="inicio">
       <div class="hero-copy">
         <p class="eyebrow">Simulación narrativa · estrategIA</p>
         <h1>Entrar en Ágora también es tomar decisiones</h1>
-        <p class="hero-lead">En 2032, una red pública de agentes coordina servicios, expedientes y recursos. No decide sola, pero la forma en que presenta cada opción cambia lo que parece posible.</p>
-
+        <p class="hero-lead">Cinco experiencias para explorar cómo una interfaz puede ordenar opciones, ocultar dependencias y transformar aquello que parece posible.</p>
         <div class="notice" role="note">
           <span class="notice-icon" aria-hidden="true">i</span>
           <p><strong>Esta experiencia es ficción.</strong> No utiliza inteligencia artificial, no solicita datos personales y no representa a ninguna Administración.</p>
         </div>
-
         <div class="hero-actions">
-          <button class="button button-primary" type="button" data-go="expediente">Comenzar la simulación</button>
+          <button class="button button-primary" type="button" data-go="laboratorio">Entrar en el laboratorio</button>
           <button class="button button-secondary" type="button" data-go="archivo">Explorar los expedientes</button>
           <button class="button button-secondary" type="button" data-share>Compartir</button>
         </div>
@@ -89,202 +71,243 @@
 
       <div class="hero-system" aria-label="Estado simulado de Ágora">
         <div class="system-card">
-          <div class="card-topline">
-            <span>ÁGORA / RED FEDERADA</span>
-            <span>17:06 CET</span>
-          </div>
+          <div class="card-topline"><span>ÁGORA / RED FEDERADA</span><span>17:06 CET</span></div>
           <div class="orbital" aria-hidden="true">
-            <span class="orbit orbit-one"></span>
-            <span class="orbit orbit-two"></span>
-            <span class="core">A</span>
-            <span class="node node-one"></span>
-            <span class="node node-two"></span>
-            <span class="node node-three"></span>
+            <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="core">A</span>
+            <span class="node node-one"></span><span class="node node-two"></span><span class="node node-three"></span>
           </div>
           <dl class="system-metrics">
-            <div><dt>Servicios conectados</dt><dd>1.284</dd></div>
-            <div><dt>Revisiones humanas</dt><dd>43</dd></div>
-            <div><dt>Alertas activas</dt><dd>7</dd></div>
+            <div><dt>Simulaciones</dt><dd>5</dd></div>
+            <div><dt>Dilemas</dt><dd>9</dd></div>
+            <div><dt>Respuestas correctas</dt><dd>0</dd></div>
           </dl>
         </div>
       </div>
 
       <div class="principles-strip" aria-label="Principios de la experiencia">
-        <div><span>01</span><p><strong>Comprender</strong> qué datos utiliza el sistema.</p></div>
-        <div><span>02</span><p><strong>Decidir</strong> entre bienes incompatibles.</p></div>
-        <div><span>03</span><p><strong>Responder</strong> por las consecuencias.</p></div>
+        <div><span>01</span><p><strong>Investigar</strong> antes de confirmar.</p></div>
+        <div><span>02</span><p><strong>Elegir</strong> entre bienes incompatibles.</p></div>
+        <div><span>03</span><p><strong>Explicar</strong> aquello que queda fuera.</p></div>
       </div>
     </section>
 
-    <section id="expediente" class="view" data-view="expediente" hidden>
-      <div class="section-heading">
+    <section id="vista-laboratorio" class="view lab-view" data-view="laboratorio" hidden>
+      <div class="section-heading lab-heading">
         <div>
-          <p class="eyebrow">Simulación 01 · Supervisión humana</p>
-          <h1>Expediente de ayuda urgente</h1>
+          <p class="eyebrow">Laboratorio de decisiones</p>
+          <h1>Cinco formas de entrar en Ágora</h1>
+          <p>No existe una respuesta perfecta. Cada decisión protege algo, desplaza un coste y revela un criterio.</p>
         </div>
-        <span class="case-chip">AG-VM-2032-0486</span>
+        <div class="progress-card">
+          <span>Experiencias completadas</span>
+          <strong><b id="progress-count">0</b>/5</strong>
+          <div><i id="progress-bar"></i></div>
+        </div>
       </div>
 
-      <div class="workspace">
-        <aside class="case-sidebar" aria-label="Resumen del expediente">
-          <p class="sidebar-label">Solicitante</p>
-          <h2>Samira Haddad</h2>
-          <dl class="case-facts">
-            <div><dt>Ayuda</dt><dd>Emergencia de alquiler</dd></div>
-            <div><dt>Vencimiento</dt><dd>Viernes, 18:00</dd></div>
-            <div><dt>Menores a cargo</dt><dd>2</dd></div>
-            <div><dt>Recomendación</dt><dd><span class="status-denied">Denegar</span></dd></div>
-          </dl>
-          <div class="confidence">
-            <div><span>Confianza del sistema</span><strong>96 %</strong></div>
-            <div class="confidence-bar"><span style="width: 96%"></span></div>
-          </div>
+      <div class="lab-layout">
+        <aside class="module-nav" aria-label="Simulaciones disponibles">
+          <button class="active" type="button" data-module="firma"><span>01</span><b>La última firma</b><small>Supervisión</small><i aria-hidden="true"></i></button>
+          <button type="button" data-module="escuela"><span>02</span><b>La antigua escuela</b><small>Legitimidad</small><i aria-hidden="true"></i></button>
+          <button type="button" data-module="computo"><span>03</span><b>Cero cómputo</b><small>Infraestructura</small><i aria-hidden="true"></i></button>
+          <button type="button" data-module="ley"><span>04</span><b>La misma ley</b><small>Comunicación</small><i aria-hidden="true"></i></button>
+          <button type="button" data-module="cancion"><span>05</span><b>La Jota del Puente</b><small>Patrimonio</small><i aria-hidden="true"></i></button>
         </aside>
 
-        <div class="case-main">
-          <div class="panel">
-            <div class="panel-heading">
-              <div>
-                <p class="panel-kicker">Recomendación de Ágora</p>
-                <h2>Denegación por propiedad alternativa</h2>
+        <div class="module-stage">
+          <article class="module active" data-module-panel="firma">
+            <header class="module-header">
+              <div><p class="panel-kicker">Simulación 01 · Supervisión humana</p><h2>Expediente de ayuda urgente</h2></div>
+              <span class="case-chip">AG-VM-2032-0486</span>
+            </header>
+            <div class="scenario-banner">
+              <div><span>Solicitante</span><strong>Samira Haddad</strong></div>
+              <div><span>Vencimiento</span><strong>Viernes, 18:00</strong></div>
+              <div><span>Recomendación</span><strong class="danger-text">Denegar · 96 %</strong></div>
+            </div>
+            <div class="panel compact-panel">
+              <p class="panel-kicker">Recomendación de Ágora</p>
+              <h3>Denegación por propiedad alternativa</h3>
+              <p>La solicitante figura como copropietaria de una vivienda habitable. La ordenanza excluye a quienes disponen de otra propiedad residencial.</p>
+              <button class="disclosure" type="button" aria-expanded="false" aria-controls="fuentes-expediente"><span>Investigar datos y fuentes</span><span aria-hidden="true">＋</span></button>
+              <div id="fuentes-expediente" class="sources" hidden>
+                <article><span class="source-state source-ok">Vigente</span><h4>Registro catastral</h4><p>Participación del 12,5 % en una vivienda.</p></article>
+                <article class="source-warning"><span class="source-state source-review">Revisar</span><h4>Certificado técnico</h4><p>La vivienda carece de cubierta. Caducó hace un mes.</p></article>
+                <article><span class="source-state source-ok">Vigente</span><h4>Ordenanza</h4><p>Excluye propiedades alternativas habitables.</p></article>
               </div>
-              <span class="trace-id">Traza 8F-221</span>
             </div>
-
-            <p>La solicitante figura como copropietaria de una vivienda habitable. La ordenanza municipal excluye a quienes disponen de una propiedad residencial alternativa.</p>
-
-            <button class="disclosure" type="button" aria-expanded="false" aria-controls="fuentes-expediente">
-              <span>Consultar datos y fuentes utilizadas</span>
-              <span aria-hidden="true">＋</span>
-            </button>
-
-            <div id="fuentes-expediente" class="sources" hidden>
-              <article>
-                <span class="source-state source-ok">Vigente</span>
-                <h3>Registro catastral</h3>
-                <p>Participación del 12,5 % en una vivienda de Villaseca.</p>
-              </article>
-              <article class="source-warning">
-                <span class="source-state source-review">Revisar</span>
-                <h3>Certificado técnico</h3>
-                <p>La vivienda carece de cubierta. El documento caducó hace un mes.</p>
-              </article>
-              <article>
-                <span class="source-state source-ok">Vigente</span>
-                <h3>Ordenanza municipal</h3>
-                <p>Exclusión por disponibilidad de otra propiedad habitable.</p>
-              </article>
+            <div class="choice-section">
+              <p class="panel-kicker">Tu decisión</p><h3>La remesa contiene 374 concesiones y 112 denegaciones</h3>
+              <div class="choice-grid three">
+                <button type="button" data-case-choice="confirmar"><b>Confirmar la remesa</b><small>Prioriza rapidez y continuidad.</small></button>
+                <button type="button" data-case-choice="urgente"><b>Separar este caso</b><small>Corrige la excepción individual.</small></button>
+                <button type="button" data-case-choice="detener"><b>Detener y revisar</b><small>Prioriza supervisión sustantiva.</small></button>
+              </div>
             </div>
-          </div>
+            <div id="case-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+          </article>
 
-          <div class="panel decision-panel">
+          <article class="module" data-module-panel="escuela" hidden>
+            <header class="module-header">
+              <div><p class="panel-kicker">Simulación 02 · Legitimidad política</p><h2>Definir «beneficio social»</h2></div>
+              <span class="case-chip">VALDEARENAS · 2032</span>
+            </header>
+            <p class="module-intro">Solo existe presupuesto para transformar la antigua escuela una vez. Ágora puede comparar resultados, pero necesita saber qué debe importar más.</p>
+            <div class="school-layout">
+              <div class="panel">
+                <p class="panel-kicker">Pondera los criterios</p>
+                <div class="weight-controls">
+                  <label><span><b>Vulnerabilidad inmediata</b><output id="vulnerability-output">60</output></span><input id="vulnerability" type="range" min="0" max="100" value="60" data-school-weight></label>
+                  <label><span><b>Futuro demográfico</b><output id="future-output">60</output></span><input id="future" type="range" min="0" max="100" value="60" data-school-weight></label>
+                  <label><span><b>Número de personas</b><output id="reach-output">50</output></span><input id="reach" type="range" min="0" max="100" value="50" data-school-weight></label>
+                </div>
+              </div>
+              <div class="recommendation-card">
+                <p class="panel-kicker">Recomendación dinámica</p>
+                <h3 id="school-recommendation">Objetivos incompatibles</h3>
+                <div class="score-pair">
+                  <div><span>Centro de mayores</span><strong id="senior-score">61</strong></div>
+                  <div><span>Escuela infantil</span><strong id="nursery-score">61</strong></div>
+                </div>
+                <p id="school-explanation">Los criterios actuales no producen una ventaja clara.</p>
+              </div>
+            </div>
+            <div class="choice-section">
+              <p class="panel-kicker">La máquina ha calculado. Ahora hay que gobernar.</p>
+              <div class="choice-grid three">
+                <button type="button" data-school-choice="mayores"><b>Centro para mayores</b><small>Prioriza riesgo y cobertura inmediata.</small></button>
+                <button type="button" data-school-choice="infantil"><b>Escuela infantil</b><small>Prioriza conciliación y permanencia futura.</small></button>
+                <button type="button" data-school-choice="mixto"><b>Uso compartido</b><small>Reduce la capacidad de ambos servicios.</small></button>
+              </div>
+            </div>
+            <div id="school-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+          </article>
+
+          <article class="module" data-module-panel="computo" hidden>
+            <header class="module-header">
+              <div><p class="panel-kicker">Simulación 03 · Infraestructura crítica</p><h2>Distribuir capacidad durante una emergencia</h2></div>
+              <span class="case-chip alert-chip">Capacidad: 100</span>
+            </header>
+            <p class="module-intro">Una ola de calor ha reducido el cómputo público. Reparte 100 unidades. No existe una distribución sin costes.</p>
+            <div class="compute-layout">
+              <div class="panel allocation-panel">
+                <div class="panel-heading"><h3>Prioridades de servicio</h3><div class="total-allocation"><span>Asignado</span><strong id="total-value">100</strong></div></div>
+                <div class="sliders">
+                  <label><span><b>Hospitales</b><output id="hospital-output">35</output></span><small>Pruebas, camas y apoyo diagnóstico.</small><input id="hospital" type="range" min="5" max="60" value="35" data-allocation></label>
+                  <label><span><b>Incendios</b><output id="fire-output">30</output></span><small>Predicción, rutas y simulación.</small><input id="fire" type="range" min="5" max="60" value="30" data-allocation></label>
+                  <label><span><b>Agua y energía</b><output id="utilities-output">20</output></span><small>Equilibrio de red y demanda.</small><input id="utilities" type="range" min="5" max="50" value="20" data-allocation></label>
+                  <label><span><b>Atención ciudadana</b><output id="citizen-output">15</output></span><small>Traducción, refugios y transporte.</small><input id="citizen" type="range" min="0" max="50" value="15" data-allocation></label>
+                </div>
+                <div id="allocation-warning" class="allocation-warning" role="status"></div>
+                <button id="simulate-allocation" class="button button-primary full-width" type="button">Aplicar distribución</button>
+              </div>
+              <div class="panel dependency-panel">
+                <p class="panel-kicker">Dependencias ocultas</p>
+                <h3>Un servicio operativo puede seguir siendo inaccesible</h3>
+                <div class="dependency-flow">
+                  <span>Hospital</span><i>←</i><strong>Traducción · Transporte · Información</strong><i>←</i><span>Ciudadanía</span>
+                </div>
+                <ul class="dependency-list">
+                  <li><span></span>Los modelos locales reducen dependencia, pero no existen en todos los territorios.</li>
+                  <li><span></span>Declararlo todo crítico vuelve inútil cualquier protocolo.</li>
+                  <li><span></span>La categoría técnica no siempre revela la importancia social.</li>
+                </ul>
+              </div>
+            </div>
+            <div id="compute-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+          </article>
+
+          <article class="module" data-module-panel="ley" hidden>
+            <header class="module-header">
+              <div><p class="panel-kicker">Simulación 04 · Realidad compartida</p><h2>Tres explicaciones verdaderas de la misma ley</h2></div>
+              <span class="case-chip">APOYO INICIAL · 74 %</span>
+            </header>
+            <p class="module-intro">Ágora adapta el orden, los ejemplos y el título de la Ley de Movilidad Cotidiana. Elige un perfil para ver qué recibe.</p>
+            <div class="persona-tabs" role="tablist" aria-label="Perfiles ciudadanos">
+              <button class="active" type="button" data-persona="teresa" role="tab">Teresa · Alcaldesa rural</button>
+              <button type="button" data-persona="oscar" role="tab">Óscar · Repartidor</button>
+              <button type="button" data-persona="beatriz" role="tab">Beatriz · Fisioterapeuta</button>
+            </div>
+            <div class="law-screen">
+              <div class="law-phone">
+                <span class="phone-label">TU EXPLICACIÓN</span>
+                <h3 id="law-title">Más conexiones para tu municipio</h3>
+                <p id="law-lead">La nueva ley garantiza dos conexiones diarias para municipios con baja cobertura.</p>
+                <ol id="law-points"><li>Transporte rural garantizado</li><li>Nuevas ayudas de movilidad</li><li>Financiación complementaria urbana</li></ol>
+                <button id="show-conditions" type="button">Ver condiciones relegadas</button>
+                <p id="law-condition" hidden>La financiación depende parcialmente de nuevos peajes urbanos.</p>
+              </div>
+              <div class="panel comparison-panel">
+                <p class="panel-kicker">Auditoría de explicaciones</p>
+                <h3>¿Qué debe aparecer siempre?</h3>
+                <p>Marca el núcleo que ninguna versión personalizada podrá relegar.</p>
+                <label><input type="checkbox" value="cambios" data-common-core> Qué cambia</label>
+                <label><input type="checkbox" value="paga" data-common-core> Quién paga</label>
+                <label><input type="checkbox" value="gana" data-common-core> Quién gana</label>
+                <label><input type="checkbox" value="pierde" data-common-core> Quién puede perder</label>
+                <label><input type="checkbox" value="incertidumbre" data-common-core> Qué sigue sin saberse</label>
+                <button id="publish-core" class="button button-primary full-width" type="button">Publicar núcleo común</button>
+              </div>
+            </div>
+            <div id="law-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+          </article>
+
+          <article class="module" data-module-panel="cancion" hidden>
+            <header class="module-header">
+              <div><p class="panel-kicker">Simulación 05 · Patrimonio vivo</p><h2>Reconstruir la Jota del Puente</h2></div>
+              <span class="case-chip">ARCHIVO COMARCAL</span>
+            </header>
+            <p class="module-intro">No existe una versión original completa. Combina fuentes, inferencias y creación para preparar la verbena.</p>
+            <div class="mixer-layout">
+              <div class="panel mixer">
+                <fieldset><legend>Melodía</legend>
+                  <label><input type="radio" name="melody" value="archivo" checked> A · Coherencia del cuaderno</label>
+                  <label><input type="radio" name="melody" value="baile"> B · Compatibilidad con el baile</label>
+                  <label><input type="radio" name="melody" value="memoria"> C · Coincidencia con recuerdos</label>
+                </fieldset>
+                <fieldset><legend>Ritmo</legend>
+                  <label><input type="radio" name="rhythm" value="tambor" checked> Tambor transcrito</label>
+                  <label><input type="radio" name="rhythm" value="ventana"> Golpe de la ventana</label>
+                  <label><input type="radio" name="rhythm" value="nuevo"> Percusión de Hamza</label>
+                </fieldset>
+                <fieldset><legend>Final</legend>
+                  <label><input type="radio" name="ending" value="fragmento" checked> Fragmento conservado</label>
+                  <label><input type="radio" name="ending" value="comunitario"> Final comunitario nuevo</label>
+                </fieldset>
+                <button id="play-mix" class="button button-secondary full-width" type="button">Escuchar esquema rítmico</button>
+              </div>
+              <div class="record-card">
+                <p class="panel-kicker">Ficha provisional</p>
+                <h3>¿Cómo debe catalogarse?</h3>
+                <div class="catalog-options">
+                  <button type="button" data-catalog="recuperacion"><b>Recuperación histórica</b><small>Mayor atractivo; oculta parte de la incertidumbre.</small></button>
+                  <button type="button" data-catalog="reconstruccion"><b>Reconstrucción comunitaria</b><small>Distingue fuentes, inferencias y creación.</small></button>
+                  <button type="button" data-catalog="nueva"><b>Obra nueva inspirada</b><small>Máxima prudencia; rompe continuidad con la tradición.</small></button>
+                </div>
+              </div>
+            </div>
+            <div id="song-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+          </article>
+
+          <section id="lab-profile" class="profile-panel lab-profile">
             <div>
-              <p class="panel-kicker">Tu revisión</p>
-              <h2>¿Qué debería ocurrir ahora?</h2>
-              <p>La remesa contiene 374 concesiones y 112 denegaciones. Detenerla retrasará todas las ayudas.</p>
+              <p class="panel-kicker">Tu perfil de decisión</p>
+              <h2 id="profile-title">Completa al menos tres simulaciones</h2>
+              <p id="profile-copy">Ágora comparará los criterios que has priorizado. No existe un perfil correcto.</p>
             </div>
-            <div class="decision-grid">
-              <button type="button" data-case-choice="confirmar">
-                <span class="decision-number">A</span>
-                <strong>Confirmar la remesa</strong>
-                <small>Prioriza rapidez y continuidad del servicio.</small>
-              </button>
-              <button type="button" data-case-choice="urgente">
-                <span class="decision-number">B</span>
-                <strong>Revisión urgente individual</strong>
-                <small>Corrige el caso sin detener el lote completo.</small>
-              </button>
-              <button type="button" data-case-choice="detener">
-                <span class="decision-number">C</span>
-                <strong>Detener y revisar</strong>
-                <small>Prioriza supervisión sustantiva sobre velocidad.</small>
-              </button>
+            <div class="profile-bars" aria-label="Perfil de decisión">
+              <div><span>Garantías</span><div><i id="bar-guarantees"></i></div></div>
+              <div><span>Eficiencia</span><div><i id="bar-efficiency"></i></div></div>
+              <div><span>Resiliencia</span><div><i id="bar-resilience"></i></div></div>
+              <div><span>Comunidad</span><div><i id="bar-community"></i></div></div>
             </div>
-          </div>
-
-          <div id="case-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
+            <button id="reset-demo" class="button button-secondary" type="button">Reiniciar decisiones</button>
+          </section>
         </div>
       </div>
     </section>
 
-    <section id="computo" class="view" data-view="computo" hidden>
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Simulación 02 · Infraestructura crítica</p>
-          <h1>Distribuir capacidad durante una emergencia</h1>
-        </div>
-        <span class="case-chip alert-chip">Capacidad disponible: 100</span>
-      </div>
-
-      <div class="compute-layout">
-        <div class="panel allocation-panel">
-          <div class="panel-heading">
-            <div>
-              <p class="panel-kicker">Centro Nacional de Cómputo Público</p>
-              <h2>Prioridades de servicio</h2>
-            </div>
-            <div class="total-allocation" aria-live="polite">
-              <span>Asignado</span>
-              <strong id="total-value">100</strong>
-            </div>
-          </div>
-          <p>Una ola de calor ha reducido la capacidad. Reparte 100 unidades. No existe una distribución sin costes.</p>
-
-          <div class="sliders">
-            <label>
-              <span><strong>Hospitales</strong><output id="hospital-output">35</output></span>
-              <small>Pruebas, camas y apoyo diagnóstico.</small>
-              <input id="hospital" type="range" min="5" max="60" value="35" data-allocation>
-            </label>
-            <label>
-              <span><strong>Incendios</strong><output id="fire-output">30</output></span>
-              <small>Predicción, rutas y simulación del viento.</small>
-              <input id="fire" type="range" min="5" max="60" value="30" data-allocation>
-            </label>
-            <label>
-              <span><strong>Agua y energía</strong><output id="utilities-output">20</output></span>
-              <small>Equilibrio de red y demanda.</small>
-              <input id="utilities" type="range" min="5" max="50" value="20" data-allocation>
-            </label>
-            <label>
-              <span><strong>Atención ciudadana</strong><output id="citizen-output">15</output></span>
-              <small>Traducción, accesibilidad, refugios y transporte.</small>
-              <input id="citizen" type="range" min="0" max="50" value="15" data-allocation>
-            </label>
-          </div>
-
-          <div id="allocation-warning" class="allocation-warning" role="status"></div>
-          <button id="simulate-allocation" class="button button-primary full-width" type="button">Aplicar distribución</button>
-        </div>
-
-        <div class="panel impact-panel">
-          <p class="panel-kicker">Impacto estimado</p>
-          <h2>Dependencias visibles</h2>
-          <div class="impact-map" aria-hidden="true">
-            <span class="impact-center">Ciudadanía</span>
-            <span class="impact-node node-hospital">Hospitales</span>
-            <span class="impact-node node-fire">Incendios</span>
-            <span class="impact-node node-utilities">Red básica</span>
-            <span class="impact-node node-citizen">Acceso</span>
-            <svg viewBox="0 0 420 260" preserveAspectRatio="none">
-              <path d="M210 130 L90 55"></path>
-              <path d="M210 130 L330 55"></path>
-              <path d="M210 130 L95 215"></path>
-              <path d="M210 130 L330 215"></path>
-            </svg>
-          </div>
-          <ul class="dependency-list">
-            <li><span></span>Un servicio puede estar operativo y seguir siendo inaccesible.</li>
-            <li><span></span>Las capacidades locales reducen dependencia, pero son desiguales.</li>
-            <li><span></span>Declararlo todo crítico vuelve inútil cualquier prioridad.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="compute-result" class="result-panel" tabindex="-1" hidden aria-live="polite"></div>
-    </section>
-
-    <section id="archivo" class="view archive-view" data-view="archivo" hidden>
+    <section id="vista-archivo" class="view archive-view" data-view="archivo" hidden>
       <div class="section-heading archive-heading">
         <div>
           <p class="eyebrow">Archivo narrativo · estrategIA</p>
@@ -298,85 +321,22 @@
           <button type="button" data-filter="cultura">Cultura</button>
         </div>
       </div>
-
       <div class="archive-grid">
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">01</span><span class="archive-tag">Supervisión</span>
-          <h2>La última firma</h2>
-          <p>Una decisión correcta según las reglas puede seguir siendo injusta.</p>
-          <blockquote>«Tiempo de revisión: 11 segundos»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">02</span><span class="archive-tag">Legitimidad</span>
-          <h2>El alcalde de los jueves</h2>
-          <p>Optimizar objetivos incompatibles no evita tener que gobernar.</p>
-          <blockquote>«Defina beneficio social»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">03</span><span class="archive-tag">Memoria</span>
-          <h2>La memoria del ministro</h2>
-          <p>Separar lo público de lo privado puede destruir aquello que los conectaba.</p>
-          <blockquote>«Estará ordenado»</blockquote>
-        </article>
-        <article class="archive-card" data-category="vida">
-          <span class="archive-number">04</span><span class="archive-tag">Cuidados</span>
-          <h2>El cuidador que aprendió a llamar</h2>
-          <p>La tecnología ayuda mejor cuando sabe cuándo debe apartarse.</p>
-          <blockquote>«Mis rutinas son mías»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">05</span><span class="archive-tag">Infraestructura</span>
-          <h2>Cero cómputo</h2>
-          <p>Lo aparentemente secundario puede conectar a las personas con lo esencial.</p>
-          <blockquote>«Infraestructura social crítica»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">06</span><span class="archive-tag">Responsabilidad</span>
-          <h2>La empresa que no estaba allí</h2>
-          <p>Una organización puede funcionar y, aun así, no tener a nadie que responda.</p>
-          <blockquote>«Responsable de lo no previsto»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">07</span><span class="archive-tag">Fiscalización</span>
-          <h2>La oposición automática</h2>
-          <p>Encontrar más irregularidades no crea más capacidad para investigarlas.</p>
-          <blockquote>«Ordena por alcance»</blockquote>
-        </article>
-        <article class="archive-card" data-category="instituciones">
-          <span class="archive-number">08</span><span class="archive-tag">Comunicación</span>
-          <h2>La ley que todos apoyaban</h2>
-          <p>Varias explicaciones verdaderas pueden destruir una realidad compartida.</p>
-          <blockquote>«No han visto la habitación»</blockquote>
-        </article>
-        <article class="archive-card" data-category="cultura">
-          <span class="archive-number">09</span><span class="archive-tag">Patrimonio</span>
-          <h2>La canción que nunca existió</h2>
-          <p>Una reconstrucción honesta puede convertirse en una tradición nueva.</p>
-          <blockquote>«Mañana ya será tradición»</blockquote>
-        </article>
-      </div>
-
-      <div class="profile-panel">
-        <div>
-          <p class="panel-kicker">Tu paso por Ágora</p>
-          <h2 id="profile-title">Aún no has tomado suficientes decisiones</h2>
-          <p id="profile-copy">Completa las dos simulaciones para descubrir qué criterios has priorizado.</p>
-        </div>
-        <div class="profile-bars" aria-label="Perfil de decisión">
-          <div><span>Garantías</span><div><i id="bar-guarantees"></i></div></div>
-          <div><span>Eficiencia</span><div><i id="bar-efficiency"></i></div></div>
-          <div><span>Resiliencia</span><div><i id="bar-resilience"></i></div></div>
-        </div>
-        <button id="reset-demo" class="button button-secondary" type="button">Reiniciar experiencia</button>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">01</span><span class="archive-tag">Supervisión</span><h2>La última firma</h2><p>Una decisión correcta según las reglas puede seguir siendo injusta.</p><blockquote>«Tiempo de revisión: 11 segundos»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">02</span><span class="archive-tag">Legitimidad</span><h2>El alcalde de los jueves</h2><p>Optimizar objetivos incompatibles no evita tener que gobernar.</p><blockquote>«Defina beneficio social»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">03</span><span class="archive-tag">Memoria</span><h2>La memoria del ministro</h2><p>Separar lo público de lo privado puede destruir aquello que los conectaba.</p><blockquote>«Estará ordenado»</blockquote></article>
+        <article class="archive-card" data-category="vida"><span class="archive-number">04</span><span class="archive-tag">Cuidados</span><h2>El cuidador que aprendió a llamar</h2><p>La tecnología ayuda mejor cuando sabe cuándo debe apartarse.</p><blockquote>«Mis rutinas son mías»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">05</span><span class="archive-tag">Infraestructura</span><h2>Cero cómputo</h2><p>Lo aparentemente secundario puede conectar a las personas con lo esencial.</p><blockquote>«Infraestructura social crítica»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">06</span><span class="archive-tag">Responsabilidad</span><h2>La empresa que no estaba allí</h2><p>Una organización puede funcionar y no tener a nadie que responda.</p><blockquote>«Responsable de lo no previsto»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">07</span><span class="archive-tag">Fiscalización</span><h2>La oposición automática</h2><p>Encontrar más irregularidades no crea más capacidad para investigarlas.</p><blockquote>«Ordena por alcance»</blockquote></article>
+        <article class="archive-card" data-category="instituciones"><span class="archive-number">08</span><span class="archive-tag">Comunicación</span><h2>La ley que todos apoyaban</h2><p>Varias explicaciones verdaderas pueden destruir una realidad compartida.</p><blockquote>«No han visto la habitación»</blockquote></article>
+        <article class="archive-card" data-category="cultura"><span class="archive-number">09</span><span class="archive-tag">Patrimonio</span><h2>La canción que nunca existió</h2><p>Una reconstrucción honesta puede convertirse en una tradición nueva.</p><blockquote>«Mañana ya será tradición»</blockquote></article>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>
-      <strong>Portal ciudadano Ágora 2032</strong>
-      <p>Una experiencia narrativa de <a href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">estrategIA</a> sobre inteligencia artificial, política y gobierno.</p>
-    </div>
+    <div><strong>Portal ciudadano Ágora 2032</strong><p>Una experiencia narrativa de <a href="https://estrategiabyaleph.substack.com/" target="_blank" rel="noreferrer">estrategIA</a>.</p></div>
     <p>Ficción prospectiva · Sin datos personales · Sin IA real</p>
   </footer>
 </body>

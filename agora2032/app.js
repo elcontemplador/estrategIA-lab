@@ -1,44 +1,32 @@
 const state = {
-  caseChoice: null,
-  allocation: null,
+  activeModule: "firma",
+  results: {},
 };
 
+const scoreKeys = ["guarantees", "efficiency", "resilience", "community"];
+const moduleOrder = ["firma", "escuela", "computo", "ley", "cancion"];
 const views = [...document.querySelectorAll("[data-view]")];
 const navLinks = [...document.querySelectorAll("[data-route]")];
 const nav = document.querySelector(".main-nav");
 const navToggle = document.querySelector(".nav-toggle");
 
 function routeTo(route, updateHash = true) {
-  const validRoute = views.some((view) => view.dataset.view === route) ? route : "inicio";
-  views.forEach((view) => {
-    view.hidden = view.dataset.view !== validRoute;
-  });
-  navLinks.forEach((link) => {
-    link.classList.toggle("active", link.dataset.route === validRoute);
-  });
-  if (updateHash) history.replaceState(null, "", `#${validRoute}`);
+  const valid = views.some((view) => view.dataset.view === route) ? route : "inicio";
+  views.forEach((view) => { view.hidden = view.dataset.view !== valid; });
+  navLinks.forEach((link) => link.classList.toggle("active", link.dataset.route === valid));
+  if (updateHash) history.replaceState(null, "", `#${valid}`);
   nav?.classList.remove("open");
   navToggle?.setAttribute("aria-expanded", "false");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: updateHash ? "smooth" : "auto" });
   if (updateHash) {
-    const heading = document.querySelector(`[data-view="${validRoute}"] h1`);
-    if (heading) {
-      heading.tabIndex = -1;
-      heading.focus({ preventScroll: true });
-    }
+    const heading = document.querySelector(`[data-view="${valid}"] h1`);
+    if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
   }
 }
 
 window.addEventListener("hashchange", () => routeTo(location.hash.slice(1), false));
-document.querySelectorAll("[data-go]").forEach((button) => {
-  button.addEventListener("click", () => routeTo(button.dataset.go));
-});
-navLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    routeTo(link.dataset.route);
-  });
-});
+document.querySelectorAll("[data-go]").forEach((button) => button.addEventListener("click", () => routeTo(button.dataset.go)));
+navLinks.forEach((link) => link.addEventListener("click", (event) => { event.preventDefault(); routeTo(link.dataset.route); }));
 navToggle?.addEventListener("click", () => {
   const open = nav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(open));
@@ -47,23 +35,69 @@ navToggle?.addEventListener("click", () => {
 document.querySelector("[data-share]")?.addEventListener("click", async () => {
   const share = {
     title: "Portal ciudadano Ágora 2032",
-    text: "Entra en una simulación narrativa de estrategIA sobre inteligencia artificial, política y gobierno.",
+    text: "Cinco simulaciones narrativas de estrategIA sobre inteligencia artificial, política y gobierno.",
     url: "https://elcontemplador.github.io/estrategIA-lab/agora2032/",
   };
   const status = document.getElementById("share-status");
   try {
-    if (navigator.share) {
-      await navigator.share(share);
-      status.textContent = "Experiencia compartida.";
-    } else {
-      await navigator.clipboard.writeText(share.url);
-      status.textContent = "Enlace copiado.";
-    }
+    if (navigator.share) { await navigator.share(share); status.textContent = "Experiencia compartida."; }
+    else { await navigator.clipboard.writeText(share.url); status.textContent = "Enlace copiado."; }
   } catch (error) {
     if (error.name !== "AbortError") status.textContent = "Puedes copiar la dirección desde el navegador.";
   }
 });
 
+function showModule(name) {
+  state.activeModule = name;
+  document.querySelectorAll("[data-module]").forEach((button) => button.classList.toggle("active", button.dataset.module === name));
+  document.querySelectorAll("[data-module-panel]").forEach((panel) => {
+    panel.hidden = panel.dataset.modulePanel !== name;
+    panel.classList.toggle("active", panel.dataset.modulePanel === name);
+  });
+  document.querySelector(".module-stage")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.querySelectorAll("[data-module]").forEach((button) => button.addEventListener("click", () => showModule(button.dataset.module)));
+
+function completeModule(name, scores) {
+  state.results[name] = scores;
+  document.querySelector(`[data-module="${name}"]`)?.classList.add("complete");
+  addNextAction(name);
+  updateProgress();
+  updateProfile();
+}
+
+function addNextAction(name) {
+  const panel = document.querySelector(`[data-module-panel="${name}"]`);
+  const result = panel?.querySelector(".result-panel");
+  if (!result || result.querySelector(".result-actions")) return;
+  const index = moduleOrder.indexOf(name);
+  const next = moduleOrder[index + 1];
+  const actions = document.createElement("div");
+  actions.className = "result-actions";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "button button-secondary";
+  button.textContent = next ? "Continuar con la siguiente simulación" : "Ver mi perfil de decisión";
+  button.addEventListener("click", () => {
+    if (next) showModule(next);
+    else document.getElementById("lab-profile")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+  actions.append(button);
+  result.append(actions);
+}
+
+function updateProgress() {
+  const completed = Object.keys(state.results).length;
+  document.getElementById("progress-count").textContent = completed;
+  document.getElementById("progress-bar").style.width = `${completed * 20}%`;
+}
+
+function resultMarkup(kicker, title, copy, tags = []) {
+  return `<p class="panel-kicker">${kicker}</p><h3>${title}</h3><p>${copy}</p><div class="result-meta">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div>`;
+}
+
+// 01 · Supervisión
 const disclosure = document.querySelector(".disclosure");
 disclosure?.addEventListener("click", () => {
   const target = document.getElementById(disclosure.getAttribute("aria-controls"));
@@ -75,22 +109,16 @@ disclosure?.addEventListener("click", () => {
 
 const caseOutcomes = {
   confirmar: {
-    title: "La remesa continúa",
-    copy: "Las 374 concesiones se pagan a tiempo. La denegación de Samira sigue su curso ordinario y la habitación vence antes de la primera cita disponible. La supervisión figura como completada.",
-    tags: ["Rapidez alta", "Garantía baja", "486 expedientes resueltos"],
-    scores: { guarantees: 22, efficiency: 88, resilience: 48 },
+    html: resultMarkup("Consecuencia", "La remesa continúa", "Las concesiones se pagan a tiempo. Samira sigue el cauce ordinario y la habitación vence antes de la primera cita. La supervisión figura como completada.", ["Rapidez alta", "Garantía baja"]),
+    scores: { guarantees: 20, efficiency: 92, resilience: 48, community: 35 },
   },
   urgente: {
-    title: "El caso se separa de la remesa",
-    copy: "Samira recibe una revisión urgente sin detener el resto de pagos. El servicio resuelve la excepción, pero conserva un sistema que solo detecta los casos de quienes consiguen llegar hasta una persona.",
-    tags: ["Rapidez alta", "Corrección individual", "Riesgo de desigualdad"],
-    scores: { guarantees: 63, efficiency: 76, resilience: 57 },
+    html: resultMarkup("Consecuencia", "El caso se separa", "Samira obtiene una revisión urgente sin detener el lote. Se corrige la excepción, pero el sistema sigue dependiendo de que alguien consiga llegar hasta una persona.", ["Corrección individual", "Riesgo de desigualdad"]),
+    scores: { guarantees: 66, efficiency: 78, resilience: 55, community: 55 },
   },
   detener: {
-    title: "La remesa queda detenida",
-    copy: "Se revisan las 112 denegaciones vinculadas a propiedades alternativas. Varias familias cobrarán con retraso, pero la firma humana deja de ser una formalidad. La plantilla actual necesita varios días.",
-    tags: ["Garantía alta", "Retraso general", "Supervisión sustantiva"],
-    scores: { guarantees: 91, efficiency: 35, resilience: 62 },
+    html: resultMarkup("Consecuencia", "La remesa queda detenida", "Se revisan las denegaciones vinculadas a propiedades alternativas. Varias familias cobrarán tarde, pero la firma deja de ser una formalidad.", ["Garantía alta", "Retraso general"]),
+    scores: { guarantees: 94, efficiency: 32, resilience: 62, community: 68 },
   },
 };
 
@@ -98,98 +126,246 @@ document.querySelectorAll("[data-case-choice]").forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelectorAll("[data-case-choice]").forEach((item) => item.classList.remove("selected"));
     button.classList.add("selected");
-    state.caseChoice = button.dataset.caseChoice;
-    const outcome = caseOutcomes[state.caseChoice];
+    const outcome = caseOutcomes[button.dataset.caseChoice];
     const result = document.getElementById("case-result");
-    result.innerHTML = `
-      <p class="panel-kicker">Consecuencia simulada</p>
-      <h2>${outcome.title}</h2>
-      <p>${outcome.copy}</p>
-      <div class="result-meta">${outcome.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-      <button class="button button-primary" type="button" data-next-compute>Continuar al reparto de cómputo</button>
-    `;
+    result.innerHTML = outcome.html;
     result.hidden = false;
-    result.querySelector("[data-next-compute]").addEventListener("click", () => routeTo("computo"));
     result.focus();
-    updateProfile();
+    completeModule("firma", outcome.scores);
   });
 });
 
-const sliders = [...document.querySelectorAll("[data-allocation]")];
-const totalValue = document.getElementById("total-value");
-const allocationWarning = document.getElementById("allocation-warning");
+// 02 · Escuela
+const schoolInputs = [...document.querySelectorAll("[data-school-weight]")];
 
-function currentAllocation() {
-  return Object.fromEntries(sliders.map((input) => [input.id, Number(input.value)]));
+function schoolScores() {
+  const vulnerability = Number(document.getElementById("vulnerability").value);
+  const future = Number(document.getElementById("future").value);
+  const reach = Number(document.getElementById("reach").value);
+  return {
+    vulnerability, future, reach,
+    senior: Math.round(vulnerability * .68 + reach * .32),
+    nursery: Math.round(future * .72 + reach * .28),
+  };
 }
 
-function updateAllocationUI() {
+function updateSchool() {
+  const score = schoolScores();
+  schoolInputs.forEach((input) => { document.getElementById(`${input.id}-output`).value = input.value; });
+  document.getElementById("senior-score").textContent = score.senior;
+  document.getElementById("nursery-score").textContent = score.nursery;
+  const difference = score.nursery - score.senior;
+  const recommendation = document.getElementById("school-recommendation");
+  const explanation = document.getElementById("school-explanation");
+  if (Math.abs(difference) < 7) {
+    recommendation.textContent = "Objetivos incompatibles";
+    explanation.textContent = "Los criterios actuales no producen una ventaja clara. Afinar la pregunta no elimina la elección.";
+  } else if (difference > 0) {
+    recommendation.textContent = "Escuela infantil";
+    explanation.textContent = "El futuro demográfico pesa más que la vulnerabilidad inmediata.";
+  } else {
+    recommendation.textContent = "Centro para mayores";
+    explanation.textContent = "La vulnerabilidad inmediata domina el horizonte futuro.";
+  }
+}
+schoolInputs.forEach((input) => input.addEventListener("input", updateSchool));
+
+const schoolOutcomes = {
+  mayores: ["Centro para mayores", "Las necesidades inmediatas obtienen respuesta. Las familias jóvenes siguen sin espacio de conciliación y algunas se marcharán.", { guarantees: 82, efficiency: 62, resilience: 52, community: 74 }],
+  infantil: ["Escuela infantil", "La decisión apuesta por retener familias. Las personas mayores reciben una sala menor que no sustituye el servicio esperado.", { guarantees: 62, efficiency: 72, resilience: 78, community: 68 }],
+  mixto: ["Uso compartido", "La solución reduce el conflicto visible, pero ambos servicios quedan por debajo de la capacidad recomendada.", { guarantees: 70, efficiency: 42, resilience: 65, community: 83 }],
+};
+document.querySelectorAll("[data-school-choice]").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-school-choice]").forEach((item) => item.classList.remove("selected"));
+    button.classList.add("selected");
+    const [title, copy, scores] = schoolOutcomes[button.dataset.schoolChoice];
+    const result = document.getElementById("school-result");
+    result.innerHTML = resultMarkup("Decisión política", title, copy, ["La elección es tuya", "El coste también"]);
+    result.hidden = false; result.focus();
+    completeModule("escuela", scores);
+  });
+});
+
+// 03 · Cómputo
+const allocationInputs = [...document.querySelectorAll("[data-allocation]")];
+function currentAllocation() { return Object.fromEntries(allocationInputs.map((input) => [input.id, Number(input.value)])); }
+function updateAllocation() {
   const allocation = currentAllocation();
   const total = Object.values(allocation).reduce((sum, value) => sum + value, 0);
-  sliders.forEach((input) => {
-    document.getElementById(`${input.id}-output`).value = input.value;
-  });
-  totalValue.textContent = total;
-  totalValue.style.color = total === 100 ? "var(--navy)" : "var(--burgundy)";
-  allocationWarning.textContent = total === 100
-    ? "Capacidad distribuida por completo."
-    : total > 100
-      ? `Has superado la capacidad en ${total - 100} unidades.`
-      : `Quedan ${100 - total} unidades sin asignar.`;
+  allocationInputs.forEach((input) => { document.getElementById(`${input.id}-output`).value = input.value; });
+  document.getElementById("total-value").textContent = total;
+  document.getElementById("allocation-warning").textContent = total === 100 ? "Capacidad distribuida por completo." : total > 100 ? `Exceso de ${total - 100} unidades.` : `Quedan ${100 - total} unidades.`;
 }
-sliders.forEach((input) => input.addEventListener("input", updateAllocationUI));
+allocationInputs.forEach((input) => input.addEventListener("input", updateAllocation));
 
-function computeOutcome(allocation) {
-  const risks = [];
-  const benefits = [];
-  if (allocation.hospital < 25) risks.push("los hospitales retrasan pruebas y reorganización de camas");
-  else benefits.push("los sistemas hospitalarios mantienen capacidad suficiente");
-  if (allocation.fire < 23) risks.push("las simulaciones de incendios pierden precisión temporal");
-  else benefits.push("la predicción de incendios sigue operativa");
-  if (allocation.utilities < 17) risks.push("agua y energía funcionan con menor margen ante nuevos fallos");
-  else benefits.push("la red de agua y energía conserva estabilidad");
-  if (allocation.citizen < 13) risks.push("se saturan teléfonos, traducción y transporte accesible");
-  else benefits.push("la ciudadanía conserva traducción, refugios y transporte coordinado");
-
-  const resilience = Math.round(
-    Math.min(allocation.hospital / 30, 1) * 25 +
-    Math.min(allocation.fire / 28, 1) * 25 +
-    Math.min(allocation.utilities / 20, 1) * 20 +
-    Math.min(allocation.citizen / 18, 1) * 30
-  );
-  const guarantees = Math.round(Math.min(allocation.citizen / 20, 1) * 55 + Math.min(allocation.hospital / 35, 1) * 45);
-  const efficiency = Math.round(100 - Math.abs(allocation.hospital - 32) - Math.abs(allocation.fire - 27) - Math.abs(allocation.utilities - 20) - Math.abs(allocation.citizen - 21));
-
-  return { risks, benefits, scores: { guarantees, efficiency: Math.max(10, efficiency), resilience } };
+function computeOutcome(a) {
+  const risks = [], benefits = [];
+  if (a.hospital < 25) risks.push("hospitales con retrasos"); else benefits.push("capacidad hospitalaria");
+  if (a.fire < 23) risks.push("simulaciones de incendios degradadas"); else benefits.push("predicción de incendios");
+  if (a.utilities < 17) risks.push("menor margen en agua y energía"); else benefits.push("estabilidad de red");
+  if (a.citizen < 13) risks.push("teléfonos, traducción y transporte saturados"); else benefits.push("acceso ciudadano");
+  return {
+    risks, benefits,
+    scores: {
+      guarantees: Math.round(Math.min(a.citizen / 20, 1) * 55 + Math.min(a.hospital / 35, 1) * 45),
+      efficiency: Math.max(10, Math.round(100 - Math.abs(a.hospital - 32) - Math.abs(a.fire - 27) - Math.abs(a.utilities - 20) - Math.abs(a.citizen - 21))),
+      resilience: Math.round(Math.min(a.hospital / 30, 1) * 25 + Math.min(a.fire / 28, 1) * 25 + Math.min(a.utilities / 20, 1) * 20 + Math.min(a.citizen / 18, 1) * 30),
+      community: Math.round(Math.min(a.citizen / 22, 1) * 75 + Math.min(a.utilities / 20, 1) * 25),
+    },
+  };
 }
-
 document.getElementById("simulate-allocation")?.addEventListener("click", () => {
   const allocation = currentAllocation();
   const total = Object.values(allocation).reduce((sum, value) => sum + value, 0);
-  if (total !== 100) {
-    allocationWarning.textContent = "La distribución debe sumar exactamente 100 unidades.";
-    sliders[0].focus();
+  if (total !== 100) { document.getElementById("allocation-warning").textContent = "La suma debe ser exactamente 100."; return; }
+  const outcome = computeOutcome(allocation);
+  const result = document.getElementById("compute-result");
+  result.innerHTML = resultMarkup("Balance", outcome.risks.length ? "Has protegido servicios esenciales, con costes" : "Todos los servicios resisten, con poco margen", `<strong>Protegido:</strong> ${outcome.benefits.join(", ")}. <strong>En riesgo:</strong> ${outcome.risks.length ? outcome.risks.join(", ") : "una nueva caída obligaría a reasignar"}.`, ["Sin respuesta única", `Resiliencia ${outcome.scores.resilience}/100`]);
+  result.hidden = false; result.focus();
+  completeModule("computo", outcome.scores);
+});
+
+// 04 · Ley personalizada
+const personas = {
+  teresa: { title: "Más conexiones para tu municipio", lead: "La ley garantiza dos conexiones diarias para municipios con baja cobertura.", points: ["Transporte rural garantizado", "Ayudas de movilidad", "Financiación complementaria urbana"], condition: "Parte del servicio se financia mediante nuevos peajes urbanos." },
+  oscar: { title: "Repartir sin detenerse", lead: "La ley mantiene bonificaciones para profesionales con vehículos eficientes.", points: ["Bonificación profesional", "Nuevos horarios de reparto", "Menos congestión urbana"], condition: "La bonificación depende de emisiones, horario y territorio." },
+  beatriz: { title: "Menos tráfico para llegar a quien te necesita", lead: "Los servicios esenciales podrán solicitar excepciones al nuevo acceso urbano.", points: ["Excepciones profesionales", "Reducción de tráfico", "Ayudas de desplazamiento"], condition: "La fisioterapia domiciliaria puede solicitar la excepción, pero no la tiene garantizada." },
+};
+let activePersona = "teresa";
+function renderPersona(name) {
+  activePersona = name;
+  const persona = personas[name];
+  document.querySelectorAll("[data-persona]").forEach((button) => {
+    const active = button.dataset.persona === name;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+  document.getElementById("law-title").textContent = persona.title;
+  document.getElementById("law-lead").textContent = persona.lead;
+  document.getElementById("law-points").innerHTML = persona.points.map((point) => `<li>${point}</li>`).join("");
+  const condition = document.getElementById("law-condition");
+  condition.textContent = persona.condition; condition.hidden = true;
+}
+document.querySelectorAll("[data-persona]").forEach((button) => button.addEventListener("click", () => renderPersona(button.dataset.persona)));
+document.getElementById("show-conditions")?.addEventListener("click", () => { document.getElementById("law-condition").hidden = false; });
+document.getElementById("publish-core")?.addEventListener("click", () => {
+  const selected = [...document.querySelectorAll("[data-common-core]:checked")].map((input) => input.value);
+  const count = selected.length;
+  const support = 74 - count * 5;
+  const shared = 28 + count * 14;
+  const copy = count < 3
+    ? "La explicación sigue siendo accesible, pero costes y renuncias pueden quedar ocultos para distintos grupos."
+    : count < 5
+      ? "La comprensión compartida mejora. Algunas versiones aún pueden relegar incertidumbres importantes."
+      : "Todos reciben el mismo núcleo político, aunque cambien idioma, formato y ejemplos. El apoyo baja y el desacuerdo se vuelve comparable.";
+  const result = document.getElementById("law-result");
+  result.innerHTML = resultMarkup("Publicación simulada", `${support} % de apoyo · ${Math.min(shared, 98)} % de comprensión común`, copy, [`${count}/5 elementos comunes`, "Accesibilidad conservada"]);
+  result.hidden = false; result.focus();
+  completeModule("ley", {
+    guarantees: 38 + count * 11,
+    efficiency: 88 - count * 7,
+    resilience: 48 + count * 6,
+    community: 30 + count * 13,
+  });
+});
+
+// 05 · Reconstrucción cultural
+function songSelection() {
+  return {
+    melody: document.querySelector('input[name="melody"]:checked').value,
+    rhythm: document.querySelector('input[name="rhythm"]:checked').value,
+    ending: document.querySelector('input[name="ending"]:checked').value,
+  };
+}
+
+document.getElementById("play-mix")?.addEventListener("click", async () => {
+  const selection = songSelection();
+  const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  if (!AudioCtx) return;
+  const context = new AudioCtx();
+  const patterns = {
+    archivo: [261.6, 293.7, 329.6, 293.7],
+    baile: [261.6, 329.6, 392, 329.6],
+    memoria: [293.7, 349.2, 329.6, 261.6],
+  };
+  const notes = patterns[selection.melody];
+  notes.forEach((frequency, index) => {
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.frequency.value = frequency;
+    oscillator.type = selection.rhythm === "nuevo" ? "triangle" : "sine";
+    gain.gain.setValueAtTime(.0001, context.currentTime + index * .22);
+    gain.gain.exponentialRampToValueAtTime(.18, context.currentTime + index * .22 + .02);
+    gain.gain.exponentialRampToValueAtTime(.0001, context.currentTime + index * .22 + .19);
+    oscillator.connect(gain).connect(context.destination);
+    oscillator.start(context.currentTime + index * .22);
+    oscillator.stop(context.currentTime + index * .22 + .2);
+  });
+  if (selection.rhythm === "ventana") {
+    const oscillator = context.createOscillator(), gain = context.createGain();
+    oscillator.type = "square"; oscillator.frequency.value = 85;
+    gain.gain.setValueAtTime(.2, context.currentTime + .43);
+    gain.gain.exponentialRampToValueAtTime(.0001, context.currentTime + .5);
+    oscillator.connect(gain).connect(context.destination); oscillator.start(context.currentTime + .43); oscillator.stop(context.currentTime + .51);
+  }
+});
+
+const catalogOutcomes = {
+  recuperacion: ["Recuperación histórica", "La promoción gana fuerza, pero el archivo presenta como auténtica una combinación que nunca existió de esa forma.", { guarantees: 28, efficiency: 85, resilience: 42, community: 58 }],
+  reconstruccion: ["Reconstrucción comunitaria", "La ficha distingue fuentes, inferencias y partes creadas. La ayuda y la promoción tendrán que revisarse.", { guarantees: 88, efficiency: 58, resilience: 74, community: 94 }],
+  nueva: ["Obra nueva inspirada", "La prudencia documental es máxima, pero parte de la comunidad siente que se ha roto la continuidad con su tradición.", { guarantees: 92, efficiency: 48, resilience: 55, community: 46 }],
+};
+document.querySelectorAll("[data-catalog]").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-catalog]").forEach((item) => item.classList.remove("selected"));
+    button.classList.add("selected");
+    const selection = songSelection();
+    const [title, copy, scores] = catalogOutcomes[button.dataset.catalog];
+    const sourceLabels = { archivo: "cuaderno", baile: "vídeo", memoria: "testimonios", tambor: "tambor", ventana: "ventana", nuevo: "percusión nueva", fragmento: "final conservado", comunitario: "final nuevo" };
+    const result = document.getElementById("song-result");
+    result.innerHTML = resultMarkup("Registro del archivo", title, `${copy} La versión combina ${sourceLabels[selection.melody]}, ${sourceLabels[selection.rhythm]} y ${sourceLabels[selection.ending]}.`, ["Primera interpretación: 2032", "Tradición en movimiento"]);
+    result.hidden = false; result.focus();
+    completeModule("cancion", scores);
+  });
+});
+
+// Perfil acumulado
+function updateProfile() {
+  const entries = Object.values(state.results);
+  const title = document.getElementById("profile-title");
+  const copy = document.getElementById("profile-copy");
+  if (entries.length < 3) {
+    title.textContent = "Completa al menos tres simulaciones";
+    copy.textContent = `Has completado ${entries.length}. Ágora necesita más decisiones para comparar tus prioridades.`;
+    scoreKeys.forEach((key) => { document.getElementById(`bar-${key}`).style.width = "0"; });
     return;
   }
-  const outcome = computeOutcome(allocation);
-  state.allocation = { values: allocation, ...outcome };
-  const result = document.getElementById("compute-result");
-  result.innerHTML = `
-    <p class="panel-kicker">Balance de la asignación</p>
-    <h2>${outcome.risks.length ? "Has protegido servicios esenciales, pero aparecen costes" : "La distribución mantiene los servicios, con poco margen"}</h2>
-    <p><strong>Beneficios:</strong> ${outcome.benefits.join("; ")}.</p>
-    <p><strong>Riesgos:</strong> ${outcome.risks.length ? outcome.risks.join("; ") : "cualquier nueva pérdida de capacidad obligaría a revisar las prioridades"}.</p>
-    <div class="result-meta">
-      <span>Resiliencia ${outcome.scores.resilience}/100</span>
-      <span>Acceso ${outcome.scores.guarantees}/100</span>
-      <span>Sin respuesta única</span>
-    </div>
-    <button class="button button-primary" type="button" data-next-archive>Ver mi perfil y el archivo</button>
-  `;
-  result.hidden = false;
-  result.querySelector("[data-next-archive]").addEventListener("click", () => routeTo("archivo"));
-  result.focus();
-  updateProfile();
+  const scores = Object.fromEntries(scoreKeys.map((key) => [key, Math.round(entries.reduce((sum, item) => sum + item[key], 0) / entries.length)]));
+  Object.entries(scores).forEach(([key, value]) => { document.getElementById(`bar-${key}`).style.width = `${value}%`; });
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const profiles = {
+    guarantees: ["Arquitectura de garantías", "Tiendes a proteger la capacidad de revisar, impugnar y conocer cómo se produjo una decisión."],
+    efficiency: ["Gobierno operativo", "Priorizas continuidad, rapidez y capacidad para que los servicios funcionen incluso bajo presión."],
+    resilience: ["Instituciones resilientes", "Buscas alternativas, margen de seguridad y capacidad para funcionar cuando una dependencia falla."],
+    community: ["Gobernanza comunitaria", "Das valor a la participación, el terreno compartido y las soluciones que una comunidad puede sostener."],
+  };
+  const tensionNames = { guarantees: "garantías", efficiency: "eficiencia", resilience: "resiliencia", community: "comunidad" };
+  title.textContent = profiles[sorted[0][0]][0];
+  copy.textContent = `${profiles[sorted[0][0]][1]} Tu principal tensión aparece entre ${tensionNames[sorted[0][0]]} y ${tensionNames[sorted[3][0]]}: proteger una implica aceptar costes en la otra.`;
+}
+
+document.getElementById("reset-demo")?.addEventListener("click", () => {
+  state.results = {};
+  document.querySelectorAll(".selected, .complete").forEach((item) => item.classList.remove("selected", "complete"));
+  document.querySelectorAll(".result-panel").forEach((panel) => { panel.hidden = true; panel.innerHTML = ""; });
+  document.querySelectorAll("[data-common-core]").forEach((input) => { input.checked = false; });
+  document.querySelector('input[name="melody"][value="archivo"]').checked = true;
+  document.querySelector('input[name="rhythm"][value="tambor"]').checked = true;
+  document.querySelector('input[name="ending"][value="fragmento"]').checked = true;
+  const defaults = { hospital: 35, fire: 30, utilities: 20, citizen: 15, vulnerability: 60, future: 60, reach: 50 };
+  Object.entries(defaults).forEach(([id, value]) => { document.getElementById(id).value = value; });
+  updateAllocation(); updateSchool(); updateProgress(); updateProfile(); showModule("firma");
 });
 
 document.querySelectorAll("[data-filter]").forEach((button) => {
@@ -197,57 +373,13 @@ document.querySelectorAll("[data-filter]").forEach((button) => {
     document.querySelectorAll("[data-filter]").forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
     const filter = button.dataset.filter;
-    document.querySelectorAll(".archive-card").forEach((card) => {
-      card.hidden = filter !== "todos" && card.dataset.category !== filter;
-    });
+    document.querySelectorAll(".archive-card").forEach((card) => { card.hidden = filter !== "todos" && card.dataset.category !== filter; });
   });
 });
 
-function updateProfile() {
-  const title = document.getElementById("profile-title");
-  const copy = document.getElementById("profile-copy");
-  const caseScores = state.caseChoice ? caseOutcomes[state.caseChoice].scores : null;
-  const computeScores = state.allocation?.scores ?? null;
-
-  if (!caseScores || !computeScores) {
-    title.textContent = "Aún no has tomado suficientes decisiones";
-    copy.textContent = "Completa las dos simulaciones para descubrir qué criterios has priorizado.";
-    ["guarantees", "efficiency", "resilience"].forEach((key) => {
-      document.getElementById(`bar-${key}`).style.width = "0";
-    });
-    return;
-  }
-
-  const scores = {
-    guarantees: Math.round((caseScores.guarantees + computeScores.guarantees) / 2),
-    efficiency: Math.round((caseScores.efficiency + computeScores.efficiency) / 2),
-    resilience: Math.round((caseScores.resilience + computeScores.resilience) / 2),
-  };
-  const top = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
-  const profiles = {
-    guarantees: ["Guardiana de las garantías", "Has priorizado que las decisiones puedan revisarse y que el acceso no dependa de saber reclamar."],
-    efficiency: ["Gestora pragmática", "Has protegido la continuidad y la capacidad de respuesta, aceptando que no todos los casos puedan revisarse igual."],
-    resilience: ["Arquitecta de resiliencia", "Has buscado equilibrio, alternativas y capacidad para seguir funcionando cuando el sistema pierde recursos."],
-  };
-  title.textContent = profiles[top][0];
-  copy.textContent = `${profiles[top][1]} Ningún perfil constituye una respuesta correcta: cada prioridad deja algo fuera.`;
-  Object.entries(scores).forEach(([key, value]) => {
-    document.getElementById(`bar-${key}`).style.width = `${value}%`;
-  });
-}
-
-document.getElementById("reset-demo")?.addEventListener("click", () => {
-  state.caseChoice = null;
-  state.allocation = null;
-  document.querySelectorAll("[data-case-choice]").forEach((item) => item.classList.remove("selected"));
-  document.getElementById("case-result").hidden = true;
-  document.getElementById("compute-result").hidden = true;
-  const defaults = { hospital: 35, fire: 30, utilities: 20, citizen: 15 };
-  sliders.forEach((input) => { input.value = defaults[input.id]; });
-  updateAllocationUI();
-  updateProfile();
-  routeTo("inicio");
-});
-
-updateAllocationUI();
+updateSchool();
+updateAllocation();
+updateProgress();
+updateProfile();
 routeTo(location.hash.slice(1) || "inicio", false);
+window.addEventListener("load", () => window.scrollTo({ top: 0, behavior: "auto" }), { once: true });
