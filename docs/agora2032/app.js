@@ -152,15 +152,15 @@ disclosure?.addEventListener("click", () => {
 
 const caseOutcomes = {
   confirmar: {
-    html: () => resultMarkup("Consecuencia", "La remesa continúa", `Las concesiones se pagan a tiempo. Samira sigue el cauce ordinario y la habitación vence antes de la primera cita.${state.meta.sourcesOpened ? "" : " Tomaste la decisión sin abrir las fuentes del expediente."}`, ["Rapidez alta", "Garantía baja"], "SUPERVISIÓN HUMANA COMPLETADA · 11 SEGUNDOS", "¿Cuánto tiempo y qué información hacen falta para que una firma cuente realmente como supervisión humana?"),
+    html: () => resultMarkup("Consecuencia", "La remesa continúa", `Las concesiones se pagan a tiempo. Samira sigue el cauce ordinario y la habitación vence antes de la primera cita.${state.meta.sourcesOpened ? "" : " Tomaste la decisión sin abrir las fuentes del expediente."}`, ["Rapidez alta", "Garantía baja"], "SUPERVISIÓN HUMANA COMPLETADA · 11 SEGUNDOS", "¿Qué mecanismo debería pesar más para que una decisión automatizada reciba verdadera supervisión humana?"),
     scores: { guarantees: 20, efficiency: 92, resilience: 48, community: 35 },
   },
   urgente: {
-    html: () => resultMarkup("Consecuencia", "El caso se separa", "Samira obtiene una revisión urgente sin detener el lote. Se corrige la excepción, pero el sistema sigue dependiendo de que alguien consiga llegar hasta una persona.", ["Corrección individual", "Riesgo de desigualdad"], "EXCEPCIÓN ABIERTA · TRAZA GENERAL SIN CAMBIOS", "¿Debe una garantía depender de que una persona consiga llamar la atención de otra?"),
+    html: () => resultMarkup("Consecuencia", "El caso se separa", "Samira obtiene una revisión urgente sin detener el lote. Se corrige la excepción, pero el sistema sigue dependiendo de que alguien consiga llegar hasta una persona.", ["Corrección individual", "Riesgo de desigualdad"], "EXCEPCIÓN ABIERTA · TRAZA GENERAL SIN CAMBIOS", "¿Qué mecanismo debería pesar más para que una decisión automatizada reciba verdadera supervisión humana?"),
     scores: { guarantees: 66, efficiency: 78, resilience: 55, community: 55 },
   },
   detener: {
-    html: () => resultMarkup("Consecuencia", "La remesa queda detenida", "Se revisan las denegaciones vinculadas a propiedades alternativas. Varias familias cobrarán tarde, pero la firma deja de ser una formalidad.", ["Garantía alta", "Retraso general"], "486 EXPEDIENTES · ESTADO: REVISIÓN SUSTANTIVA", "¿Cuándo está justificado retrasar una decisión correcta para comprobar si también es justa?"),
+    html: () => resultMarkup("Consecuencia", "La remesa queda detenida", "Se revisan las denegaciones vinculadas a propiedades alternativas. Varias familias cobrarán tarde, pero la firma deja de ser una formalidad.", ["Garantía alta", "Retraso general"], "486 EXPEDIENTES · ESTADO: REVISIÓN SUSTANTIVA", "¿Qué mecanismo debería pesar más para que una decisión automatizada reciba verdadera supervisión humana?"),
     scores: { guarantees: 94, efficiency: 32, resilience: 62, community: 68 },
   },
 };
@@ -227,7 +227,7 @@ document.querySelectorAll("[data-school-choice]").forEach((button) => {
     button.classList.add("selected");
     const [title, copy, scores] = schoolOutcomes[button.dataset.schoolChoice];
     const result = document.getElementById("school-result");
-    result.innerHTML = resultMarkup("Decisión política", title, copy, ["La elección es tuya", "El coste también"], "ÁGORA · RECOMENDACIÓN ARCHIVADA COMO APOYO TÉCNICO", "¿Quién debe decidir qué valores no pueden delegarse a un sistema?");
+    result.innerHTML = resultMarkup("Decisión política", title, copy, ["La elección es tuya", "El coste también"], "ÁGORA · RECOMENDACIÓN ARCHIVADA COMO APOYO TÉCNICO", "Cuando varios objetivos municipales son incompatibles, ¿quién debería fijar la prioridad final?");
     result.hidden = false; result.focus();
     completeModule("escuela", scores);
   });
@@ -289,7 +289,7 @@ document.getElementById("simulate-allocation")?.addEventListener("click", () => 
   if (total !== 100) { document.getElementById("allocation-warning").textContent = "La suma debe ser exactamente 100."; return; }
   const outcome = computeOutcome(allocation);
   const result = document.getElementById("compute-result");
-  result.innerHTML = resultMarkup("Balance", outcome.risks.length ? "Has protegido servicios esenciales, con costes" : "Todos los servicios resisten, con poco margen", `<strong>Protegido:</strong> ${outcome.benefits.join(", ")}. <strong>En riesgo:</strong> ${outcome.risks.length ? outcome.risks.join(", ") : "una nueva caída obligaría a reasignar"}.`, ["Sin respuesta única", `Resiliencia ${outcome.scores.resilience}/100`], `CAPACIDAD ASIGNADA · H ${allocation.hospital} / I ${allocation.fire} / R ${allocation.utilities} / C ${allocation.citizen}`, "¿Qué servicios deberían considerarse infraestructura social crítica?");
+  result.innerHTML = resultMarkup("Balance", outcome.risks.length ? "Has protegido servicios esenciales, con costes" : "Todos los servicios resisten, con poco margen", `<strong>Protegido:</strong> ${outcome.benefits.join(", ")}. <strong>En riesgo:</strong> ${outcome.risks.length ? outcome.risks.join(", ") : "una nueva caída obligaría a reasignar"}.`, ["Sin respuesta única", `Resiliencia ${outcome.scores.resilience}/100`], `CAPACIDAD ASIGNADA · H ${allocation.hospital} / I ${allocation.fire} / R ${allocation.utilities} / C ${allocation.citizen}`, "Si el cómputo público escasea, ¿qué criterio debería decidir el primer recorte?");
   result.hidden = false; result.focus();
   completeModule("computo", outcome.scores);
 });
@@ -332,7 +332,7 @@ document.getElementById("publish-core")?.addEventListener("click", () => {
       ? "La comprensión compartida mejora. Algunas versiones aún pueden relegar incertidumbres importantes."
       : "Todos reciben el mismo núcleo político, aunque cambien idioma, formato y ejemplos. El apoyo baja y el desacuerdo se vuelve comparable.";
   const result = document.getElementById("law-result");
-  result.innerHTML = resultMarkup("Publicación simulada", `${support} % de apoyo · ${Math.min(shared, 98)} % de comprensión común`, copy, [`${count}/5 elementos comunes`, "Accesibilidad conservada"], `NÚCLEO COMÚN · ${count} ELEMENTOS · APOYO ESTIMADO ${support} %`, "¿Qué información debe recibir todo el mundo en el mismo orden para poder discutir sobre la misma decisión?");
+  result.innerHTML = resultMarkup("Publicación simulada", `${support} % de apoyo · ${Math.min(shared, 98)} % de comprensión común`, copy, [`${count}/5 elementos comunes`, "Accesibilidad conservada"], `NÚCLEO COMÚN · ${count} ELEMENTOS · APOYO ESTIMADO ${support} %`, "¿Qué debería mantenerse común aunque reduzca apoyo inicial o aumente preguntas?");
   result.hidden = false; result.focus();
   completeModule("ley", {
     guarantees: 38 + count * 11,
@@ -409,7 +409,7 @@ document.querySelectorAll("[data-catalog]").forEach((button) => {
     const selection = songSelection();
     const [title, copy, scores] = catalogOutcomes[button.dataset.catalog];
     const result = document.getElementById("song-result");
-    result.innerHTML = resultMarkup("Registro del archivo", title, `${copy} La versión combina ${sourceLabels[selection.melody]}, ${sourceLabels[selection.rhythm]} y ${sourceLabels[selection.ending]}.`, ["Primera interpretación: 2032", "Tradición en movimiento"], `CATÁLOGO · FUENTE + INFERENCIA + ${selection.rhythm === "nuevo" || selection.ending === "comunitario" ? "CREACIÓN" : "RECONSTRUCCIÓN"}`, "¿Cuándo deja una reconstrucción de conservar el pasado y empieza a crear una tradición nueva?");
+    result.innerHTML = resultMarkup("Registro del archivo", title, `${copy} La versión combina ${sourceLabels[selection.melody]}, ${sourceLabels[selection.rhythm]} y ${sourceLabels[selection.ending]}.`, ["Primera interpretación: 2032", "Tradición en movimiento"], `CATÁLOGO · FUENTE + INFERENCIA + ${selection.rhythm === "nuevo" || selection.ending === "comunitario" ? "CREACIÓN" : "RECONSTRUCCIÓN"}`, "¿Qué debería pesar más al presentar una tradición reconstruida con ayuda de IA?");
     result.hidden = false; result.focus();
     completeModule("cancion", scores);
   });
@@ -505,15 +505,15 @@ document.querySelectorAll("[data-filter]").forEach((button) => {
 });
 
 const archiveDetails = {
-  firma: ["Simulación disponible", "La última firma", "Una firma humana puede existir en el registro y haber desaparecido en la práctica.", "¿Cuánto tiempo y qué información hacen falta para que una firma cuente de verdad?", "firma"],
-  escuela: ["Simulación disponible", "El alcalde de los jueves", "La recomendación cambia cuando cambia la definición de beneficio social.", "¿Quién debería decidir qué decisiones públicas no son delegables?", "escuela"],
+  firma: ["Simulación disponible", "La última firma", "Una firma humana puede existir en el registro y haber desaparecido en la práctica.", "¿Qué mecanismo debería pesar más para que una decisión automatizada reciba verdadera supervisión humana?", "firma"],
+  escuela: ["Simulación disponible", "El alcalde de los jueves", "La recomendación cambia cuando cambia la definición de beneficio social.", "Cuando varios objetivos municipales son incompatibles, ¿quién debería fijar la prioridad final?", "escuela"],
   memoria: ["Expediente narrativo", "La memoria del ministro", "Conservar cada documento no basta si se destruyen las relaciones que permitían interpretarlo.", "¿A quién pertenece la memoria de una decisión pública: al cargo, al Estado o a la ciudadanía?"],
-  cuidador: ["Expediente narrativo", "El cuidador que aprendió a llamar", "La tecnología coordina cuidados sin sustituir la reciprocidad entre personas.", "¿Qué debería poder aprender un sistema sobre un hogar para ayudar a cuidarlo?"],
-  computo: ["Simulación disponible", "Cero cómputo", "Una categoría secundaria puede sostener traducción, transporte e información de emergencia.", "¿Qué servicios deberían considerarse infraestructura social crítica?", "computo"],
-  empresa: ["Expediente narrativo", "La empresa que no estaba allí", "Una organización automatizada puede funcionar sin que nadie comprenda una excepción concreta.", "¿Qué autoridad necesita una persona para responder realmente por un proceso automatizado?"],
-  oposicion: ["Expediente narrativo", "La oposición automática", "Detectar miles de anomalías puede enterrar la investigación que más importa.", "¿Quién debería decidir qué hallazgos merecen la atención escasa de una institución?"],
-  ley: ["Simulación disponible", "La ley que todos apoyaban", "Todas las explicaciones pueden ser ciertas y, aun así, impedir una discusión común.", "¿Qué información debe ser idéntica para toda la ciudadanía?", "ley"],
-  cancion: ["Simulación disponible", "La canción que nunca existió", "La trazabilidad permite crear una tradición nueva sin fingir que se ha recuperado intacta.", "¿Cuándo la conservación se convierte en creación?", "cancion"],
+  cuidador: ["Expediente narrativo", "El cuidador que aprendió a llamar", "La tecnología coordina cuidados sin sustituir la reciprocidad entre personas.", "Si un asistente de cuidados detecta cambios preocupantes, ¿qué límite debería prevalecer?"],
+  computo: ["Simulación disponible", "Cero cómputo", "Una categoría secundaria puede sostener traducción, transporte e información de emergencia.", "Si el cómputo público escasea, ¿qué criterio debería decidir el primer recorte?", "computo"],
+  empresa: ["Expediente narrativo", "La empresa que no estaba allí", "Una organización automatizada puede funcionar sin que nadie comprenda una excepción concreta.", "¿Qué requisito debería pesar más cuando una empresa casi enteramente automatizada contrata con el sector público?"],
+  oposicion: ["Expediente narrativo", "La oposición automática", "Detectar miles de anomalías puede enterrar la investigación que más importa.", "¿Qué criterio debería ordenar primero las alertas automáticas sobre posibles irregularidades públicas?"],
+  ley: ["Simulación disponible", "La ley que todos apoyaban", "Todas las explicaciones pueden ser ciertas y, aun así, impedir una discusión común.", "¿Qué debería mantenerse común aunque reduzca apoyo inicial o aumente preguntas?", "ley"],
+  cancion: ["Simulación disponible", "La canción que nunca existió", "La trazabilidad permite crear una tradición nueva sin fingir que se ha recuperado intacta.", "¿Qué debería pesar más al presentar una tradición reconstruida con ayuda de IA?", "cancion"],
 };
 const archiveDialog = document.getElementById("archive-dialog");
 document.querySelectorAll("[data-open-archive]").forEach((button) => button.addEventListener("click", () => {
