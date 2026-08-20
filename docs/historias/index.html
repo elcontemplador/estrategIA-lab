@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archivo historIAs | estrategIA</title>
+  <meta name="description" content="Relatos ilustrados para pensar el futuro de la política, el gobierno y la inteligencia artificial. Archivo editorial de estrategIA desde 2024.">
+  <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/historias/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Archivo historIAs | estrategIA">
+  <meta property="og:description" content="Ficciones para pensar el futuro de la política, el gobierno y la inteligencia artificial.">
+  <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/historias/">
+  <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Archivo historIAs",
+    "description": "Ficciones para pensar el futuro de la política, el gobierno y la inteligencia artificial.",
+    "url": "https://elcontemplador.github.io/estrategIA-lab/historias/",
+    "numberOfItems": 20,
+    "dateModified": "2026-08-20",
+    "hasPart": [
+      {"@type": "CollectionPage", "name": "HistorIAs veraniegas 2024", "url": "https://elcontemplador.github.io/estrategIA-lab/historias/?temporada=2024#archivo"},
+      {"@type": "CollectionPage", "name": "HistorIAs veraniegas 2025", "url": "https://elcontemplador.github.io/estrategIA-lab/historias/?temporada=2025#archivo"},
+      {"@type": "CollectionPage", "name": "HistorIAs veraniegas 2026", "url": "https://elcontemplador.github.io/estrategIA-lab/historias/?temporada=2026#archivo"}
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "estrategIA lab",
+      "url": "https://elcontemplador.github.io/estrategIA-lab/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#archivo">Saltar al archivo</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Volver a estrategIA lab">
+      <span>estrateg<span>IA</span></span>
+      <small>archivo narrativo</small>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#proyecto">El proyecto</a>
+      <a href="#archivo">Historias</a>
+      <a href="#ediciones">PDF</a>
+      <a href="../">estrategIA lab</a>
+    </nav>
+    <a class="header-cta" href="https://estrategiabyaleph.substack.com/subscribe">Suscribirse</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">El archivo de ficción de estrategIA</p>
+        <h1 id="hero-title">histor<span>IA</span>s</h1>
+        <p class="hero-dek">Ficciones para pensar el futuro de la política, el gobierno y la inteligencia artificial.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#archivo">Explorar las historias</a>
+          <a class="button button-ghost" href="#ediciones">Descargar las ediciones</a>
+        </div>
+        <nav class="season-shortcuts" aria-label="Ir directamente a una temporada">
+          <span>Ir directamente a</span>
+          <a href="?temporada=2024#archivo" data-season="2024">2024</a>
+          <a href="?temporada=2025#archivo" data-season="2025">2025</a>
+          <a href="?temporada=2026#archivo" data-season="2026">2026</a>
+        </nav>
+        <dl class="hero-stats" aria-label="Resumen del archivo">
+          <div><dt id="story-count">-</dt><dd>historias</dd></div>
+          <div><dt id="season-count">-</dt><dd>veranos</dd></div>
+          <div><dt id="theme-count">-</dt><dd>dilemas</dd></div>
+        </dl>
+      </div>
+      <div class="hero-gallery" id="hero-gallery" aria-label="Ilustraciones de las historIAs veraniegas"></div>
+    </section>
+
+    <section class="project section" id="proyecto" aria-labelledby="project-title">
+      <div class="section-heading project-heading">
+        <p class="eyebrow">Por qué existe este archivo</p>
+        <h2 id="project-title">Imaginar el futuro antes de que llegue del todo</h2>
+      </div>
+      <div class="project-text" id="project-text"></div>
+      <aside class="project-note">
+        <p>Las historIAs no predicen. Crean una distancia narrativa desde la que mirar mejor las decisiones del presente.</p>
+      </aside>
+    </section>
+
+    <section class="seasons section" aria-labelledby="seasons-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Tres formas de experimentar</p>
+          <h2 id="seasons-title">Cada verano, una pregunta distinta</h2>
+        </div>
+        <p>De la comparación entre modelos al mundo compartido de Ágora 2032.</p>
+      </div>
+      <div class="season-grid" id="season-grid"></div>
+    </section>
+
+    <section class="archive section" id="archivo" aria-labelledby="archive-title">
+      <div class="section-heading archive-heading">
+        <div>
+          <p class="eyebrow">Archivo completo</p>
+          <h2 id="archive-title">Leer por año o por dilema</h2>
+        </div>
+        <p><span id="result-count">0</span> historias en esta selección</p>
+      </div>
+
+      <div class="filters" aria-label="Filtros del archivo">
+        <div class="filter-group">
+          <p class="filter-label">Temporada</p>
+          <div class="filter-row" id="year-filters"></div>
+        </div>
+        <div class="filter-group">
+          <p class="filter-label">Dilema</p>
+          <div class="filter-row theme-filters" id="theme-filters"></div>
+        </div>
+      </div>
+
+      <div class="story-grid" id="story-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No hay historias que coincidan con esta combinación.</p>
+    </section>
+
+    <section class="reading-routes section" aria-labelledby="routes-title">
+      <div class="section-heading">
+        <p class="eyebrow">Rutas de lectura</p>
+        <h2 id="routes-title">Tres puertas de entrada</h2>
+      </div>
+      <div class="route-grid">
+        <button class="route-card" type="button" data-route-theme="democracia">
+          <span class="route-number">01</span>
+          <h3>Quién decide</h3>
+          <p>Elecciones, representación, persuasión y legitimidad cuando los sistemas también intervienen en la voluntad política.</p>
+          <span class="route-link">Abrir esta ruta</span>
+        </button>
+        <button class="route-card" type="button" data-route-theme="responsabilidad">
+          <span class="route-number">02</span>
+          <h3>Quién responde</h3>
+          <p>Firmas, supervisión, organizaciones automatizadas y decisiones que siguen necesitando a alguien capaz de asumir su coste.</p>
+          <span class="route-link">Abrir esta ruta</span>
+        </button>
+        <button class="route-card" type="button" data-route-theme="infraestructura">
+          <span class="route-number">03</span>
+          <h3>Qué debe seguir funcionando</h3>
+          <p>Centros de datos, servicios públicos, trabajo y capacidades humanas que una sociedad no debería descubrir que ha perdido demasiado tarde.</p>
+          <span class="route-link">Abrir esta ruta</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="downloads section" id="ediciones" aria-labelledby="downloads-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Ediciones ilustradas</p>
+          <h2 id="downloads-title">Leer sin prisa. Conservar por años.</h2>
+        </div>
+        <p>Volúmenes preparados para pantalla, tableta o impresión. La antología crecerá con cada nueva temporada.</p>
+      </div>
+      <div class="download-grid">
+        <article class="download-card">
+          <span class="download-year">2024</span>
+          <div><p class="download-status">Edición completa</p><h3>Relatos de política, gobierno e IA en 2045</h3><p>Siete historias ilustradas. Siete modelos imaginando el poder.</p></div>
+          <a class="button button-dark" href="descargas/historias_veraniegas_2024.pdf" download>Descargar PDF</a>
+        </article>
+        <article class="download-card">
+          <span class="download-year">2025</span>
+          <div><p class="download-status">Edición completa</p><h3>Cinco futuros sin un único mundo</h3><p>De la geopolítica de la IA a una huelga tecnológica.</p></div>
+          <a class="button button-dark" href="descargas/historias_veraniegas_2025.pdf" download>Descargar PDF</a>
+        </article>
+        <article class="download-card">
+          <span class="download-year">2026</span>
+          <div><p class="download-status">Edición completa</p><h3>Archivo Ágora 2032</h3><p>Ocho historias conectadas en una España próxima.</p></div>
+          <a class="button button-dark" href="descargas/historias_veraniegas_2026.pdf" download>Descargar PDF</a>
+        </article>
+        <article class="download-card anthology">
+          <span class="download-year">24-26</span>
+          <div><p class="download-status">Antología acumulativa</p><h3>Archivo historIAs</h3><p>Todas las historias reunidas en un único volumen ilustrado.</p></div>
+          <a class="button button-light" href="descargas/archivo_historias_2024_2026.pdf" download>Descargar antología</a>
+        </article>
+      </div>
+      <p class="download-note">Las compilaciones contienen únicamente las historIAs. El capítulo final de reflexión de cada temporada queda fuera de los volúmenes.</p>
+    </section>
+
+    <section class="method section" aria-labelledby="method-title">
+      <div class="method-panel">
+        <div>
+          <p class="eyebrow">Transparencia editorial</p>
+          <h2 id="method-title">Un laboratorio editorial, no un oráculo</h2>
+        </div>
+        <ul id="method-list"></ul>
+      </div>
+    </section>
+
+    <section class="newsletter section" aria-labelledby="newsletter-title">
+      <p class="eyebrow">La conversación continúa</p>
+      <h2 id="newsletter-title">Una historia termina. La pregunta sigue abierta.</h2>
+      <p>estrategIA analiza cada semana cómo la inteligencia artificial transforma la política, el gobierno y las instituciones.</p>
+      <div class="hero-actions centered">
+        <a class="button button-primary" href="https://estrategiabyaleph.substack.com/">Leer estrategIA</a>
+        <a class="button button-ghost dark-ghost" href="https://estrategiabyaleph.substack.com/subscribe">Suscribirse</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Archivo historIAs</strong><p>Un proyecto editorial de estrategIA, impulsado por la Institución Educativa ALEPH.</p></div>
+    <div class="footer-links"><a href="../">estrategIA lab</a><a href="https://estrategiabyaleph.substack.com/">Newsletter</a><a href="#hero-title">Volver arriba</a></div>
+  </footer>
+
+  <dialog class="story-dialog" id="story-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar la historia">×</button>
+    <div class="dialog-scroll">
+      <div class="dialog-visual" id="dialog-gallery"></div>
+      <div class="dialog-copy">
+        <p class="eyebrow" id="dialog-eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-meta" id="dialog-meta"></p>
+        <p class="dialog-premise" id="dialog-premise"></p>
+        <div class="after-fiction">
+          <p class="after-label" id="after-label"></p>
+          <div id="dialog-after"></div>
+        </div>
+        <div class="dialog-actions">
+          <a class="button button-primary" id="dialog-link" target="_blank" rel="noreferrer">Leer en estrategIA</a>
+          <button class="button button-ghost dark-ghost" type="button" data-close-dialog>Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">Este archivo necesita JavaScript para mostrar las fichas y los filtros. Los PDF pueden descargarse sin JavaScript.</p></noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
