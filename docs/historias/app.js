@@ -19,6 +19,8 @@
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const siteHeader = document.querySelector(".site-header");
   let dialogTrigger = null;
+  let activeStoryId = null;
+  let copyFeedbackTimer = null;
 
   const escapeHtml = (value) => String(value)
     .replaceAll("&", "&amp;")
@@ -96,12 +98,14 @@
       const status = "Temporada completa";
       return `
         <article class="season-card season-${season.year}" id="temporada-${season.year}">
-          <div class="season-topline"><span>${escapeHtml(season.eyebrow)}</span><b>${count} historias</b></div>
-          <p class="season-year">${season.year}</p>
-          <h3>${escapeHtml(season.title)}</h3>
-          <p>${escapeHtml(season.description)}</p>
-          <div class="season-key"><span>${status}</span><p>${escapeHtml(season.editorial_key)}</p></div>
-          <a href="?temporada=${season.year}#archivo" data-season="${season.year}">Explorar ${season.year}</a>
+          <a class="season-card-link" href="?temporada=${season.year}#archivo" data-season="${season.year}" aria-label="Explorar la temporada ${season.year}: ${escapeHtml(season.title)}">
+            <div class="season-topline"><span>${escapeHtml(season.eyebrow)}</span><b>${count} historias</b></div>
+            <p class="season-year">${season.year}</p>
+            <h3>${escapeHtml(season.title)}</h3>
+            <p>${escapeHtml(season.description)}</p>
+            <div class="season-key"><span>${status}</span><p>${escapeHtml(season.editorial_key)}</p></div>
+            <span class="season-card-cta">Explorar ${season.year} <span aria-hidden="true">→</span></span>
+          </a>
         </article>
       `;
     }).join("");
@@ -156,18 +160,20 @@
         : "";
       return `
         <article class="story-card" data-story-id="${story.id}">
-          <div class="story-image">
-            ${primaryImage ? `<img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(imageAlt)}" loading="lazy">` : `<span>${story.year}</span>`}
-            <p>${story.year} / ${String(story.order).padStart(2, "0")}</p>
-            ${imageCredit}
-          </div>
-          <div class="story-content">
-            <p class="story-model">estrategIA #${story.issue} · ${escapeHtml(story.model)}</p>
-            <h3>${escapeHtml(story.title)}</h3>
-            <p class="story-premise">${escapeHtml(story.premise)}</p>
-            <div class="story-tags">${story.themes.map((theme) => `<span>${escapeHtml(themeLabel(theme))}</span>`).join("")}</div>
-            <a href="${escapeHtml(storyHref(story.id))}" data-open-story="${story.id}">Abrir ficha <span aria-hidden="true">↗</span></a>
-          </div>
+          <a class="story-card-link" href="${escapeHtml(storyHref(story.id))}" data-open-story="${story.id}" aria-label="Abrir la ficha de ${escapeHtml(story.title)}">
+            <div class="story-image">
+              ${primaryImage ? `<img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(imageAlt)}" loading="lazy">` : `<span>${story.year}</span>`}
+              <p>${story.year} / ${String(story.order).padStart(2, "0")}</p>
+              ${imageCredit}
+            </div>
+            <div class="story-content">
+              <p class="story-model">estrategIA #${story.issue} · ${escapeHtml(story.model)}</p>
+              <h3>${escapeHtml(story.title)}</h3>
+              <p class="story-premise">${escapeHtml(story.premise)}</p>
+              <div class="story-tags">${story.themes.map((theme) => `<span>${escapeHtml(themeLabel(theme))}</span>`).join("")}</div>
+              <span class="story-card-cta">Abrir ficha <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
         </article>
       `;
     }).join("");
@@ -182,6 +188,9 @@
     const story = data.stories.find((item) => item.id === storyId);
     if (!story) return;
     dialogTrigger = trigger || null;
+    activeStoryId = storyId;
+    clearTimeout(copyFeedbackTimer);
+    byId("dialog-permalink").textContent = "Copiar enlace";
     byId("dialog-eyebrow").textContent = `${seasonFor(story.year)?.title || story.year} · historia ${String(story.order).padStart(2, "0")}`;
     byId("dialog-title").textContent = story.title;
     byId("dialog-meta").textContent = `estrategIA #${story.issue} · ${story.model} · ${story.word_count} palabras`;
@@ -193,7 +202,6 @@
       .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
       .join("");
     byId("dialog-link").href = story.url;
-    byId("dialog-permalink").href = storyHref(story.id);
     const images = imagesFor(story);
     const imageNote = imageNoteFor(story);
     byId("dialog-gallery").innerHTML = images.length
@@ -214,6 +222,31 @@
     document.body.classList.remove("dialog-open");
     dialogTrigger?.focus();
     syncFilterUrl();
+  }
+
+  async function copyStoryLink(button) {
+    if (!activeStoryId) return;
+    const permalink = storyHref(activeStoryId);
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+      await navigator.clipboard.writeText(permalink);
+      button.textContent = "Enlace copiado";
+    } catch {
+      const helper = document.createElement("textarea");
+      helper.value = permalink;
+      helper.setAttribute("readonly", "");
+      helper.style.position = "fixed";
+      helper.style.opacity = "0";
+      document.body.append(helper);
+      helper.select();
+      const copied = document.execCommand("copy");
+      helper.remove();
+      button.textContent = copied ? "Enlace copiado" : "No se pudo copiar";
+    }
+    clearTimeout(copyFeedbackTimer);
+    copyFeedbackTimer = setTimeout(() => {
+      button.textContent = "Copiar enlace";
+    }, 2400);
   }
 
   document.addEventListener("click", (event) => {
@@ -260,6 +293,11 @@
     if (storyButton) {
       event.preventDefault();
       openStory(storyButton.dataset.openStory, storyButton);
+      return;
+    }
+    const copyButton = event.target.closest("#dialog-permalink");
+    if (copyButton) {
+      copyStoryLink(copyButton);
       return;
     }
     if (event.target.closest("[data-close-dialog]")) closeStory();
