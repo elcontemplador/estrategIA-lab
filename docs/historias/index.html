@@ -233,14 +233,14 @@
       </noscript>
 
       <div class="filters" aria-label="Filtros del archivo">
-        <fieldset class="filter-group">
-          <legend class="filter-label">Temporada</legend>
+        <div class="filter-group" role="group" aria-labelledby="year-filter-label">
+          <p class="filter-label" id="year-filter-label">Temporada</p>
           <div class="filter-row" id="year-filters"></div>
-        </fieldset>
-        <fieldset class="filter-group">
-          <legend class="filter-label">Dilema</legend>
+        </div>
+        <div class="filter-group" role="group" aria-labelledby="theme-filter-label">
+          <p class="filter-label" id="theme-filter-label">Dilema</p>
           <div class="filter-row theme-filters" id="theme-filters"></div>
-        </fieldset>
+        </div>
       </div>
 
       <div class="story-grid" id="story-grid"></div>
