@@ -214,10 +214,10 @@ button { font: inherit; }
 .archive { background: var(--paper-light); }
 .archive-heading { display: flex; max-width: none; align-items: end; justify-content: space-between; gap: 32px; }
 .archive-heading > p { margin: 0 0 8px; color: var(--muted); font-size: .78rem; }
-.filters { display: grid; gap: 22px; margin-bottom: 44px; padding: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.filter-group { display: grid; min-width: 0; grid-template-columns: 100px 1fr; align-items: start; gap: 18px; margin: 0; padding: 0; border: 0; }
-.filter-label { margin: 8px 0 0; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
-.filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters { display: grid; gap: 14px; margin-bottom: 38px; padding: 18px 0 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.filter-group { display: grid; min-width: 0; grid-template-columns: 112px minmax(0, 1fr); align-items: center; gap: 16px; }
+.filter-label { margin: 0; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.filter-row { display: flex; width: 100%; min-width: 0; flex-wrap: wrap; gap: 7px; }
 .filter-row button { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; color: #4d4644; cursor: pointer; font-size: .76rem; }
 .filter-row button:hover, .filter-row button.active { border-color: var(--burgundy); background: var(--burgundy); color: white; }
 
