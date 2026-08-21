@@ -2,12 +2,22 @@
   const data = window.HISTORIAS_DATA;
   if (!data) return;
 
-  const requestedYear = new URLSearchParams(window.location.search).get("temporada");
+  const initialParams = new URLSearchParams(window.location.search);
+  const requestedYear = initialParams.get("temporada");
+  const requestedTheme = initialParams.get("tema");
+  const requestedStory = initialParams.get("historia");
   const validYears = new Set(data.seasons.map((season) => String(season.year)));
-  const state = { year: validYears.has(requestedYear) ? requestedYear : "all", theme: "all" };
+  const validThemes = new Set(data.themes.map((theme) => theme.id));
+  const validStories = new Set(data.stories.map((story) => story.id));
+  const state = {
+    year: validYears.has(requestedYear) ? requestedYear : "all",
+    theme: validThemes.has(requestedTheme) ? requestedTheme : "all"
+  };
   const byId = (id) => document.getElementById(id);
   const storyGrid = byId("story-grid");
   const dialog = byId("story-dialog");
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const siteHeader = document.querySelector(".site-header");
   let dialogTrigger = null;
 
   const escapeHtml = (value) => String(value)
@@ -19,6 +29,39 @@
 
   const themeLabel = (id) => data.themes.find((theme) => theme.id === id)?.label || id;
   const seasonFor = (year) => data.seasons.find((season) => season.year === year);
+  const archiveImageFor = (story) => story.archive_image?.web_path || "";
+  const imagesFor = (story) => story.images?.length ? story.images : (archiveImageFor(story) ? [archiveImageFor(story)] : []);
+  const primaryImageFor = (story) => story.image || imagesFor(story)[0] || "";
+  const imageAltFor = (story) => story.image_alt || story.archive_image?.alt || `Ilustración de ${story.title}`;
+  const imageNoteFor = (story) => story.image_note || story.archive_image?.note || "";
+
+  function urlForState(storyId = null) {
+    const nextUrl = new URL(window.location.href);
+    if (state.year === "all") nextUrl.searchParams.delete("temporada");
+    else nextUrl.searchParams.set("temporada", state.year);
+    if (state.theme === "all") nextUrl.searchParams.delete("tema");
+    else nextUrl.searchParams.set("tema", state.theme);
+    if (storyId) nextUrl.searchParams.set("historia", storyId);
+    else nextUrl.searchParams.delete("historia");
+    nextUrl.hash = "archivo";
+    return nextUrl;
+  }
+
+  const storyHref = (storyId) => urlForState(storyId).href;
+
+  function syncFilterUrl() {
+    window.history.replaceState({}, "", urlForState());
+  }
+
+  function syncStoryUrl(storyId) {
+    window.history.replaceState({}, "", urlForState(storyId));
+  }
+
+  function setMenu(open) {
+    siteHeader.classList.toggle("menu-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Cerrar navegación" : "Abrir navegación");
+  }
 
   function renderHero() {
     byId("story-count").textContent = data.stories.length;
@@ -79,6 +122,19 @@
     `).join("");
   }
 
+  function updateFilterControls() {
+    document.querySelectorAll("[data-year]").forEach((button) => {
+      const active = button.dataset.year === state.year;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    document.querySelectorAll("[data-theme]").forEach((button) => {
+      const active = button.dataset.theme === state.theme;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
   function filteredStories() {
     return data.stories.filter((story) => {
       const yearMatch = state.year === "all" || String(story.year) === state.year;
@@ -91,37 +147,38 @@
     const stories = filteredStories();
     byId("result-count").textContent = stories.length;
     byId("empty-state").hidden = stories.length !== 0;
-    storyGrid.innerHTML = stories.map((story) => `
-      <article class="story-card" data-story-id="${story.id}">
-        <div class="story-image">
-          ${story.image ? `<img src="${escapeHtml(story.image)}" alt="Ilustración de ${escapeHtml(story.title)}" loading="lazy">` : `<span>${story.year}</span>`}
-          <p>${story.year} / ${String(story.order).padStart(2, "0")}</p>
-        </div>
-        <div class="story-content">
-          <p class="story-model">estrategIA #${story.issue} · ${escapeHtml(story.model)}</p>
-          <h3>${escapeHtml(story.title)}</h3>
-          <p class="story-premise">${escapeHtml(story.premise)}</p>
-          <div class="story-tags">${story.themes.map((theme) => `<span>${escapeHtml(themeLabel(theme))}</span>`).join("")}</div>
-          <button type="button" data-open-story="${story.id}">Abrir ficha <span aria-hidden="true">↗</span></button>
-        </div>
-      </article>
-    `).join("");
+    storyGrid.innerHTML = stories.map((story) => {
+      const primaryImage = primaryImageFor(story);
+      const imageAlt = imageAltFor(story);
+      const imageNote = imageNoteFor(story);
+      const imageCredit = imageNote
+        ? `<span class="story-image-credit">Creada para el archivo</span>`
+        : "";
+      return `
+        <article class="story-card" data-story-id="${story.id}">
+          <div class="story-image">
+            ${primaryImage ? `<img src="${escapeHtml(primaryImage)}" alt="${escapeHtml(imageAlt)}" loading="lazy">` : `<span>${story.year}</span>`}
+            <p>${story.year} / ${String(story.order).padStart(2, "0")}</p>
+            ${imageCredit}
+          </div>
+          <div class="story-content">
+            <p class="story-model">estrategIA #${story.issue} · ${escapeHtml(story.model)}</p>
+            <h3>${escapeHtml(story.title)}</h3>
+            <p class="story-premise">${escapeHtml(story.premise)}</p>
+            <div class="story-tags">${story.themes.map((theme) => `<span>${escapeHtml(themeLabel(theme))}</span>`).join("")}</div>
+            <a href="${escapeHtml(storyHref(story.id))}" data-open-story="${story.id}">Abrir ficha <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      `;
+    }).join("");
   }
 
   function applyFilters() {
-    renderFilters();
+    updateFilterControls();
     renderStories();
   }
 
-  function syncSeasonUrl() {
-    const nextUrl = new URL(window.location.href);
-    if (state.year === "all") nextUrl.searchParams.delete("temporada");
-    else nextUrl.searchParams.set("temporada", state.year);
-    nextUrl.hash = "archivo";
-    window.history.replaceState({}, "", nextUrl);
-  }
-
-  function openStory(storyId, trigger) {
+  function openStory(storyId, trigger, syncUrl = true) {
     const story = data.stories.find((item) => item.id === storyId);
     if (!story) return;
     dialogTrigger = trigger || null;
@@ -136,32 +193,48 @@
       .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
       .join("");
     byId("dialog-link").href = story.url;
-    const images = story.images || [];
+    byId("dialog-permalink").href = storyHref(story.id);
+    const images = imagesFor(story);
+    const imageNote = imageNoteFor(story);
     byId("dialog-gallery").innerHTML = images.length
-      ? images.map((image, index) => `<img src="${escapeHtml(image)}" alt="Ilustración ${index + 1} de ${escapeHtml(story.title)}" loading="lazy">`).join("")
+      ? images.map((image, index) => {
+        const alt = index === 0 && (story.image_alt || story.archive_image?.alt)
+          ? imageAltFor(story)
+          : `Ilustración ${index + 1} de ${story.title}`;
+        return `<img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}" loading="lazy">`;
+      }).join("") + (imageNote ? `<p class="dialog-image-note">${escapeHtml(imageNote)}</p>` : "")
       : `<div class="dialog-placeholder"><span>${story.year}</span></div>`;
     dialog.showModal();
     document.body.classList.add("dialog-open");
+    if (syncUrl) syncStoryUrl(story.id);
   }
 
   function closeStory() {
     dialog.close();
     document.body.classList.remove("dialog-open");
     dialogTrigger?.focus();
+    syncFilterUrl();
   }
 
   document.addEventListener("click", (event) => {
+    const toggle = event.target.closest("[data-menu-toggle]");
+    if (toggle) {
+      setMenu(toggle.getAttribute("aria-expanded") !== "true");
+      return;
+    }
+    if (event.target.closest("#primary-nav a")) setMenu(false);
     const yearButton = event.target.closest("[data-year]");
     if (yearButton) {
       state.year = yearButton.dataset.year;
       applyFilters();
-      syncSeasonUrl();
+      syncFilterUrl();
       return;
     }
     const themeButton = event.target.closest("[data-theme]");
     if (themeButton) {
       state.theme = themeButton.dataset.theme;
       applyFilters();
+      syncFilterUrl();
       return;
     }
     const seasonButton = event.target.closest("[data-season]");
@@ -170,7 +243,7 @@
       state.year = seasonButton.dataset.season;
       state.theme = "all";
       applyFilters();
-      syncSeasonUrl();
+      syncFilterUrl();
       byId("archivo").scrollIntoView({ behavior: "smooth" });
       return;
     }
@@ -179,12 +252,13 @@
       state.year = "all";
       state.theme = routeButton.dataset.routeTheme;
       applyFilters();
-      syncSeasonUrl();
+      syncFilterUrl();
       byId("archivo").scrollIntoView({ behavior: "smooth" });
       return;
     }
     const storyButton = event.target.closest("[data-open-story]");
     if (storyButton) {
+      event.preventDefault();
       openStory(storyButton.dataset.openStory, storyButton);
       return;
     }
@@ -199,8 +273,21 @@
     closeStory();
   });
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteHeader.classList.contains("menu-open")) {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+
+  window.matchMedia("(min-width: 1051px)").addEventListener("change", (event) => {
+    if (event.matches) setMenu(false);
+  });
+
   renderHero();
   renderProject();
   renderSeasons();
+  renderFilters();
   applyFilters();
+  if (validStories.has(requestedStory)) openStory(requestedStory, null, false);
 })();
