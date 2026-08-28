@@ -301,7 +301,10 @@
         <article class="download-card anthology">
           <span class="download-year">24-26</span>
           <div><p class="download-status">Antología acumulativa</p><h3>Archivo historIAs</h3><p>Veinte historias · 76 páginas · 12,6 MB.</p></div>
-          <a class="button button-light" href="descargas/archivo_historias_2024_2026.pdf" download>Descargar antología</a>
+          <div class="download-actions">
+            <a class="button button-light" href="descargas/archivo_historias_2024_2026.pdf" target="_blank" rel="noreferrer" data-open-pdf>Leer en la web</a>
+            <a class="button button-ghost light-ghost" href="descargas/archivo_historias_2024_2026.pdf" download>Descargar</a>
+          </div>
         </article>
       </div>
       <p class="download-note">Las compilaciones reúnen únicamente las historIAs en ediciones ilustradas, con una breve presentación editorial. El capítulo final de reflexión de cada temporada queda fuera de los volúmenes.</p>
@@ -357,6 +360,24 @@
         </div>
       </div>
     </div>
+  </dialog>
+
+  <dialog class="pdf-dialog" id="pdf-dialog" aria-labelledby="pdf-dialog-title">
+    <header class="pdf-dialog-header">
+      <div>
+        <p class="eyebrow">Antología completa · 2024–2026</p>
+        <h2 id="pdf-dialog-title">Leer el Archivo historIAs</h2>
+      </div>
+      <div class="pdf-dialog-actions">
+        <a class="button button-ghost light-ghost" href="descargas/archivo_historias_2024_2026.pdf" target="_blank" rel="noreferrer">Abrir en otra pestaña</a>
+        <a class="button button-light" href="descargas/archivo_historias_2024_2026.pdf" download>Descargar</a>
+        <button class="pdf-dialog-close" type="button" data-close-pdf aria-label="Cerrar el lector">×</button>
+      </div>
+    </header>
+    <div class="pdf-reader">
+      <iframe id="pdf-reader-frame" title="Antología Archivo historIAs 2024–2026" loading="lazy"></iframe>
+    </div>
+    <p class="pdf-reader-note">Si el lector de tu navegador no muestra el documento, puedes abrirlo en otra pestaña o descargarlo.</p>
   </dialog>
 
   <script src="data.js"></script>

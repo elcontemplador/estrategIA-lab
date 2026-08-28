@@ -264,6 +264,9 @@ button { font: inherit; }
 .download-card.anthology { background: var(--burgundy-dark); color: white; }
 .download-card.anthology .download-year, .download-card.anthology .download-status { color: #f2c56d; }
 .download-card.anthology div > p:last-child { color: #decfca; }
+.download-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.download-card.anthology .light-ghost { border-color: rgba(255,255,255,.58); color: white; }
+.download-card.anthology .light-ghost:hover { border-color: white; background: rgba(255,255,255,.1); }
 .download-note { margin: 24px 0 0; color: #625956; font-size: .77rem; }
 
 .method { background: var(--paper-light); }
@@ -304,6 +307,19 @@ button { font: inherit; }
 .after-fiction #dialog-after p:last-child { margin-bottom: 0; }
 .dialog-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .dialog-actions #dialog-link span { margin-left: 6px; }
+.pdf-dialog { width: min(1440px, calc(100vw - 32px)); height: calc(100vh - 32px); max-width: none; max-height: none; padding: 0; border: 0; background: #23191b; color: white; box-shadow: 0 40px 100px rgba(0,0,0,.48); }
+.pdf-dialog[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
+.pdf-dialog::backdrop { background: rgba(22,14,16,.86); backdrop-filter: blur(7px); }
+.pdf-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,.13); }
+.pdf-dialog-header .eyebrow { margin-bottom: 3px; color: #f2c56d; }
+.pdf-dialog-header h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.35rem, 2.2vw, 2rem); line-height: 1.1; }
+.pdf-dialog-actions { display: flex; align-items: center; gap: 9px; }
+.pdf-dialog-actions .button { min-height: 42px; }
+.pdf-dialog-actions .light-ghost { border-color: rgba(255,255,255,.58); color: white; }
+.pdf-dialog-close { display: inline-grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(255,255,255,.58); border-radius: 50%; background: transparent; color: white; cursor: pointer; font-size: 1.55rem; line-height: 1; }
+.pdf-reader { min-height: 0; background: #3c3939; }
+.pdf-reader iframe { display: block; width: 100%; height: 100%; border: 0; background: #3c3939; }
+.pdf-reader-note { margin: 0; padding: 9px 22px 11px; color: #d6cbc7; font-size: .72rem; text-align: center; }
 .noscript { margin: 34px 0 0; padding: clamp(28px, 5vw, 52px); border: 1px solid #dcc88d; background: #fff3cd; color: #594c27; }
 .noscript .eyebrow { color: #8b6519; }
 .noscript h2 { margin: 0 0 10px; font-family: var(--serif); }
@@ -340,6 +356,7 @@ button { font: inherit; }
   .download-card > div,
   .download-card .button { grid-column: 1; }
   .download-card .button { justify-self: start; }
+  .download-actions { justify-content: flex-start; }
   .method-panel { grid-template-columns: 1fr; gap: 44px; }
 }
 
@@ -372,6 +389,7 @@ button { font: inherit; }
   .dialog-visual img { min-height: 190px; height: 190px; }
   .dialog-copy { padding: 34px 24px 50px; }
   .dialog-close { top: 22px; right: 22px; }
+  .pdf-dialog { display: none; }
 }
 
 @media (max-width: 420px) {
