@@ -16,9 +16,12 @@
   const byId = (id) => document.getElementById(id);
   const storyGrid = byId("story-grid");
   const dialog = byId("story-dialog");
+  const pdfDialog = byId("pdf-dialog");
+  const pdfFrame = byId("pdf-reader-frame");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const siteHeader = document.querySelector(".site-header");
   let dialogTrigger = null;
+  let pdfDialogTrigger = null;
   let activeStoryId = null;
   let copyFeedbackTimer = null;
 
@@ -224,6 +227,20 @@
     syncFilterUrl();
   }
 
+  function openPdfReader(trigger) {
+    pdfDialogTrigger = trigger;
+    pdfFrame.src = "descargas/archivo_historias_2024_2026.pdf#page=1&view=FitH";
+    pdfDialog.showModal();
+    document.body.classList.add("dialog-open");
+  }
+
+  function closePdfReader() {
+    pdfDialog.close();
+    pdfFrame.removeAttribute("src");
+    document.body.classList.remove("dialog-open");
+    pdfDialogTrigger?.focus();
+  }
+
   async function copyStoryLink(button) {
     if (!activeStoryId) return;
     const permalink = storyHref(activeStoryId);
@@ -295,12 +312,19 @@
       openStory(storyButton.dataset.openStory, storyButton);
       return;
     }
+    const pdfButton = event.target.closest("[data-open-pdf]");
+    if (pdfButton && window.matchMedia("(min-width: 761px)").matches) {
+      event.preventDefault();
+      openPdfReader(pdfButton);
+      return;
+    }
     const copyButton = event.target.closest("#dialog-permalink");
     if (copyButton) {
       copyStoryLink(copyButton);
       return;
     }
     if (event.target.closest("[data-close-dialog]")) closeStory();
+    if (event.target.closest("[data-close-pdf]")) closePdfReader();
   });
 
   dialog.addEventListener("click", (event) => {
@@ -309,6 +333,13 @@
   dialog.addEventListener("cancel", (event) => {
     event.preventDefault();
     closeStory();
+  });
+  pdfDialog.addEventListener("click", (event) => {
+    if (event.target === pdfDialog) closePdfReader();
+  });
+  pdfDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closePdfReader();
   });
 
   document.addEventListener("keydown", (event) => {
