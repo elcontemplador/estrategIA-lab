@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qué es la inteligencia artificial | guía visual de estrategIA</title>
+    <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/">
+    <meta
+      name="description"
+      content="Una guía visual e interactiva de estrategIA para entender qué es la inteligencia artificial, cómo funcionan los modelos, qué cambia con los agentes y qué criterio conviene tener en 2026."
+    >
+    <meta name="author" content="Fernando Nieto Lobato">
+    <meta name="theme-color" content="#1e1e20">
+    <meta property="og:title" content="Qué es la inteligencia artificial">
+    <meta
+      property="og:description"
+      content="Una guía visual de estrategIA para entender IA generativa, modelos, prompts, agentes, multimodalidad, alucinaciones y gobernanza."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/">
+    <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="estrategIA lab">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Qué es la inteligencia artificial">
+    <meta
+      name="twitter:description"
+      content="Una guía visual e interactiva para entender la IA con claridad, prudencia y enfoque institucional."
+    >
+    <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Cabecera principal">
+      <a class="brand" href="../" aria-label="Volver a estrategIA lab">
+        <picture>
+          <source srcset="../assets/estrategia-substack-header.webp" type="image/webp">
+          <img src="../assets/estrategia-substack-header.png" alt="estrategIA" width="756" height="502">
+        </picture>
+      </a>
+      <nav class="site-nav site-nav-minimal" aria-label="Enlaces de estrategIA">
+        <a href="https://estrategiabyaleph.substack.com/">Leer newsletter</a>
+      </nav>
+      <a class="nav-cta" href="https://estrategiabyaleph.substack.com/subscribe">Suscribirse</a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">guía visual de estrategIA</p>
+          <h1 id="hero-title">Qué es la inteligencia artificial</h1>
+          <p class="hero-lede">
+            Una explicación visual para personas que no quieren convertirse en técnicas,
+            pero sí necesitan criterio para trabajar, decidir, comunicar o gobernar en un
+            mundo donde la IA ya aparece en su trabajo, sus herramientas y sus decisiones.
+          </p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#patrones">Descubre cómo funciona</a>
+            <a class="button secondary" href="#checklist">Checklist final</a>
+            <a class="button secondary" href="https://estrategiabyaleph.substack.com/">Leer estrategIA</a>
+          </div>
+        </div>
+        <aside class="hero-panel glass-panel" aria-label="Idea principal">
+          <span class="panel-label">tesis de la guía</span>
+          <p>
+            La IA no es una inteligencia escondida en un ordenador. Es un sistema que ha
+            aprendido de muchos textos, imágenes o datos y que calcula qué respuesta encaja
+            mejor con lo que le pides. Puede ser muy útil, pero no entiende como una persona:
+            su calidad depende de cómo la uses, qué información le das y quién revisa lo que produce.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section editorial-lead reveal" aria-labelledby="lead-title">
+        <div class="section-heading">
+          <p class="section-kicker">01 · punto de partida</p>
+          <h2 id="lead-title">La pregunta importante no es si la IA es inteligente, sino qué hace con la información</h2>
+          <p>
+            Piensa en el autocompletar de tu móvil. Si escribes "Nos vemos a las...", el teclado
+            te sugiere "ocho" o "siete" porque ha aprendido qué palabras suelen venir después.
+            Un modelo como ChatGPT, Claude o Gemini funciona con una idea parecida, pero a una
+            escala enorme: no solo sugiere una palabra, sino que puede construir párrafos,
+            resumir documentos, traducir, programar o ayudarte a ordenar una decisión.
+          </p>
+          <p>
+            Eso no significa que "entienda" el mundo como tú. Significa que reconoce patrones
+            en información previa y calcula continuaciones plausibles. La diferencia entre
+            "plausible" y "verdadero" es una de las claves de toda esta guía.
+          </p>
+        </div>
+        <div class="model-cards" aria-label="Tres ideas esenciales">
+          <article>
+            <span>1</span>
+            <h3>Aprende de ejemplos</h3>
+            <p>
+              Si le muestras millones de fotos etiquetadas como "gato", extrae rasgos comunes:
+              orejas, bigotes, ojos, formas. No sabe qué es un gato; aprende qué suele parecerse a uno.
+            </p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Genera probabilidades</h3>
+            <p>
+              Si escribes "Buenos días, ¿qué tal...", calcula que "estás" encaja mejor que
+              "ministerio" o "bicicleta". Esa lógica, repetida miles de veces, crea una respuesta.
+            </p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Necesita criterio</h3>
+            <p>
+              Puede redactar un buen borrador y equivocarse en una fecha. La revisión humana
+              no es un trámite: es la diferencia entre una ayuda y un riesgo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="patrones" class="section dark-section reveal" aria-labelledby="patterns-title">
+        <div class="section-heading">
+          <p class="section-kicker">02 · el motor de patrones</p>
+          <h2 id="patterns-title">El autocompletar gigante</h2>
+          <p>
+            Un modelo de lenguaje es un programa entrenado con cantidades enormes de texto:
+            páginas web, libros, artículos, código, conversaciones y documentos. De toda esa lectura
+            no sale una biblioteca exacta de frases memorizadas, sino un mapa estadístico de cómo
+            suelen combinarse las palabras, los argumentos y las ideas.
+          </p>
+          <p>
+            Cuando tú le escribes algo, el modelo genera la respuesta palabra a palabra. Parece
+            que "contesta", pero por debajo está calculando qué continuación encaja mejor con
+            lo anterior. A gran escala, predecir bien la siguiente palabra obliga a reflejar gramática,
+            hechos del mundo, estilos, razonamientos sencillos y convenciones sociales.
+          </p>
+          <p>
+            ¿Por qué falla? Porque lo más probable no siempre es lo correcto. Si una fecha,
+            una ley o un nombre "suena" bien en una frase, el modelo puede colocarlo aunque sea falso.
+          </p>
+        </div>
+        <div class="autocomplete-lab glass-panel" data-autocomplete-lab>
+          <div class="lab-copy">
+            <h3>Prueba una frase</h3>
+            <p>
+              Elige un inicio y observa cómo cambian las probabilidades. La cifra no es una
+              medición real: es una simulación didáctica para hacer visible la lógica probabilística.
+            </p>
+            <select data-completion-select aria-label="Elegir ejemplo de autocompletado">
+              <option value="cielo">El cielo es...</option>
+              <option value="ayuntamiento">Un ayuntamiento puede usar IA para...</option>
+              <option value="campana">En una campaña electoral, la IA puede...</option>
+            </select>
+          </div>
+          <div class="probability-panel" aria-live="polite">
+            <p class="prompt-fragment" data-completion-fragment>El cielo es...</p>
+            <div class="probability-list" data-probability-list></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paradigma" class="section paradigm-section reveal" aria-labelledby="paradigm-title">
+        <div class="section-heading">
+          <p class="section-kicker">03 · conceptos clave para 2026</p>
+          <h2 id="paradigm-title">De conversar con una máquina a delegar procesos supervisados</h2>
+          <p>
+            El salto conceptual que conviene entender no es solo que los modelos escriban mejor.
+            Es que empiezan a combinar lenguaje, visión, voz, razonamiento paso a paso y uso de
+            herramientas. En términos sencillos: pasamos de pedir respuestas a diseñar procesos
+            donde la IA puede ayudar a pensar, buscar, comparar y preparar una acción.
+          </p>
+        </div>
+        <div class="paradigm-grid">
+          <article class="pillar-card">
+            <span>razonar</span>
+            <h3>Modelos de razonamiento</h3>
+            <p>
+              Ante "¿cuánto es 17 × 23?", un modelo básico puede responder de golpe. Uno de
+              razonamiento tiende a descomponer: 17 × 20 = 340; 17 × 3 = 51; total, 391.
+              En tareas complejas, esa pausa reduce errores y hace más visible el camino.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <span>actuar</span>
+            <h3>Agentes</h3>
+            <p>
+              Antes la IA sobre todo hablaba. Un agente puede hacer pasos: buscar subvenciones,
+              filtrar convocatorias abiertas, comparar requisitos con tu organización y preparar
+              un borrador de solicitud para que tú lo revises.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <span>percibir</span>
+            <h3>Multimodalidad</h3>
+            <p>
+              Puedes enviar una foto de una factura y pedir que extraiga los datos. Puedes dictar
+              una instrucción por voz y recibir una tabla. La IA se acerca a los formatos reales
+              del trabajo: documentos escaneados, reuniones, gráficos, mapas o imágenes de campo.
+            </p>
+          </article>
+        </div>
+        <div class="agent-demo glass-panel" data-agent-demo>
+          <div class="demo-tabs" role="group" aria-label="Comparar flujos de IA">
+            <button class="is-active" data-flow="reactivo">IA reactiva</button>
+            <button data-flow="agentico">IA agéntica supervisada</button>
+          </div>
+          <div class="flow-visual" data-flow-visual aria-live="polite"></div>
+          <p class="flow-caption" data-flow-caption>
+            Un flujo reactivo transforma una pregunta en una respuesta. Es útil, pero deja al usuario casi todo el trabajo de verificación y ejecución.
+          </p>
+        </div>
+      </section>
+
+      <section id="prompting" class="section prompt-section reveal" aria-labelledby="prompting-title">
+        <div class="section-heading">
+          <p class="section-kicker">04 · dirección de trabajo</p>
+          <h2 id="prompting-title">Un buen prompt no es un conjuro: es un encargo bien definido</h2>
+          <p>
+            La IA responde mejor cuando recibe una tarea clara, contexto suficiente, límites,
+            formato y criterio de calidad. En la práctica, usar bien IA se parece menos a hablar
+            con una máquina y más a dirigir un pequeño proyecto.
+          </p>
+          <div class="prompt-before-after" aria-label="Ejemplo de prompt débil y prompt fuerte">
+            <article>
+              <span>débil</span>
+              <p>Hazme un resumen.</p>
+            </article>
+            <article>
+              <span>fuerte</span>
+              <p>
+                Actúa como analista de políticas públicas. Resume este documento para un público
+                no especializado. Incluye los 5 puntos principales, obligaciones municipales,
+                plazos y dudas por verificar. Formato: viñetas, máximo 300 palabras.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="prompt-builder glass-panel" data-prompt-builder>
+          <div class="builder-bank" aria-label="Bloques de prompt disponibles">
+            <button data-block="rol">Rol</button>
+            <button data-block="tarea">Tarea</button>
+            <button data-block="contexto">Contexto</button>
+            <button data-block="limites">Límites</button>
+            <button data-block="formato">Formato</button>
+            <button data-block="criterio">Criterio</button>
+          </div>
+          <div class="builder-output">
+            <div class="prompt-score">
+              <span>calidad del encargo</span>
+              <strong data-prompt-score>0/6</strong>
+            </div>
+            <div class="assembled-prompt" data-assembled-prompt>
+              Pulsa bloques para construir una instrucción de trabajo.
+            </div>
+            <p data-prompt-diagnosis>
+              Un prompt débil obliga al modelo a adivinar. Un prompt fuerte reduce ambigüedad y facilita la revisión.
+            </p>
+            <p class="block-explainer" data-block-explainer>
+              Pulsa un bloque para ver por qué mejora el encargo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="alucinaciones" class="section hallucination-section reveal" aria-labelledby="hallucination-title">
+        <div class="section-heading">
+          <p class="section-kicker">05 · errores plausibles</p>
+          <h2 id="hallucination-title">El problema no es que la IA falle: es que puede fallar con mucha seguridad</h2>
+          <p>
+            Una alucinación es una respuesta falsa, inventada o no verificada que suena plausible.
+            Para perfiles institucionales, el riesgo no está solo en el error, sino en que el error
+            viaje con apariencia de autoridad.
+          </p>
+          <p>
+            La IA no miente: no tiene intención. Alucina porque su trabajo básico es producir
+            texto que suene coherente, no comprobar por sí sola que cada dato sea verdadero.
+            Por eso hay que vigilar fechas, cifras, citas, normas, fuentes y razonamientos que
+            encajan demasiado bien.
+          </p>
+        </div>
+        <div class="hallucination-game glass-panel" data-hallucination-game>
+          <div class="scenario-tabs" role="group" aria-label="Tipos de alucinación">
+            <button class="is-active" data-scenario="legal">Dato inventado</button>
+            <button data-scenario="fuente">Fuente falsa</button>
+            <button data-scenario="logica">Lógica incorrecta</button>
+            <button data-scenario="sesgo">Confirmación</button>
+          </div>
+          <div class="generated-note">
+            <span>ejemplo ficticio con errores deliberados</span>
+            <p data-scenario-text></p>
+          </div>
+          <div class="claim-list" aria-label="Seleccionar afirmación problemática" data-claim-list>
+            <button data-claim="normal">"Reglamento Europeo de IA"</button>
+            <button data-claim="hallucination">"cada semana" y "desde enero de 2026"</button>
+            <button data-claim="normal">"ayuntamiento que use un chatbot"</button>
+          </div>
+          <p class="hallucination-feedback" data-hallucination-feedback>
+            Pulsa la parte más sospechosa. El objetivo no es memorizar normas, sino entrenar el reflejo de verificación.
+          </p>
+        </div>
+      </section>
+
+      <section id="riesgos" class="section risk-section reveal" aria-labelledby="risk-title">
+        <div class="section-heading">
+          <p class="section-kicker">06 · criterio institucional</p>
+          <h2 id="risk-title">No todos los usos tienen el mismo riesgo</h2>
+          <p>
+            La misma tecnología puede ser razonable para resumir una reunión y problemática para
+            ordenar expedientes sensibles. La pregunta no es "¿puede hacerlo?", sino qué pasa si
+            se equivoca, qué datos usa, quién responde y qué persona queda afectada.
+          </p>
+          <p>
+            En el ámbito institucional, el primer riesgo suele ser invisible: introducir datos
+            personales, expedientes, contratos o información confidencial en un servicio externo
+            sin haber revisado condiciones, permisos y garantías. Antes de automatizar, hay que
+            saber qué datos entran y dónde van.
+          </p>
+        </div>
+        <p>
+          Esta escala es didáctica: ayuda a pensar en consecuencias y controles, pero no clasifica
+          jurídicamente un sistema. Para evaluar un uso concreto hay que consultar la normativa
+          aplicable. Véase el <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/spa">Reglamento (UE) 2024/1689</a>
+          y sus actualizaciones.
+        </p>
+        <div class="risk-tool" data-risk-tool>
+          <div class="risk-options" role="group" aria-label="Casos de uso">
+            <button class="is-active" data-risk="bajo">Borrador interno</button>
+            <button data-risk="medio">Atención ciudadana</button>
+            <button data-risk="alto">Decisión sensible</button>
+          </div>
+          <div class="risk-meter glass-panel" aria-live="polite">
+            <div class="meter-track">
+              <span data-risk-fill></span>
+            </div>
+            <strong data-risk-title>Riesgo bajo</strong>
+            <p data-risk-copy>
+              Buen caso para acelerar trabajo si no incluye datos sensibles y una persona revisa el resultado.
+            </p>
+            <ul data-risk-controls>
+              <li>Revisión humana</li>
+              <li>No introducir información sensible</li>
+              <li>Guardar trazabilidad mínima</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="glosario" class="section glossary-section reveal" aria-labelledby="glossary-title">
+        <div class="section-heading">
+          <p class="section-kicker">07 · glosario de supervivencia</p>
+          <h2 id="glossary-title">Conceptos que conviene reconocer en una reunión</h2>
+          <p>
+            No hace falta dominar la ingeniería de IA para participar con criterio. Sí conviene
+            reconocer algunas palabras y traducirlas a decisiones prácticas.
+          </p>
+        </div>
+        <div class="flashcards" data-flashcards>
+          <button class="flashcard" data-term="token">
+            <span>Token</span>
+            <strong>Una pieza de texto</strong>
+            <p>Como una sílaba aproximada con la que el modelo lee y escribe.</p>
+          </button>
+          <button class="flashcard" data-term="contexto">
+            <span>Ventana de contexto</span>
+            <strong>La mesa de trabajo</strong>
+            <p>Lo que el modelo puede tener delante en una conversación o tarea.</p>
+          </button>
+          <button class="flashcard" data-term="rag">
+            <span>RAG</span>
+            <strong>Modelo + documentos</strong>
+            <p>Busca información en fuentes concretas antes de responder.</p>
+          </button>
+          <button class="flashcard" data-term="fine-tuning">
+            <span>Fine-tuning</span>
+            <strong>Ajuste especializado</strong>
+            <p>Entrenar más un modelo para un estilo, dominio o tarea concreta.</p>
+          </button>
+          <button class="flashcard" data-term="evaluacion">
+            <span>Evaluación</span>
+            <strong>Pruebas antes de confiar</strong>
+            <p>Medir aciertos, errores, sesgos y comportamiento bajo presión.</p>
+          </button>
+          <button class="flashcard" data-term="gobernanza">
+            <span>Gobernanza</span>
+            <strong>Reglas y responsables</strong>
+            <p>Quién decide, quién supervisa, qué se permite y qué se audita.</p>
+          </button>
+          <button class="flashcard" data-term="llm">
+            <span>LLM</span>
+            <strong>Modelo de lenguaje grande</strong>
+            <p>El tipo de modelo que trabaja con lenguaje y genera respuestas largas.</p>
+          </button>
+          <button class="flashcard" data-term="prompt">
+            <span>Prompt</span>
+            <strong>La instrucción</strong>
+            <p>Lo que le pides al sistema, con tarea, contexto, límites y formato.</p>
+          </button>
+          <button class="flashcard" data-term="agente">
+            <span>Agente</span>
+            <strong>IA que ejecuta pasos</strong>
+            <p>No solo responde: planifica, usa herramientas y pide revisión.</p>
+          </button>
+          <button class="flashcard" data-term="alucinacion">
+            <span>Alucinación</span>
+            <strong>Error plausible</strong>
+            <p>Una respuesta falsa que suena convincente y exige verificación.</p>
+          </button>
+          <button class="flashcard" data-term="api">
+            <span>API</span>
+            <strong>Puerta de conexión</strong>
+            <p>Permite que una aplicación use un modelo o servicio de IA.</p>
+          </button>
+          <button class="flashcard" data-term="entrenamiento">
+            <span>Datos de entrenamiento</span>
+            <strong>Lo que vio para aprender</strong>
+            <p>La base de ejemplos que condiciona capacidades, sesgos y límites.</p>
+          </button>
+        </div>
+      </section>
+
+      <section id="checklist" class="section checklist-section reveal" aria-labelledby="checklist-title">
+        <div class="section-heading">
+          <p class="section-kicker">08 · cierre práctico</p>
+          <h2 id="checklist-title">Antes de usar IA, formula mejores preguntas</h2>
+          <p>
+            La alfabetización en IA no consiste en aprender nombres de herramientas. Consiste en
+            construir criterio para decidir cuándo usarla, cómo supervisarla y cuándo no delegar.
+          </p>
+        </div>
+        <div class="checklist glass-panel" data-checklist>
+          <label><input type="checkbox"> ¿Qué problema concreto queremos resolver?</label>
+          <label><input type="checkbox"> ¿Qué datos entran y qué datos no deberían entrar?</label>
+          <label><input type="checkbox"> ¿Contienen información personal, sensible o confidencial?</label>
+          <label><input type="checkbox"> ¿Quién revisa el resultado antes de usarlo?</label>
+          <label><input type="checkbox"> ¿Qué ocurre si el sistema se equivoca?</label>
+          <label><input type="checkbox"> ¿Afecta a derechos, recursos públicos o decisiones sobre personas?</label>
+          <label><input type="checkbox"> ¿Qué dependencia crea respecto al proveedor o la herramienta?</label>
+          <label><input type="checkbox"> ¿Cómo sabremos que mejora el trabajo y no solo lo acelera?</label>
+          <div class="checklist-progress" aria-live="polite">
+            <span data-checklist-progress>0 de 8 preguntas marcadas</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="futuro" class="section future-section reveal" aria-labelledby="future-title">
+        <div class="section-heading">
+          <p class="section-kicker">09 · qué cambia en 2026</p>
+          <h2 id="future-title">La IA ya no es solo una caja de texto: cada vez ayuda más a pensar, preparar y ejecutar</h2>
+          <p>
+            La imagen clásica de la IA como un chatbot que contesta preguntas se está quedando corta.
+            En 2026, el uso más interesante no consiste solo en pedirle una respuesta, sino en pedirle
+            que te ayude a formular mejor el encargo, dividir el problema, buscar información, comparar
+            opciones y preparar una salida revisable.
+          </p>
+        </div>
+        <div class="future-list">
+          <article>
+            <span>01</span>
+            <div>
+              <p class="future-label">verificación con fuentes</p>
+              <h3>La fiabilidad se comprueba en cada tarea</h3>
+            </div>
+            <p>
+              No des por fiable una respuesta por proceder de un modelo reciente. Define la tarea,
+              aporta documentos pertinentes y contrasta las afirmaciones con sus fuentes antes de
+              utilizarlas. El <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">perfil de IA generativa del NIST (2024)</a>
+              ofrece un marco para examinar riesgos de estos sistemas. Esta guía no establece una
+              clasificación comparativa de modelos ni garantiza la exactitud de sus respuestas.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <p class="future-label">prompts asistidos</p>
+              <h3>También puede ayudarte a escribir el prompt</h3>
+            </div>
+            <p>
+              Si no sabes cómo pedir algo, puedes empezar por ahí: "ayúdame a convertir esta necesidad
+              en una buena instrucción". La IA puede preguntarte por objetivo, público, formato, límites
+              y criterios de calidad. En la práctica, esto reduce la barrera de entrada: ya no hace falta
+              memorizar trucos, sino conversar hasta definir bien el trabajo.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <p class="future-label">más agéntica</p>
+              <h3>Empieza a hacer procesos, no solo textos</h3>
+            </div>
+            <p>
+              La IA agéntica puede planificar pasos, usar herramientas, leer archivos, buscar datos,
+              ejecutar acciones y volver con un resultado. Eso abre usos muy potentes, pero cambia el
+              riesgo: un error ya no es solo una frase incorrecta, puede ser una acción mal ejecutada.
+            </p>
+          </article>
+        </div>
+        <div class="future-principle glass-panel">
+          <h3>La regla práctica</h3>
+          <p>
+            Cuanto más capaz sea la IA de actuar por ti, más importante es diseñar límites, permisos,
+            puntos de revisión y responsabilidades. La buena adopción no consiste en delegarlo todo,
+            sino en decidir qué puede hacer la máquina, qué debe revisar una persona y qué nunca debería
+            automatizarse sin garantías.
+          </p>
+        </div>
+      </section>
+
+      <section class="section subscribe-section reveal" aria-labelledby="subscribe-title">
+        <div class="subscribe-copy">
+          <p class="section-kicker">seguir aprendiendo</p>
+          <h2 id="subscribe-title">estrategIA continúa esta conversación cada semana</h2>
+          <p>
+            Si esta guía te ha servido para ordenar conceptos, la newsletter profundiza en cómo la
+            inteligencia artificial transforma política, gobierno, comunicación pública y liderazgo institucional.
+          </p>
+          <a class="button primary" href="https://estrategiabyaleph.substack.com/">Leer la newsletter</a>
+        </div>
+        <div class="substack-embed-wrap" aria-label="Formulario de suscripción a estrategIA">
+          <iframe
+            src="https://estrategiabyaleph.substack.com/embed"
+            title="Suscripción a estrategIA en Substack"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="section editorial-control reveal" aria-labelledby="control-title">
+        <div class="section-heading">
+          <p class="section-kicker">nota editorial</p>
+          <h2 id="control-title">Cómo leer esta guía</h2>
+          <p>Revisión editorial de esta página: <time datetime="2026-09-04">4 de septiembre de 2026</time>.</p>
+          <p>
+            Esta guía ofrece marcos conceptuales y ejemplos didácticos elaborados por estrategIA.
+            Cuando se describen tendencias del ecosistema de IA en 2026, la información debe
+            contrastarse con fuentes actualizadas antes de tomar decisiones concretas, especialmente
+            en materia legal, contractual, tecnológica o de protección de datos.
+          </p>
+          <p>
+            La idea de esta página es sencilla: trasladar a personas sin conocimientos previos los
+            conceptos más básicos y esenciales de la inteligencia artificial, con un lenguaje claro,
+            ejemplos reconocibles y una mirada prudente sobre sus posibilidades y límites.
+          </p>
+          <p>
+            Referencias para ampliar y contrastar: el <a href="https://airc.nist.gov/airmf-resources/airmf/">marco de gestión de riesgos de IA del NIST (2023)</a>,
+            su <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">perfil para IA generativa (2024)</a>
+            y el <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/spa">texto oficial del Reglamento (UE) 2024/1689</a>.
+            Los ejercicios, porcentajes y escalas de esta página son recursos pedagógicos de estrategIA;
+            no son mediciones de esos documentos ni un dictamen jurídico.
+          </p>
+          <p>
+            <a href="https://estrategiabyaleph.substack.com/">estrategIA</a> es un proyecto creado
+            y dirigido por <a href="https://www.fernandonieto.es/">Fernando Nieto Lobato</a>, centrado
+            en inteligencia artificial, política, gobierno y comunicación pública.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>estrategIA</strong>
+        <p>
+          Proyecto creado y dirigido por
+          <a href="https://www.fernandonieto.es/">Fernando Nieto Lobato</a>.
+        </p>
+      </div>
+      <a href="https://estrategiabyaleph.substack.com/">Leer la newsletter</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
