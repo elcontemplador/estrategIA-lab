@@ -404,6 +404,19 @@ h3 {
   color: var(--burgundy);
 }
 
+.project-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.project-card[id] {
+  scroll-margin-top: 180px;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
