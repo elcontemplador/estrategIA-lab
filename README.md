@@ -27,6 +27,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
+- La ribera del Molino, demo municipal en 3D: https://ribera-estrategia.netlify.app/ribera/
 - Archivo historIAs: https://elcontemplador.github.io/estrategIA-lab/historias/
 - Guía de inteligencia artificial: https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/
 - Ágora 2032, prototipo narrativo: https://elcontemplador.github.io/estrategIA-lab/agora2032/
