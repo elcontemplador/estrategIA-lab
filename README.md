@@ -81,6 +81,7 @@ que existía solo en `gh-pages` y preservó los archivos y PDF publicados.
 - Substack: https://estrategiabyaleph.substack.com/
 - Suscripción: https://estrategiabyaleph.substack.com/subscribe
 - LinkedIn Newsletter: https://www.linkedin.com/newsletters/estrategia-7201868200244834304/
+- Edición inglesa: https://elcontemplador.github.io/estrategia-english/
 - Página en ALEPH: https://institucioneducativaaleph.com/investigacion-y-publicaciones/estrategia-newsletter-sobre-inteligencia-artificial-en-la-politica-y-el-gobierno-de-la-institucion-educativa-aleph/
 
 ## Autoría editorial
@@ -89,4 +90,20 @@ estrategIA fue creada y está dirigida por Fernando Nieto Lobato, editada por Pa
 
 ## Licencia y cita
 
-El contenido de este repositorio se publica bajo licencia Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Consulte `LICENSE` y `CITATION.cff` para los detalles de uso y citación.
+El contenido de este repositorio se publica bajo licencia Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), salvo activos con condiciones propias documentadas en [atribuciones](docs/assets/ATTRIBUTIONS.md). Consulte `LICENSE` y `CITATION.cff` para los detalles de uso y citación. Los proyectos externos conservan sus respectivas licencias: consultar código público no concede automáticamente permiso para reutilizarlo.
+
+## Portada y mantenimiento
+
+La portada sitúa el catálogo después de una presentación breve, con siete fichas de
+proyecto, vistas previas, requisitos, límites y acciones disponibles. La edición inglesa
+figura como recurso editorial, separada de los prototipos.
+
+`docs/home.js` añade solo mejoras progresivas: ajusta el margen de los enlaces internos
+a la cabecera y limita el destacado del tercer aniversario a octubre de 2026, en la zona
+horaria de Madrid. Al terminar el mes, el juego permanece en el catálogo. Sin JavaScript,
+la promoción conserva su fecha explícita y todos los proyectos, enlaces y condiciones
+siguen accesibles. No hay analítica ni llamadas a modelos de IA.
+
+La fecha de revisión de las fichas no es la fecha de creación o de publicación de cada
+proyecto. Actualícela cuando vuelva a comprobar el catálogo; no la regenere automáticamente.
+Conserve las capturas como vistas previas reales, los activos originales y sus atribuciones.

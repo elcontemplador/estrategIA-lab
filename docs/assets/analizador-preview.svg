@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="720" viewBox="0 0 1160 720" role="img" aria-labelledby="title desc">
+  <title id="title">Vista previa del HTML anotado</title>
+  <desc id="desc">Ejemplo visual de un discurso político anotado con recursos retóricos, frames y claims verificables.</desc>
+  <rect width="1160" height="720" fill="#f7f4ea"/>
+  <rect x="50" y="44" width="1060" height="632" rx="8" fill="#ffffff" stroke="#d7dce5"/>
+  <text x="84" y="96" font-family="Georgia, serif" font-size="34" fill="#172033">Analizador de discurso político</text>
+  <text x="84" y="132" font-family="Arial, sans-serif" font-size="16" fill="#516070">HTML anotado con capas de análisis candidatas y revisión humana</text>
+
+  <rect x="84" y="164" width="992" height="54" rx="6" fill="#f4f7fb" stroke="#d7dce5"/>
+  <rect x="108" y="181" width="18" height="18" rx="3" fill="#172033"/>
+  <text x="138" y="196" font-family="Arial, sans-serif" font-size="15" fill="#172033">Recursos</text>
+  <rect x="240" y="181" width="18" height="18" rx="3" fill="#172033"/>
+  <text x="270" y="196" font-family="Arial, sans-serif" font-size="15" fill="#172033">Frames</text>
+  <rect x="370" y="181" width="18" height="18" rx="3" fill="#172033"/>
+  <text x="400" y="196" font-family="Arial, sans-serif" font-size="15" fill="#172033">Claims</text>
+  <rect x="500" y="181" width="18" height="18" rx="3" fill="#172033"/>
+  <text x="530" y="196" font-family="Arial, sans-serif" font-size="15" fill="#172033">Posibles falacias</text>
+
+  <text x="84" y="276" font-family="Georgia, serif" font-size="24" fill="#172033">Discurso de campaña sobre empleo y seguridad</text>
+  <text x="84" y="316" font-family="Georgia, serif" font-size="19" fill="#172033">
+    <tspan>Compatriotas, hoy presentamos un plan claro: </tspan>
+    <tspan fill="#172033">empleo, vivienda y seguridad</tspan>
+    <tspan> para todos.</tspan>
+  </text>
+  <rect x="577" y="292" width="258" height="31" rx="5" fill="#e6f3ff" stroke="#7fb7f3"/>
+  <text x="590" y="313" font-family="Arial, sans-serif" font-size="13" fill="#183d66">Frame: economía/empleo (0.70)</text>
+
+  <text x="84" y="384" font-family="Georgia, serif" font-size="19" fill="#172033">
+    <tspan>No prometemos milagros, </tspan>
+    <tspan>sino trabajo constante.</tspan>
+  </text>
+  <rect x="86" y="394" width="392" height="9" fill="#fff4bf"/>
+  <rect x="500" y="362" width="188" height="31" rx="5" fill="#fff7d9" stroke="#e1c857"/>
+  <text x="514" y="383" font-family="Arial, sans-serif" font-size="13" fill="#6a5513">Recurso: contraste (0.74)</text>
+
+  <text x="84" y="452" font-family="Georgia, serif" font-size="19" fill="#172033">
+    <tspan>En 2027 reduciremos el paro al 9% y crearemos 120000 empleos verdes.</tspan>
+  </text>
+  <rect x="82" y="428" width="756" height="36" rx="4" fill="none" stroke="#cc6b3f" stroke-dasharray="5 5"/>
+  <rect x="860" y="430" width="168" height="31" rx="5" fill="#ffe4d8" stroke="#d78961"/>
+  <text x="874" y="451" font-family="Arial, sans-serif" font-size="13" fill="#7a3417">Claim: dato (0.95)</text>
+
+  <text x="84" y="520" font-family="Georgia, serif" font-size="19" fill="#172033">
+    <tspan>Si no actuamos ahora, la crisis energética puede duplicar la factura.</tspan>
+  </text>
+  <rect x="82" y="494" width="660" height="36" rx="4" fill="#fde5f0" opacity="0.8"/>
+  <rect x="762" y="498" width="218" height="31" rx="5" fill="#fde5f0" stroke="#d27fa9"/>
+  <text x="776" y="519" font-family="Arial, sans-serif" font-size="13" fill="#7b3155">Posible falacia: miedo (0.52)</text>
+
+  <rect x="84" y="590" width="992" height="48" rx="6" fill="#fcf8ed" stroke="#e5d9b8"/>
+  <text x="108" y="620" font-family="Arial, sans-serif" font-size="14" fill="#5a4718">Nota: todas las etiquetas son candidatas automáticas y requieren revisión humana.</text>
+</svg>

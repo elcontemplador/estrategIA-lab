@@ -35,6 +35,7 @@ async function main() {
   const origin = new URL(base).origin;
   await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
   const page = await context.newPage();
+  await page.clock.setFixedTime(new Date('2026-10-15T12:00:00Z'));
   page.setDefaultTimeout(10000);
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
@@ -44,6 +45,33 @@ async function main() {
       await page.goto(base, { waitUntil: 'networkidle' });
       check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Homepage overflow at ${width}px`);
     }
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(base, { waitUntil: 'networkidle' });
+    check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
+    check(await page.locator('.project-card').count() === 7, 'Seven projects, including Agora, remain accessible');
+    check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
+    check(await page.locator('#analizador-discursos a[href*="releases/tag/v0.1.1"]').count() === 1, 'Windows download is visible');
+    check(await page.locator('#app-estoica a[href*="play.google.com"]').count() === 1, 'Android store link is visible');
+    check(await page.locator('[data-anniversary]').isVisible(), 'October anniversary promotion');
+    check(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior === 'auto'), 'Reduced motion is respected');
+    for (const width of [320, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(base, { waitUntil: 'networkidle' });
+      for (const id of ['proyectos', 'recursos', 'equipo']) {
+        await page.locator(`nav a[href="#${id}"]`).first().click();
+        check(await page.evaluate(id => {
+          const header = document.querySelector('header');
+          const bottom = getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().bottom : 0;
+          return document.getElementById(id).querySelector('h2').getBoundingClientRect().top >= bottom;
+        }, id), `Section title is not hidden at ${width}: ${id}`);
+      }
+      await page.addStyleTag({ content: 'html { font-size: 200% !important; }' });
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Homepage text at 200% does not overflow at ${width}`);
+    }
+    await page.clock.setFixedTime(new Date('2026-11-01T12:00:00Z'));
+    await page.goto(base, { waitUntil: 'networkidle' });
+    check(!await page.locator('[data-anniversary]').isVisible(), 'Anniversary promotion expires after October');
+    check(await page.locator('#reto-estrategia').isVisible(), 'The game remains in the catalogue after October');
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base + 'historias/', { waitUntil: 'networkidle' });
     const data = await page.evaluate(() => window.HISTORIAS_DATA);
@@ -124,6 +152,9 @@ async function main() {
     check(errors.length === 0, `JavaScript errors: ${errors.join('; ')}`);
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
+    await plain.goto(base);
+    check(await plain.locator('.project-card').count() === 7, 'All projects remain accessible without JavaScript');
+    check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
     await plain.goto(base + 'que-es-la-ia/');
     const sections = plain.locator('.reveal');
     check(await sections.count() >= 12, 'Guide sections preserved');
