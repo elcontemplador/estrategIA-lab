@@ -27,6 +27,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
+- El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
 - La ribera del Molino, demo municipal en 3D: https://ribera-estrategia.netlify.app/ribera/
 - Archivo historIAs: https://elcontemplador.github.io/estrategIA-lab/historias/
 - Guía de inteligencia artificial: https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/
