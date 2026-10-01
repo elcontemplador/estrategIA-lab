@@ -3,31 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>estrategIA lab | repositorios y prototipos de IA, política y gobierno</title>
+    <title>estrategIA lab | proyectos y recursos de IA, política y gobierno</title>
     <link rel="canonical" href="https://elcontemplador.github.io/estrategIA-lab/">
     <meta
       name="description"
-      content="estrategIA lab reúne repositorios, prototipos y proyectos prácticos vinculados a la newsletter estrategIA."
+      content="Juegos, herramientas, guías y relatos para explorar la IA, la política y el gobierno. El laboratorio de estrategIA y su edición inglesa."
     >
     <meta name="author" content="Fernando Nieto Lobato">
     <meta name="theme-color" content="#9d2235">
     <meta property="og:title" content="estrategIA lab">
     <meta
       property="og:description"
-      content="Repositorios, prototipos y proyectos prácticos de estrategIA, la newsletter pionera en español sobre inteligencia artificial, política y gobierno."
+      content="Juegos, herramientas, guías y relatos para explorar la IA, la política y el gobierno. El laboratorio de estrategIA y su edición inglesa."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elcontemplador.github.io/estrategIA-lab/">
-    <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <meta property="og:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-social.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="658">
+    <meta property="og:image:alt" content="El laboratorio de estrategIA: IA, política y gobierno">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="estrategIA lab">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="estrategIA lab">
     <meta
       name="twitter:description"
-      content="Repositorios, prototipos y proyectos prácticos de estrategIA."
+      content="Juegos, herramientas, guías y relatos sobre IA, política y gobierno."
     >
-    <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-hero.png">
+    <meta name="twitter:image" content="https://elcontemplador.github.io/estrategIA-lab/assets/estrategia-social.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
@@ -41,7 +44,7 @@
         "name": "estrategIA lab",
         "url": "https://elcontemplador.github.io/estrategIA-lab/",
         "inLanguage": "es",
-        "description": "Repositorios, prototipos y proyectos prácticos vinculados a la newsletter estrategIA.",
+        "description": "Proyectos y recursos para explorar la IA, la política y el gobierno, vinculados a la newsletter estrategIA.",
         "publisher": {
           "@type": "Organization",
           "name": "Institución Educativa ALEPH",
@@ -56,461 +59,201 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#inicio">Saltar al contenido</a>
     <header class="site-header" aria-label="Cabecera principal">
-      <a class="brand" href="#inicio" aria-label="Inicio de estrategIA">
-        <picture>
-          <source srcset="assets/estrategia-substack-header.webp" type="image/webp">
-          <img src="assets/estrategia-substack-header.png" alt="estrategIA" width="756" height="502">
-        </picture>
-      </a>
+      <a class="brand" href="#inicio" aria-label="Inicio de estrategIA lab">estrategIA <span>lab</span></a>
       <nav class="site-nav" aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
-        <a href="#enfoque">Enfoque</a>
         <a href="#recursos">Recursos</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#suscripcion">Suscripción</a>
+        <a href="#equipo">Acerca de</a>
       </nav>
-      <a class="nav-cta" href="https://estrategiabyaleph.substack.com/subscribe">Suscribirse</a>
+      <a class="edition-link" href="https://elcontemplador.github.io/estrategia-english/" lang="en">English edition <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main id="inicio" role="main">
-      <section class="hero" aria-labelledby="hero-title">
+    <main id="inicio" tabindex="-1">
+      <section class="hero hero-anniversary" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">estrategIA lab · repositorios y prototipos</p>
-          <h1 id="hero-title">estrategIA</h1>
-          <p class="hero-lede">
-            El espacio en GitHub de la newsletter estrategIA para reunir
-            proyectos, prototipos y ejemplos de IA aplicada, vibe coding,
-            comunicación pública y gobierno.
-          </p>
-          <p class="hero-context">
-            La newsletter se lee en Substack; la ficha institucional y los
-            recursos viven en ALEPH. Aquí se ordena la parte práctica y abierta:
-            repositorios que se pueden consultar, probar y reutilizar.
-          </p>
+          <p class="eyebrow">IA, política y gobierno · proyectos para explorar</p>
+          <h1 id="hero-title">estrategIA <span>lab</span></h1>
+          <p class="hero-lede">Un laboratorio para aprender, experimentar y pensar las decisiones públicas con inteligencia artificial.</p>
           <div class="hero-actions" aria-label="Acciones principales">
-            <a class="button primary" href="#proyectos">
-              Ver proyectos y prototipos
-            </a>
-            <a class="button secondary" href="https://estrategiabyaleph.substack.com/subscribe">
-              Suscribirse en Substack
-            </a>
-            <a class="button tertiary" href="https://estrategiabyaleph.substack.com/">
-              Leer la newsletter
-            </a>
+            <a class="button primary" href="#proyectos">Explorar los proyectos</a>
+            <a class="hero-reading" href="https://estrategiabyaleph.substack.com/">Leer la newsletter <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </section>
-
-      <section class="intro band" aria-labelledby="intro-title">
-        <div class="content-grid">
-          <div>
-            <h2 id="intro-title">La IA ya es una cuestión política.</h2>
-          </div>
-          <div class="rich-copy">
-            <p>
-              <a href="https://estrategiabyaleph.substack.com/">estrategIA</a>
-              es una newsletter pionera en español sobre la intersección entre
-              inteligencia artificial, política, gobierno, comunicación pública
-              y liderazgo institucional. Fue creada y está dirigida por
-              <a href="https://www.fernandonieto.es/">Fernando Nieto Lobato</a>
-              y editada por
-              <a href="https://es.linkedin.com/in/pablomartindiez">Pablo Martín Diez</a>.
-              Cuenta con el impulso de la
-              <a href="https://institucioneducativaaleph.com/">Institución Educativa ALEPH</a>.
-            </p>
-            <p>
-              Su punto de partida es sencillo: la inteligencia artificial ya no
-              puede leerse solo como una cuestión tecnológica. También es una
-              cuestión política, institucional, económica, cultural y
-              democrática.
-            </p>
-          </div>
-        </div>
+        <aside class="anniversary" data-anniversary aria-labelledby="anniversary-title">
+          <p class="eyebrow">Octubre de 2026 · tercer aniversario</p>
+          <h2 id="anniversary-title">Tres años de ideas.<br>Un reto para seguir aprendiendo.</h2>
+          <p>Quince preguntas por partida, tres comodines y un banco de 1.000 preguntas sobre IA.</p>
+          <a class="button anniversary-button" href="https://elcontemplador.github.io/reto-estrategia-ia/">Jugar al reto estrategIA <span aria-hidden="true">→</span></a>
+        </aside>
       </section>
 
       <section id="proyectos" class="section projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <p class="section-kicker">estrategIA lab</p>
-          <h2 id="projects-title">El laboratorio público de estrategIA</h2>
-          <p>
-            Substack es el espacio principal de lectura y la web de ALEPH reúne
-            la ficha institucional, los prompts, las herramientas y las buenas
-            prácticas. Esta página cumple una función distinta: ordenar los
-            repositorios y prototipos vinculados a estrategIA, de modo que la
-            parte práctica del proyecto pueda consultarse, probarse y
-            reutilizarse de forma abierta. Algunos de estos trabajos se
-            presentaron en
-            <a href="https://open.substack.com/pub/estrategiabyaleph/p/estrategia-128-adios-al-chatbot-la?r=gp8ei&utm_campaign=post-expanded-share&utm_medium=web">estrategIA #128</a>.
-          </p>
-          <p class="lab-note">
-            Este espacio irá creciendo a medida que la newsletter publique
-            nuevos experimentos, herramientas y casos de uso abiertos.
-          </p>
+          <p class="section-kicker">El laboratorio</p>
+          <h2 id="projects-title">Elige una forma de explorar</h2>
+          <p>Juegos, herramientas, guías y relatos vinculados a estrategIA. Cada ficha indica cómo acceder y qué conviene tener en cuenta.</p>
+          <p class="review-date">Fichas y enlaces revisados el <time datetime="2026-10-01">1 de octubre de 2026</time>.</p>
         </div>
-
         <div class="project-list">
-          <article id="reto-estrategia" class="project-card">
-            <div>
-              <p class="project-type">Cultura general sobre IA · tercer aniversario</p>
-              <h3>El reto estrategIA</h3>
-              <p>
-                ¿Cuánto sabes de inteligencia artificial? Quince preguntas de
-                dificultad creciente, tres comodines y dos seguros: decide cuándo
-                arriesgar o plantarte para llegar a los 100.000 puntos. Un banco de
-                1.000 preguntas con explicaciones y fuentes para celebrar tres años
-                de estrategIA y seguir aprendiendo. Partida individual, sin reloj
-                ni clasificación pública.
-              </p>
-              <div class="project-meta" aria-label="Datos del proyecto">
-                <span>Estado: juego publicado</span>
-                <span>Ámbito: cultura general sobre IA</span>
-              </div>
+          <article id="reto-estrategia" class="project-card" aria-labelledby="reto-title">
+            <figure class="project-media"><img src="assets/reto-preview.webp" alt="Pantalla de entrada de El reto estrategIA" width="640" height="400" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Aprender jugando</p>
+              <h3 id="reto-title">El reto estrategIA</h3>
+              <p>Quince preguntas de dificultad creciente, tres comodines y dos seguros. Decide cuándo arriesgar o plantarte para llegar a los 100.000 puntos, con explicaciones y fuentes para seguir aprendiendo.</p>
+              <div class="project-meta"><span>Publicado</span><span>Navegador · sin cuenta</span></div>
+              <details class="project-details"><summary>Contexto y condiciones</summary><p>Un concurso de cultura general sobre IA creado para el tercer aniversario de estrategIA. Partida individual, sin reloj ni clasificación pública. El repositorio no declara una licencia general de reutilización y conserva las atribuciones de terceros.</p><a href="https://github.com/elcontemplador/reto-estrategia-ia#readme">Consultar las condiciones del proyecto</a></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="https://elcontemplador.github.io/reto-estrategia-ia/">
-                Jugar al reto
-              </a>
-              <a class="text-link subtle" href="https://github.com/elcontemplador/reto-estrategia-ia">
-                Ver repositorio
-              </a>
+            <div class="project-actions" aria-label="Acciones de El reto estrategIA">
+              <a class="text-link" href="https://elcontemplador.github.io/reto-estrategia-ia/">Jugar al reto</a>
+              <a class="text-link subtle" href="https://github.com/elcontemplador/reto-estrategia-ia">Ver código</a>
             </div>
           </article>
 
-          <article id="ribera-del-molino" class="project-card">
-            <div>
-              <p class="project-type">Una decisión municipal en 3D</p>
-              <h3>La ribera del Molino</h3>
-              <p>
-                Un solar junto al río, treinta hogares y dos proyectos.
-                Compara un parque inundable con una propuesta de más vivienda
-                protegida por una defensa. Recorre ambas orillas, escucha
-                cuatro voces ficticias y prueba qué ocurre cuando sube el agua.
-                Un experimento creado con Astra para explorar decisiones y
-                consecuencias: un caso didáctico, no un estudio hidráulico.
-              </p>
-              <img class="project-preview" src="assets/ribera-del-molino.jpg"
-                alt="Comparación del mismo solar junto al río: parque en la propuesta A y un tercer edificio protegido por un muro en la B."
-                width="1600" height="904" loading="lazy" decoding="async">
-              <div class="project-meta" aria-label="Datos del proyecto">
-                <span>Estado: demo interactiva</span>
-                <span>Ámbito: vivienda, espacio público y crecidas</span>
-              </div>
+          <article id="ribera-del-molino" class="project-card" aria-labelledby="ribera-title">
+            <figure class="project-media"><img src="assets/ribera-preview.webp" alt="Dos alternativas para el solar de La ribera del Molino" width="640" height="362" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Comparar decisiones públicas</p>
+              <h3 id="ribera-title">La ribera del Molino</h3>
+              <p>Un solar junto al río y dos alternativas: conservar un parque inundable o añadir diez viviendas con una defensa frente al agua. Recorre ambas orillas, escucha cuatro voces ficticias y observa qué cambia cuando sube el río.</p>
+              <div class="project-meta"><span>Demo</span><span>Navegador · alternativa sin 3D</span></div>
+              <details class="project-details"><summary>Cómo se hizo y límites</summary><p>El proceso con Astra en Codex se relata en estrategIA #154: un primer planteamiento demasiado amplio se acotó a una decisión municipal. Es un caso didáctico ficticio, no un estudio hidráulico ni una consulta ciudadana. No se ha identificado una licencia de reutilización para esta demo.</p></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="https://ribera-estrategia.netlify.app/ribera/">
-                Explorar la ribera
-              </a>
-              <a class="text-link subtle" href="https://ribera-estrategia.netlify.app/ribera/lectura.html">
-                Leer el caso sin 3D
-              </a>
+            <div class="project-actions" aria-label="Acciones de La ribera del Molino">
+              <a class="text-link" href="https://ribera-estrategia.netlify.app/ribera/">Explorar la ribera</a>
+              <a class="text-link subtle" href="https://ribera-estrategia.netlify.app/ribera/lectura.html">Leer sin 3D</a>
+              <a class="context-link" href="https://estrategiabyaleph.substack.com/p/estrategia-154-gpt-6-astra-y-la-nueva">Leer el contexto · #154</a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div>
-              <p class="project-type">Archivo narrativo e ilustrado</p>
-              <h3>Archivo historIAs</h3>
-              <p>
-                Las historIAs veraniegas de estrategIA, organizadas por
-                temporadas y dilemas, con sus ilustraciones originales,
-                contexto editorial y ediciones descargables en PDF.
-              </p>
-              <div class="project-meta" aria-label="Datos del proyecto">
-                <span>Estado: archivo completo 2024-2026</span>
-                <span>Ámbito: ficción, IA, política y gobierno</span>
-              </div>
+          <article id="historias" class="project-card" aria-labelledby="historias-title">
+            <figure class="project-media"><img src="assets/historias-preview.webp" alt="Portada del archivo ilustrado historIAs" width="640" height="400" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Imaginar futuros y dilemas</p>
+              <h3 id="historias-title">Archivo historIAs</h3>
+              <p>Veinte relatos de los veranos de 2024, 2025 y 2026, organizados por temporadas y dilemas. Ilustraciones originales, contexto editorial y ediciones en PDF para leer y conservar.</p>
+              <div class="project-meta"><span>Archivo</span><span>Navegador y PDF</span></div>
+              <details class="project-details"><summary>Contexto y condiciones</summary><p>Ficción sobre IA, política y gobierno para abrir preguntas, no para predecir el futuro. Materiales del LAB bajo CC BY-NC 4.0, sujetos a las atribuciones y derechos de terceros.</p><a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/LICENSE">Consultar la licencia del LAB</a></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="historias/">
-                Explorar las historIAs
-              </a>
-              <a class="text-link subtle" href="historias/descargas/archivo_historias_2024_2026.pdf">
-                Descargar la antología
-              </a>
+            <div class="project-actions" aria-label="Acciones del Archivo historIAs">
+              <a class="text-link" href="historias/">Explorar las historIAs</a>
+              <a class="text-link subtle" href="historias/descargas/archivo_historias_2024_2026.pdf">Descargar la antología<span class="action-note">PDF · 12,6 MB</span></a>
+              <a class="context-link" href="https://github.com/elcontemplador/estrategIA-lab/tree/main/docs/historias">Ver código</a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div>
-              <p class="project-type">Guía visual e interactiva</p>
-              <h3>Qué es la inteligencia artificial</h3>
-              <p>
-                Página divulgativa de una sola pieza para explicar, con lenguaje
-                claro y enfoque institucional, qué es la IA, cómo funcionan los
-                modelos, qué conceptos conviene conocer y cómo evaluar riesgos
-                de uso en 2026.
-              </p>
-              <div class="project-meta" aria-label="Datos del recurso">
-                <span>Estado: versión ampliada e interactiva</span>
-                <span>Ámbito: alfabetización, IA generativa y gobierno</span>
-              </div>
+          <article id="guia-ia" class="project-card" aria-labelledby="guia-title">
+            <figure class="project-media"><img src="assets/guia-preview.webp" alt="Portada de la guía visual Qué es la inteligencia artificial" width="640" height="400" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Comprender antes de usar</p>
+              <h3 id="guia-title">Qué es la inteligencia artificial</h3>
+              <p>Una guía visual e interactiva para entender modelos, prompts, agentes y riesgos de uso. Lenguaje claro y ejemplos para quienes necesitan trabajar, comunicar o decidir con criterio.</p>
+              <div class="project-meta"><span>Publicado</span><span>Navegador · lectura sin JavaScript</span></div>
+              <details class="project-details"><summary>Contexto y condiciones</summary><p>Recurso divulgativo con enfoque institucional y fuentes de referencia. Las simplificaciones ayudan a introducir los conceptos; no sustituyen la evaluación de cada herramienta o caso de uso. Materiales del LAB bajo CC BY-NC 4.0.</p><a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/LICENSE">Consultar la licencia del LAB</a></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="que-es-la-ia/">
-                Abrir guía
-              </a>
+            <div class="project-actions" aria-label="Acciones de la guía de inteligencia artificial">
+              <a class="text-link" href="que-es-la-ia/">Abrir la guía</a>
+              <a class="text-link subtle" href="https://github.com/elcontemplador/estrategIA-lab/tree/main/docs/que-es-la-ia">Ver código</a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div>
-              <p class="project-type">Vibe coding y publicación móvil</p>
-              <h3>App estoica</h3>
-              <p>
-                Un ejemplo de cómo, ya a principios de 2026, era posible crear
-                una aplicación plenamente funcional y publicarla en Google Play
-                usando solo vibe coding. En este caso, el desarrollo se realizó
-                con Antigravity y el contexto se explica en estrategIA #128.
-              </p>
-              <div class="project-meta" aria-label="Datos del proyecto">
-                <span>Estado: publicada en Google Play</span>
-                <span>Ámbito: vibe coding, Antigravity y app móvil</span>
-              </div>
+          <article id="agora-2032" class="project-card" aria-labelledby="agora-title">
+            <figure class="project-media"><img src="assets/agora-preview.webp" alt="Entrada al prototipo narrativo Ágora 2032" width="640" height="400" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Explorar instituciones posibles</p>
+              <h3 id="agora-title">Ágora 2032</h3>
+              <p>Un prototipo narrativo inspirado en las historIAs de 2026. Explora cinco decisiones sobre servicios públicos, educación, cómputo, legislación y cultura en una ciudad ficticia.</p>
+              <div class="project-meta"><span>Prototipo</span><span>Navegador · ficción interactiva</span></div>
+              <details class="project-details"><summary>Contexto y condiciones</summary><p>Una simulación editorial de dilemas y consecuencias, sin modelos ni servicios de IA conectados. Sus resultados son ficticios. Materiales del LAB bajo CC BY-NC 4.0.</p><a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/LICENSE">Consultar la licencia del LAB</a></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="https://github.com/elcontemplador/estoicismo_diario">
-                Ver repositorio
-              </a>
+            <div class="project-actions" aria-label="Acciones de Ágora 2032">
+              <a class="text-link" href="agora2032/">Explorar Ágora</a>
+              <a class="text-link subtle" href="https://github.com/elcontemplador/estrategIA-lab/tree/main/docs/agora2032">Ver código</a>
+              <a class="context-link" href="historias/?temporada=2026#archivo">Leer la temporada 2026</a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div>
-              <p class="project-type">Análisis político con Codex</p>
-              <h3>Analizador de discursos</h3>
-              <p>
-                Prototipo creado con Codex para analizar discursos políticos,
-                identificar marcos argumentales y convertir el trabajo textual
-                en una herramienta útil para la comunicación institucional.
-              </p>
-              <div class="project-meta" aria-label="Datos del proyecto">
-                <span>Estado: prototipo público</span>
-                <span>Ámbito: Codex, análisis político y discurso</span>
-              </div>
+          <article id="app-estoica" class="project-card" aria-labelledby="estoica-title">
+            <figure class="project-media project-media-icon"><img src="assets/estoica-icon.webp" alt="Icono original de Estoicismo Diario" width="512" height="512" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">De una idea a una app</p>
+              <h3 id="estoica-title">App estoica</h3>
+              <p>Estoicismo Diario, una aplicación Android publicada en Google Play. Un ejemplo de desarrollo con Antigravity y vibe coding, explicado en estrategIA #128.</p>
+              <div class="project-meta"><span>Publicado</span><span>Android · Google Play</span></div>
+              <details class="project-details"><summary>Cómo se hizo y condiciones</summary><p>El contexto editorial relata su desarrollo con Antigravity a principios de 2026. El código puede consultarse, pero el repositorio no declara una licencia general de reutilización.</p><a href="https://github.com/elcontemplador/estoicismo_diario#readme">Consultar el proyecto</a></details>
             </div>
-            <div class="project-actions">
-              <a class="text-link" href="https://github.com/elcontemplador/analizador-discurso-politico">
-                Ver repositorio
-              </a>
+            <div class="project-actions" aria-label="Acciones de la App estoica">
+              <a class="text-link" href="https://play.google.com/store/apps/details?id=com.fernandonieto.estoicismodiario">Ver en Google Play</a>
+              <a class="text-link subtle" href="https://github.com/elcontemplador/estoicismo_diario">Ver código</a>
+              <a class="context-link" href="https://estrategiabyaleph.substack.com/p/estrategia-128-adios-al-chatbot-la">Leer el contexto · #128</a>
             </div>
           </article>
-        </div>
-      </section>
 
-      <section id="enfoque" class="section" aria-labelledby="enfoque-title">
-        <div class="section-heading">
-          <p class="section-kicker">Enfoque</p>
-          <h2 id="enfoque-title">Una mirada estratégica, rigurosa y práctica</h2>
-          <p>
-            Desde octubre de 2023, estrategIA analiza cada semana cómo la IA
-            transforma la toma de decisiones públicas, la comunicación política,
-            las campañas electorales, la administración, la regulación, la
-            seguridad, la educación, el trabajo y la forma en que las sociedades
-            imaginan su futuro. Lo hace lejos del entusiasmo acrítico y también
-            del alarmismo superficial.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span class="feature-number">01</span>
-            <h3>Qué cambia</h3>
-            <p>
-              Señales relevantes sobre IA, poder, instituciones, opinión
-              pública y transformación administrativa.
-            </p>
-          </article>
-          <article>
-            <span class="feature-number">02</span>
-            <h3>Por qué importa</h3>
-            <p>
-              Consecuencias políticas, democráticas, organizativas y culturales
-              de una tecnología que ya influye en decisiones públicas.
-            </p>
-          </article>
-          <article>
-            <span class="feature-number">03</span>
-            <h3>Cómo afecta</h3>
-            <p>
-              Capacidades, criterios, herramientas y riesgos para gobiernos,
-              administraciones, equipos de comunicación y consultores.
-            </p>
-          </article>
-          <article>
-            <span class="feature-number">04</span>
-            <h3>Qué hacer ya</h3>
-            <p>
-              Casos de uso, prototipos, prompts, lecturas y recursos para pasar
-              del diagnóstico a la experimentación responsable.
-            </p>
+          <article id="analizador-discursos" class="project-card" aria-labelledby="analizador-title">
+            <figure class="project-media"><img src="assets/analizador-preview.svg" alt="Ejemplo de salida HTML anotada del analizador de discursos" width="1160" height="720" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Analizar comunicación política</p>
+              <h3 id="analizador-title">Analizador de discursos</h3>
+              <p>Una herramienta local para explorar marcos argumentales y señalar fragmentos que merecen revisión. Ofrece resultados anotados y una descarga para Windows que funciona sin instalar Python.</p>
+              <div class="project-meta"><span>Prototipo</span><span>Windows · análisis local</span></div>
+              <details class="project-details"><summary>Límites y condiciones</summary><p>Creado con Codex. Las detecciones son candidatas: no verifica hechos ni determina la intención real del discurso. Código bajo MIT; materiales editoriales y visuales bajo CC BY-SA 4.0, salvo indicación distinta o derechos de terceros.</p><a href="https://github.com/elcontemplador/analizador-discurso-politico/blob/main/LICENSE">Consultar las licencias del proyecto</a></details>
+            </div>
+            <div class="project-actions" aria-label="Acciones del Analizador de discursos">
+              <a class="text-link" href="https://github.com/elcontemplador/analizador-discurso-politico/releases/tag/v0.1.1">Descargar para Windows<span class="action-note">v0.1.1 · ZIP · 9,5 MB</span></a>
+              <a class="text-link subtle" href="https://github.com/elcontemplador/analizador-discurso-politico">Ver código</a>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="recursos" class="section resources" aria-labelledby="resources-title">
         <div class="section-heading">
-          <p class="section-kicker">Canales y recursos</p>
-          <h2 id="resources-title">Dónde leer, seguir y explorar estrategIA</h2>
-          <p>
-            Además de la publicación semanal, ALEPH mantiene páginas de apoyo
-            con herramientas, buenas prácticas y prompts que amplían la utilidad
-            práctica de la newsletter.
-          </p>
+          <p class="section-kicker">Lecturas y recursos</p>
+          <h2 id="resources-title">Sigue una idea, encuentra una herramienta</h2>
+          <p>La newsletter, su edición inglesa y los recursos de ALEPH completan el laboratorio.</p>
         </div>
         <div class="resource-grid">
-          <a href="https://estrategiabyaleph.substack.com/">
-            <span>Newsletter principal</span>
-            <strong>estrategIA en Substack</strong>
-          </a>
-          <a href="https://estrategiabyaleph.substack.com/subscribe">
-            <span>Correo semanal</span>
-            <strong>Suscripción directa</strong>
-          </a>
-          <a href="https://www.linkedin.com/newsletters/estrategia-7201868200244834304/">
-            <span>Newsletter de ALEPH</span>
-            <strong>Seguir en LinkedIn</strong>
-          </a>
-          <a href="https://institucioneducativaaleph.com/investigacion-y-publicaciones/estrategia-newsletter-sobre-inteligencia-artificial-en-la-politica-y-el-gobierno-de-la-institucion-educativa-aleph/">
-            <span>Institución Educativa ALEPH</span>
-            <strong>Ficha de estrategIA</strong>
-          </a>
-          <a href="https://institucioneducativaaleph.com/encuentra-todas-las-herramientas-de-ia-mostradas-en-nuestra-newsletter-estrategia/">
-            <span>Repositorio práctico</span>
-            <strong>Herramientas recomendadas</strong>
-          </a>
-          <a href="https://institucioneducativaaleph.com/recopilacion-de-prompts-sobre-politica-y-gobierno-para-chatgpt-y-otros-modelos-de-ia/">
-            <span>Uso aplicado</span>
-            <strong>Prompts sobre política y gobierno</strong>
-          </a>
-          <a href="https://institucioneducativaaleph.com/recopilatorio-de-buenas-practicas-en-inteligencia-artificial-aplicada-a-politica-y-gobierno/">
-            <span>Aprendizaje institucional</span>
-            <strong>Buenas prácticas en IA pública</strong>
-          </a>
+          <a href="https://estrategiabyaleph.substack.com/"><span>Publicación original</span><strong>Leer estrategIA en español</strong><p>Artículos, actualidad y recursos sobre IA, política y gobierno.</p></a>
+          <a class="english-resource" href="https://elcontemplador.github.io/estrategia-english/"><span>English edition</span><strong>estrategIA en inglés <span aria-hidden="true">↗</span></strong><p>Archivo de artículos principales traducidos, con fechas, autoría y enlaces a los originales.</p></a>
+          <a href="https://www.linkedin.com/newsletters/estrategia-7201868200244834304/"><span>Otro canal de lectura</span><strong>Seguir en LinkedIn</strong><p>La newsletter de ALEPH en LinkedIn.</p></a>
+          <a href="https://institucioneducativaaleph.com/encuentra-todas-las-herramientas-de-ia-mostradas-en-nuestra-newsletter-estrategia/"><span>Aplicaciones</span><strong>Herramientas recomendadas</strong><p>Recopilación de herramientas presentadas en la newsletter.</p></a>
+          <a href="https://institucioneducativaaleph.com/recopilacion-de-prompts-sobre-politica-y-gobierno-para-chatgpt-y-otros-modelos-de-ia/"><span>Uso práctico</span><strong>Prompts sobre política y gobierno</strong><p>Encargos y ejemplos para orientar el trabajo con modelos de IA.</p></a>
+          <a href="https://institucioneducativaaleph.com/recopilatorio-de-buenas-practicas-en-inteligencia-artificial-aplicada-a-politica-y-gobierno/"><span>Aprendizaje institucional</span><strong>Buenas prácticas en IA pública</strong><p>Casos para explorar aplicaciones, condiciones y criterios de uso.</p></a>
         </div>
       </section>
 
-      <section class="section archive" aria-labelledby="contents-title">
-        <div class="section-heading">
-          <p class="section-kicker">Qué encontrarás</p>
-          <h2 id="contents-title">Tres perspectivas complementarias</h2>
-        </div>
-        <div class="perspective-grid">
-          <article>
-            <h3>Gobernanza y políticas públicas</h3>
-            <p>
-              Regulación, estrategias nacionales, usos de IA en administraciones
-              públicas, automatización, datos, transparencia, riesgos
-              democráticos y oportunidades para mejorar la acción de gobierno.
-            </p>
-          </article>
-          <article>
-            <h3>Comunicación, campañas y liderazgo político</h3>
-            <p>
-              Impacto de la IA generativa en la comunicación pública, la
-              propaganda, la segmentación, la creación de contenidos, la
-              consultoría política, la reputación institucional y la relación
-              entre ciudadanía y poder.
-            </p>
-          </article>
-          <article>
-            <h3>Herramientas, casos y criterio práctico</h3>
-            <p>
-              Aplicaciones útiles, estudios de caso, informes relevantes,
-              prompts y recursos pensados para responsables públicos,
-              consultores, docentes y equipos profesionales.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="method band" aria-labelledby="method-title">
-        <div class="content-grid">
+      <section id="equipo" class="section about" aria-labelledby="team-title">
+        <div class="about-layout">
           <div>
-            <p class="section-kicker">Propósito</p>
-            <h2 id="method-title">Mejores líderes, mejores instituciones.</h2>
+            <p class="section-kicker">Acerca de</p>
+            <h2 id="team-title">Una mirada política sobre la IA</h2>
+            <p id="enfoque">Desde octubre de 2023, estrategIA analiza cómo la IA cambia la política y el gobierno. Fue creada y está dirigida por <a href="https://www.fernandonieto.es/">Fernando Nieto Lobato</a>, editada por <a href="https://es.linkedin.com/in/pablomartindiez">Pablo Martín Diez</a> y revisada por <a href="https://www.linkedin.com/in/sofiagarciam">Sofía García Morales</a>, con el impulso de la Institución Educativa ALEPH.</p>
+            <p><a href="https://institucioneducativaaleph.com/investigacion-y-publicaciones/estrategia-newsletter-sobre-inteligencia-artificial-en-la-politica-y-el-gobierno-de-la-institucion-educativa-aleph/">Conocer el proyecto en ALEPH <span aria-hidden="true">↗</span></a></p>
+            <p class="contact">Para colaborar o patrocinar estrategIA, escribe a su editor: <a href="mailto:pablomartin@institucioneducativaaleph.com">pablomartin@institucioneducativaaleph.com</a>.</p>
           </div>
-          <p>
-            En el marco de ALEPH, estrategIA quiere ayudar a comprender uno de
-            los grandes desafíos de nuestro tiempo: cómo incorporar la
-            inteligencia artificial a la política y al gobierno sin renunciar al
-            criterio, la deliberación, la responsabilidad pública y el sentido
-            humano de la tecnología. La IA no sustituirá la necesidad de
-            liderazgo; más bien exigirá mejores líderes, mejores instituciones y
-            una comprensión más profunda de los cambios que ya están
-            transformando nuestras sociedades.
-          </p>
+          <a class="aleph-mark" href="https://institucioneducativaaleph.com/" aria-label="Institución Educativa ALEPH"><img src="assets/aleph-mark.webp" alt="Institución Educativa ALEPH" width="320" height="320" loading="lazy"></a>
         </div>
-      </section>
-
-      <section id="equipo" class="section team" aria-labelledby="team-title">
-        <div class="team-layout">
-          <div>
-            <p class="section-kicker">Quiénes somos</p>
-            <h2 id="team-title">Equipo editorial</h2>
-            <p>
-              estrategIA fue creada y está dirigida por
-              <a href="https://www.fernandonieto.es/">Fernando Nieto Lobato</a>,
-              director de Innovación Digital de la Institución Educativa ALEPH y
-              consultor estratégico especializado en inteligencia artificial
-              aplicada a la política, el gobierno y la comunicación pública.
-            </p>
-            <p>
-              La edición está a cargo de
-              <a href="https://es.linkedin.com/in/pablomartindiez">Pablo Martín Diez</a>
-              y cuenta con
-              <a href="http://www.linkedin.com/in/sofiagarciam">Sofía García Morales</a>
-              en la revisión y corrección editorial.
-            </p>
-            <p>
-              Quien desee patrocinar o colaborar con estrategIA, la newsletter
-              pionera en español sobre IA, política y gobierno, puede escribir a
-              su editor, Pablo Martín, en
-              <a href="mailto:pablomartin@institucioneducativaaleph.com">pablomartin@institucioneducativaaleph.com</a>.
-            </p>
-            <div class="profile-links">
-              <a href="https://www.fernandonieto.es/">Web de Fernando</a>
-              <a href="https://es.linkedin.com/in/fernandonietolobato">LinkedIn de Fernando</a>
-              <a href="https://es.linkedin.com/in/pablomartindiez">LinkedIn de Pablo</a>
-              <a href="http://www.linkedin.com/in/sofiagarciam">LinkedIn de Sofía</a>
-              <a href="https://institucioneducativaaleph.com/">Web de ALEPH</a>
-            </div>
-          </div>
-          <a class="aleph-card" href="https://institucioneducativaaleph.com/">
-            <img src="assets/aleph-logo.png" alt="ALEPH" width="1264" height="646" loading="lazy">
-            <span>Análisis, Liderazgo, Estudios Políticos y Humanismo</span>
-          </a>
+        <div class="about-notes">
+          <details id="uso" class="usage"><summary>Uso, licencias y cómo citar</summary><p>Los materiales de este repositorio se publican bajo <a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/LICENSE">CC BY-NC 4.0</a>, salvo los activos con <a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/docs/assets/ATTRIBUTIONS.md">condiciones y atribuciones propias</a>. Cada proyecto externo tiene sus propias condiciones. Poder consultar el código no concede por sí solo permiso para reutilizarlo; las atribuciones y los derechos de terceros se conservan.</p><p class="citation">Nieto Lobato, F. y Martín Diez, P. <cite>estrategIA lab</cite>. Institución Educativa ALEPH. <a href="https://elcontemplador.github.io/estrategIA-lab/">https://elcontemplador.github.io/estrategIA-lab/</a>.</p><a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/CITATION.cff">Consultar la ficha de cita</a></details>
+          <details class="changelog"><summary>Actualizaciones del laboratorio</summary><p><time datetime="2026-10-01">1 de octubre de 2026</time>: acceso a la edición inglesa, fichas con vistas previas y acciones directas, regreso de Ágora 2032 al catálogo y mejoras de lectura y navegación en móvil.</p></details>
         </div>
       </section>
 
       <section id="suscripcion" class="section subscribe" aria-labelledby="subscribe-title">
         <div class="subscribe-panel">
-          <p class="section-kicker">Suscripción</p>
-          <h2 id="subscribe-title">Recibe estrategIA</h2>
-          <p>
-            Una lectura periódica para seguir la evolución de la IA desde el
-            ángulo que importa a gobiernos, administraciones, comunicadores y
-            actores institucionales.
-          </p>
-          <div class="hero-actions center" aria-label="Opciones de suscripción">
-            <a class="button primary" href="https://estrategiabyaleph.substack.com/subscribe">
-              Recibe el próximo número
-            </a>
-            <a class="button secondary" href="https://www.linkedin.com/newsletters/estrategia-7201868200244834304/">
-              Seguir en LinkedIn
-            </a>
-          </div>
+          <h2 id="subscribe-title">La conversación continúa cada semana</h2>
+          <p>Recibe estrategIA en español: análisis, actualidad y recursos para comprender la IA desde la política y el gobierno.</p>
+          <a class="button subscribe-button" href="https://estrategiabyaleph.substack.com/subscribe">Recibir la newsletter</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <div>
-        <img src="assets/aleph-logo-white.png" alt="ALEPH" width="1264" height="646" loading="lazy">
-        <p>estrategIA lab, prototipos y repositorios abiertos de la newsletter.</p>
-      </div>
-      <p>
-        <a href="https://github.com/elcontemplador/estrategIA-lab">Repositorio de estrategIA lab</a>
-      </p>
+    <footer class="site-footer">
+      <div class="footer-brand"><img src="assets/aleph-mark-white.webp" alt="ALEPH" width="192" height="192" loading="lazy"><p>estrategIA lab · proyectos y recursos de IA, política y gobierno.</p></div>
+      <nav class="footer-links" aria-label="Enlaces del pie"><a href="https://github.com/elcontemplador/estrategIA-lab">Repositorio del LAB</a><a href="#uso">Uso y cita</a><a href="sitemap.xml">Mapa del sitio</a><a href="https://elcontemplador.github.io/estrategia-english/" lang="en">English edition</a></nav>
     </footer>
+    <script src="home.js" defer></script>
   </body>
 </html>
