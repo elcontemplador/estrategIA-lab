@@ -48,8 +48,15 @@ async function main() {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base, { waitUntil: 'networkidle' });
     check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
-    check(await page.locator('.project-card').count() === 7, 'Seven projects, including Agora, remain accessible');
+    check(await page.locator('.project-card').count() === 8, 'Eight projects, including the English article archive, remain accessible');
     check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
+    check(await page.locator('#laboratorio').isVisible(), 'The laboratory context is visible before the catalogue');
+    const ecosystem = await page.locator('.ecosystem').innerText();
+    check(['Substack', 'ALEPH', 'estrategIA lab', 'números completos en español'].every(x => ecosystem.includes(x)), 'The relationship between the newsletter, ALEPH and the laboratory is explained');
+    check(await page.locator('#archivo-ingles .project-scope').isVisible(), 'English archive scope is visible outside expandable details');
+    const englishScope = await page.locator('#archivo-ingles').innerText();
+    check(['artículos principales', 'números completos en español', 'tercer aniversario', 'lectores de otros países'].every(x => englishScope.includes(x)), 'English archive purpose and partial translation scope are explicit');
+    check(await page.locator('#archivo-ingles img').getAttribute('src') === 'assets/english-archive-preview.webp', 'The English project has its own preview');
     check(await page.locator('#analizador-discursos a[href*="releases/tag/v0.1.1"]').count() === 1, 'Windows download is visible');
     check(await page.locator('#app-estoica a[href*="play.google.com"]').count() === 1, 'Android store link is visible');
     check(await page.locator('[data-anniversary]').isVisible(), 'October anniversary promotion');
@@ -57,7 +64,7 @@ async function main() {
     for (const width of [320, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(base, { waitUntil: 'networkidle' });
-      for (const id of ['proyectos', 'recursos', 'equipo']) {
+      for (const id of ['laboratorio', 'proyectos', 'recursos', 'equipo']) {
         await page.locator(`nav a[href="#${id}"]`).first().click();
         check(await page.evaluate(id => {
           const header = document.querySelector('header');
@@ -153,8 +160,9 @@ async function main() {
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base);
-    check(await plain.locator('.project-card').count() === 7, 'All projects remain accessible without JavaScript');
+    check(await plain.locator('.project-card').count() === 8, 'All projects remain accessible without JavaScript');
     check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
+    check(await plain.locator('#laboratorio').isVisible() && await plain.locator('#archivo-ingles .project-scope').isVisible(), 'Editorial context and English scope remain visible without JavaScript');
     await plain.goto(base + 'que-es-la-ia/');
     const sections = plain.locator('.reveal');
     check(await sections.count() >= 12, 'Guide sections preserved');
