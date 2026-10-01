@@ -29,6 +29,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 - El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
 - La ribera del Molino, demo municipal en 3D: https://ribera-estrategia.netlify.app/ribera/
+- Archivo web de artículos principales en inglés: https://elcontemplador.github.io/estrategia-english/
 - Archivo historIAs: https://elcontemplador.github.io/estrategIA-lab/historias/
 - Guía de inteligencia artificial: https://elcontemplador.github.io/estrategIA-lab/que-es-la-ia/
 - Ágora 2032, prototipo narrativo: https://elcontemplador.github.io/estrategIA-lab/agora2032/
@@ -81,7 +82,7 @@ que existía solo en `gh-pages` y preservó los archivos y PDF publicados.
 - Substack: https://estrategiabyaleph.substack.com/
 - Suscripción: https://estrategiabyaleph.substack.com/subscribe
 - LinkedIn Newsletter: https://www.linkedin.com/newsletters/estrategia-7201868200244834304/
-- Edición inglesa: https://elcontemplador.github.io/estrategia-english/
+- Archivo de artículos principales en inglés: https://elcontemplador.github.io/estrategia-english/
 - Página en ALEPH: https://institucioneducativaaleph.com/investigacion-y-publicaciones/estrategia-newsletter-sobre-inteligencia-artificial-en-la-politica-y-el-gobierno-de-la-institucion-educativa-aleph/
 
 ## Autoría editorial
@@ -94,9 +95,14 @@ El contenido de este repositorio se publica bajo licencia Creative Commons Attri
 
 ## Portada y mantenimiento
 
-La portada sitúa el catálogo después de una presentación breve, con siete fichas de
-proyecto, vistas previas, requisitos, límites y acciones disponibles. La edición inglesa
-figura como recurso editorial, separada de los prototipos.
+La portada explica qué es estrategIA y cómo se relacionan la newsletter en Substack,
+la presentación y los recursos de ALEPH y este laboratorio. Ese contexto permanece
+visible antes del catálogo y conserva la mirada política y el propósito editorial.
+
+Las ocho fichas explican el propósito de los proyectos, con vistas previas, requisitos,
+límites y acciones disponibles. El archivo web en inglés figura como proyecto de acceso
+internacional a los artículos principales traducidos; su alcance se explica a la vista.
+No contiene el resto de secciones de los números completos ni otra suscripción semanal.
 
 `docs/home.js` añade solo mejoras progresivas: ajusta el margen de los enlaces internos
 a la cabecera y limita el destacado del tercer aniversario a octubre de 2026, en la zona

@@ -140,3 +140,19 @@ details[open] > summary { margin-bottom: 8px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Contexto editorial visible antes del catálogo. */
+.hero-context { max-width: 650px; margin: 16px 0 0; font-size: 1rem; line-height: 1.6; }
+.lab-context { background: #fff; border-bottom: 1px solid var(--line); }
+.context-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.context-columns h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.context-columns p { color: var(--muted); margin: 16px 0 0; }
+.ecosystem { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 30px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
+.ecosystem dt { font-weight: 800; }
+.ecosystem dd { margin: 8px 0 0; font-size: .9rem; color: var(--muted); }
+.team-heading { margin-top: 28px; font-size: 1.4rem; }
+.project-copy > p.project-purpose { margin-top: 12px; }
+.project-copy > p.project-scope { margin-top: 14px; padding-left: 12px; border-left: 3px solid var(--burgundy); font-size: .9rem; }
+@media (max-width: 820px) {
+  .context-columns, .ecosystem { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
