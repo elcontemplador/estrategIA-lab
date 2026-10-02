@@ -33,18 +33,32 @@ async function state(page) {
 }
 async function chapterPoint(page) {
   const chapter = page.locator('.chapter-nav a[href="#idea"]');
-  await chapter.evaluate(element => {
-    const box = element.getBoundingClientRect();
-    const nav = element.parentElement;
-    const navBox = nav.getBoundingClientRect();
-    nav.scrollLeft += box.left - navBox.left - (navBox.width - box.width) / 2;
-  });
+  // Scrolling the article schedules an active-chapter update, which can move
+  // this horizontal strip on its next animation frame. Let that finish before
+  // positioning the pointer; Linux WebKit can deliver the scroll event later.
   await settle(page);
-  const box = await chapter.boundingBox();
-  assert.ok(box, 'The chapter link has a visible bounding box');
-  const point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
-  assert.equal(await page.evaluate(({x, y}) => document.elementFromPoint(x, y)?.closest('a')?.hash, point), '#idea',
-    'The actual click hits La idea, including underneath the mobile index overlay');
+  let point;
+  let hit;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    await chapter.evaluate(element => {
+      const box = element.getBoundingClientRect();
+      const nav = element.parentElement;
+      const navBox = nav.getBoundingClientRect();
+      nav.scrollTo({left: nav.scrollLeft + box.left - navBox.left - (navBox.width - box.width) / 2, behavior: 'instant'});
+    });
+    await settle(page);
+    const box = await chapter.boundingBox();
+    assert.ok(box, 'The chapter link has a visible bounding box');
+    point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+    hit = await page.evaluate(({x, y}) => document.elementFromPoint(x, y)?.closest('a')?.hash, point);
+    if (hit !== '#idea') continue;
+    // Verify the exact same pointer position remains over the link after any
+    // pending scroll handlers. Do not force clicks through the index overlay.
+    await settle(page);
+    hit = await page.evaluate(({x, y}) => document.elementFromPoint(x, y)?.closest('a')?.hash, point);
+    if (hit === '#idea') return point;
+  }
+  assert.equal(hit, '#idea', 'The actual click hits La idea stably, including underneath the mobile index overlay');
   return point;
 }
 async function trial(browser, url, engine, width, mode) {
