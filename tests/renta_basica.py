@@ -124,6 +124,13 @@ def pdf_text(page, path):
 def wait_fragment(page, fragment):
     page.wait_for_function('(fragment)=>location.hash===fragment', arg=fragment)
 
+def wait_fragment_focus(page, fragment, selector):
+    # A completed click does not imply that the queued hashchange handler has
+    # revealed the destination and assigned focus yet (notably in Linux CI).
+    page.wait_for_function('''({fragment,selector})=>
+      location.hash===fragment && document.querySelector(selector)===document.activeElement
+    ''',arg={'fragment':fragment,'selector':selector},timeout=5000)
+
 def click_chapter(page, fragment):
     """Click the actual sticky link, avoiding the overlaid mobile index link."""
     chapter = page.locator(f'.chapter-nav a[href="{fragment}"]')
@@ -151,8 +158,13 @@ try:
         check('forecast_deep_link_opens',addition.locator('#aceleracion').evaluate('(e)=>e.open'))
         addition.goto(URL+'#fuentes')
         addition.locator('.index-link').click()
+        wait_fragment_focus(addition,'#indice','#indice summary')
         check('persistent_index_opens_and_focuses',addition.locator('#indice').evaluate('(e)=>e.open && e.querySelector("summary")===document.activeElement'))
         addition.locator('#indice a[href="#fiscalidad-ia"]').click()
+        addition.wait_for_function('''()=>{
+          const top=document.getElementById('fiscalidad-ia').getBoundingClientRect().top;
+          return location.hash==='#fiscalidad-ia' && top>=0 && top<innerHeight;
+        }''',timeout=5000)
         fiscal_y=addition.locator('#fiscalidad-ia').bounding_box()['y']
         check('index_reaches_fiscal_section',addition.evaluate('location.hash')=='#fiscalidad-ia' and 0<=fiscal_y<844)
         addition.evaluate('document.querySelectorAll("details").forEach(e=>e.open=true)')
@@ -240,6 +252,7 @@ try:
         citation=page.locator('#cita-kela-1')
         citation.focus()
         page.keyboard.press('Enter')
+        wait_fragment_focus(page,'#fuente-kela','#fuente-kela')
         check('citation_destination_focus',page.locator('#fuente-kela').evaluate('(e)=>e===document.activeElement'))
         page.go_back()
         page.wait_for_timeout(60)
@@ -250,9 +263,11 @@ try:
         citation.focus()
         page.keyboard.press('Enter')
         page.locator('#fuente-kela .source-return').click()
+        wait_fragment_focus(page,'#cita-kela-1','#cita-kela-1')
         check('citation_return_focus',citation.evaluate('(e)=>e===document.activeElement'))
         page.goto(URL+'#fuente-oecd')
         page.locator('#fuente-oecd .source-return').click()
+        wait_fragment_focus(page,'#cita-oecd-1','#cita-oecd-1')
         check('return_opens_details',page.locator('#cita-oecd-1').is_visible() and page.locator('#cita-oecd-1').evaluate('(e)=>e===document.activeElement'))
         check('all_sources_have_return',page.locator('.source-list li').count()==36 and page.locator('.source-return').count()==36)
         page.goto(URL+'#prepararse')
@@ -263,6 +278,7 @@ try:
         check('acceleration_access',page.locator('.chapter-nav a.active').get_attribute('href')=='#ia' and page.locator('#aceleracion').bounding_box()['y']>=0)
         page.locator('#cita-rsi2026-1').click()
         page.locator('#fuente-rsi2026 .source-return').click()
+        wait_fragment_focus(page,'#cita-rsi2026-1','#cita-rsi2026-1')
         check('new_reference_return',page.locator('#cita-rsi2026-1').evaluate('(e)=>e===document.activeElement'))
         # Reading can move far from a fragment already present in the URL.
         # Back must restore the new citation and position, not the older fragment.
