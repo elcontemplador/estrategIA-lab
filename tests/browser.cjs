@@ -133,6 +133,7 @@ async function main() {
     // The new monograph is served below the LAB base path, with portable downloads.
     await page.goto(base);
     await page.locator('#renta-basica a[href="renta-basica/"]').click();
+    await page.waitForLoadState('networkidle');
     check(page.url() === base + 'renta-basica/', 'Catalogue opens the monograph in the LAB');
     check(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://elcontemplador.github.io/estrategIA-lab/renta-basica/', 'Renta basica canonical route');
     for (const width of [320, 390, 768, 1440]) {
