@@ -3,6 +3,7 @@
 Requiere Playwright, PyMuPDF y Pillow. --output es la carpeta de evidencias.
 """
 from pathlib import Path
+from datetime import date
 import argparse
 import json
 import re
@@ -22,7 +23,14 @@ DIST=ROOT/'docs/renta-basica'
 OUT=args.output
 OUT.mkdir(parents=True,exist_ok=True)
 ORIGIN='https://elcontemplador.github.io/estrategIA-lab/renta-basica'
-EDITION=re.search(r'data-edition="(\d+)"',(DIST/'index.html').read_text(encoding='utf-8')).group(1)
+HTML=(DIST/'index.html').read_text(encoding='utf-8')
+METADATA=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',HTML,re.S).group(1))
+EDITION=str(METADATA['version'])
+MODIFIED=date.fromisoformat(METADATA['dateModified'])
+MONTHS=('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre')
+DATE_LONG=f'{MODIFIED.day} de {MONTHS[MODIFIED.month-1]} de {MODIFIED.year}'
+assert re.search(r'data-edition="(\d+)"',HTML).group(1)==EDITION, 'La edición HTML y los metadatos deben coincidir'
+assert METADATA['url']==ORIGIN+'/', 'La URL canónica debe coincidir con la de las descargas'
 
 MARKDOWN=r'''origin => {
   const skip='script,style,nav,input,button,noscript,.hero-actions,.download-links,.contents,.source-return,.scenario-tabs,.closing-actions,.visually-hidden,.table-hint,.range-extremes,.cost-bar,.key,.chain-index,.diagram-number,.scenario-letter,.stress-chain li>span,.roadmap li>span,[aria-hidden="true"]';
@@ -81,7 +89,7 @@ with sync_playwright() as pw:
     page.evaluate('document.querySelectorAll("details").forEach(e=>e.open=true)')
     markdown=page.evaluate(MARKDOWN,ORIGIN)
     expected_sources=page.locator('.source-list li a[href^="https"]').evaluate_all('(es)=>es.map(e=>e.href)')
-    markdown+=f'\n---\n\nEdición {EDITION} · 2 de octubre de 2026. Versión completa de la [web de renta básica de estrategIA]('+ORIGIN+'/).\n'
+    markdown+=f'\n---\n\nEdición {EDITION} · {DATE_LONG}. Versión completa de la [web de renta básica de estrategIA]('+ORIGIN+'/).\n'
     (DIST/'renta-basica-informe.md').write_text(markdown,encoding='utf-8')
     # Los fragmentos siguen siendo internos. Ningún enlace de descarga apunta al disco local.
     page.evaluate('''origin=>document.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href');if(h&&!h.startsWith('#')&&!/^(https?:|mailto:)/.test(h))a.href=new URL(h,origin+'/').href;})''',ORIGIN)
@@ -89,7 +97,7 @@ with sync_playwright() as pw:
         header_template='<div></div>',footer_template=f'<div style="width:100%;text-align:center;font:9px Arial;color:#62605e">estrategIA · Renta básica · Edición {EDITION} &nbsp; | &nbsp; <span class="pageNumber"></span> / <span class="totalPages"></span></div>',
         margin={'top':'15mm','bottom':'18mm','left':'15mm','right':'15mm'})
     with fitz.open(stream=pdf_data,filetype='pdf') as doc:
-        doc.set_metadata({'title':'Renta básica y la era de la IA · estrategIA','author':'Fernando Nieto Lobato','subject':f'Evidencia, fiscalidad y una agenda de preparación para gobiernos. Edición {EDITION}, 2 octubre 2026.','creator':'estrategIA · HTML canónico y Chromium'})
+        doc.set_metadata({'title':'Renta básica y la era de la IA · estrategIA','author':'Fernando Nieto Lobato','subject':f'Evidencia, fiscalidad y una agenda de preparación para gobiernos. Edición {EDITION}, {MODIFIED.isoformat()}.','creator':'estrategIA · HTML canónico y Chromium'})
         doc.save(DIST/'renta-basica-informe.pdf',garbage=4,deflate=True)
     browser.close()
 

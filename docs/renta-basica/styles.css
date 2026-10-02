@@ -407,3 +407,10 @@ summary{min-height:44px}
   .reading-key{margin-top:14px;padding-block:12px;break-inside:avoid}
   .pullquote{break-inside:avoid}
 }
+
+/* Impresión: permitir que los escenarios aprovechen el espacio de la introducción. */
+@media print{
+  .scenario-section .section-heading{margin-bottom:18px}
+  .scenario-panel,.scenario-panel[hidden]{break-inside:auto;padding:16px 0}
+  .scenario-title,.scenario-body dl>div{break-inside:avoid}
+}

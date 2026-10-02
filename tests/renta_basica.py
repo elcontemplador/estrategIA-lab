@@ -5,6 +5,7 @@ No network requests or mutation of the site's source files.
 """
 from pathlib import Path
 from html.parser import HTMLParser
+from datetime import date
 import argparse
 import hashlib
 import json
@@ -65,7 +66,10 @@ check('external_link_isolation', all(a.get('target') != '_blank' or 'noopener' i
 check('encoding', '\ufffd' not in html)
 origin='https://elcontemplador.github.io/estrategIA-lab/renta-basica'
 data=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',html,re.S).group(1))
-check('article_metadata',data['@type']=='Article' and data['version']=='9' and data['url']==origin+'/' and data['author']['name']=='Fernando Nieto Lobato' and data['dateModified']=='2026-10-02')
+modified = date.fromisoformat(data['dateModified'])
+published = date.fromisoformat(data['datePublished'])
+edition = re.search(r'Edición\s+(\d+)\s*·\s*<time datetime="([^"]+)"', html)
+check('article_metadata',data['@type']=='Article' and data['url']==origin+'/' and data['author']['name']=='Fernando Nieto Lobato' and published<=modified and bool(edition) and edition.group(1)==str(data['version']) and edition.group(2)==data['dateModified'])
 check('sharing_metadata',all(s in html for s in ['rel="canonical" href="'+origin+'/'+'"','property="og:image" content="'+origin+'/og.png"','name="twitter:card" content="summary_large_image"']))
 check('download_assets',all((DIST/p).is_file() for p in ['renta-basica-informe.pdf','renta-basica-informe.md','og.png']))
 png=(DIST/'og.png').read_bytes()
@@ -73,8 +77,13 @@ check('sharing_image_size',png[:8]==b'\x89PNG\r\n\x1a\n' and struct.unpack('>II'
 sitemap=ET.fromstring((ROOT/'docs/sitemap.xml').read_text(encoding='utf-8'))
 check('sitemap_and_robots',origin+'/' in [e.text for e in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')] and 'Sitemap: https://elcontemplador.github.io/estrategIA-lab/sitemap.xml' in (ROOT/'docs/robots.txt').read_text())
 md=(DIST/'renta-basica-informe.md').read_text(encoding='utf-8')
+months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+edition_label = f"Edición {data['version']}"
+edition_date = f'{modified.day} de {months[modified.month-1]} de {modified.year}'
+check('markdown_edition_matches_html',f'{edition_label} · {edition_date}' in md)
 new_probes=['51,8','Korinek y Lockwood','American A.I. Sovereign Wealth Fund Act','En 2 minutos','Seis entregables concretos','Mapping Tax Risks','Tres vías que cumplen funciones distintas','Recursos disponibles, calendario y sostenibilidad.','Publicar supuestos y revisarlos con datos observables.','superinteligencia artificial','aceleración autosostenida','rentas económicas','antes de 2030','postrabajo','rentas altas universales','Navier–Stokes']
 with fitz.open(DIST/'renta-basica-informe.pdf') as doc:
+    check('pdf_edition_matches_html',edition_label in doc.metadata.get('subject','') and data['dateModified'] in doc.metadata.get('subject',''))
     published_text=re.sub(r'\s+',' ',' '.join(p.get_text() for p in doc))
     check('downloads_complete',all(p.casefold() in md.casefold() and p.casefold() in published_text.casefold() for p in new_probes),{'pages':len(doc)})
     local_links=[l for p in doc for l in p.get_links() if str(l.get('uri','')).startswith('file:') or l.get('file')]
@@ -111,6 +120,24 @@ def pdf_text(page, path):
                     p.get_pixmap(matrix=fitz.Matrix(1.3, 1.3)).save(OUT / ('print_' + label + '.png'))
                     break
     return text, pages
+
+def wait_fragment(page, fragment):
+    page.wait_for_function('(fragment)=>location.hash===fragment', arg=fragment)
+
+def click_chapter(page, fragment):
+    """Click the actual sticky link, avoiding the overlaid mobile index link."""
+    chapter = page.locator(f'.chapter-nav a[href="{fragment}"]')
+    chapter.evaluate('''e=>{
+      const strip=e.parentElement,box=e.getBoundingClientRect(),nav=strip.getBoundingClientRect();
+      strip.scrollLeft+=box.left-nav.left-(nav.width-box.width)/2;
+    }''')
+    page.wait_for_function('''fragment=>{
+      const link=document.querySelector('.chapter-nav a[href="'+fragment+'"]'),r=link.getBoundingClientRect();
+      return document.elementFromPoint(r.left+r.width/2,r.top+r.height/2)?.closest('a')===link;
+    }''',arg=fragment)
+    box=chapter.bounding_box()
+    page.mouse.click(box['x']+box['width']/2,box['y']+box['height']/2)
+    wait_fragment(page,fragment)
 
 try:
     with sync_playwright() as pw:
@@ -247,7 +274,9 @@ try:
                 history_page.locator('#cita-imf-3').focus()
                 before_y=history_page.evaluate('scrollY')
                 history_page.keyboard.press('Enter')
+                wait_fragment(history_page,'#fuente-imf')
                 history_page.go_back()
+                wait_fragment(history_page,original_hash)
                 history_page.wait_for_timeout(100)
                 restored=history_page.evaluate('''()=>({y:scrollY,active:document.activeElement.id,top:document.activeElement.getBoundingClientRect().top,nav:document.querySelector('.chapter-nav').getBoundingClientRect().height})''')
                 history_page.keyboard.press('Tab')
@@ -270,15 +299,11 @@ try:
                 else: history_page.locator('#fuente-kela .source-return').click()
                 history_page.wait_for_timeout(100)
                 history_page.locator('#respuesta-rapida').evaluate('e=>e.scrollIntoView({block:"center",behavior:"instant"})')
-                chapter=history_page.locator('.chapter-nav a[href="#idea"]')
-                # Scroll only the horizontal chapter strip. Locator.click may
-                # otherwise reposition the page before activating a sticky link.
-                chapter.evaluate('e=>e.parentElement.scrollLeft=e.offsetLeft')
-                history_page.wait_for_timeout(50)
                 before_y=history_page.evaluate('scrollY')
-                box=chapter.bounding_box()
-                history_page.mouse.click(box['x']+box['width']/2,box['y']+box['height']/2)
+                previous_hash=history_page.evaluate('location.hash')
+                click_chapter(history_page,'#idea')
                 history_page.go_back()
+                wait_fragment(history_page,previous_hash)
                 history_page.wait_for_timeout(100)
                 after_y=history_page.evaluate('scrollY')
                 history_page.keyboard.press('Tab')
