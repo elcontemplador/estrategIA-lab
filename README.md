@@ -57,11 +57,16 @@ Antes de integrar cambios en `main`, con Python 3.12 y Node 22:
 ```sh
 npm ci --ignore-scripts
 npx playwright install chromium
+python -m pip install -r scripts/renta-basica-requirements.txt
+python -m playwright install chromium
+npx playwright install firefox webkit
 python tests/validate_site.py
 npm test
+node tests/renta_basica_navigation.cjs --output qa/renta-basica-navigation
+python tests/renta_basica.py --output qa/renta-basica
 ```
 
-Las pruebas se ejecutan sobre un servidor temporal y un navegador sin sesión personal.
+Las pruebas usan archivos locales o un servidor temporal y navegadores sin sesión personal.
 Comprueban los recursos existentes, las fichas y filtros del archivo, las descargas,
 las simulaciones, la adaptación móvil y la lectura de la guía sin JavaScript. No envían
 formularios ni invocan servicios de IA. No equivalen a una auditoría integral de accesibilidad.
@@ -110,6 +115,19 @@ python tests/renta_basica.py --output RUTA_A_EVIDENCIAS/qa
 Ambos comandos aceptan `--browser-channel msedge` para usar Microsoft Edge instalado.
 La QA comprueba estructura, enlaces, descargables, controles, navegación, adaptación
 móvil e impresión. Sus resultados no sustituyen la revisión editorial y visual.
+La versión y la fecha se contrastan entre el HTML, sus metadatos y las descargas;
+las comprobaciones no presuponen una edición concreta. La navegación se comprueba
+además en Chromium, Firefox y WebKit con `tests/renta_basica_navigation.cjs`.
+
+El workflow ejecuta ambas baterías antes de publicar y conserva sus informes y
+capturas como el artefacto `renta-basica-qa` durante 14 días, también si una prueba
+falla. WebKit automatizado no equivale a una prueba manual en Safari o iPhone.
+
+El sitemap del LAB está en `https://elcontemplador.github.io/estrategIA-lab/sitemap.xml`.
+El archivo `robots.txt` de este subdirectorio no gobierna el host de GitHub Pages:
+los buscadores consultan el de la raíz del dominio. Queda pendiente enviar el sitemap
+desde una propiedad verificada de Search Console o referenciarlo en la raíz, si se
+controla. Disponer de un sitemap no garantiza la indexación.
 
 ## Canales de estrategIA
 

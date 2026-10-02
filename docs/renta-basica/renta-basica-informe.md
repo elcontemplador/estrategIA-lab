@@ -10,7 +10,7 @@ Postrabajo significa aquí que vivir dignamente deja de depender de encontrar un
 
 Una publicación impulsada por la Institución Educativa ALEPH.
 
-Publicado: 26 septiembre 2026 Edición 9 · 2 octubre 2026
+Publicado: 26 septiembre 2026 Edición 10 · 2 octubre 2026
 
 La cadena que importa
 
@@ -869,7 +869,7 @@ Esta página es una síntesis de investigación abierta a revisión. La selecci�
 
     NBER · OpenResearch · 2024 · rev. agosto de 2026  [The Employment Effects of a Guaranteed Income: Experimental Evidence from Two U.S. States](https://www.nber.org/papers/w32719)
 
-    Ensayo de tres años. La estimación de −4,2 puntos mide la probabilidad de estar empleado: sección IV.B y tabla IV, panel A, medida combinada de registros y encuestas. Documento de trabajo revisable.
+    Ensayo de tres años. La estimación de −4,2 puntos mide la probabilidad de estar empleado: sección V.A, página 20 (21 del PDF), y tabla IV, panel A, medida combinada de registros y encuestas. Documento de trabajo revisable.
 
 4. 04
 
@@ -1007,7 +1007,7 @@ Esta página es una síntesis de investigación abierta a revisión. La selecci�
 
     Comisión Europea · marzo de 2026 · datos de 2024  [Data on Taxation Trends 2026](https://taxation-customs.ec.europa.eu/taxation/economic-analysis/data-taxation-trends_en)
 
-    Tabla 44: España 51,8 %. Incluye impuestos y cotizaciones sobre trabajo y determinadas rentas de no ocupados; no es porcentaje del PIB ni recaudación amenazada por IA.
+    Tabla 44: España 51,8 %. Incluye impuestos y cotizaciones sobre trabajo y determinadas rentas de no ocupados; no es porcentaje del PIB ni recaudación amenazada por IA.  [Consultar la tabla 44, página 46 del PDF.](https://taxation-customs.ec.europa.eu/document/download/aff28bc9-f9dc-4665-8510-72224c9e1ea9_en?filename=Indicators-List-of-tables_0.pdf#page=46)
 
 27. 27
 
@@ -1071,4 +1071,4 @@ Esta página es una síntesis de investigación abierta a revisión. La selecci�
 
 ---
 
-Edición 9 · 2 de octubre de 2026. Versión completa de la [web de renta básica de estrategIA](https://elcontemplador.github.io/estrategIA-lab/renta-basica/).
+Edición 10 · 2 de octubre de 2026. Versión completa de la [web de renta básica de estrategIA](https://elcontemplador.github.io/estrategIA-lab/renta-basica/).

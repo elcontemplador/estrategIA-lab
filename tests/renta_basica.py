@@ -5,6 +5,7 @@ No network requests or mutation of the site's source files.
 """
 from pathlib import Path
 from html.parser import HTMLParser
+from datetime import date
 import argparse
 import hashlib
 import json
@@ -65,7 +66,10 @@ check('external_link_isolation', all(a.get('target') != '_blank' or 'noopener' i
 check('encoding', '\ufffd' not in html)
 origin='https://elcontemplador.github.io/estrategIA-lab/renta-basica'
 data=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',html,re.S).group(1))
-check('article_metadata',data['@type']=='Article' and data['version']=='9' and data['url']==origin+'/' and data['author']['name']=='Fernando Nieto Lobato' and data['dateModified']=='2026-10-02')
+modified = date.fromisoformat(data['dateModified'])
+published = date.fromisoformat(data['datePublished'])
+edition = re.search(r'Edición\s+(\d+)\s*·\s*<time datetime="([^"]+)"', html)
+check('article_metadata',data['@type']=='Article' and data['url']==origin+'/' and data['author']['name']=='Fernando Nieto Lobato' and published<=modified and bool(edition) and edition.group(1)==str(data['version']) and edition.group(2)==data['dateModified'])
 check('sharing_metadata',all(s in html for s in ['rel="canonical" href="'+origin+'/'+'"','property="og:image" content="'+origin+'/og.png"','name="twitter:card" content="summary_large_image"']))
 check('download_assets',all((DIST/p).is_file() for p in ['renta-basica-informe.pdf','renta-basica-informe.md','og.png']))
 png=(DIST/'og.png').read_bytes()
@@ -73,8 +77,13 @@ check('sharing_image_size',png[:8]==b'\x89PNG\r\n\x1a\n' and struct.unpack('>II'
 sitemap=ET.fromstring((ROOT/'docs/sitemap.xml').read_text(encoding='utf-8'))
 check('sitemap_and_robots',origin+'/' in [e.text for e in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')] and 'Sitemap: https://elcontemplador.github.io/estrategIA-lab/sitemap.xml' in (ROOT/'docs/robots.txt').read_text())
 md=(DIST/'renta-basica-informe.md').read_text(encoding='utf-8')
+months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+edition_label = f"Edición {data['version']}"
+edition_date = f'{modified.day} de {months[modified.month-1]} de {modified.year}'
+check('markdown_edition_matches_html',f'{edition_label} · {edition_date}' in md)
 new_probes=['51,8','Korinek y Lockwood','American A.I. Sovereign Wealth Fund Act','En 2 minutos','Seis entregables concretos','Mapping Tax Risks','Tres vías que cumplen funciones distintas','Recursos disponibles, calendario y sostenibilidad.','Publicar supuestos y revisarlos con datos observables.','superinteligencia artificial','aceleración autosostenida','rentas económicas','antes de 2030','postrabajo','rentas altas universales','Navier–Stokes']
 with fitz.open(DIST/'renta-basica-informe.pdf') as doc:
+    check('pdf_edition_matches_html',edition_label in doc.metadata.get('subject','') and data['dateModified'] in doc.metadata.get('subject',''))
     published_text=re.sub(r'\s+',' ',' '.join(p.get_text() for p in doc))
     check('downloads_complete',all(p.casefold() in md.casefold() and p.casefold() in published_text.casefold() for p in new_probes),{'pages':len(doc)})
     local_links=[l for p in doc for l in p.get_links() if str(l.get('uri','')).startswith('file:') or l.get('file')]
@@ -112,6 +121,31 @@ def pdf_text(page, path):
                     break
     return text, pages
 
+def wait_fragment(page, fragment):
+    page.wait_for_function('(fragment)=>location.hash===fragment', arg=fragment)
+
+def wait_fragment_focus(page, fragment, selector):
+    # A completed click does not imply that the queued hashchange handler has
+    # revealed the destination and assigned focus yet (notably in Linux CI).
+    page.wait_for_function('''({fragment,selector})=>
+      location.hash===fragment && document.querySelector(selector)===document.activeElement
+    ''',arg={'fragment':fragment,'selector':selector},timeout=5000)
+
+def click_chapter(page, fragment):
+    """Click the actual sticky link, avoiding the overlaid mobile index link."""
+    chapter = page.locator(f'.chapter-nav a[href="{fragment}"]')
+    chapter.evaluate('''e=>{
+      const strip=e.parentElement,box=e.getBoundingClientRect(),nav=strip.getBoundingClientRect();
+      strip.scrollLeft+=box.left-nav.left-(nav.width-box.width)/2;
+    }''')
+    page.wait_for_function('''fragment=>{
+      const link=document.querySelector('.chapter-nav a[href="'+fragment+'"]'),r=link.getBoundingClientRect();
+      return document.elementFromPoint(r.left+r.width/2,r.top+r.height/2)?.closest('a')===link;
+    }''',arg=fragment)
+    box=chapter.bounding_box()
+    page.mouse.click(box['x']+box['width']/2,box['y']+box['height']/2)
+    wait_fragment(page,fragment)
+
 try:
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True, **({'channel':args.browser_channel} if args.browser_channel else {}))
@@ -124,8 +158,13 @@ try:
         check('forecast_deep_link_opens',addition.locator('#aceleracion').evaluate('(e)=>e.open'))
         addition.goto(URL+'#fuentes')
         addition.locator('.index-link').click()
+        wait_fragment_focus(addition,'#indice','#indice summary')
         check('persistent_index_opens_and_focuses',addition.locator('#indice').evaluate('(e)=>e.open && e.querySelector("summary")===document.activeElement'))
         addition.locator('#indice a[href="#fiscalidad-ia"]').click()
+        addition.wait_for_function('''()=>{
+          const top=document.getElementById('fiscalidad-ia').getBoundingClientRect().top;
+          return location.hash==='#fiscalidad-ia' && top>=0 && top<innerHeight;
+        }''',timeout=5000)
         fiscal_y=addition.locator('#fiscalidad-ia').bounding_box()['y']
         check('index_reaches_fiscal_section',addition.evaluate('location.hash')=='#fiscalidad-ia' and 0<=fiscal_y<844)
         addition.evaluate('document.querySelectorAll("details").forEach(e=>e.open=true)')
@@ -213,6 +252,7 @@ try:
         citation=page.locator('#cita-kela-1')
         citation.focus()
         page.keyboard.press('Enter')
+        wait_fragment_focus(page,'#fuente-kela','#fuente-kela')
         check('citation_destination_focus',page.locator('#fuente-kela').evaluate('(e)=>e===document.activeElement'))
         page.go_back()
         page.wait_for_timeout(60)
@@ -223,9 +263,11 @@ try:
         citation.focus()
         page.keyboard.press('Enter')
         page.locator('#fuente-kela .source-return').click()
+        wait_fragment_focus(page,'#cita-kela-1','#cita-kela-1')
         check('citation_return_focus',citation.evaluate('(e)=>e===document.activeElement'))
         page.goto(URL+'#fuente-oecd')
         page.locator('#fuente-oecd .source-return').click()
+        wait_fragment_focus(page,'#cita-oecd-1','#cita-oecd-1')
         check('return_opens_details',page.locator('#cita-oecd-1').is_visible() and page.locator('#cita-oecd-1').evaluate('(e)=>e===document.activeElement'))
         check('all_sources_have_return',page.locator('.source-list li').count()==36 and page.locator('.source-return').count()==36)
         page.goto(URL+'#prepararse')
@@ -236,6 +278,7 @@ try:
         check('acceleration_access',page.locator('.chapter-nav a.active').get_attribute('href')=='#ia' and page.locator('#aceleracion').bounding_box()['y']>=0)
         page.locator('#cita-rsi2026-1').click()
         page.locator('#fuente-rsi2026 .source-return').click()
+        wait_fragment_focus(page,'#cita-rsi2026-1','#cita-rsi2026-1')
         check('new_reference_return',page.locator('#cita-rsi2026-1').evaluate('(e)=>e===document.activeElement'))
         # Reading can move far from a fragment already present in the URL.
         # Back must restore the new citation and position, not the older fragment.
@@ -247,7 +290,9 @@ try:
                 history_page.locator('#cita-imf-3').focus()
                 before_y=history_page.evaluate('scrollY')
                 history_page.keyboard.press('Enter')
+                wait_fragment(history_page,'#fuente-imf')
                 history_page.go_back()
+                wait_fragment(history_page,original_hash)
                 history_page.wait_for_timeout(100)
                 restored=history_page.evaluate('''()=>({y:scrollY,active:document.activeElement.id,top:document.activeElement.getBoundingClientRect().top,nav:document.querySelector('.chapter-nav').getBoundingClientRect().height})''')
                 history_page.keyboard.press('Tab')
@@ -270,15 +315,11 @@ try:
                 else: history_page.locator('#fuente-kela .source-return').click()
                 history_page.wait_for_timeout(100)
                 history_page.locator('#respuesta-rapida').evaluate('e=>e.scrollIntoView({block:"center",behavior:"instant"})')
-                chapter=history_page.locator('.chapter-nav a[href="#idea"]')
-                # Scroll only the horizontal chapter strip. Locator.click may
-                # otherwise reposition the page before activating a sticky link.
-                chapter.evaluate('e=>e.parentElement.scrollLeft=e.offsetLeft')
-                history_page.wait_for_timeout(50)
                 before_y=history_page.evaluate('scrollY')
-                box=chapter.bounding_box()
-                history_page.mouse.click(box['x']+box['width']/2,box['y']+box['height']/2)
+                previous_hash=history_page.evaluate('location.hash')
+                click_chapter(history_page,'#idea')
                 history_page.go_back()
+                wait_fragment(history_page,previous_hash)
                 history_page.wait_for_timeout(100)
                 after_y=history_page.evaluate('scrollY')
                 history_page.keyboard.press('Tab')
