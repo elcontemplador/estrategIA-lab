@@ -48,7 +48,7 @@ async function main() {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base, { waitUntil: 'networkidle' });
     check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
-    check(await page.locator('.project-card').count() === 8, 'Eight projects, including the English article archive, remain accessible');
+    check(await page.locator('.project-card').count() === 9, 'Nine projects, including renta basica and the English archive, remain accessible');
     check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
     check(await page.locator('#laboratorio').isVisible(), 'The laboratory context is visible before the catalogue');
     const ecosystem = await page.locator('.ecosystem').innerText();
@@ -130,6 +130,34 @@ async function main() {
     for (const box of await page.locator('[data-checklist] input').all()) await box.check();
     check(await page.locator('[data-checklist-progress]').innerText() === '8 de 8 preguntas marcadas', 'Checklist counter');
 
+    // The new monograph is served below the LAB base path, with portable downloads.
+    await page.goto(base);
+    await page.locator('#renta-basica a[href="renta-basica/"]').click();
+    check(page.url() === base + 'renta-basica/', 'Catalogue opens the monograph in the LAB');
+    check(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://elcontemplador.github.io/estrategIA-lab/renta-basica/', 'Renta basica canonical route');
+    for (const width of [320, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Monograph overflow at ' + width + 'px');
+    }
+    check(await page.locator('#gross-value').innerText() === '96,0' && await page.locator('#balance-value').innerText() === '62,4 mil M€', 'Migrated calculator initial balance');
+    await page.locator('#payment').focus();
+    await page.keyboard.press('ArrowRight');
+    check(await page.locator('#balance-value').innerText() === '66,3 mil M€', 'Migrated calculator remains interactive');
+    await page.locator('#reset-calculator').click();
+    await page.goto(base + 'renta-basica/#fuente-kela');
+    check(await page.locator('#fuente-kela').isVisible(), 'Previously shared reference fragment survives migration');
+    await page.locator('#fuente-kela .source-return').click();
+    check(await page.locator('#cita-kela-1').evaluate(e => e === document.activeElement), 'Reference returns to the cited passage');
+    await page.goto(base + 'renta-basica/#escenario-desplazamiento');
+    check(await page.locator('#escenario-desplazamiento').isVisible(), 'Scenario deep link survives migration');
+    for (const [file, signature] of [['renta-basica-informe.pdf', '%PDF-'], ['renta-basica-informe.md', '# Preparar la renta básica']]) {
+      const response = await page.request.get(base + 'renta-basica/' + file);
+      const body = await response.body();
+      check(response.status() === 200 && (file.endsWith('.pdf') ? body.toString('utf8', 0, 5) === signature : body.toString('utf8').includes(signature)), 'Monograph download: ' + file);
+    }
+    await page.locator('.top-link').click();
+    check(page.url() === base, 'Monograph provides a working return to the LAB');
+
     await page.goto(base + 'agora2032/', { waitUntil: 'networkidle' });
     await page.locator('[data-go="laboratorio"]').click();
     await page.locator('[data-case-choice="detener"]').click();
@@ -160,9 +188,13 @@ async function main() {
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base);
-    check(await plain.locator('.project-card').count() === 8, 'All projects remain accessible without JavaScript');
+    check(await plain.locator('.project-card').count() === 9, 'All projects remain accessible without JavaScript');
     check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
     check(await plain.locator('#laboratorio').isVisible() && await plain.locator('#archivo-ingles .project-scope').isVisible(), 'Editorial context and English scope remain visible without JavaScript');
+    await plain.goto(base + 'renta-basica/');
+    check(await plain.locator('.source-list li').count() === 36, 'Monograph sources remain readable without JavaScript');
+    check(await plain.locator('#payment').isDisabled() && await plain.locator('.scenario-panel:visible').count() === 3, 'No-JavaScript reading mode remains honest and complete');
+    check(await plain.locator('a[href="renta-basica-informe.pdf"]').count() > 0, 'Monograph download remains accessible without JavaScript');
     await plain.goto(base + 'que-es-la-ia/');
     const sections = plain.locator('.reveal');
     check(await sections.count() >= 12, 'Guide sections preserved');

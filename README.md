@@ -27,6 +27,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
+- Renta básica en la era de la IA, monográfico sobre una posible transición hacia el postrabajo: https://elcontemplador.github.io/estrategIA-lab/renta-basica/
 - El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
 - La ribera del Molino, demo municipal en 3D: https://ribera-estrategia.netlify.app/ribera/
 - Archivo web de artículos principales en inglés: https://elcontemplador.github.io/estrategia-english/
@@ -77,6 +78,39 @@ cambio en `main` y deja que el mismo procedimiento la compruebe y publique.
 El cambio de publicación del 4 de septiembre de 2026 recuperó en `main/docs` la guía
 que existía solo en `gh-pages` y preservó los archivos y PDF publicados.
 
+## Monográfico de renta básica
+
+La fuente canónica es [`docs/renta-basica/index.html`](docs/renta-basica/index.html).
+El monográfico pide a los gobiernos estudiar seriamente la renta básica, la fiscalidad
+y la protección social ante una posible transición hacia el **postrabajo**. Distingue
+evidencia de pilotos, modelos, previsiones y propuestas de preparación.
+
+El PDF y el Markdown de `docs/renta-basica/` se derivan del mismo HTML mediante
+[`scripts/build_renta_basica_downloads.py`](scripts/build_renta_basica_downloads.py).
+No se editan por separado. Al modificar el contenido, conserva los identificadores de
+los apartados y las citas para mantener los enlaces internos y las referencias existentes.
+
+Instala las dependencias y el navegador de desarrollo:
+
+```sh
+python -m pip install -r scripts/renta-basica-requirements.txt
+python -m playwright install chromium
+```
+
+Regenera los descargables y ejecuta su comprobación específica desde la raíz del
+repositorio. Sustituye `RUTA_A_EVIDENCIAS` por una carpeta de trabajo fuera de `docs/`;
+`--output` guarda las evidencias, mientras el generador actualiza el PDF y el Markdown
+en `docs/renta-basica/`:
+
+```sh
+python scripts/build_renta_basica_downloads.py --output RUTA_A_EVIDENCIAS/descargas
+python tests/renta_basica.py --output RUTA_A_EVIDENCIAS/qa
+```
+
+Ambos comandos aceptan `--browser-channel msedge` para usar Microsoft Edge instalado.
+La QA comprueba estructura, enlaces, descargables, controles, navegación, adaptación
+móvil e impresión. Sus resultados no sustituyen la revisión editorial y visual.
+
 ## Canales de estrategIA
 
 - Substack: https://estrategiabyaleph.substack.com/
@@ -99,7 +133,7 @@ La portada explica qué es estrategIA y cómo se relacionan la newsletter en Sub
 la presentación y los recursos de ALEPH y este laboratorio. Ese contexto permanece
 visible antes del catálogo y conserva la mirada política y el propósito editorial.
 
-Las ocho fichas explican el propósito de los proyectos, con vistas previas, requisitos,
+Las nueve fichas explican el propósito de los proyectos, con vistas previas, requisitos,
 límites y acciones disponibles. El archivo web en inglés figura como proyecto de acceso
 internacional a los artículos principales traducidos; su alcance se explica a la vista.
 No contiene el resto de secciones de los números completos ni otra suscripción semanal.
@@ -113,3 +147,5 @@ siguen accesibles. No hay analítica ni llamadas a modelos de IA.
 La fecha de revisión de las fichas no es la fecha de creación o de publicación de cada
 proyecto. Actualícela cuando vuelva a comprobar el catálogo; no la regenere automáticamente.
 Conserve las capturas como vistas previas reales, los activos originales y sus atribuciones.
+La incorporación del monográfico de renta básica el 2 de octubre de 2026 se distingue
+de la revisión de las otras ocho fichas, realizada el 1 de octubre de 2026.
