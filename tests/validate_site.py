@@ -33,7 +33,7 @@ class Page(HTMLParser):
             self.refs.extend(x.strip().split()[0] for x in a['srcset'].split(','))
 
 pages = {p.relative_to(ROOT).as_posix(): Page(p.read_text(encoding='utf-8')) for p in ROOT.rglob('*.html')}
-for required in ('index.html', 'historias/index.html', 'que-es-la-ia/index.html', 'agora2032/index.html', '404.html', '.nojekyll'):
+for required in ('index.html', 'historias/index.html', 'que-es-la-ia/index.html', 'agora2032/index.html', 'renta-basica/index.html', '404.html', '.nojekyll'):
     if not (ROOT / required).is_file():
         errors.append(f'Missing page: {required}')
 
@@ -69,10 +69,33 @@ for name in ('historias_veraniegas_2024.pdf', 'historias_veraniegas_2025.pdf', '
     p = ROOT / 'historias' / 'descargas' / name
     if not p.is_file() or p.read_bytes()[:5] != b'%PDF-':
         errors.append(f'Missing or invalid PDF: {name}')
+# Migration regression: canonical route, complete downloadable edition and spelling.
+article = ROOT / 'renta-basica'
+html = (article / 'index.html').read_text(encoding='utf-8')
+md = (article / 'renta-basica-informe.md').read_text(encoding='utf-8')
+expected = SITE + 'renta-basica/'
+metadata = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1))
+edition = re.search(r'data-edition="(\d+)"', html).group(1)
+if metadata['url'] != expected or metadata['mainEntityOfPage'] != expected or ('rel="canonical" href="' + expected + '"') not in html:
+    errors.append('Renta basica canonical URL must point to its LAB route')
+if metadata['version'] != edition or f'Edición {edition}' not in md:
+    errors.append('Renta basica HTML and Markdown editions must agree')
+for name, text in [('HTML', html), ('Markdown', md)]:
+    if 'posttrabajo' in text.casefold() or 'postrabajo' not in text.casefold():
+        errors.append(f'Renta basica {name}: spelling must be postrabajo')
+    if 'renta-basica.elcontemplador.chatgpt.site' in text:
+        errors.append(f'Renta basica {name}: stale publication URL')
+pdf = article / 'renta-basica-informe.pdf'
+if not pdf.is_file() or pdf.read_bytes()[:5] != b'%PDF-':
+    errors.append('Missing or invalid renta basica PDF')
+source_urls = re.findall(r'<li id="fuente-[^"]+".*?<a href="(https[^"]+)"', html, re.S)
+if len(source_urls) != 36 or not all(u in md for u in source_urls):
+    errors.append('Renta basica Markdown must retain all 36 sources')
+
 for script in ROOT.rglob('*.js'):
     run = subprocess.run(['node', '--check', str(script)], capture_output=True, text=True)
     if run.returncode:
         errors.append(run.stderr)
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(pages)} HTML pages; internal HTML/CSS/manifest/sitemap references; four PDFs; JavaScript syntax.')
+print(f'PASS: {len(pages)} HTML pages; internal HTML/CSS/manifest/sitemap references; five PDFs; renta basica edition and sources; JavaScript syntax.')

@@ -5,6 +5,7 @@ este catálogo no cambia las condiciones de reutilización de los proyectos orig
 
 | Archivo | Procedencia | Condiciones |
 | --- | --- | --- |
+| `renta-basica-preview.webp` | Captura propia del [monográfico Renta básica en la era de la IA](https://elcontemplador.github.io/estrategIA-lab/renta-basica/), 2 de octubre de 2026. | Vista previa real de un recurso de este LAB. Conserva la autoría del monográfico y las atribuciones y derechos de sus fuentes. |
 | `analizador-preview.svg` | [Analizador de discursos: vista previa de HTML anotado](https://github.com/elcontemplador/analizador-discurso-politico/blob/main/docs/assets/annotated-html-preview.svg). Archivo original, sin modificaciones. | Material visual bajo [CC BY-SA 4.0](https://github.com/elcontemplador/analizador-discurso-politico/blob/main/LICENSE). Esta licencia se conserva y prevalece sobre la licencia general del LAB para este activo. |
 | `estoica-icon.webp` | [Icono original de Estoicismo Diario](https://github.com/elcontemplador/estoicismo_diario/blob/main/assets/images/icon.png), reducido y convertido a WebP para su presentación. | El proyecto no declara una licencia general de reutilización. No se añade una licencia nueva a este icono. |
 | `english-archive-preview.webp` | Captura del [archivo web de artículos principales de estrategIA en inglés](https://elcontemplador.github.io/estrategia-english/), 1 de octubre de 2026. | Conserva los derechos de los textos y de los activos originales. La presencia en el LAB no añade una licencia al proyecto externo. |
