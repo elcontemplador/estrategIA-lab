@@ -27,6 +27,8 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
+- Los memes de estrategIA: archivo visual de 184 imágenes de los primeros 158 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/
+
 - Renta básica en la era de la IA, monográfico sobre una posible transición hacia el postrabajo: https://elcontemplador.github.io/estrategIA-lab/renta-basica/
 - El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
 - La ribera del Molino, demo municipal en 3D: https://ribera-estrategia.netlify.app/ribera/
@@ -167,3 +169,7 @@ proyecto. Actualícela cuando vuelva a comprobar el catálogo; no la regenere au
 Conserve las capturas como vistas previas reales, los activos originales y sus atribuciones.
 La incorporación del monográfico de renta básica el 2 de octubre de 2026 se distingue
 de la revisión de las otras ocho fichas, realizada el 1 de octubre de 2026.
+
+## Mantener el archivo de memes
+
+El catálogo editable, los criterios de selección y el proceso de actualización están en [data/memes/README.md](data/memes/README.md). Las fichas se generan con `python scripts/build_memes.py`; `node tests/memes.cjs` comprueba la galería, las fichas y la accesibilidad automática.

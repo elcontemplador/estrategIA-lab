@@ -48,7 +48,8 @@ async function main() {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base, { waitUntil: 'networkidle' });
     check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
-    check(await page.locator('.project-card').count() === 9, 'Nine projects, including renta basica and the English archive, remain accessible');
+    check(await page.locator('.project-card').count() === 10, 'Ten projects, including the meme archive, remain accessible');
+    check(await page.locator('#archivo-memes a[href="memes/"]').count() === 1, 'The meme archive is linked from the LAB');
     check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
     check(await page.locator('#laboratorio').isVisible(), 'The laboratory context is visible before the catalogue');
     const ecosystem = await page.locator('.ecosystem').innerText();
@@ -189,7 +190,7 @@ async function main() {
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base);
-    check(await plain.locator('.project-card').count() === 9, 'All projects remain accessible without JavaScript');
+    check(await plain.locator('.project-card').count() === 10, 'All projects remain accessible without JavaScript');
     check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
     check(await plain.locator('#laboratorio').isVisible() && await plain.locator('#archivo-ingles .project-scope').isVisible(), 'Editorial context and English scope remain visible without JavaScript');
     await plain.goto(base + 'renta-basica/');

@@ -34,6 +34,8 @@ jobs:
         run: python tests/validate_site.py
       - name: Probar recorridos y accesibilidad basica
         run: npm test
+      - name: Probar archivo de memes
+        run: node tests/memes.cjs
       - name: Probar navegacion de renta basica en tres motores
         run: node tests/renta_basica_navigation.cjs --output qa/renta-basica-navigation
       - name: Comprobar lectura, controles y PDF de renta basica
