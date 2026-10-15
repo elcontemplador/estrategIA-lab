@@ -166,6 +166,11 @@ siguen accesibles. No hay analítica ni llamadas a modelos de IA.
 
 La fecha de revisión de las fichas no es la fecha de creación o de publicación de cada
 proyecto. Actualícela cuando vuelva a comprobar el catálogo; no la regenere automáticamente.
+Cada ficha muestra también el mes y año de su primera publicación accesible. Las fuentes
+y los criterios están en `data/project-launches.json`. No cambie esa fecha al actualizar
+un proyecto o incorporarlo al catálogo. En archivos, corresponde al lanzamiento de la web,
+no a las fechas de sus contenidos. Mantenga el dato en el HTML de portada; la ficha de memes
+lo recupera de ese JSON al ejecutar `scripts/build_memes.py`.
 Conserve las capturas como vistas previas reales, los activos originales y sus atribuciones.
 La incorporación del monográfico de renta básica el 2 de octubre de 2026 se distingue
 de la revisión de las otras ocho fichas, realizada el 1 de octubre de 2026.

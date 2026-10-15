@@ -1,0 +1,56 @@
+{
+  "verifiedOn": "2026-10-15",
+  "criterion": "Mes de primera publicación accesible del proyecto enlazado, no de creación del repositorio, anuncio de un prototipo, incorporación al LAB ni publicación de sus contenidos originales.",
+  "projects": {
+    "archivo-memes": {
+      "month": "2026-10",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/38689345136"],
+      "note": "Primer despliegue del archivo: 15 de octubre de 2026. Los memes originales son anteriores."
+    },
+    "renta-basica": {
+      "month": "2026-10",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/36990363572"],
+      "note": "Primer despliegue en main del monográfico: 2 de octubre de 2026."
+    },
+    "reto-estrategia": {
+      "month": "2026-10",
+      "evidence": ["https://github.com/elcontemplador/reto-estrategia-ia/actions/runs/36837269227"],
+      "note": "Primera ejecución de despliegue exitosa: 1 de octubre de 2026."
+    },
+    "ribera-del-molino": {
+      "month": "2026-09",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/33959377436", "https://estrategiabyaleph.substack.com/p/estrategia-154-gpt-6-astra-y-la-nueva"],
+      "note": "Publicación online documentada el 5 de septiembre de 2026 en Netlify; enlazada desde LAB ese mismo día y presentada en la newsletter del 9 de septiembre."
+    },
+    "historias": {
+      "month": "2026-08",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/32351384173"],
+      "note": "Primer despliegue del archivo web: 20 de agosto de 2026. No se utiliza la fecha de los relatos, que empiezan en 2024."
+    },
+    "guia-ia": {
+      "month": "2026-06",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/27188447673"],
+      "note": "Primer despliegue de la guía desde la antigua rama de publicación gh-pages: 9 de junio de 2026. Su traslado posterior a main/docs no es el lanzamiento."
+    },
+    "agora-2032": {
+      "month": "2026-06",
+      "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/27814468857"],
+      "note": "Primera demo desplegada: 19 de junio de 2026. Su ocultación temporal en portada y posterior regreso no cambian el lanzamiento."
+    },
+    "app-estoica": {
+      "month": "2026-01",
+      "evidence": ["https://www.fernandonieto.es/de-un-tweet-a-una-app-la-evolucion-de-mi-pequeno-side-project-sobre-estoicismo-con-ayuda-de-la-ia/"],
+      "note": "Anuncio del autor el 26 de enero de 2026, con enlace público a la app en Google Play. La historia de las citas y del proyecto social anterior no fecha el lanzamiento de la app."
+    },
+    "analizador-discursos": {
+      "month": "2026-06",
+      "evidence": ["https://github.com/elcontemplador/analizador-discurso-politico/releases/tag/v0.1.0"],
+      "note": "Primera release pública v0.1.0: 1 de junio de 2026. La presentación del prototipo en marzo mostraba su funcionamiento, sin publicar todavía una versión descargable."
+    },
+    "archivo-ingles": {
+      "month": "2026-09",
+      "evidence": ["https://github.com/elcontemplador/estrategia-english/actions/runs/36585629075"],
+      "note": "Primer despliegue del archivo web: 29 de septiembre de 2026. No confundir con los artículos originales ni con su incorporación al catálogo del LAB en octubre."
+    }
+  }
+}

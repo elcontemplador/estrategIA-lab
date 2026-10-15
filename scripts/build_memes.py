@@ -7,6 +7,7 @@ OUT=ROOT/'docs/memes';SITE='https://elcontemplador.github.io/estrategIA-lab/';BA
 catalog=json.loads((ROOT/'data/memes/catalog.json').read_text(encoding='utf-8'))
 items=sorted(catalog['items'],key=lambda x:(-x['issue'],x['order']))
 latest=items[0]
+launch_month=json.loads((ROOT/'data/project-launches.json').read_text(encoding='utf-8'))['projects']['archivo-memes']['month']
 cutoff=catalog['cutoffIssue']
 assert latest['issue']<=cutoff and latest['date']<=catalog['cutoffDate'], 'Catalogue cutoff must cover every published piece'
 TAGS={'politica':'Política y gobierno','trabajo':'Trabajo y vida cotidiana','usar-ia':'Usos y capacidades de la IA','poder':'Poder y empresas','regulacion':'Regulación y riesgos','informacion':'Información y creatividad'}
@@ -54,7 +55,7 @@ for idx,x in enumerate(items):
 home=ROOT/'docs/index.html';text=home.read_text(encoding='utf-8')
 new=f'''          <article id="archivo-memes" class="project-card" aria-labelledby="memes-title">
             <figure class="project-media"><img src="memes/assets/{latest['id']}-thumb.webp" alt="{esc(latest['alt'],quote=True)}" width="{latest['width']}" height="{latest['height']}" loading="lazy" style="object-fit:contain"></figure>
-            <div class="project-copy"><p class="project-type">Mirar la IA con humor</p><h3 id="memes-title">Los memes de estrategIA</h3><p>{len(items)} memes y viñetas de nuestros primeros {cutoff} números. Las imágenes completas, con una explicación breve de su contexto y un enlace a la newsletter en la que aparecieron. Busca una frase, un tema o una edición y recorre lo que hemos contado sobre IA, política y gobierno.</p><div class="project-meta"><span>Archivo visual</span><span>Navegador · sin cuenta</span></div></div>
+            <div class="project-copy"><p class="project-type">Mirar la IA con humor</p><h3 id="memes-title">Los memes de estrategIA</h3><p>{len(items)} memes y viñetas de nuestros primeros {cutoff} números. Las imágenes completas, con una explicación breve de su contexto y un enlace a la newsletter en la que aparecieron. Busca una frase, un tema o una edición y recorre lo que hemos contado sobre IA, política y gobierno.</p><div class="project-meta"><span>Archivo visual</span><span>Navegador · sin cuenta</span></div><p class="project-launch">Lanzamiento · <time datetime="{launch_month}">{MONTHS[int(launch_month[5:])-1]} de {launch_month[:4]}</time></p></div>
             <div class="project-actions" aria-label="Acciones del archivo de memes"><a class="text-link" href="memes/">Explorar los memes</a><a class="context-link" href="memes/#sobre-el-archivo">Sobre el archivo</a></div>
           </article>
 '''
