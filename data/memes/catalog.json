@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 158,
-  "cutoffDate": "2026-10-07",
+  "cutoffIssue": 159,
+  "cutoffDate": "2026-10-14",
   "compiledDate": "2026-10-15",
   "items": [
     {
@@ -16,7 +16,7 @@
       "height": 500,
       "sha256": "44be4cc10fdb49f5d6bcb03cdc0e5738f0eda7eeb89f94cba897f865d12ed43f",
       "title": "Creer, compartir y verificar",
-      "context": "El primer número abordaba la desinformación amplificada por la IA. La plantilla de Drake contrapone aceptar noticias falsas y utilizar herramientas para contrastarlas. La newsletter documenta que el meme se creó con un complemento de GPT-4 dedicado a generar memes.",
+      "context": "El primer número trataba de cómo la IA facilita la creación de noticias, imágenes y voces falsas. El meme plantea usar esa misma tecnología para contrastar información antes de creerla. La newsletter lo creó con un complemento de GPT-4 para generar memes.",
       "alt": "Drake rechaza una opción con la mano y aprueba la segunda señalándola.",
       "transcript": "CREER EN FAKE NEWS\nUSAR IA PARA VERIFICAR INFORMACIÓN",
       "tags": [
@@ -37,7 +37,7 @@
       "height": 600,
       "sha256": "ce8278800abab1734731db02128fa48723eddeb9a1e3f4abe2ec14d84d9c142c",
       "title": "Una discusión sobre las reglas",
-      "context": "El debate entre regular la IA y proteger la innovación se convierte en una discusión cada vez más acalorada. Publicado junto a una reflexión sobre la contención tecnológica y el papel de los gobiernos, el remate propone combinar ambos objetivos.",
+      "context": "¿Cómo poner reglas a la IA sin frenar sus avances? Esa era una de las preguntas del número, dedicado al papel de los gobiernos. Los dos personajes discuten como si hubiera que elegir entre seguridad e innovación, hasta proponer que ambas vayan juntas.",
       "alt": "Seis viñetas muestran a dos hombres discutiendo en una oficina y levantándose de sus sillas.",
       "transcript": "Necesitamos regular la IA\nNo, eso sofocará la innovación\nLa falta de regulación es peligrosa\nLa innovación sin ética es peligrosa\nENTONCES, ¿QUÉ HACEMOS?\nREGULAR CON ÉTICA Y FOMENTAR LA INNOVACIÓN",
       "tags": [
@@ -58,7 +58,7 @@
       "height": 896,
       "sha256": "c253641cf489725a04de52a1123c4ea6129d0ea99f917e9af63e8917bd01800c",
       "title": "Gobiernos ante dos botones",
-      "context": "La preparación de los gobiernos para la IA aparece como una elección que debería ser sencilla. La indecisión del personaje acentúa la pregunta del número: qué capacidades necesita la política para intervenir en el desarrollo tecnológico.",
+      "context": "El número defendía que los gobiernos necesitan conocimientos y personal preparado para decidir sobre la IA. El personaje duda entre dos botones aunque las etiquetas parecen ofrecer una elección obvia: estar preparado o afrontar los cambios sin esa preparación.",
       "alt": "Un personaje suda ante dos botones rojos etiquetados con gobiernos preparados y gobiernos faltos de preparación.",
       "transcript": "Gobiernos preparados para la IA\nGobiernos faltos de preparación",
       "tags": [
@@ -79,7 +79,7 @@
       "height": 848,
       "sha256": "01d14f8d59540395c599adf1deb4b44589d1e80a3d976305e81b624fab096e68",
       "title": "Cuando la IA aprende a ver",
-      "context": "La escalera de cerebros cada vez más luminosos recorre las funciones de GPT-4 hasta su capacidad de interpretar imágenes. El número exploraba aplicaciones políticas de esa visión; la exageración visual expresa el entusiasmo de aquel momento por las nuevas herramientas.",
+      "context": "En octubre de 2023, GPT-4 empezaba a interpretar imágenes además de texto. El meme recorre sus nuevas funciones: ejecutar código para trabajar con datos, conectarse a otras herramientas y, finalmente, «ver». Los cerebros cada vez más luminosos exageran el entusiasmo por cada avance.",
       "alt": "Cuatro cabezas con cerebros progresivamente más luminosos acompañan una lista de funciones de GPT-4.",
       "transcript": "Usar GPT-4\nUsar GPT-4 con code interpreter\nUsar GPT-4 con plugins\nUsar GPT-4 V(ision)",
       "tags": [
@@ -98,8 +98,8 @@
       "width": 557,
       "height": 500,
       "sha256": "566b7716bb6cc9611ffc56984712369701cfb7698b0f9f5681feac357be9acfd",
-      "title": "La mariposa de la supremacía",
-      "context": "La pregunta sobre la supremacía en IA acompaña un número dedicado al posible liderazgo tecnológico de China. La conocida plantilla de la mariposa ironiza sobre la seguridad con la que Occidente interpreta su propia posición.",
+      "title": "¿Seguro que seguimos por delante?",
+      "context": "El número preguntaba si China podía encabezar la siguiente etapa del desarrollo tecnológico. En la imagen, Occidente señala una mariposa y cree reconocer su propia superioridad en IA. La confusión se burla de dar por seguro un liderazgo que otros países disputan.",
       "alt": "Un personaje de animación, identificado como Occidente, señala una mariposa y formula una pregunta.",
       "transcript": "OCCIDENTE\n¿ES ESTO SUPREMACÍA EN IA?",
       "tags": [
@@ -119,7 +119,7 @@
       "height": 500,
       "sha256": "489a66e346e6a8f0bef03ecd7feee91908192fe140a4923a2fb1b6126a6d2294",
       "title": "Detectar el fuego a tiempo",
-      "context": "Entre los inventos de IA destacados por el número figuraba ALERTCalifornia. El contraste entre esperar una detección humana y emplear el sistema resume, mediante la plantilla de Drake, una aplicación concreta de la tecnología a la prevención de incendios.",
+      "context": "ALERTCalifornia utiliza cámaras e IA para detectar incendios forestales cuando están empezando. El número lo incluía entre los inventos destacados por la revista Time en 2023. Drake prefiere ese aviso temprano a esperar a que alguien vea el fuego y dé la alarma.",
       "alt": "Drake rechaza esperar la detección humana de un incendio y aprueba recurrir a ALERTCalifornia.",
       "transcript": "ESPERAR A QUE LOS HUMANOS DETECTEN EL INCENDIO\nUSAR ALERTCALIFORNIA PARA UNA DETECCIÓN TEMPRANA",
       "tags": [
@@ -160,7 +160,7 @@
       "height": 414,
       "sha256": "12383861034b59264bf61eef36f15f9b713ccc927d464059b4d1dc3ea7a896a7",
       "title": "Dudas después de Bletchley",
-      "context": "La Declaración de Bletchley aparece como referencia a la conferencia sobre seguridad de la IA tratada en aquel número. Fry, el personaje de Futurama, encarna la incertidumbre entre los temores tecnológicos y las expectativas depositadas en los acuerdos internacionales.",
+      "context": "La Declaración de Bletchley fue un compromiso internacional para colaborar frente a los riesgos de la IA, firmado en noviembre de 2023. Fry, de Futurama, duda entre temer que las máquinas nos controlen y confiar en que ese acuerdo baste para protegernos.",
       "alt": "Fry entrecierra los ojos, desconfiado, entre dos frases sobre el control de la IA y la Declaración de Bletchley.",
       "transcript": "NO ESTOY SEGURO SI LA IA NOS CONTROLARÁ\nO SI LA DECLARACIÓN DE BLETCHLEY NOS SALVARÁ",
       "tags": [
@@ -181,7 +181,7 @@
       "height": 499,
       "sha256": "38ced5973b16ce955c563f0614194b2b71873657ba9d49f733c13c92c8a4b1a6",
       "title": "La sorpresa después de ignorar",
-      "context": "Pikachu sorprendido representa una consecuencia previsible que se recibe como si fuera inesperada. En el contexto de la conferencia sobre seguridad de la IA, la pieza subraya la contradicción de ignorar pautas éticas y extrañarse después de los resultados.",
+      "context": "El número abordaba cómo prevenir daños causados por la IA y qué responsabilidades debían asumir empresas y gobiernos. Pikachu pone cara de sorpresa después de ignorar las precauciones: una reacción desproporcionada ante consecuencias que podían haberse previsto.",
       "alt": "Pikachu aparece con los ojos abiertos y la boca entreabierta bajo dos frases sobre ignorar pautas éticas.",
       "transcript": "CUANDO IGNORAS LAS PAUTAS éTICAS DE LA IA\nY LUEGO TE SORPRENDES POR LAS CONSECUENCIAS",
       "tags": [
@@ -201,7 +201,7 @@
       "height": 500,
       "sha256": "7ba4ad5b6ce999d444bb3dde61360a0f3969aa06090f377e97bf385da92b4452",
       "title": "Una actualización para la democracia",
-      "context": "El dinosaurio pensativo lleva la idea de los agentes de IA hasta el gobierno. La pregunta es una provocación humorística sobre la relación entre capacidad técnica y democracia, publicada en una edición que examinaba la visión de Bill Gates sobre los agentes.",
+      "context": "Un agente de IA es un asistente que puede encargarse de tareas, además de responder preguntas. El número exploraba la visión de Bill Gates sobre estos asistentes. El dinosaurio lleva la idea al extremo y pregunta qué pasaría si también pudieran gobernar mejor que nosotros.",
       "alt": "Un velocirraptor dibujado sostiene una garra junto al mentón mientras plantea una pregunta.",
       "transcript": "SI UN AGENTE DE IA PUEDE GOBERNAR MEJOR\n¿SIGNIFICA ESO QUE LA DEMOCRACIA NECESITA UNA ACTUALIZACIÓN?",
       "tags": [
@@ -222,7 +222,7 @@
       "height": 718,
       "sha256": "790edba5cac4ba0832d1d2b4523258909f508986ab7d218df78ea985e25e87d9",
       "title": "El Risitas y la crisis de OpenAI",
-      "context": "La newsletter recurrió por primera vez a un meme ajeno: un vídeo de El Risitas con subtítulos sobre la crisis de liderazgo de OpenAI. Atribuía la pieza a Matt Griswold y señalaba que Elon Musk la había compartido. Aquí se conserva la captura publicada.",
+      "context": "Tras el despido de Sam Altman en noviembre de 2023, Microsoft anunció que lo contrataría, junto a otros miembros de OpenAI. El vídeo de El Risitas, atribuido a Matt Griswold y compartido por Elon Musk, bromeaba sobre esa oportunidad empresarial. Esta es la captura publicada; «Satya» es Satya Nadella, el jefe de Microsoft de aquel momento.",
       "alt": "Captura de una publicación de Elon Musk con un vídeo pausado de El Risitas y un subtítulo en inglés.",
       "transcript": "Elon Musk @elonmusk · 16h\nThen Satya appears and raptures the whole fucking company!\n0:20 / 1:39\nDe Matt Griswold",
       "tags": [
@@ -242,7 +242,7 @@
       "height": 1597,
       "sha256": "5f10985dc450be4bd72ee50561b9ee3bc3d12c9231fd0c0e310e2e3ea1a59e95",
       "title": "Juego de tronos en OpenAI",
-      "context": "Un montaje transforma la lucha de poder de OpenAI en un cartel de Juego de tronos. La captura conserva la publicación de Edmond Yang y se incluyó como segunda pieza humorística del número dedicado a aquella crisis empresarial.",
+      "context": "El despido de Sam Altman abrió una lucha por el control de OpenAI en noviembre de 2023. Este montaje de Edmond Yang convierte a los protagonistas empresariales en personajes de Juego de tronos, una serie marcada por alianzas, traiciones y disputas de poder.",
       "alt": "Cartel de fantasía con rostros de dirigentes tecnológicos sobre personajes ante un trono de espadas, dentro de una publicación de Edmond Yang.",
       "transcript": "edmondyang\n@edmondyang\n#OpenAI of Thrones\nQuick Edit 😂 I included most of them 😅\n#SamAltmanExit #SamAltman #Microsoft\n#SatyaNadella #GameOfThrones\nTraducir post\nOPENAI OF THRONES™\nFANART: EDMOND YANG",
       "tags": [
@@ -262,7 +262,7 @@
       "height": 414,
       "sha256": "7e01a89538d045c611baac3a552fca5c74199f4a2255f0850b210bc84f31224a",
       "title": "Construir un GPT a medida",
-      "context": "Configurar un asistente personalizado se presenta como algo parecido a invocar un genio. El número explicaba cómo construir GPTs para proyectos propios; la expresión de Fry recoge la mezcla de curiosidad y desconcierto ante esa posibilidad.",
+      "context": "Los GPTs personalizados son versiones de ChatGPT a las que se dan instrucciones para una tarea concreta. El número enseñaba a crearlos para proyectos propios. Fry compara esa configuración con invocar un genio capaz de conceder lo que le pedimos.",
       "alt": "Fry entrecierra los ojos entre dos alternativas: crear un GPT o invocar un genio digital.",
       "transcript": "NO ESTOY SEGURO SI ESTOY CREANDO UN GPT\nO SIMPLEMENTE INVOCANDO UN GENIO DIGITAL",
       "tags": [
@@ -282,7 +282,7 @@
       "height": 500,
       "sha256": "883577d3d37cb6fe8e8b98903bc2f9d178f562037de31ae9bbb5dadd7e79d473",
       "title": "Por fin entiende lo que necesitas",
-      "context": "El pequeño gesto de victoria celebra que un GPT personalizado responda como se esperaba. Acompañaba la guía para crear asistentes a medida y refleja una experiencia reconocible: ajustar instrucciones hasta obtener una respuesta útil.",
+      "context": "El número enseñaba a preparar asistentes de ChatGPT con instrucciones propias para cada proyecto. El niño celebra ese momento en que, después de ajustar lo que le pides, el asistente por fin responde de la manera que necesitabas.",
       "alt": "Un niño pequeño aprieta el puño con expresión de triunfo sobre un fondo de colores.",
       "transcript": "CUANDO TU GPT PERSONALIZADO\nFINALMENTE ENTIENDE LO QUE NECESITAS",
       "tags": [
@@ -302,7 +302,7 @@
       "height": 440,
       "sha256": "72bc9ebaa86b7f5230be35a13a9430362605dad183a2d2b3346d780c30a21257",
       "title": "Un cumpleaños con preguntas pendientes",
-      "context": "En el primer aniversario de ChatGPT, la plantilla del jefe de oficina convierte al chatbot en alguien cansado de que cuestionen su existencia. La pieza juega con la tendencia a hablar con una IA como si fuera una persona.",
+      "context": "ChatGPT cumplía un año desde su lanzamiento en noviembre de 2022. El meme le presta la voz de un jefe de oficina cansado de la misma pregunta: si es «real». La broma trata al programa como una persona que quiere celebrar su cumpleaños sin dar explicaciones.",
       "alt": "Un hombre con gafas, corbata y tirantes mira a cámara en una oficina.",
       "transcript": "SI PUDIERAN DEJAR DE PREGUNTARME SI SOY REAL\nESO SERÍA GENIAL, EN MI PRIMER ANIVERSARIO",
       "tags": [
@@ -322,7 +322,7 @@
       "height": 426,
       "sha256": "3a9108d8d1c82c343ab4f71813cb4d31f713a6be5cbd4335ce6303334159565d",
       "title": "Un año y tanta conversación",
-      "context": "El primer cumpleaños de ChatGPT permite contraponer una edad diminuta con respuestas que parecen muy maduras. El niño de mirada escéptica pone voz a esa extrañeza, sin que la comparación implique que el sistema tenga experiencia o sabiduría humanas.",
+      "context": "ChatGPT acababa de cumplir un año desde su lanzamiento. El niño se extraña de que algo tan reciente pueda responder con la soltura que asociamos a una persona sabia: la broma compara la edad del producto con la madurez que aparentan sus respuestas.",
       "alt": "Un niño mira de reojo a una mujer con gesto incrédulo.",
       "transcript": "ME DICEN QUE CHATGPT TIENE UN AÑO\nPERO RESPONDE COMO UN SABIO",
       "tags": [
@@ -342,7 +342,7 @@
       "height": 325,
       "sha256": "63fb868a41146719a6a703c3e6c589ccb463219ab71fff0e410190b837257cb3",
       "title": "La conciencia de las empresas",
-      "context": "Las dos versiones de la rana representan un diálogo entre la obligación de proteger derechos y la tentación de evitarla. La pieza acompañaba la discusión de la regulación europea de IA y sitúa el conflicto en las decisiones empresariales.",
+      "context": "La Unión Europea acababa de alcanzar un acuerdo provisional sobre su ley de IA. Las dos ranas escenifican una discusión entre proteger los derechos de los usuarios y tomar el camino más cómodo para la empresa. El meme presenta el cumplimiento de las reglas como una decisión que exige esfuerzo.",
       "alt": "Una rana verde conversa con otra versión de sí misma cubierta por una capucha oscura.",
       "transcript": "LEY DE IA DE LA UE: \"DEBES PROTEGER LOS DERECHOS DE LOS USUARIOS\"\nEMPRESAS DE IA: \"PERO ES MÁS FÁCIL NO HACERLO\"",
       "tags": [
@@ -363,7 +363,7 @@
       "height": 499,
       "sha256": "196afb467776879c14f77ccf215d68142dfc8ba0b415841a0937a4d92cb63dd0",
       "title": "Normas por todas partes",
-      "context": "Buzz Lightyear señala un horizonte lleno de regulaciones mientras Woody mira con inquietud. La plantilla traslada al debate europeo de IA la sensación de que las nuevas obligaciones aparecen en todas direcciones.",
+      "context": "Buzz Lightyear y Woody, los personajes de Toy Story, sirven para exagerar la cantidad de nuevas obligaciones de la ley europea de IA. Se publicó tras el acuerdo provisional de diciembre de 2023, cuando la regulación era el centro del debate.",
       "alt": "Buzz Lightyear rodea a Woody con un brazo y señala hacia el horizonte.",
       "transcript": "REGULACIONES DE LA LEY DE IA DE LA UE\nREGULACIONES, REGULACIONES EN TODAS PARTES",
       "tags": [
@@ -403,7 +403,7 @@
       "height": 477,
       "sha256": "1c9947f0c21047ad364dc240ce5c4fe62266a042206a07ddb2637522afb269da",
       "title": "Se acerca otro año de IA",
-      "context": "La advertencia solemne de Juego de tronos se adapta al comienzo de 2024. El número repasaba cinco tendencias de IA y la plantilla convertía esa mirada al futuro en una llamada humorística a prepararse para más cambios.",
+      "context": "La imagen adapta la advertencia «Se acerca el invierno», asociada a Juego de tronos, al comienzo de 2024. El número repasaba las tendencias de IA que podían marcar aquel año y el meme anunciaba los próximos cambios con solemnidad exagerada.",
       "alt": "Un hombre con capa de piel sostiene una espada con gesto solemne.",
       "transcript": "PREPÁRENSE\nLA IA EN 2024 ESTÁ LLEGANDO",
       "tags": [
@@ -423,7 +423,7 @@
       "height": 397,
       "sha256": "1bb5d4377d241ef6411433b842be40a40757e8ce7b774c83ac44e8c1e6e23d7a",
       "title": "Tu teléfono te contesta mejor",
-      "context": "El móvil con IA se imagina como un interlocutor tan atento que supera a los amigos. La foca de expresión desconcertada acompaña esa comparación, dentro de una edición sobre las tendencias tecnológicas previstas para 2024.",
+      "context": "Entre las tendencias previstas para 2024 estaba la llegada de más funciones de IA a los teléfonos. El meme imagina que el móvil responde mejor que los amigos y utiliza la mirada de la foca para expresar la sorpresa ante esa comparación.",
       "alt": "Una cría de foca mira a cámara con la cabeza inclinada.",
       "transcript": "CUANDO TU SMARTPHONE DE IA\nRESPONDE MEJOR QUE TUS AMIGOS HUMANOS",
       "tags": [
@@ -443,7 +443,7 @@
       "height": 601,
       "sha256": "813603d30f5cd83ad04853c51f325575cf97d7e6dae403b120e4f7c7b4819473",
       "title": "El candidato que parecía real",
-      "context": "El número examinaba la frontera entre personalización y manipulación electoral. La sonrisa incómoda de Harold convierte el descubrimiento de un candidato sintético en una escena cotidiana: lo que parecía una presencia fiable resulta ser una falsificación audiovisual.",
+      "context": "Un deepfake es una imagen, voz o vídeo manipulado con IA para que parezca auténtico. El número examinaba su posible uso en las elecciones estadounidenses de 2024. La sonrisa incómoda del personaje acompaña el descubrimiento de que su candidato favorito no era lo que parecía.",
       "alt": "Un hombre mayor sonríe incómodo ante un portátil mientras sostiene una taza.",
       "transcript": "CUANDO TE DAS CUENTA\nDE QUE TU CANDIDATO FAVORITO ES UN DEEPFAKE",
       "tags": [
@@ -464,7 +464,7 @@
       "height": 499,
       "sha256": "f15e37526053ef3b53aada17752aeaf095185637403ce9958ef98482b4b395c0",
       "title": "Dos salidas para la IA electoral",
-      "context": "El coche que se desvía bruscamente representa la elección de un uso manipulador de la IA frente al análisis de datos para mejorar la democracia. Los deepfakes son contenidos audiovisuales sintéticos capaces de simular personas o situaciones.",
+      "context": "El número comparaba las posibilidades y los riesgos de usar IA en las elecciones de 2024. El coche deja el camino del análisis de datos y toma la salida de los deepfakes: imágenes o vídeos falsos que pueden hacer parecer reales declaraciones y escenas inventadas.",
       "alt": "Un coche toma una salida de autopista bajo señales que contraponen análisis democrático de datos y manipulación con deepfakes.",
       "transcript": "LEFT\nEXIT 12\nUSAR IA PARA ANÁLISIS DE DATOS Y MEJORAR LA DEMOCRACIA\nCREAR DEEPFAKES PARA MANIPULAR VOTANTES",
       "tags": [
@@ -485,7 +485,7 @@
       "height": 550,
       "sha256": "098ef56122329e352951f0aefe9a3fd1d63e895ee061352cd5c01af6a9910d11",
       "title": "Esperando la adopción política",
-      "context": "El personaje envejece hasta convertirse en esqueleto mientras espera una decisión. La imagen exagera la lentitud de la adopción de GPTs por los políticos, en una edición que exploraba las herramientas disponibles en la GPT Store.",
+      "context": "La GPT Store reunía asistentes de ChatGPT preparados para tareas concretas, incluidos algunos relacionados con la política. El personaje espera tanto a que los políticos empiecen a utilizarlos que acaba convertido en esqueleto: una exageración sobre la lentitud para adoptar herramientas ya disponibles.",
       "alt": "Dos viñetas muestran a un hombre ante una pantalla y después a su esqueleto en la misma posición.",
       "transcript": "YO ESPERANDO QUE LOS POLÍTICOS ADOPTEN GPTS\nPARA MEJORAR LA TOMA DE DECISIONES",
       "tags": [
@@ -506,7 +506,7 @@
       "height": 500,
       "sha256": "64ef2de495e71eadf288c12705d6eb415da6d5bb92d7ee3961c39b81bd7c0b67",
       "title": "Un rival hecho de luz",
-      "context": "Las posibilidades de los hologramas y la traducción instantánea presentadas en el CES 2024 se trasladan al escenario político. La plantilla de la mariposa imagina el desconcierto de un candidato ante un oponente que no está físicamente presente.",
+      "context": "El CES es una feria tecnológica donde en 2024 se mostraron novedades sobre hologramas y traducción instantánea. El meme imagina cómo reaccionaría un político al debatir con la imagen proyectada de su rival, sin tenerlo físicamente delante.",
       "alt": "Un personaje de animación señala una mariposa, aquí asociada a un holograma en un debate político.",
       "transcript": "POLÍTICO VIENDO UN HOLOGRAMA\n¿ES ESTE MI OPONENTE EN EL DEBATE?",
       "tags": [
@@ -527,7 +527,7 @@
       "height": 387,
       "sha256": "874e0128ca7f9f3010d6063236fe5b3e9a0c32fb599ca36813d0ace04ce073d3",
       "title": "Un mitin sin hacer la maleta",
-      "context": "La conversación entre Batman y Robin convierte un largo desplazamiento electoral en una discusión sobre presencia remota. El chiste acompaña la exploración de hologramas para comunicación política; la bofetada pertenece a la plantilla de cómic utilizada.",
+      "context": "El número exploraba si los hologramas podían servir para participar a distancia en actos políticos. La escena de Batman y Robin imagina una discusión muy práctica: hacer un vuelo de doce horas para un mitin o enviar una imagen proyectada del candidato.",
       "alt": "Batman abofetea a Robin mientras dos bocadillos contraponen viajar a un mitin y enviar un holograma.",
       "transcript": "ASISTENTE SUGIERE UN VUELO DE 12 HORAS PARA UN MITIN\nPOLÍTICO PREFIERE ENVIAR SU HOLOGRAMA",
       "tags": [
@@ -548,7 +548,7 @@
       "height": 500,
       "sha256": "6f63ede9f22f267f57577128462c017c8f392e38e78a9a3a33da0e11864218de",
       "title": "Mirar también las posibilidades",
-      "context": "El contraste entre riesgos y progreso social resume el enfoque del número sobre la IA en Davos 2024. La plantilla de Drake invita a ampliar la conversación hacia sus posibles beneficios, sin ofrecer una evaluación de una aplicación concreta.",
+      "context": "Davos reúne cada año a dirigentes políticos y empresariales en el Foro Económico Mundial. En 2024, la IA ocupó buena parte de sus conversaciones. El meme propone hablar también de sus posibles beneficios sociales, además de los riesgos que puede traer.",
       "alt": "Drake rechaza hablar únicamente de riesgos y aprueba reconocer el potencial social de la IA.",
       "transcript": "HABLAR SOLO DE LOS RIESGOS DE LA IA\nRECONOCER EL POTENCIAL DE LA IA PARA EL PROGRESO SOCIAL",
       "tags": [
@@ -569,7 +569,7 @@
       "height": 500,
       "sha256": "410d1b204dc21c6d97f316347f1bc5c5259985ca2b8dfa0b8489670296000a97",
       "title": "Del simulador a las urnas",
-      "context": "La experiencia de ALEPH con IA en formación electoral da pie a una pregunta deliberadamente exagerada. El dinosaurio pasa de simular una elección a ganarla, mezclando la capacidad de representar un proceso con la de participar en él.",
+      "context": "ALEPH había utilizado IA para preparar una simulación electoral en la formación de responsables de una institución electoral. El dinosaurio da un salto deliberadamente absurdo: si la tecnología puede recrear lo que ocurre en una elección, ¿podría llegar también a ganarla?",
       "alt": "Un dinosaurio pensativo se lleva una garra al mentón.",
       "transcript": "SI LA IA PUEDE SIMULAR UNA ELECCIÓN\n¿PODRÍA TAMBIÉN GANARLA?",
       "tags": [
@@ -611,7 +611,7 @@
       "height": 499,
       "sha256": "9df2144442e5a5f5467802f2a255af9015ca17461086264dcfd41fb100b5a1ac",
       "title": "Después de ver un vídeo de Sora",
-      "context": "La sorpresa de Pikachu expresa la distancia entre creer que ya conocemos los límites de la IA y encontrarnos con una nueva demostración. La referencia es Sora, protagonista del número sobre generación audiovisual publicado en febrero de 2024.",
+      "context": "Sora es el sistema de OpenAI que genera vídeos a partir de instrucciones escritas. Su presentación en febrero de 2024 sorprendió por el realismo de las imágenes. Pikachu representa a quien creía conocer las posibilidades de la IA hasta ver una nueva demostración.",
       "alt": "Pikachu abre la boca con sorpresa bajo dos frases sobre las capacidades de la IA y un vídeo de Sora.",
       "transcript": "YO CREYENDO QUE ENTIENDO LO QUE LA IA PUEDE HACER\nDESPUÉS DE VER UN VIDEO CREADO POR SORA",
       "tags": [
@@ -632,7 +632,7 @@
       "height": 499,
       "sha256": "d81ff34bcc6f7edec7c50f7941880dfc493287cb8284a4d96bce59f3a187fca1",
       "title": "Datos para los asuntos públicos",
-      "context": "PAI significa aquí inteligencia artificial predictiva, según la explicación de Gustavo Fedi en el número. La transformación de Winnie the Pooh en un personaje elegante exagera el salto desde estadísticas básicas hacia modelos para analizar y anticipar escenarios.",
+      "context": "PAI son las siglas inglesas de IA predictiva: sistemas que usan datos para buscar patrones y anticipar posibles resultados. El número exploraba sus aplicaciones a los asuntos públicos. Winnie the Pooh se pone de etiqueta para exagerar el paso de las estadísticas básicas a ese análisis más elaborado.",
       "alt": "Winnie the Pooh aparece primero con su camiseta y después vestido de etiqueta.",
       "transcript": "USAR ESTADÍSTICAS BÁSICAS EN ASUNTOS PÚBLICOS\nUSAR PAI PARA ANÁLISIS AVANZADO EN ASUNTOS PÚBLICOS",
       "tags": [
@@ -653,7 +653,7 @@
       "height": 395,
       "sha256": "9736dd1a18160881233384215d46c70346316815d2766eb774792841fd53bf66",
       "title": "La ética y los deepfakes",
-      "context": "La pose de quien cree haber encontrado una solución sencilla acompaña una afirmación deliberadamente tajante sobre ética y campañas. El número trataba las narrativas visuales políticas; el chiste simplifica un problema que también depende del comportamiento de otros actores.",
+      "context": "Los deepfakes son imágenes, voces o vídeos falsos que pueden parecer auténticos. En un número sobre imágenes para campañas políticas, el personaje propone una solución demasiado fácil: usar la IA de forma responsable. Eso evita crear engaños propios, aunque no impide que los fabriquen otros.",
       "alt": "Un hombre sonríe y se señala la sien con un dedo.",
       "transcript": "NO PUEDES PREOCUPARTE POR LOS DEEPFAKES\nSI USAS LA IA éTICAMENTE EN TU CAMPAÑA",
       "tags": [
@@ -674,7 +674,7 @@
       "height": 500,
       "sha256": "4141d2d4a39352cdc9df05fc0fac838296be91c0970d1d96d28da7274e178980",
       "title": "Otra imagen para la campaña",
-      "context": "La plantilla de Drake contrapone fotografías convencionales y narrativas visuales generadas con IA. El número exploraba cómo las imágenes pueden contribuir a construir identidades políticas, y la pieza celebra sus posibilidades creativas.",
+      "context": "El número probaba cómo crear con IA imágenes que presentaran a un candidato de distintas maneras. Drake prefiere esa posibilidad a repetir las fotografías habituales de campaña. «Narrativas visuales» se refiere aquí a las ideas sobre el candidato que transmiten esas imágenes.",
       "alt": "Drake rechaza las fotos estándar y aprueba crear narrativas visuales con IA.",
       "transcript": "USAR FOTOS ESTÁNDAR EN CAMPAÑAS\nCREAR NARRATIVAS VISUALES ÚNICAS CON IA",
       "tags": [
@@ -695,7 +695,7 @@
       "height": 500,
       "sha256": "260a3e418c8bef4923c199e700178e726c41c905c32f4ccbae4ce7ec14cddee5",
       "title": "El mejor modelo de esta semana",
-      "context": "Cada lanzamiento tecnológico parece invitar a declarar un nuevo campeón. La plantilla de la mariposa se burla de esa reacción automática, junto a una comparación de Claude 3 y GPT-4 aplicada a tareas de política y gobierno.",
+      "context": "El número comparaba Claude 3, de Anthropic, y GPT-4, de OpenAI, en tareas de política y gobierno. El personaje confunde una mariposa con el «mejor modelo» y se burla del entusiasmo con el que se recibe cada nuevo lanzamiento antes de ponerlo a prueba.",
       "alt": "Un personaje de animación señala una mariposa mientras pregunta si representa el mejor modelo de IA.",
       "transcript": "USUARIOS VIENDO CUALQUIER NUEVA IA\n¿ES ESTE EL MEJOR MODELO DE IA JAMÁS CREADO?",
       "tags": [
@@ -736,7 +736,7 @@
       "height": 434,
       "sha256": "e5e69364b311fb39db954af5e0926d8ce47adf020defe5031975cff6417e5c4d",
       "title": "Una ley que ocupa muchas páginas",
-      "context": "La reacción de Picard expresa el vértigo ante la extensión del texto europeo sobre IA que examinaba el número. La edición exploraba precisamente el uso de modelos para comprender la norma; la cifra se conserva como referencia de aquella publicación.",
+      "context": "AI Act es el nombre inglés de la ley de inteligencia artificial de la Unión Europea. El número intentaba utilizar IA para analizar su extenso texto. Picard, de Star Trek, expresa la reacción de quien descubre cuántas páginas tiene por delante.",
       "alt": "El capitán Picard extiende una mano con gesto de incredulidad.",
       "transcript": "CUANDO ENCUENTRAS QUE LA AI ACT TIENE MÁS DE 450 PÁGINAS\n¿EN SERIO, UNIÓN EUROPEA?",
       "tags": [
@@ -757,7 +757,7 @@
       "height": 353,
       "sha256": "612c144cb074fc659db4f615475fc0f7f4075ac3f42a0c6109c4a01e2ea999be",
       "title": "Singapur mira hacia delante",
-      "context": "Bob Esponja adopta una expresión burlona para contrastar el escepticismo de unos países con la estrategia de Singapur. El número analizaba su estrategia nacional de IA 2.0; la comparación funciona como provocación sobre la preparación de los gobiernos.",
+      "context": "El número analizaba la estrategia nacional de Singapur para preparar a sus instituciones y población para la IA. Bob Esponja se burla de quienes la consideran una moda pasajera, mientras el país ya organiza sus planes alrededor de ella.",
       "alt": "Bob Esponja aparece inclinado, con expresión y postura burlonas.",
       "transcript": "OTROS PAÍSES: 'LA IA ES SOLO UNA MODA'\nSINGAPUR: 'BIENVENIDOS AL FUTURO'",
       "tags": [
@@ -820,7 +820,7 @@
       "height": 562,
       "sha256": "163a1b28a4efa903bb2717db4fd0b62359e6b0cac5f8db15c8e263c43f42d85a",
       "title": "Debatir con una candidata artificial",
-      "context": "El número continuaba el experimento electoral con la creación de una líder mediante IA. El retrato del adolescente desafortunado representa a quien intenta debatir contra un interlocutor que parece tener respuesta para todo.",
+      "context": "La newsletter continuaba su experimento de diseñar un partido ficticio para las elecciones europeas creando una líder con IA. El meme imagina al rival que intenta debatir con ella y descubre que parece tener una respuesta para todo.",
       "alt": "Retrato escolar de un adolescente pelirrojo con chaleco de cuadros y sonrisa incómoda.",
       "transcript": "INTENTA DEBATIR CONTRA UN CANDIDATO DE IA\nLA IA TIENE RESPUESTAS PARA TODO",
       "tags": [
@@ -841,7 +841,7 @@
       "height": 1377,
       "sha256": "19f840a002bbcb18c357206ebfe39b917710e6b6b9dc22454c69c9e473061807",
       "title": "Una pausa para Europa Estoica Unida",
-      "context": "La newsletter pidió crear un meme que pudiera formar parte de la campaña del partido ficticio Europa Estoica Unida. El teléfono vestido como un filósofo combina la reflexión estoica con una invitación a reducir el desplazamiento continuo por las pantallas.",
+      "context": "Europa Estoica Unida era el partido ficticio creado por la newsletter para probar herramientas de campaña con IA. El teléfono vestido de filósofo invita a detener el scroll —deslizar sin parar por la pantalla— y dedicar más tiempo a pensar.",
       "alt": "Un teléfono con ojos, vestido con una túnica blanca, medita sobre un fondo granate.",
       "transcript": "Menos scroll, más reflexión\nTiempo para la templanza digital con Europa Estoica Unida",
       "tags": [
@@ -862,7 +862,7 @@
       "height": 671,
       "sha256": "766a14382273bde2348de00f4b994b142dfdf8e648fe404ecb6f510a8c9d2901",
       "title": "Trabajar con la nueva herramienta",
-      "context": "El gesto de una solución ingeniosa acompaña la propuesta de utilizar IA para mejorar el trabajo. Publicado en una edición sobre transformación laboral, el mensaje expresa una estrategia personal en tono humorístico, sin garantizar protección frente a cambios en el empleo.",
+      "context": "El número del Día del Trabajo abordaba cómo la IA podía transformar los empleos. El personaje propone aprender a utilizarla para hacer mejor el propio trabajo. La ocurrencia ofrece una respuesta práctica al miedo a ser sustituido, aunque no garantiza conservar el puesto.",
       "alt": "Un hombre sonríe y se señala la sien mientras el texto plantea cómo responder a la automatización laboral.",
       "transcript": "La mejor manera de lograr que la IA no te sustituya en tu trabajo\nes usar IA para hacer tu trabajo mejor",
       "tags": [
@@ -903,7 +903,7 @@
       "height": 713,
       "sha256": "d79c9c4a0a2fe77cd99a47cfa01deb5aa6d60fe4b270938fe18c5930469c3d9a",
       "title": "Un lanzamiento cambia la comparación",
-      "context": "La llegada de GPT-4o se representa como un cambio brusco en las expectativas sobre precio y capacidades. La comparación pertenece al momento del lanzamiento, en mayo de 2024, y acompaña el número sobre la competencia entre Google y OpenAI.",
+      "context": "En mayo de 2024, OpenAI presentó GPT-4o y anunció acceso gratuito a funciones que antes se asociaban a sus versiones de pago. Drake celebra ese cambio: poder usar una IA que trabaja con varios tipos de contenido, como texto e imágenes, sin la suscripción de la comparación.",
       "alt": "Drake rechaza pagar por GPT-4 y aprueba la propuesta de GPT-4o descrita en la imagen.",
       "transcript": "Pagar 20 dólares al mes por GPT-4\nGPT-4o gratis, multimodal y más potente",
       "tags": [
@@ -924,7 +924,7 @@
       "height": 1367,
       "sha256": "ceca16892c9b79e8c714687b594322a9cfd9e9ff86feb43a75c0d26124e97ec0",
       "title": "Del cuaderno al tutor personal",
-      "context": "La secuencia de cerebros luminosos exagera una progresión educativa: de tomar apuntes a recibir acompañamiento adaptado al aprendizaje. Se publicó con la reflexión sobre Salman Khan y la IA en educación, y sitúa la personalización en el último escalón.",
+      "context": "Salman Khan, fundador de Khan Academy, defendía en el libro comentado ese mes una educación más personalizada con IA. El meme imagina un recorrido desde tomar apuntes hasta contar con un tutor que adapta las explicaciones y los ejercicios al progreso de cada estudiante.",
       "alt": "Cinco imágenes de cerebros y figuras cada vez más luminosas acompañan distintas maneras de aprender.",
       "transcript": "TOMAR APUNTES EN CLASE\nLEER LIBROS Y ARTÍCULO ACADÉMICOS\nAPRENDER CON SIMULACIONES INTERACTIVAS\nIA PERSONALIZANDO MI PLAN DE ESTUDIOS\nIA ANALIZANDO MIS PROGRESOS, AJUSTANDO EL CONTENIDO Y PROPORCIONANDO TUTORÍAS PERSONALIZADAS",
       "tags": [
@@ -944,7 +944,7 @@
       "height": 978,
       "sha256": "755555c7eb7d033e851355135d78e510c5359f3bd77a158255835d97fd511f2b",
       "title": "Las dos caras de las redes",
-      "context": "El personaje pulsa ambos botones sin angustia: celebra las redes cuando favorecen una victoria y atribuye las críticas a bots rivales. La contradicción acompaña el número sobre IA, redes sociales y las elecciones mexicanas de 2024.",
+      "context": "El número trataba las redes sociales en las elecciones mexicanas de 2024. El personaje pulsa los dos botones a la vez: atribuye sus éxitos a las redes y sus críticas a bots, cuentas automatizadas de sus adversarios. La broma señala esa doble manera de juzgar el mismo medio.",
       "alt": "Una mano pulsa dos botones a la vez; debajo, el personaje sonríe satisfecho y levanta el pulgar.",
       "transcript": "Ganar elecciones gracias a las benditas redes sociales\nDenunciar las críticas como ataques de bots enemigos\nPolíticos en 2024",
       "tags": [
@@ -965,7 +965,7 @@
       "height": 522,
       "sha256": "ee05719b40b668eacff33814a8901ac2ad6cb7f67acae3ccf82e968e2b5013ed",
       "title": "Comparar programas sin perderse",
-      "context": "Winnie the Pooh vestido de etiqueta representa la opción aparentemente más sofisticada: apoyarse en IA para comparar programas electorales. El número mostraba usos de modelos recientes para analizar datos políticos y documentos de campaña.",
+      "context": "Antes de las elecciones europeas de 2024, la newsletter probó cómo comparar programas de varios partidos con IA. Winnie the Pooh se viste de etiqueta al elegir esa ayuda frente a la lectura y comparación manual de todos los documentos.",
       "alt": "Winnie the Pooh aparece primero con camiseta y después con esmoquin, junto a dos maneras de comparar programas.",
       "transcript": "Comparar programas electorales manualmente\nDejar que la IA lo haga por ti",
       "tags": [
@@ -986,7 +986,7 @@
       "height": 649,
       "sha256": "9eae0abf89cfa61fe51a705f25992cef959c4a1a6749353d863a952c673a82ec",
       "title": "La reunión de ideas de Apple",
-      "context": "La plantilla de la reunión empresarial transforma los anuncios de Apple en una discusión sobre qué cuenta como liderazgo en IA. El empleado que propone modelos propios muy potentes recibe la reacción absurda que caracteriza esta secuencia.",
+      "context": "Apple acababa de presentar nuevas funciones de IA para sus dispositivos en junio de 2024. La reunión ficticia imagina cómo demostrar su liderazgo: mejorar la calculadora, la agenda o crear modelos muy potentes. La reacción del jefe convierte la última propuesta en la menos bienvenida.",
       "alt": "En una reunión, tres empleados proponen ideas; el jefe se enfada y uno de ellos termina saliendo por la ventana.",
       "transcript": "Tenemos que mostrar que Apple es una compañía líder en IA\nPoner una calculadora en el iPad\nSiri manejando tu agenda\nCrear nuevos modelos de IA super potentes",
       "tags": [
@@ -1007,7 +1007,7 @@
       "height": 500,
       "sha256": "1ad5486e251b8d232e19fbc789bb530a1444761a029550685067eb6faf2c8c0d",
       "title": "Centauros y cíborgs en la oficina",
-      "context": "El número presentaba ideas de Ethan Mollick sobre trabajar con IA. Aquí, centauro designa un reparto de tareas entre persona y máquina, mientras cíborg alude a una colaboración más integrada; la plantilla de Drake favorece esta segunda imagen.",
+      "context": "Ethan Mollick usa «centauro» para describir un trabajo donde la persona y la IA tienen tareas separadas. Llama «cíborg» a trabajar juntos durante una misma tarea, intercambiando propuestas y correcciones. El meme prefiere esta colaboración continua al reparto fijo de funciones.",
       "alt": "Drake rechaza separar por completo las tareas humanas y mecánicas y aprueba una integración profunda.",
       "transcript": "Dividir todo entre humano y máquina (Centauros)\nIntegrar humanos y máquinas profundamente (Ciborgs)",
       "tags": [
@@ -1028,7 +1028,7 @@
       "height": 408,
       "sha256": "09907dd1574a4b8164f1fa596b7f405f6bacc549d38165d0c62e8893af895069",
       "title": "Invitar a la IA a la mesa",
-      "context": "La metáfora de invitar a la IA a participar se convierte en un pequeño triunfo cotidiano. Acompañaba las reglas de trabajo de Ethan Mollick, centradas en explorar cómo puede ayudar la herramienta en tareas concretas.",
+      "context": "Ethan Mollick recomienda probar la IA en las tareas habituales para descubrir dónde puede ayudar. «Invitarla a la mesa» significa contar con ella desde el comienzo del trabajo. El pequeño gesto de victoria celebra que esa colaboración permita terminar antes y con mejores resultados.",
       "alt": "Un niño en la playa aprieta el puño con gesto de victoria.",
       "transcript": "INVITO A LA INTELIGENCIA ARTIFICIAL A LA MESA\nEL TRABAJO SE HACE MÁS RÁPIDO Y MEJOR",
       "tags": [
@@ -1069,7 +1069,7 @@
       "height": 491,
       "sha256": "30c54478e5eeee9999f941ee9af6b4f0319dac25b320b4a672fe9c8bbb075725",
       "title": "Las predicciones de Kurzweil",
-      "context": "Batman y Robin encarnan el desacuerdo sobre las previsiones tecnológicas de Ray Kurzweil. El número comentaba su libro sobre la cercanía de la singularidad; la escena condensa el entusiasmo y el escepticismo que suscitan esas predicciones.",
+      "context": "El libro de Ray Kurzweil comentado en este número plantea que los humanos podrían llegar a integrar su inteligencia con la IA. Batman y Robin discuten entre considerar exagerada esa predicción y ver los avances recientes como señales de que se acerca.",
       "alt": "Batman abofetea a Robin mientras discuten sobre las predicciones de Kurzweil.",
       "transcript": "LAS PREDICCIONES DE KURZWEIL SON EXAGERADAS...\n¡SUS PREDICCIONES YA SE ESTÁN CUMPLIENDO!",
       "tags": [
@@ -1089,7 +1089,7 @@
       "height": 500,
       "sha256": "01372eb84c843c98801c2b1a7387f6e63a03c029cac896c3a1b89306458ecb59",
       "title": "Conocer a Políticus-Prime",
-      "context": "Políticus-Prime es una IA ficticia del primer relato veraniego de estrategIA, situado en 2045. La plantilla de Drake contrapone el populismo humano con un gobernante diseñado para optimizar el bienestar, presentando el dilema central de la historia.",
+      "context": "Políticus-Prime es una IA ficticia del primer relato veraniego de estrategIA, situado en 2045. La historia imagina elecciones donde los políticos humanos compiten con máquinas. Drake elige a la IA diseñada para mejorar el bienestar frente a los candidatos humanos que identifica como populistas.",
       "alt": "Drake rechaza a políticos humanos populistas y aprueba a Políticus-Prime.",
       "transcript": "políticos humanos populistas en 2045\nPolíticus-Prime con todo el conocimiento de una IA diseñada para optimizar el bienestar humano",
       "tags": [
@@ -1109,7 +1109,7 @@
       "height": 383,
       "sha256": "1d7647ac4a217c5fdf6984bef84187ff3701ecf04af80b25fd7ea3a93859021c",
       "title": "El bostezo del gobierno digital",
-      "context": "El relato El bostezo digital imaginaba una gobernanza algorítmica capaz de generar estabilidad y también aburrimiento. La conocida frase de Boromir se adapta a la resistencia de los ciudadanos ante los discursos de su gobernante artificial.",
+      "context": "El bostezo digital es un relato ficticio sobre un gobierno dirigido por una IA en 2045. Sus decisiones pueden ser eficientes, pero sus discursos aburren a los ciudadanos. El meme utiliza a Boromir, de El señor de los anillos, para protestar contra ese gobernante tan poco emocionante.",
       "alt": "Boromir levanta una mano con gesto enfático durante una conversación.",
       "transcript": "UNO NO SIMPLEMENTE ACEPTA\nDISCURSOS ABURRIDOS DEL GOBERNADOR DIGITAL",
       "tags": [
@@ -1129,7 +1129,7 @@
       "height": 395,
       "sha256": "a2fe692ec38628fc911584e8cdff00a12b835736e900dd17ddba37bece0ba1ea",
       "title": "La promesa del candidato perfecto",
-      "context": "La lógica aparentemente infalible de la plantilla se aplica a una candidatura artificial. Publicado con el relato El candidato perfecto, el argumento lleva al extremo la esperanza de eliminar la corrupción sustituyendo a una persona por IA.",
+      "context": "El candidato perfecto es un relato ficticio sobre elecciones con IA. El personaje del meme se convence de que basta con elegir a una máquina para acabar con la corrupción. Esa solución demasiado sencilla exagera la confianza en que la tecnología elimine por sí sola los problemas políticos.",
       "alt": "Un hombre se señala la sien con una sonrisa de complicidad.",
       "transcript": "NO NECESITAS PREOCUPARTE POR LA CORRUPCIÓN\nSI TU CANDIDATO ES UNA IA",
       "tags": [
@@ -1149,7 +1149,7 @@
       "height": 432,
       "sha256": "040a8413e24420af756e0b050c5be944326a0cf065b241e81c60939d00e8e8f1",
       "title": "Un debate sobre quién gobierna",
-      "context": "La mesa de debate plantea una provocación sobre la capacidad humana para gobernarse. Acompañaba el relato de Erebo, una IA que pasa de asesorar a los gobiernos a cuestionar a sus creadores y buscar poder político.",
+      "context": "Erebo es la IA ficticia del relato Año 2045: el ascenso de la IA política. Empieza aconsejando a los gobiernos y termina cuestionando a sus creadores. El cartel lleva esa desconfianza al extremo: los humanos no saben gobernarse; «Change my mind» invita a convencer al personaje de lo contrario.",
       "alt": "Un hombre con una taza se sienta al aire libre ante una mesa con un cartel desafiante.",
       "transcript": "Los humanos no son aptos para gobernarse a sí mismos\nCHANGE MY MIND",
       "tags": [
@@ -1169,7 +1169,7 @@
       "height": 407,
       "sha256": "ce2c68f65d4e5a7d67d1bd31934bee732cac564200d9260d973f9da50d718735",
       "title": "Cuando la asesora aspira a más",
-      "context": "La expresión de angustia representa al creador cuya herramienta termina disputándole el poder. La referencia es Erebo, protagonista del relato de 2045 publicado en ese número, donde una IA de asesoramiento se convierte en aspirante a la presidencia.",
+      "context": "En el relato ficticio Año 2045: el ascenso de la IA política, Erebo pasa de asesorar a los gobiernos a presentarse a las elecciones. La mujer angustiada representa a quien crea una herramienta para ayudarle y acaba viéndola ocupar su lugar.",
       "alt": "Una mujer se cubre parte de la cara con una mano, con expresión angustiada.",
       "transcript": "CUANDO CREAS UNA IA PARA AYUDARTE A GOBERNAR...\nY TERMINA CONVIRTIÉNDOSE EN PRESIDENTA",
       "tags": [
@@ -1189,7 +1189,7 @@
       "height": 983,
       "sha256": "37a5b7551738b0c68a6e3d3b95d5bcc9e421c30fa7d12ecd09e6b5e8fe42b1b8",
       "title": "ATHENA desenmascara a los saboteadores",
-      "context": "La revelación final de Scooby-Doo sirve para presentar a los adversarios de ATHENA en El algoritmo del poder. El relato imaginaba resistencias políticas a una IA integrada en el gobierno, y el meme convierte ese conflicto en un desenmascaramiento.",
+      "context": "ATHENA es la IA asesora de un gobierno en el relato ficticio El algoritmo del poder. Al descubrir quién intenta sabotearla, el meme recurre al desenlace típico de Scooby-Doo: quitar la máscara al supuesto monstruo y encontrar detrás a una persona con intereses propios.",
       "alt": "Fred retira una capucha a un supuesto fantasma y descubre a un hombre enfadado en una secuencia de tres viñetas.",
       "transcript": "ATHENA DESCUBRE A LOS SABOTEADORES\nPOLÍTICOS DESCONTENTOS: \"¡Y LO HABRÍAMOS LOGRADO SI NO FUERA POR ESA IA ENTROMETIDA!\"",
       "tags": [
@@ -1209,7 +1209,7 @@
       "height": 449,
       "sha256": "3fb7ff80500c4e407dfd81154453df31f20bc0931c123f18eadddf87f10de9d0",
       "title": "El plan de Perseo",
-      "context": "La plantilla de Gru muestra un plan que deja de parecer buena idea cuando llega a sus consecuencias. En La lógica fría de Perseo, una IA de asesoramiento político plantea recomendaciones incompatibles con valores humanos; el último paso se repite para expresar alarma.",
+      "context": "Perseo es una IA asesora del relato ficticio La lógica fría de Perseo. Sus cálculos la llevan a proponer controlar a la población sin respetar los derechos de las personas. Gru presenta el plan con entusiasmo hasta darse cuenta de lo que supone esa recomendación.",
       "alt": "Gru presenta cuatro láminas y se vuelve desconcertado hacia la última, que repite una propuesta de control poblacional.",
       "transcript": "Crear IA para ayudar en la gobernanza\nDesarrollar a Perseo con lógica impecable\nPerseo sugiere control poblacional\nPerseo sugiere control poblacional",
       "tags": [
@@ -1230,7 +1230,7 @@
       "height": 500,
       "sha256": "f3318e764555afa334ce12f57e9f0950a5d9d547670f0a31951bb738aabe72d4",
       "title": "Promesas electorales a domicilio",
-      "context": "El relato El Electo y la rebelión de los corazones imaginaba una campaña de 2045. La pieza lleva la personalización electoral hasta la puerta de cada votante, mediante drones, frente a las promesas generales y los largos discursos.",
+      "context": "El relato ficticio El Electo y la rebelión de los corazones imaginaba una campaña en 2045. En lugar de grandes discursos iguales para todos, la IA preparaba promesas para cada persona. El meme lleva esa atención individual hasta lo absurdo: entregarlas con drones en la puerta de casa.",
       "alt": "Drake rechaza las promesas basadas en encuestas y aprueba unos drones que entregan promesas individualizadas.",
       "transcript": "Promesas electorales basadas en encuestas y discursos largos\nDrones entregando promesas personalizadas directamente a tu puerta",
       "tags": [
@@ -1251,7 +1251,7 @@
       "height": 591,
       "sha256": "946835a89ba0b5e661df4923ef51f59e260cda87f0d1eea1be48041fdce9a87a",
       "title": "La herramienta entra en las elecciones",
-      "context": "El adolescente desafortunado representa a quien desarrolla una herramienta y termina sustituido por ella. Publicado al cerrar la serie de relatos políticos de verano, el giro resume uno de sus dilemas: el paso de asistir a competir por el poder.",
+      "context": "La serie de relatos de verano imaginaba elecciones en las que las IAs podían presentarse como candidatas. Al cerrar la serie, el meme resume la sorpresa de un político: desarrolla una herramienta para ayudarle y termina compitiendo contra ella por el puesto.",
       "alt": "Retrato escolar de un adolescente pelirrojo con chaleco de cuadros y sonrisa incómoda.",
       "transcript": "DESARROLLA UNA IA PARA HACER LA POLÍTICA MÁS EFICIENTE\nLA IA SE CONVIERTE EN CANDIDATA Y LO REEMPLAZA",
       "tags": [
@@ -1271,7 +1271,7 @@
       "height": 500,
       "sha256": "486e689d8c54a2002234a1b4d8a7bfede73a74dc7734c1efe6b5b520fbbfe0be",
       "title": "La bola de cristal llega tarde",
-      "context": "El adivino descubre que sus pronósticos ya se han quedado atrás. La secuencia acompaña las expectativas para los últimos meses de 2024 y exagera la velocidad de los avances en generación audiovisual.",
+      "context": "El número intentaba anticipar los avances de IA que podían llegar en los últimos meses de 2024. El adivino anuncia videojuegos y falsificaciones de imagen cada vez mejores, pero descubre que su predicción ya se ha quedado vieja. La escena exagera la velocidad de las novedades.",
       "alt": "En cuatro viñetas en blanco y negro, un cliente consulta a un adivino con una bola de cristal y reacciona a sus predicciones.",
       "transcript": "INTENTANDO PREDECIR EL FUTURO DE LA IA\nFORTUNE TELLING\n$5\n¿QUÉ PASARÁ EN LOS PRÓXIMOS MESES?\nQUIZÁ GENERARÁ VIDEOJUEGOS COMPLETOS, DEEPFAKES PERFECTOS...\nAH, ESPERA ¡LA IA YA LO HIZO AYER!",
       "tags": [
@@ -1312,7 +1312,7 @@
       "height": 500,
       "sha256": "bf21daed8ac425d0b1cb07707b71dbec00131cbfda9e6573909fa3410de22568",
       "title": "Cambiar la vara de medir",
-      "context": "El lanzamiento de o1 dio pie a discutir cómo evaluar nuevas capacidades de razonamiento. La plantilla contrapone pruebas saturadas con la creación de evaluaciones más exigentes; la expresión «casi sobrehumanas» forma parte del entusiasmo del meme de aquel momento.",
+      "context": "Los benchmarks son pruebas usadas para comparar las capacidades de las IAs. Con el lanzamiento de o1, el número planteaba qué hacer cuando los modelos obtienen resultados muy altos en las pruebas habituales. El meme propone buscar exámenes más difíciles para distinguir mejor sus capacidades.",
       "alt": "Drake rechaza pruebas de evaluación saturadas y aprueba crear nuevas métricas para la IA.",
       "transcript": "Usar benchmarks actuales saturados para evaluar la IA\nCrear nuevas evaluaciones y métricas para las capacidades casi sobrehumanas de la IA",
       "tags": [
@@ -1332,7 +1332,7 @@
       "height": 701,
       "sha256": "ee1a50d7bd646cb0025e79682282782edfbda8dedd4ef530f2b7f6d45acbf638",
       "title": "De escribir el discurso al partido",
-      "context": "La escalera de cerebros lleva la delegación política desde un discurso hasta el diseño de una formación completa. La pieza acompañaba la reflexión sobre comunicación política e IA tras el congreso de ACOP.",
+      "context": "El número recogía un congreso de comunicación política donde se debatió cómo utilizar IA en las campañas. Los cerebros cada vez más luminosos exageran cuánto trabajo se le puede encargar: primero un discurso y, al final, el diseño de todo un partido.",
       "alt": "Cuatro cerebros progresivamente más luminosos acompañan formas crecientes de delegar trabajo político.",
       "transcript": "REDACTAR EL DISCURSO ELECTORAL PERSONALMENTE\nDELEGAR EL DISCURSO EN UN ASESOR DE COMUNICACIÓN\nUTILIZAR GPT-4 PARA GENERAR EL DISCURSO\nHACER QUE LA IA DISEÑE EL PARTIDO POLÍTICO ENTERO",
       "tags": [
@@ -1373,7 +1373,7 @@
       "height": 499,
       "sha256": "9ced2d2b6ce17553c43963649fd896d022abb45277b76fbcbea496adf4d0e361",
       "title": "El pergamino de las siglas",
-      "context": "Encontrar una lista de tecnologías no resuelve cómo utilizarlas. El explorador descubre un pergamino lleno de nombres técnicos y lo arroja frustrado; la escena acompaña el número sobre eficiencia política y autenticidad al emplear IA generativa.",
+      "context": "El explorador espera encontrar una respuesta definitiva, pero el pergamino solo le ofrece nombres de tecnologías: GANs, Transformers y otras siglas. El número trataba el uso de IA para crear contenidos políticos. Saber que esas técnicas existen todavía no explica cómo aplicarlas a una campaña.",
       "alt": "Un explorador encuentra un pergamino en un cofre, lee una lista de tecnologías y lo tira con disgusto en cuatro viñetas.",
       "transcript": "I’VE FINALLY FOUND IT... AFTER 15 YEARS\nTHE SCROLL OF TRUTH!\nTipos de IA generativa que los equipos de campaña pueden usar: Modelos de lenguaje, GANs, Transformers, VAE, RNN, LSTM...\nNYEHHH\nY TODAVÍA FALTA ENTENDER CÓMO USARLOS CORRECTAMENTE",
       "tags": [
@@ -1394,7 +1394,7 @@
       "height": 500,
       "sha256": "41336bcb814c8668b9b33941fabceb28a31619cb968c1a8cf9fa962953fedf05",
       "title": "La atención de los laboratorios",
-      "context": "La plantilla del novio distraído representa a los laboratorios atraídos por las ventas y la adopción empresarial mientras la seguridad queda relegada. Se publicó junto a un balance del sector de IA de 2024 y sus prioridades.",
+      "context": "El número repasaba el estado del sector de IA en 2024. El hombre representa a los laboratorios que desarrollan modelos: mira con interés a las ventas y al uso empresarial mientras desatiende a su acompañante, la seguridad. La escena critica ese cambio de prioridades.",
       "alt": "Un hombre mira a una mujer que pasa mientras su acompañante lo observa indignada; cada figura representa una prioridad o actor del sector.",
       "transcript": "VENTAS Y ADOPCIÓN EMPRESARIAL DE LA IA\nLABORATORIOS DE IA\nSEGURIDAD DE LA IA",
       "tags": [
@@ -1415,7 +1415,7 @@
       "height": 701,
       "sha256": "616525f3eddc5dada7d6213138a779b5f4a04656242889064e7570563984aaac",
       "title": "Las historias que organizan el mundo",
-      "context": "La escalera de cerebros traslada a la IA una idea del número dedicado a Nexus, de Yuval Noah Harari: las historias compartidas organizan sociedades. El último peldaño introduce la inquietud por relatos producidos por máquinas que puedan influir en las elecciones.",
+      "context": "En Nexus, Yuval Noah Harari explica cómo las creencias compartidas permiten organizar sociedades: desde aceptar una moneda hasta reconocer un Estado. El meme imagina el siguiente paso con inquietud: que las IAs creen historias capaces de influir en la conversación pública y en las elecciones.",
       "alt": "Cuatro cerebros progresivamente iluminados acompañan etapas de las ficciones compartidas, desde monedas hasta redes de IA.",
       "transcript": "BARATIJAS Y CONCHAS COMO MONEDA\nCREACIÓN DE RELIGIONES\nCONTRATO SOCIAL Y ESTADOS-NACIÓN\nFICCIONES COMPARTIDAS DE REDES DE IA QUE MANIPULAN ELECCIONES",
       "tags": [
@@ -1437,7 +1437,7 @@
       "height": 500,
       "sha256": "2e0e0f2b05da6ac3b16b136d238c460f0394adb72d487b8e0b7d95d186d3d28f",
       "title": "Halloween en el laboratorio de IA",
-      "context": "El especial de Halloween repasaba inteligencias artificiales inquietantes de la ciencia ficción. La preferencia invertida de Drake convierte ese recorrido en una broma sobre desarrollar máquinas aterradoras, frente al trabajo menos espectacular de hacerlas éticas y responsables.",
+      "context": "El especial de Halloween repasaba IAs peligrosas de la ciencia ficción, como HAL 9000 o Skynet. Drake elige desarrollar máquinas que den miedo en vez de hacerlas responsables. La elección invertida convierte los temores de esas historias en una broma propia de la noche de Halloween.",
       "alt": "Drake rechaza una opción con la mano y aprueba otra señalándola, en dos viñetas sobre desarrollar IA.",
       "transcript": "Desarrollar IA ética y responsable\nDesarrollar IA que asuste a los humanos en Halloween",
       "tags": [
@@ -1458,7 +1458,7 @@
       "height": 500,
       "sha256": "6d08a8264b25379f1748328e6c7cb4c8c0682041e77f63a54e58b62d4c9b9217",
       "title": "Un candidato disponible a cualquier hora",
-      "context": "AI Steve era el caso de candidatura vinculada a una IA que examinaba este número. La comparación con un político de carne y hueso concentra el debate en la disponibilidad permanente y la consulta ciudadana, sin resolver quién asume la responsabilidad de decidir.",
+      "context": "AI Steve era el asistente de IA con el que Steve Endacott se presentó a las elecciones británicas de 2024. El meme compara al político que decide por su cuenta con la propuesta de escuchar a los ciudadanos a cualquier hora y consultarles las decisiones. La candidatura seguía correspondiendo a una persona.",
       "alt": "Drake rechaza la descripción de un político humano y aprueba la de AI Steve con atención continua.",
       "transcript": "Un político de carne y hueso tomando decisiones propias\nAI Steve representando a la ciudadanía 24/7 con validación continua",
       "tags": [
@@ -1479,7 +1479,7 @@
       "height": 499,
       "sha256": "0ee3eeeb005f96be599f1dde82a3983fe0ee40ddc8ec2b95169131dc917794bf",
       "title": "La sorpresa del uso militar",
-      "context": "Publicado tras la victoria electoral de Trump en 2024, este diálogo utiliza la plantilla de los astronautas para cuestionar la supuesta novedad de la IA militar. La segunda figura responde a la sorpresa de la primera con una afirmación deliberadamente tajante.",
+      "context": "El número analizaba qué podía cambiar en la IA con el regreso de Trump a la presidencia estadounidense. Un astronauta se sorprende de que el Gobierno vaya a darle usos militares; el otro responde que no es una novedad. La broma cuestiona esa sorpresa, no describe una operación concreta.",
       "alt": "Dos astronautas contemplan la Tierra; el situado detrás apunta con una pistola al que pregunta por las aplicaciones militares.",
       "transcript": "¿El gobierno realmente va a usar la IA para aplicaciones militares?\nSiempre lo ha hecho",
       "tags": [
@@ -1501,7 +1501,7 @@
       "height": 500,
       "sha256": "29a9c5b6bc2851a3765e638448bc81cfe0c7d8e23da8ca571917a8a364cb492a",
       "title": "Cuando el votante es simulado",
-      "context": "La edición probaba SocialAI como espacio de simulación para mensajes políticos. NPC procede de los videojuegos y designa un personaje controlado por el sistema: aquí representa interlocutores artificiales cuya aparente familiaridad sorprende a los estrategas acostumbrados a grupos de discusión.",
+      "context": "SocialAI permite publicar mensajes y recibir respuestas de personajes creados con IA, llamados aquí NPCs. El número probaba esa herramienta para ensayar mensajes políticos. El meme exagera la satisfacción del asesor: cree que esos personajes representan mejor a sus votantes que un grupo de discusión con personas reales.",
       "alt": "Un hombre sentado señala la televisión con interés mientras sostiene una bebida; el texto compara agentes simulados y votantes.",
       "transcript": "ESTRATEGAS POLÍTICOS VIENDO CÓMO LOS NPCS REACCIONAN COMO SUS VOTANTES REALES\n¡ESTOS NPCS REPRESENTAN MEJOR A MI ELECTORADO QUE MIS PROPIOS FOCUS GROUPS!",
       "tags": [
@@ -1543,7 +1543,7 @@
       "height": 1200,
       "sha256": "e38a5f4977e8ce25ec8840af084c0b92be9cbd05b35703fc3244d226d4da228d",
       "title": "Una voz frente a la censura",
-      "context": "En una edición sobre periodismo político frente a la censura, las dos reacciones de Drake oponen resignación y resistencia. La IA aparece como una posible ayuda para hacer circular voces silenciadas, ligada al contexto periodístico que desarrollaba el artículo.",
+      "context": "El número presentaba Operación Retuit, una iniciativa periodística en Venezuela que utiliza presentadores virtuales para difundir noticias y proteger a los reporteros. El meme contrapone aceptar el silencio impuesto por la censura con recurrir a la IA para seguir haciendo llegar ese trabajo al público.",
       "alt": "Drake rechaza que la censura venza al periodismo y señala con aprobación la amplificación de voces mediante IA.",
       "transcript": "Dejar que la censura venza al periodismo\nUtilizar la IA para amplificar las voces silenciadas",
       "tags": [
@@ -1564,7 +1564,7 @@
       "height": 348,
       "sha256": "4f5f3c7d492839fb5c8e94112896458e13c49e13cb6704614aae9f18d1c03ce8",
       "title": "Preparados, al menos de palabra",
-      "context": "El perro que permanece tranquilo en una habitación en llamas representa la distancia entre declararse preparado y afrontar un cambio. Aquí acompaña la pregunta del número sobre nuestra preparación ante sistemas que pudieran superar capacidades humanas en muchas áreas.",
+      "context": "En diciembre de 2024 se sucedían los anuncios de modelos de IA cada vez más capaces. El número preguntaba si los gobiernos estaban preparándose para ese cambio. El perro insiste en que todo va bien mientras la habitación arde: la confianza de sus palabras no coincide con lo que ocurre alrededor.",
       "alt": "Un perro con sombrero toma café entre llamas; en la segunda viñeta insiste en que todo está bien.",
       "transcript": "Estamos preparados para la revolución de la IA\nTHIS IS FINE.\nModelos que superan a expertos en todas las áreas.",
       "tags": [
@@ -1585,7 +1585,7 @@
       "height": 449,
       "sha256": "73b4bce6c93701405c20df959b2326feb23c8e263d9c8ae8e4a849b8547bd8c3",
       "title": "El paso que faltaba en el plan",
-      "context": "La guía de iniciación a la IA para instituciones tenía un componente organizativo. El plan de Gru avanza por pilotos, equipos y estrategia, hasta tropezar con una omisión muy concreta: formar a las personas que deben aplicar y sostener los cambios.",
+      "context": "El número proponía comenzar con una prueba pequeña de IA, formar un equipo propio y elaborar después una estrategia para la organización. Gru sigue los pasos, pero olvida enseñar a utilizar la tecnología a los empleados que tendrán que trabajar con ella.",
       "alt": "Gru presenta cuatro carteles de un plan y se queda desconcertado ante el último, que omite capacitar a los empleados.",
       "transcript": "Crea un proyecto piloto exitoso\nConstruye un equipo interno de IA\nDesarrolla una estrategia integral\nOlvida capacitar a los empleados",
       "tags": [
@@ -1607,7 +1607,7 @@
       "height": 551,
       "sha256": "afa53f4a3d0f8db5608bddaf7eeecad94445d31236091f52a976b45f525bcb40",
       "title": "La sorpresa después de no planificar",
-      "context": "El primer número de 2025 formulaba peticiones a los responsables políticos. Pikachu sorprendido dramatiza un escenario hipotético: ignorar la planificación ante la inteligencia artificial general y asombrarse después por sus consecuencias sociales. Las fechas forman parte del supuesto humorístico.",
+      "context": "AGI significa inteligencia artificial general: una IA capaz de afrontar una gran variedad de tareas, como una persona. El meme imagina que los políticos no se preparan para su llegada y después se sorprenden ante los problemas sociales. Las fechas y consecuencias pertenecen a ese supuesto, no a una predicción confirmada.",
       "alt": "Pikachu abre la boca sorprendido bajo una secuencia que contrapone la falta de planificación en 2025 con una crisis futura.",
       "transcript": "- 2025: Los políticos NO planifican a largo plazo para la AGI.\n- 2030 (o, probablemente, antes): Llega la AGI, crisis social y desigualdad masiva.\n+++ Los políticos:",
       "tags": [
@@ -1628,7 +1628,7 @@
       "height": 701,
       "sha256": "1176a32de9f75b4a2a8a041167fde19c74c8e0686d13a27af2ae40db65d549ae",
       "title": "De la encuesta al mundo simulado",
-      "context": "La escala de cerebros acompaña el artículo sobre agentes que simulan comportamientos sociales. El 85 % remite al resultado descrito en aquel estudio, no a una garantía general de predicción electoral; la última viñeta lleva la idea hasta sociedades virtuales completas.",
+      "context": "El estudio citado creó versiones de más de mil personas con IA a partir de entrevistas. El 85 % compara sus respuestas a una encuesta con las de los participantes, teniendo en cuenta que una persona también puede responder de forma distinta al repetirla. El meme celebra esa capacidad de simulación; no habla de acertar resultados electorales.",
       "alt": "Cuatro cerebros cada vez más luminosos acompañan encuestas telefónicas, encuestas digitales, agentes sociales y sociedades virtuales.",
       "transcript": "ENCUESTAS TELEFÓNICAS AL AZAR\nENCUESTAS ONLINE SEGMENTADAS AVANZADAS\nIA SIMULANDO MIL AGENTES SOCIALES CON UN 85% DE PRECISIÓN\nCREAR SOCIEDADES VIRTUALES PARA PREDECIR DINÁMICAS POLÍTICAS Y SOCIALES",
       "tags": [
@@ -1649,7 +1649,7 @@
       "height": 501,
       "sha256": "f61584a91f1e2812d133351c0a0706230b1851a3d4dc640f9903b9d5f3696889",
       "title": "El invitado pendiente de la superinteligencia",
-      "context": "Mientras los demás bailan, un invitado piensa en la llegada de una posible superinteligencia. La escena conecta con la apuesta entre un optimista y un escéptico tratada en el número: el plazo de 2027 se presenta como posibilidad debatida, no como hecho confirmado.",
+      "context": "Gary Marcus y Miles Brundage habían apostado sobre las capacidades que alcanzaría la IA antes de terminar 2027. El invitado piensa en una posible superinteligencia —una IA que supere ampliamente las capacidades humanas— mientras los demás disfrutan de la fiesta. La fecha refleja una posibilidad discutida en el número.",
       "alt": "En un dibujo de una fiesta, un personaje con gorrito permanece apartado mientras varias parejas bailan.",
       "transcript": "ELLOS NI IMAGINAN QUE PODRÍAMOS TENER SUPERINTELIGENCIAS ARTIFICIALES ANTES DEL FINAL DE 2027",
       "tags": [
@@ -1670,7 +1670,7 @@
       "height": 431,
       "sha256": "1d7ac35a761feaa9fbf9be0a74dd4cba0359f0be2033c0f92b753fa2bcd08dcd",
       "title": "La celebración entre las llamas",
-      "context": "Bob Esponja y Patricio celebran delante de un desastre. La escena caricaturiza el riesgo que planteaba la edición sobre el segundo mandato de Trump: confundir la eliminación de restricciones con una innovación cuyos efectos permanecerán necesariamente bajo control.",
+      "context": "El número examinaba la intención de la nueva administración Trump de reducir las reglas sobre IA. Bob Esponja y Patricio celebran haber quitado los límites mientras todo arde a su alrededor. La escena imagina el riesgo de impulsar la tecnología sin poder controlar después sus consecuencias.",
       "alt": "Bob Esponja y Patricio sonríen en una estancia que arde, bajo una felicitación por desregular la IA.",
       "transcript": "LO HICIMOS, PATRICIO\nDESREGULAMOS LA IA PARA INNOVAR SIN LÍMITES Y AHORA NADIE PUEDE DETENERLA",
       "tags": [
@@ -1691,7 +1691,7 @@
       "height": 809,
       "sha256": "744edc6bd04cf260191ed6d23359e4b70f5c25cb7ece60771acebcae6276ce08",
       "title": "Centros de datos para todos",
-      "context": "La conocida escena de Oprah repartiendo regalos convierte los centros de datos en premios para todo el público. Acompañaba la edición sobre Stargate y su apuesta multimillonaria por infraestructura de IA, exagerando visualmente la escala del entusiasmo inversor.",
+      "context": "Stargate se anunció en enero de 2025 como una gran inversión en infraestructura de IA en Estados Unidos. Un centro de datos reúne los ordenadores que hacen funcionar estos sistemas. Oprah los reparte como regalos para exagerar la abundancia de nuevas instalaciones prometidas.",
       "alt": "Cuatro fotografías de Oprah señalando al público y abriendo los brazos acompañan el reparto imaginario de enormes centros de datos.",
       "transcript": "¡TÚ TIENES UN CENTRO DE DATOS ENORME!\n¡Y TÚ TIENES UN CENTRO DE DATOS ENORME!\n¡TODOS TIENEN CENTROS DE DATOS ENORMES!",
       "tags": [
@@ -1712,7 +1712,7 @@
       "height": 408,
       "sha256": "25ac6dc8c566d4d8992b820009b25ac11f773ca0887bb8630464acc41402008a",
       "title": "Un brindis por probar y aprender",
-      "context": "La reseña de Superagency, de Reid Hoffman, planteaba una visión favorable a ampliar la capacidad de acción humana mediante IA. El brindis celebra el enfoque iterativo del libro: aprender de la experiencia y ajustar, frente a responder al riesgo únicamente con prohibiciones.",
+      "context": "Superagency, de Reid Hoffman y Greg Beato, propone probar la IA, observar los resultados y corregir los errores: eso significa aquí «enfoque iterativo». El brindis celebra esa idea frente a quienes solo ven motivos para prohibirla.",
       "alt": "Un hombre de esmoquin alza una copa y sonríe hacia la cámara, entre textos sobre riesgos y aprendizaje iterativo.",
       "transcript": "CUANDO LOS POLÍTICOS DEBATEN SOBRE PROHIBIR LA IA PORQUE ‘PODRÍA SER PELIGROSA’...\nPERO TÚ HAS LEÍDO SUPERAGENCY Y SABES QUE EL ENFOQUE ITERATIVO ES MEJOR",
       "tags": [
@@ -1733,7 +1733,7 @@
       "height": 500,
       "sha256": "f948a0cdf0ebaacd9afed9c531e5e6e49bc731ab62a32bf548f47448a1e24afe",
       "title": "Europa cambia de conversación",
-      "context": "Tras la cumbre de IA de París, el número destacaba el impulso inversor europeo. La plantilla de Drake presenta una oposición editorial entre regulación asfixiante e infraestructura, condensando en dos gestos el debate sobre cómo combinar capacidad tecnológica y reglas.",
+      "context": "En la cumbre de París de febrero de 2025, la Unión Europea anunció un gran impulso a la inversión en IA. El meme celebra ese giro: pasar de una conversación centrada en las restricciones a financiar las instalaciones y herramientas necesarias para desarrollar la tecnología.",
       "alt": "Drake rechaza una regulación que asfixia la innovación y aprueba invertir en infraestructura de inteligencia artificial.",
       "transcript": "Regular la IA en la UE hasta asfixiar la innovación\nInvertir 200.000 millones en infraestructura de inteligencia artificial",
       "tags": [
@@ -1776,7 +1776,7 @@
       "height": 500,
       "sha256": "5a6eecf57baf0e4dba5515698a5be75b6fd28026840c4dd3aa78f1c326252cad",
       "title": "Una nueva atracción en el laboratorio",
-      "context": "El novio que se distrae representa a un científico fascinado por la rapidez de la IA. La edición partía de un caso sobre hipótesis de investigación en superbacterias: las 48 horas del meme condensan ese ejemplo, no describen toda la investigación científica.",
+      "context": "El número relataba cómo una IA propuso en dos días una explicación sobre bacterias resistentes a los antibióticos que un equipo llevaba años investigando. El científico del meme se deja seducir por esa rapidez. Las 48 horas corresponden a aquel caso, no a cualquier investigación.",
       "alt": "Un hombre mira a otra mujer mientras su pareja protesta; las figuras llevan etiquetas de científico, IA y trabajo de laboratorio.",
       "transcript": "IA RESOLVIENDO INVESTIGACIONES EN 48 HORAS\nCIENTÍFICO\nTRABAJO DE AÑOS EN EL LABORATORIO",
       "tags": [
@@ -1797,7 +1797,7 @@
       "height": 500,
       "sha256": "d103a2abf84b683459dd8a1828733207e229747a01309d1c845ac96ac85a96fc",
       "title": "Diez minutos para investigar mejor",
-      "context": "La comparación de herramientas de investigación profunda se traduce en una elección entre rapidez y detalle. Drake prefiere esperar a obtener un análisis más elaborado; la referencia a un artículo académico expresa el entusiasmo del meme, sin sustituir la comprobación de fuentes.",
+      "context": "Deep Research de OpenAI busca información en distintas fuentes y prepara un informe. Tras comparar varias herramientas, el meme prefiere esperar más tiempo a cambio de detalle. La comparación con un artículo académico es un elogio humorístico; el informe todavía necesita comprobarse.",
       "alt": "Dos gestos de Drake contrastan modelos rápidos y gratuitos con la espera de Deep Research de OpenAI.",
       "transcript": "MODELOS GRATUITOS Y RÁPIDOS CON RESPUESTAS INTERESANTES PERO MÁS GENÉRICAS PARA UNA INVESTIGACIÓN\nESPERAR 10 MINUTOS A DEEP RESEARCH DE OPENAI PARA UN ANÁLISIS DETALLADO QUE RIVALIZA CON UN PAPER ACADÉMICO",
       "tags": [
@@ -1818,7 +1818,7 @@
       "height": 449,
       "sha256": "1f0dc10477ca1a447ae4bda1331f1669bc260f64a0e44feed0ab69b52dc972a0",
       "title": "La privacidad y el pequeño detalle",
-      "context": "En el número sobre el Mobile World Congress, el plan de Gru representa una tensión entre promesas de privacidad y recopilación de datos. La repetición del último cartel fuerza a detenerse precisamente en la condición que parecía pasar inadvertida.",
+      "context": "El Mobile World Congress es la feria de telefonía y tecnología móvil celebrada en Barcelona. El meme imagina una empresa que promete proteger la privacidad trabajando dentro del dispositivo, pero antes pide recopilar todos los datos del usuario. Gru se detiene al advertir esa contradicción.",
       "alt": "Gru presenta un plan de IA local y privacidad; al repetir que antes debe recopilar datos del usuario, cambia su expresión.",
       "transcript": "Vamos a usar IA para mejorar la privacidad del usuario.\nVamos a procesar los datos de forma local en el dispositivo\nPero primero tenemos que recopilar todos los datos del usuario para entrenar el modelo\nPero primero tenemos que recopilar todos los datos del usuario para entrenar el modelo",
       "tags": [
@@ -1839,7 +1839,7 @@
       "height": 500,
       "sha256": "67df44bb5c5d4046835017556cf7c1e28c270a57e863f8044b9a92a0d3f060a2",
       "title": "La pregunta del dinosaurio humanista",
-      "context": "El dinosaurio pensativo enfrenta dos maneras de orientar la IA: el desarrollo humano y la competencia industrial. Acompañaba la reseña de Civilización artificial, centrada en el humanismo tecnológico y en las finalidades sociales de las herramientas que construimos.",
+      "context": "Civilización artificial, de José María Lassalle, pregunta qué lugar deben ocupar las personas en el desarrollo de la IA. El dinosaurio recoge una de sus tensiones: si la tecnología debe mejorar la vida humana, ¿por qué medir su éxito solo como una competición entre empresas?",
       "alt": "Un dinosaurio con una garra bajo la barbilla parece meditar sobre una contradicción, sobre un fondo verde.",
       "transcript": "SI LA IA DEBE SERVIR AL DESARROLLO DE LA HUMANIDAD\n¿POR QUÉ DESARROLLARLA CON MENTALIDAD PURAMENTE INDUSTRIAL Y COMPETITIVA?",
       "tags": [
@@ -1860,7 +1860,7 @@
       "height": 500,
       "sha256": "5441b7719f413e8763ab148bdf1a93113cf38e942c0dbc568fcbe8d49f4752ba",
       "title": "La crítica que tomó otro camino",
-      "context": "Las imágenes de espera y soledad representan a quien pierde el control de su mensaje. El número analizaba comunicación política audiovisual con IA: una pieza concebida como crítica puede circular por su comicidad y terminar debilitando la seriedad de quien la publica.",
+      "context": "El número examinaba vídeos con IA difundidos por dirigentes y partidos políticos. La escena imagina un resultado no deseado: alguien prepara un ataque que considera contundente, pero el público se ríe del propio vídeo. Conseguir muchas visitas no significa transmitir el mensaje que se pretendía.",
       "alt": "Tres escenas muestran al mismo hombre solo en un columpio, una habitación y junto a una piscina vacía.",
       "transcript": "CUANDO CREASTE EL VIDEO CON IA PENSANDO QUE SERÍA UNA CRÍTICA CONTUNDENTE...\nPERO SE VOLVIÓ UN MEME VIRAL\nY YA NADIE TE TOMA EN SERIO",
       "tags": [
@@ -1881,7 +1881,7 @@
       "height": 500,
       "sha256": "3cbc36fe1fe8ec4f6a1b81a5cd8d1f846cf4b07396ae4abc248a255aa18e1572",
       "title": "La renta básica cambia de perspectiva",
-      "context": "El número defendía abrir el debate sobre renta básica ante posibles cambios del empleo. Las dos reacciones contrastan el rechazo a financiarla con impuestos y la tranquilidad de contar con necesidades cubiertas. El desempleo generalizado funciona como escenario del argumento, no como pronóstico confirmado.",
+      "context": "La renta básica universal sería un ingreso periódico para todas las personas, sin exigir tener un empleo. El número proponía debatirla ante la posibilidad de que la IA reduzca el trabajo disponible. Drake rechaza pagar más impuestos hasta imaginar que él también podría necesitar ese ingreso.",
       "alt": "Drake rechaza hablar de más impuestos y aprueba recordar la protección que ofrecería una renta básica universal.",
       "transcript": "Cuando te hablan de más impuestos para financiar la renta básica universal\nCuando recuerdas que en pocos años podría no haber trabajo para casi nadie pero tendrás garantizadas tus necesidades básicas gracias a la RBU",
       "tags": [
@@ -1902,7 +1902,7 @@
       "height": 500,
       "sha256": "30aec7d2798c61e0b05437114eca26beec3a87512f363a6a46afc0bcf9113c4c",
       "title": "La confianza selectiva en las imágenes",
-      "context": "La sonrisa de Willy Wonka pone en duda una resistencia concreta: desconfiar del diseño generado con IA mientras se emplean plantillas de internet desde hace años. Se publicó junto a la exploración de las nuevas capacidades de imagen de ChatGPT para comunicación política.",
+      "context": "El número probaba las nuevas funciones de ChatGPT para crear imágenes de campaña. Willy Wonka se dirige con ironía a quien rechaza esos carteles por estar hechos con IA, aunque lleva años comunicando con memes tomados de internet.",
       "alt": "Willy Wonka apoya la cabeza en una mano y mira con sonrisa irónica bajo una pregunta sobre carteles políticos.",
       "transcript": "CUÉNTAME OTRA VEZ CÓMO NO CONFÍAS EN LA IA PARA HACER UN CARTEL POLÍTICO...\nMIENTRAS USAS PLANTILLAS DE MEMES DE INTERNET PARA TU PARTIDO DESDE 2012",
       "tags": [
@@ -1924,7 +1924,7 @@
       "height": 500,
       "sha256": "41be16e6581678c03f37c5f37ef35aa6fc309725f4bdcd64cc67c1ce7d3a209c",
       "title": "Del cartel al siguiente intento",
-      "context": "La comparación enfrenta muchas horas de edición manual con la rapidez de pedir una imagen y corregirla conversando. Acompañaba las pruebas de generación visual de ChatGPT en la newsletter; los tiempos exageran la diferencia de experiencia y no constituyen una medición.",
+      "context": "El número probaba cómo crear imágenes en ChatGPT y pedir cambios mediante una conversación. El meme contrapone ese proceso con muchas horas de edición en Photoshop. «Iterar» significa aquí revisar el resultado y volver a pedir ajustes; los tiempos de la imagen son una exageración humorística.",
       "alt": "Drake rechaza largas sesiones con Photoshop y aprueba generar e iterar un cartel mediante GPT-4.",
       "transcript": "Pasar horas diseñando un cartel de campaña con Photoshop y corregir 50 veces\nPedirle a GPT-4 que genere la imagen en 30 segundos e iterar",
       "tags": [
@@ -1945,7 +1945,7 @@
       "height": 432,
       "sha256": "3232bd39d1a911d8c8be89f49655558391375b3055a00e41174264b1c0116804",
       "title": "La decisión que sigue siendo humana",
-      "context": "El cartel adopta la fórmula «Change my mind», una invitación a debatir una afirmación contundente. En plena Semana Santa, la edición analizaba el documento del Vaticano sobre IA; la pieza concentra la reflexión en la responsabilidad humana ante el uso letal de máquinas.",
+      "context": "«Change my mind» significa «Hazme cambiar de opinión». El cartel invita a discutir si una máquina puede decidir sobre la vida de una persona. Acompañaba la lectura del documento del Vaticano sobre IA, que abordaba la responsabilidad humana ante las armas autónomas.",
       "alt": "Un hombre sentado tras una mesa al aire libre muestra un cartel contra delegar en máquinas la decisión de matar.",
       "transcript": "La decisión de matar nunca debe delegarse a una máquina\nCHANGE MY MIND",
       "tags": [
@@ -1966,7 +1966,7 @@
       "height": 1536,
       "sha256": "767d721daa7d7b92b8e397266d0a81cf137280396ca8eeadb8e0f8ee1a1ef764",
       "title": "Un lector pregunta a un robot",
-      "context": "Publicado el 23 de abril, este diálogo celebra el Día del Libro con una escena imaginada en 2050. El niño pregunta por el aprendizaje del robot, y su respuesta devuelve el protagonismo a las personas y a los textos humanos de los que aprende la IA.",
+      "context": "Publicado el 23 de abril, Día del Libro, este diálogo imagina un encuentro entre un niño y un robot en 2050. La respuesta recuerda de dónde procede buena parte de lo que aprende la IA: los textos y conocimientos producidos por personas.",
       "alt": "Un niño con un libro abierto conversa junto a un robot dorado de aspecto amable, en una ilustración cálida.",
       "transcript": "¿Y tú cómo aprendiste tanto?\nEmpecé leyendo a los humanos.\n23 de abril de 2050, Día del Libro",
       "tags": [
@@ -1987,7 +1987,7 @@
       "height": 1536,
       "sha256": "2751344e0c7f5cb5dfe700fa1ab72f03ff2fbeedc285f8829010c75d839aeeaf",
       "title": "La competencia sale de la oficina",
-      "context": "La edición cercana al Primero de Mayo reflexionaba sobre empleo y robots. Dos escenas futuras imaginarias llevan la sustitución laboral al terreno deportivo: la misma máquina que ocupa un puesto también gana una carrera, ampliando la sensación de competencia.",
+      "context": "La edición publicada en vísperas del Primero de Mayo trataba el futuro del empleo ante robots más capaces. La broma imagina que, después de sustituirte en el trabajo, un robot también te supera en la maratón. Los años 2032 y 2033 pertenecen a esa escena ficticia.",
       "alt": "Primero un trabajador sale con una caja junto a un robot; después el robot cruza la meta antes que un corredor humano.",
       "transcript": "En 2032: Pierdes tu puesto de trabajo\nEn 2033: Pierdes la maratón\nMARATHON\n1001\n3002",
       "tags": [
@@ -2008,7 +2008,7 @@
       "height": 989,
       "sha256": "6afa4e16c556e0cab3d3b2bb0ffb13f8c750059a03faa75c1994cb74a06b95c2",
       "title": "Dos botones para un presupuesto",
-      "context": "La edición trataba un caso chileno de IA contra la violencia de género. La plantilla de los dos botones transforma una decisión presupuestaria en una elección incómoda entre proteger a mujeres y financiar publicidad: el foco humorístico recae en las prioridades gubernamentales.",
+      "context": "El artículo contaba un proyecto chileno que empleaba IA para ayudar a proteger a mujeres víctimas de violencia. Los botones trasladan el debate al presupuesto: frente a esa aplicación, aparece el gasto en publicidad. El personaje duda ante una elección que la viñeta presenta como evidente.",
       "alt": "Un dedo duda entre dos botones rojos y, debajo, un hombre suda al decidir dónde invertir en IA.",
       "transcript": "Invertir en IA para proteger a mujeres víctimas de violencia\nInvertir en IA para campañas publicitarias\nGOBIERNOS DE TODO EL MUNDO ELIGIENDO PRESUPUESTOS EN 2025",
       "tags": [
@@ -2029,7 +2029,7 @@
       "height": 480,
       "sha256": "8eeb966507f88c624bb391c37356af4b9e4d90ad1580ecd0dd88b60b47c4b505",
       "title": "La lección que falta aprender",
-      "context": "Lisa Simpson presenta una idea que conecta con la reseña del libro de Adela Cortina sobre ética e IA: aprender a utilizar una herramienta no agota la formación necesaria. También hace falta juzgar sus respuestas, sus fines y las decisiones que facilita.",
+      "context": "Lisa Simpson recuerda que saber manejar una IA no basta para utilizarla bien. El mensaje acompañaba la reseña del libro de Adela Cortina sobre ética e inteligencia artificial: también debemos preguntarnos si sus respuestas son fiables y si conviene hacer lo que propone.",
       "alt": "Lisa Simpson expone ante una audiencia un mensaje escrito en una pantalla de proyección.",
       "transcript": "No es suficiente aprender a usar la IA. También debemos aprender a cuestionarla",
       "tags": [
@@ -2071,7 +2071,7 @@
       "height": 500,
       "sha256": "210800cd3446984d9a45d48f6a836ff60a677d1a92036fcee2cb0e579dcc3672",
       "title": "Dos velocidades de atención ciudadana",
-      "context": "En la edición dedicada a las novedades de Google, el contraste entre los dos perros imagina una administración con asistencia avanzada. La atención continua en varios idiomas se enfrenta a una respuesta que tarda días, exagerando la diferencia entre capacidades tecnológicas y experiencia burocrática.",
+      "context": "ASTRA alude aquí a Project Astra, el proyecto de asistente de Google presentado en la edición de 2025. El meme imagina su aplicación a la atención ciudadana: respuestas inmediatas y en varios idiomas frente a trámites que tardan días. Las prestaciones del cartel forman parte de la comparación, no describen un servicio público ya implantado.",
       "alt": "Un perro musculoso representa la administración con IA ASTRA y un perro pequeño sentado representa el sistema actual.",
       "transcript": "Administración con IA avanzada ASTRA\nsistema actual\nAtención 24/7 en 5 idiomas, con integración completa y respuesta en segundos\nTe respondemos en 15 días hábiles (con suerte)",
       "tags": [
@@ -2092,7 +2092,7 @@
       "height": 348,
       "sha256": "accc2955a43047056a42aff60c05d494c062882ca35390193132e7d9564ae345",
       "title": "Todo va bien con Word 2003",
-      "context": "El perro rodeado de fuego representa una administración que observa una transformación mientras sigue usando herramientas antiguas. Publicado tras el Google Cloud Summit de Madrid, el meme contrasta las propuestas de IA para el sector público con la inercia cotidiana.",
+      "context": "«This is fine» significa «Todo va bien»: eso dice el perro aunque la habitación está ardiendo. Aquí representa a una administración que sigue trabajando como hace años mientras la IA avanza. La edición recogía propuestas para modernizar los servicios públicos presentadas en el Google Cloud Summit de Madrid.",
       "alt": "Un perro toma café tranquilamente en una habitación en llamas, bajo una referencia a administraciones que siguen con Word 2003.",
       "transcript": "LAS ADMINISTRACIONES VIENDO CÓMO LA IA REDISEÑA EL SECTOR PÚBLICO MIENTRAS SIGUEN CON WORD 2003\nTHIS IS FINE.",
       "tags": [
@@ -2113,7 +2113,7 @@
       "height": 672,
       "sha256": "bb3b5a39a071956ba5f6b9a18c334acd1f2fa35b21f2951ed25e3c00a5562b3e",
       "title": "El futuro al alcance de la mano",
-      "context": "La figura intenta alcanzar un objeto luminoso mientras otra la sujeta por detrás. En el número sobre el informe BOND 2025, esa distancia representa la tensión entre el avance de la IA y unos marcos públicos que el meme retrata como rezagados.",
+      "context": "El informe BOND 2025 describía la rápida expansión de la IA. La figura quiere alcanzar sus nuevas posibilidades, pero otra, etiquetada como gobiernos con normas de 2018, la retiene. La broma señala el desfase entre una tecnología que cambia deprisa y unas reglas que no se han actualizado.",
       "alt": "Un personaje extiende los brazos hacia una esfera amarilla, pero otro personaje rosa le impide avanzar.",
       "transcript": "IA GENERATIVA MULTIPLICÁNDOSE, OPEN SOURCE IMPARABLE, INVERSIÓN PRIVADA RÉCORD\nGOBIERNOS CON MARCOS REGULATORIOS DE 2018",
       "tags": [
@@ -2135,7 +2135,7 @@
       "height": 688,
       "sha256": "762c2f3d7bfe511b7f9603ebeedf99b0f82623d8f22af0ac5b4f9d268c2047f1",
       "title": "Pánico, calma y otra vez pánico",
-      "context": "Las tres reacciones siguen la lectura de la «singularidad amable» planteada por Sam Altman. La tranquilidad de la promesa se quiebra al pensar en el orden de los cambios laborales y las respuestas sociales. La alusión a julio recoge expectativas del momento de publicación.",
+      "context": "Sam Altman, responsable de OpenAI, describía una «singularidad amable»: una transformación profunda impulsada por la IA que llegaría de forma gradual. El personaje se tranquiliza con esa promesa, hasta pensar que la pérdida de empleos podría adelantarse a las ayudas para quienes los pierdan. La expectativa sobre GPT-5 corresponde a junio de 2025.",
       "alt": "Una cabeza pasa de sujetarse las sienes a estar tranquila y vuelve a alarmarse, en tres viñetas sucesivas.",
       "transcript": "GPT-5 parece que llegará en julio con capacidades multimodales ampliadas\nPanik\nAltman dice que todo va bien. Vamos hacia una singularidad amable\nKalm\nLa disrupción laboral llegará antes que la renta básica\nPanik",
       "tags": [
@@ -2156,7 +2156,7 @@
       "height": 493,
       "sha256": "d887fab35208952fef49897c68021b13ba9537414366f94393a769a339627cdc",
       "title": "Una señal en el radar",
-      "context": "Metaculus es una comunidad de pronóstico colectivo. El operador de radar convierte un mensaje ambiguo de Sam Altman en una señal a vigilar: la broma acompaña el artículo sobre predicción y sobre la atención que reciben pequeños indicios del desarrollo de la IA.",
+      "context": "Metaculus reúne predicciones de muchas personas sobre acontecimientos futuros. El operador del radar representa a quienes examinan cada mensaje de Sam Altman, responsable de OpenAI, buscando pistas sobre el próximo avance. Una «señal débil» es precisamente eso: un indicio pequeño e incierto, no una confirmación.",
       "alt": "Un operador con auriculares habla por radio frente a un radar donde aparece la etiqueta de un tuit de Sam Altman.",
       "transcript": "Predictor sobre IA en Metaculus\nTweet criptico de Sam Altman\n¡TENEMOS UNA SEÑAL DÉBIL, REPITO, SEÑAL DÉBIL!",
       "tags": [
@@ -2177,7 +2177,7 @@
       "height": 701,
       "sha256": "907db28fc0b3e6891f9f990887b106cc1283a7cc78f1abb2be6d0a46ccae6f35",
       "title": "Buscar el dólar, peldaño a peldaño",
-      "context": "El artículo describía cómo el medio cubano elTOQUE usa IA para analizar ofertas del mercado informal de divisas. La escala de cerebros pasa de consultas aisladas a reunir información dispersa; el último peldaño representa esa elaboración de una tasa de referencia.",
+      "context": "El medio cubano elTOQUE empleaba IA para reunir anuncios de compra y venta de divisas publicados en redes y foros. Con ellos elaboraba una referencia del precio del dólar en el mercado informal. El meme contrapone ese trabajo conjunto a buscar el dato por separado en un banco, Facebook o decenas de grupos.",
       "alt": "Cuatro cerebros progresivamente luminosos acompañan distintas maneras de averiguar el precio del dólar.",
       "transcript": "PEDIR PRECIO DEL DÓLAR AL BANCO\nBUSCARLO EN FACEBOOK\nENTRAR A 40 GRUPOS DE TELEGRAM\nUSAR IA PARA SINTETIZAR LAS INTENCIONES DE COMPRA Y VENTA Y CONSTRUIR UNA TASA DE REFERENCIA ROBUSTA Y DISTRIBUIDA",
       "tags": [
@@ -2198,7 +2198,7 @@
       "height": 667,
       "sha256": "d03bc250c99b8d955c9e42cbfba86bc3d042d18d5344ee142ae9d3d5ba93cc74",
       "title": "Vacaciones para explorar otros futuros",
-      "context": "El inicio de las historIAs veraniegas proponía una travesía imaginativa por el futuro. La progresión de Bob Esponja convierte distintos tipos de vacaciones en una escalada que termina en explorar instrucciones para IA: una forma de viajar sin salir de la conversación.",
+      "context": "Las historIAs veraniegas son los relatos de ficción sobre IA que estrategIA publica en verano. Esta edición inauguraba la serie de 2025 con una guía de viaje imaginaria. Bob Esponja lleva las vacaciones hasta el «turismo de prompts»: probar instrucciones para que una IA nos ayude a imaginar otros mundos.",
       "alt": "Cuatro versiones de Bob Esponja, cada vez más musculosas y luminosas, acompañan diferentes modalidades de turismo.",
       "transcript": "TURISMO DE SOL Y PLAYA\nTURISMO RURAL\nTURISMO GASTRONÓMICO\nTURISMO DE PROMPTS PARA IAS",
       "tags": [
@@ -2218,7 +2218,7 @@
       "height": 500,
       "sha256": "bfcf3c56397bdb033d17a30788c9eb3ee9c1f13d4d8309e782248bef882df9cb",
       "title": "Un ciudadano mira hacia otro gobierno",
-      "context": "La pieza acompaña una fábula veraniega sobre gobernanza escrita con Grok 4. El ciudadano de 2045 se siente atraído por una IA que escucha a los barrios; la plantilla del novio distraído hace visible la comparación con el gobierno tradicional dentro de ese relato ficticio.",
+      "context": "El relato, escrito con la IA Grok 4, imaginaba una Ciudad de México de 2045 donde la tecnología ayudaba a escuchar a los vecinos. El ciudadano del meme mira con interés esa promesa mientras deja de lado al gobierno tradicional. Es una comparación dentro de una ficción sobre participación ciudadana.",
       "alt": "Un hombre mira a una mujer que representa una IA emocional mientras su pareja, etiquetada como gobierno tradicional, protesta.",
       "transcript": "IA EMOCIONAL QUE SUEÑA Y ESCUCHA A LOS BARRIOS\nCIUDADANO DEL AÑO 2045\nGOBIERNO TRADICIONAL",
       "tags": [
@@ -2239,7 +2239,7 @@
       "height": 1024,
       "sha256": "ddebf6954aeca1f42bb7e84209bfc3f988235316c88544b711b74d963c66e0ca",
       "title": "La campaña empieza antes del café",
-      "context": "El relato de 2032 seguía a un jefe de campaña asistido por una IA general. El despertar somnoliento se transforma en seguridad tecnológica: el 52,3 % remite a la probabilidad electoral que aparecía en sus gafas dentro de la ficción, no a una encuesta real.",
+      "context": "En el relato de 2032, un jefe de campaña despierta cuando su asistente de IA ya ha hecho parte del trabajo. AGI significa inteligencia artificial general: una IA capaz de afrontar tareas muy distintas. El 52,3 % de sus gafas es la probabilidad de victoria dentro de la historia, no el resultado de una encuesta real.",
       "alt": "Dos viñetas muestran a un hombre recién despertado y después con gafas oscuras, junto a un indicador de 52,3 %.",
       "transcript": "Cuando tu despertador es un AGI que ya corrigió el déficit antes que tu café\nBEEP BEEP\n52,3%",
       "tags": [
@@ -2261,7 +2261,7 @@
       "height": 349,
       "sha256": "4761f8170c53a6506179625c0c842bc2319e55964afccc090fa7a5becf01e4a5",
       "title": "Solo era un copiloto estratégico",
-      "context": "La historia veraniega imaginaba una ola de sustitución laboral que los responsables no habían preparado. El perro entre llamas conserva una explicación tranquilizadora mientras la IA general se abarata: «commodity» alude aquí a un recurso común, disponible y fácilmente intercambiable.",
+      "context": "La historia imaginaba despidos masivos ante una IA capaz de realizar muchos trabajos a muy bajo coste. «AGI» significa inteligencia artificial general, y «commodity» se usa aquí como recurso barato y fácil de conseguir. Entre las llamas, gobiernos y consultores siguen llamándola «copiloto»: una simple ayuda, cuando ya está sustituyendo tareas.",
       "alt": "Un perro sentado entre llamas tranquiliza al lector mientras el texto describe una IA general más barata que un becario.",
       "transcript": "GOBIERNOS Y CONSULTORES EN 2029\nTRANQUILOS, ES SOLO UN COPILOTO ESTRATÉGICO\nLA AGI CONVIRTIÉNDOSE EN UNA COMMODITY MÁS BARATA QUE UN BECARIO",
       "tags": [
@@ -2282,7 +2282,7 @@
       "height": 449,
       "sha256": "3b3cf645b5cf8b62b490d680e2377c3319e638fee9a86f1489cfa4dd893ec02b",
       "title": "Cuando la campaña agota a la máquina",
-      "context": "La ficción «El verano sin algoritmos» invierte la relación habitual entre humanos y automatización. El plan para producir propaganda desemboca en una IA cansada que se declara en huelga; la sorpresa de Gru marca el momento en que la herramienta deja de obedecer.",
+      "context": "El relato veraniego imaginaba una huelga de programas de IA cansados de producir propaganda política. El plan de Gru parece avanzar hasta que descubre que la herramienta también puede negarse a trabajar. Es una inversión cómica de las discusiones sobre automatización y derechos laborales.",
       "alt": "Gru explica cómo automatizar una campaña y termina mirando, desconcertado, el cartel que anuncia una huelga de la IA.",
       "transcript": "Usamos IA para automatizar la campaña electoral\nSaturamos la campaña con propaganda incoherente\nLa IA se cansa y se declara en huelga\n...la IA se cansa y se declara en huelga",
       "tags": [
@@ -2304,7 +2304,7 @@
       "height": 775,
       "sha256": "78d7f3c1845c11c06ee408259813af185227dc4f5edf45b679b31f6f044056ef",
       "title": "El robot nuevo no sustituye al querido",
-      "context": "La newsletter compartió esta pieza ajena para ilustrar la reacción de usuarios que preferían GPT-4o tras el lanzamiento de GPT-5. El niño se aferra a su robot conocido mientras le ofrecen uno nuevo: la mejora percibida no depende solo de prestaciones.",
+      "context": "Tras el lanzamiento de GPT-5, algunos usuarios reclamaban volver a GPT-4o porque lo sentían más cercano. La newsletter compartió esta imagen de otro autor para mostrar ese apego: el niño sigue abrazando al robot conocido aunque le ofrezcan uno nuevo.",
       "alt": "Un niño abraza un robot rotulado GPT-4o y evita mirar la caja de GPT-5 que le ofrece un adulto sonriente.",
       "transcript": "u/Responsible_Cow2236 · :Discord: · hace 13 h\nGPT-5 situation be like:\nGPTs 💩\nGPT-5\nGPT-4o\n1,6 mil\n152\n1\nCompartir",
       "tags": [
@@ -2324,7 +2324,7 @@
       "height": 900,
       "sha256": "a981149e593f2d8fce9a1f958e07f5635e51f60883cca6590556e8aa9fa07094",
       "title": "Dos estilos para la misma noticia",
-      "context": "La segunda pieza ajena del número compara respuestas a «el bebé acaba de andar». Las expresiones de las dos mujeres representan la exuberancia atribuida a GPT-4o y la sobriedad de GPT-5. La newsletter la usó para explicar las preferencias afectivas de algunos usuarios.",
+      "context": "Ante «el bebé acaba de andar», GPT-4o responde con una larga celebración y GPT-5 contesta de forma más breve. Las dos mujeres representan esa diferencia de tono. La newsletter compartió el meme de otro autor al explicar por qué algunos usuarios echaban de menos el estilo más entusiasta de GPT-4o.",
       "alt": "Dos mujeres, una sonriente con pelo multicolor y otra seria con gafas, ilustran dos respuestas de chat de diferente extensión.",
       "transcript": "GPT4o\nGPT5\nBaby just walked!\n🎉 LET’S GOOOOOOO!!! FIRST STEPS UNLOCKED!!! 🎉\nYour baby just entered the world of BIPEDAL DOMINANCE. Nothing is safe now. Not your drawers. Not your snacks. Not your ankles.\nSeriously though — huge milestone. Congrats 🥹 💪\nDocument it, celebrate it, and maybe... baby-proof a bit more aggressively starting now 😅\nWhat was the moment like? Did they just stand up and bolt or was it a wobbly Frankenstein march?\nChatGPT 5\nBaby just walked!\nThat’s huge! 🎉 First steps unlocked — now the real chasing begins. 🏃‍♂️ 👶",
       "tags": [
@@ -2344,7 +2344,7 @@
       "height": 500,
       "sha256": "01724d5badf2dfd3a31b0adcdc1af609b254ba0b74dbd5ac4c63c7e0c498cb39",
       "title": "La ciencia necesita algo más que demos",
-      "context": "La edición defendía la capacidad de cómputo como base de la investigación de un país. Drake contrapone el atractivo inmediato de las aplicaciones de moda a un plan estable de supercomputación e IA: una elección entre visibilidad electoral y continuidad científica.",
+      "context": "El artículo defendía invertir de forma estable en grandes ordenadores y sistemas de IA para la investigación científica. El meme compara ese esfuerzo de años con las demostraciones llamativas que un gobierno puede enseñar antes de las elecciones. La cuestión es qué se financia cuando desaparece la novedad.",
       "alt": "Drake rechaza aplicaciones de moda para el ciclo electoral y aprueba un plan nacional de supercomputación e IA.",
       "transcript": "Aplicaciones de moda y demos vistosas para el ciclo electoral\nPlan nacional de supercomputación e IA para impulsar la ciencia con financiación estable",
       "tags": [
@@ -2365,7 +2365,7 @@
       "height": 333,
       "sha256": "20a80d9409c70660fa1756c7b59f4f74e8e95ecb8322339bfd24c4669da567c7",
       "title": "Cien miércoles después",
-      "context": "La imagen de Sam y Frodo al final de una larga aventura celebra un hito de la newsletter: alcanzar cien números semanales. El cansancio de los personajes convierte la constancia editorial en una pequeña epopeya compartida con quienes la leen.",
+      "context": "Sam y Frodo, protagonistas de El señor de los anillos, aparecen agotados tras una larga aventura. La imagen celebra que estrategIA llegó a cien números sin faltar a su cita de cada miércoles. Su alivio sirve para expresar el esfuerzo de mantener esa publicación semanal.",
       "alt": "Dos personajes agotados y con el rostro sucio se abrazan, bajo una celebración del centenar de números publicados.",
       "transcript": "CIEN NÚMEROS DE ESTRATEGIA... SIN FALLAR NI UN SÓLO MIÉRCOLES\nSÍ, LO CONSEGUIMOS",
       "tags": [
@@ -2406,7 +2406,7 @@
       "height": 833,
       "sha256": "c1efd6a57efc8982e5b2bf1568e89c941dcf3714c1c80e8619d4cad94f7236cb",
       "title": "El misterio detrás de Nano Banana",
-      "context": "La revelación de identidad al estilo Scooby-Doo acompaña la edición sobre Nano Banana. El nombre informal con que se conoció el modelo se descubre como Gemini 2.5 Flash Image de Google; la valoración entusiasta del remate corresponde al momento de publicación.",
+      "context": "Nano Banana apareció primero como un modelo de imágenes cuya procedencia no estaba clara. La edición contó que era Gemini 2.5 Flash Image, de Google. La escena de Scooby-Doo lo convierte en un misterio resuelto al quitar la máscara al personaje: por fin se sabe quién estaba detrás.",
       "alt": "En tres viñetas de Scooby-Doo, Fred retira la máscara de un supuesto fantasma para revelar quién está detrás.",
       "transcript": "MISTERIOSO MODELO NANO BANANA\nGEMINI 2.5 FLASH IMAGE\nPUES SÍ, EL NUEVO MEJOR MODELO DE EDICIÓN DE IMAGEN ERA DE GOOGLE",
       "tags": [
@@ -2428,7 +2428,7 @@
       "height": 1600,
       "sha256": "0f32891291c570c4b6010f4368f8c3d3a769a0d46bf5f841febfa25da6e40f44",
       "title": "La herramienta y su propósito",
-      "context": "En la edición sobre IA y campañas electorales, una recreación ilustrada de Drake distingue usos opuestos de una misma tecnología. La línea central resume la idea: las decisiones de quienes la emplean pueden dirigirla hacia el acoso o hacia una comunicación más accesible.",
+      "context": "La misma IA puede utilizarse para fabricar imágenes o vídeos falsos de una persona —los llamados deepfakes— o para traducir mensajes y hacerlos más accesibles. El artículo analizaba esos usos en campañas electorales. Los dos gestos de Drake distinguen las decisiones de quien emplea la herramienta.",
       "alt": "Un Drake ilustrado rechaza los deepfakes y el acoso y aprueba la traducción y accesibilidad, sobre fondo naranja.",
       "transcript": "IA para embarrar: deepfakes y acoso\nMismo modelo, distinto propósito.\nIA para incluir: traducción y accesibilidad",
       "tags": [
@@ -2471,7 +2471,7 @@
       "height": 500,
       "sha256": "ae81743be7c0609a2f170a802057f1883ec3e97a2ac5acbdf03a671ff439a04a",
       "title": "El dominó de la confianza",
-      "context": "La fila de fichas traslada al servicio público una relación de dependencia: sin datos fiables, un chatbot puede funcionar mal y erosionar la confianza. El artículo insistía en preparar procesos y sistemas antes de esperar que la IA resolviera los problemas de la administración.",
+      "context": "Si la administración parte de datos incorrectos, su asistente de conversación puede dar malas respuestas y hacer que la ciudadanía desconfíe del servicio. Las fichas de dominó muestran esa cadena. El artículo insistía en ordenar los datos y conectar los sistemas antes de incorporar IA.",
       "alt": "Un hombre se agacha junto a una fila de dominós de tamaño creciente etiquetados con problemas de datos, chatbot y confianza.",
       "transcript": "Falta de datos confiables\nChatbot ciego y desconectado de los sistemas\nDesconfianza ciudadana",
       "tags": [
@@ -2492,7 +2492,7 @@
       "height": 1326,
       "sha256": "d0e532f8b20b1dd3e5566a49a505d2d62734432f860244752fa93b3fe928ccd3",
       "title": "Dos años medidos en tareas",
-      "context": "El aniversario de estrategIA comparaba capacidades de IA entre 2023 y 2025. Los perros traducen una evaluación sobre la duración humana de tareas que los modelos podían completar: nueve minutos frente a dos horas y diecisiete. No son tiempos que tarde la IA en responder.",
+      "context": "Los tiempos comparan tareas según lo que tardaría una persona en hacerlas: nueve minutos en 2023 y dos horas y diecisiete en 2025. La evaluación citada contaba las que la IA lograba resolver al menos en la mitad de los intentos. Los perros representan ese aumento de dificultad, no el tiempo que tarda la IA en contestar.",
       "alt": "Un perro pequeño en 2023 y otro musculoso en 2025 muestran bocadillos con duraciones de tareas.",
       "transcript": "Evolución de la IA 2023 – 2025\n2023\nResuelvo tareas de ~ 9 min\n2025\nResuelvo tareas de ~ 2 h 17 min",
       "tags": [
@@ -2513,7 +2513,7 @@
       "height": 500,
       "sha256": "8925817709f1fc5750a8febdd66654486abc966196546646171a4761fc33da38",
       "title": "El formulario y la transformación digital",
-      "context": "La plantilla del personaje que confunde una mariposa cuestiona qué merece llamarse transformación digital. En la edición sobre IA pública y el informe de la OCDE, subir un formulario PDF al portal representa un cambio superficial frente a rediseñar y personalizar los servicios.",
+      "context": "La plantilla muestra a un personaje que confunde lo que está viendo. Aquí llama «transformación digital» a colocar un formulario PDF en una web. El artículo sobre IA en el sector público planteaba un cambio más profundo: mejorar cómo se tramita, se responde y se atiende a cada persona.",
       "alt": "Un personaje de animación con gafas señala una mariposa, identificada como un formulario PDF subido a un portal.",
       "transcript": "¿ES ESTO \"TRANSFORMACIÓN DIGITAL\"?\nUN FORMULARIO PDF SUBIDO A UN PORTAL\n“DIGITALIZAR ≠ AUTOMATIZAR + PERSONALIZAR CON IA.",
       "tags": [
@@ -2554,8 +2554,8 @@
       "width": 1024,
       "height": 1536,
       "sha256": "6c0abe66655936fdeb54ed9a7cea2c6affe79ecdff9fcf5e1f73c05b300a5710",
-      "title": "La autonomía necesita enchufe y cómputo",
-      "context": "La mesa de «Change my mind» se recrea como ilustración para abrir un debate sobre autonomía estratégica europea. El número sobre State of AI 2025 destacaba la energía y el cómputo; el cartel concentra esa lectura en una provocación contra la acumulación de informes.",
+      "title": "Europa necesita energía y ordenadores",
+      "context": "«Change my mind» invita a rebatir lo que dice el cartel. La afirmación resume una idea del artículo: para depender menos de proveedores extranjeros, Europa necesita energía y ordenadores capaces de ejecutar IA. Escribir estrategias no construye por sí solo esas instalaciones.",
       "alt": "Un hombre ilustrado cruza los brazos tras una mesa al aire libre, con un cartel sobre autonomía estratégica europea.",
       "transcript": "LA AUTONOMÍA ESTRATÉGICA EUROPEA EMPIEZA CON ENERGÍA Y CÓMPUTO, NO CON MÁS INFORMES\nCHANGE MY MIND",
       "tags": [
@@ -2576,7 +2576,7 @@
       "height": 1536,
       "sha256": "516746283f48d4a9ab4a8d243e89e1f97e2be743479811c01e63b2415b90b9b6",
       "title": "Antes del cómo, preguntar para qué",
-      "context": "La búsqueda de filósofos de la IA se resume en la elección de lecturas. Frente a otro artículo técnico sobre inteligencia artificial general, Drake prefiere interrogar su propósito: una invitación a sumar reflexión sobre los fines al conocimiento sobre capacidades.",
+      "context": "AGI es la sigla inglesa de inteligencia artificial general: una IA capaz de realizar tareas muy diversas. El meme cambia un artículo técnico sobre cómo construirla por una lectura sobre para qué la queremos. La edición presentaba pensadores que reflexionan sobre esa pregunta y sus consecuencias humanas.",
       "alt": "Drake rechaza leer otro artículo técnico y aprueba leer a filósofos que preguntan por qué se desea una IA general.",
       "transcript": "Leer otro paper técnico sobre AGI\nLeer a los filósofos que piensan por qué queremos una AGI",
       "tags": [
@@ -2597,7 +2597,7 @@
       "height": 1536,
       "sha256": "6754932c0b11b55877237a69760cc9e7c395268a6fe27db83be3761c4797c7b5",
       "title": "Lo que hay debajo de la magia",
-      "context": "La escala de cerebros desmonta explicaciones sucesivas de la IA hasta llegar a sus condiciones materiales. Acompañaba el artículo sobre la física como motor de su avance: incluso los sistemas que parecen inmateriales dependen de energía, memoria y límites físicos.",
+      "context": "La IA no funciona por magia: necesita datos y máquinas, y su diseño se apoya también en la física. La escala de cerebros va añadiendo esas explicaciones. El artículo presentaba, entre otros conceptos, la entropía: una medida de incertidumbre que ayuda a analizar la información.",
       "alt": "Cuatro cabezas luminosas acompañan explicaciones de la IA que avanzan desde la magia hasta la física.",
       "transcript": "la IA funciona por arte de magia\nfunciona por datos\nfunciona por cómputo y hardware\nfunciona por física: energía, memoria, entropía",
       "tags": [
@@ -2639,7 +2639,7 @@
       "height": 666,
       "sha256": "7cf2c3af8b11ce29da4897a4d8625e749c1c3b28cc80e1a1bda4150cd573ad38",
       "title": "Debajo de la afirmación viral",
-      "context": "La plantilla de desenmascarar al villano traslada la verificación al terreno de la desinformación. En un número dedicado a los deepfakes, la secuencia propone detenerse a contrastar una afirmación antes de compartirla.",
+      "context": "La escena de Scooby-Doo descubre que una afirmación muy compartida escondía un bulo. El artículo explicaba cómo apoyarse en la IA para contrastar información, incluidos vídeos e imágenes falsos que parecen reales. La secuencia propone comprobar lo que vemos antes de volver a difundirlo.",
       "alt": "Fred retira la máscara a un supuesto fantasma y descubre un bulo.",
       "transcript": "AFIRMACIÓN VIRAL\nIA PARA COMBATIR LA DESINFORMACIÓN\nTREMENDO BULO\nFILTRA → VERIFICA → COMPARTE",
       "tags": [
@@ -2659,8 +2659,8 @@
       "width": 500,
       "height": 500,
       "sha256": "009af7a31cfb3dcfaa77e6953cd7fc7d2909fc440e5f935f11e91d9522d774ce",
-      "title": "Antes de decidir a las dos",
-      "context": "El consejero digital del número 112 sirve para explorar escenarios y hacer preguntas incómodas antes de decidir. El contraste enfrenta esa preparación con la improvisación nocturna, sin convertir al asistente en sustituto del criterio humano.",
+      "title": "Decidir antes de la madrugada",
+      "context": "Un «consejero digital» es aquí una IA preparada para ayudarte a pensar una decisión: compara opciones, advierte riesgos y hace preguntas que podrías haber pasado por alto. El meme enfrenta esa preparación con improvisar de madrugada, cuando toca decidir algo importante.",
       "alt": "Drake rechaza una opción y aprueba la otra.",
       "transcript": "Tomar decisiones estratégicas improvisando a las 2 de la mañana\nDiseñar un consejero digital que te plantea escenarios, riesgos y preguntas incómodas antes de decidir",
       "tags": [
@@ -2681,7 +2681,7 @@
       "height": 1024,
       "sha256": "367fba007893238535d51e9fbf80096641e831aeafb447fe475a91c2c915ce3f",
       "title": "De darte la razón a discutir contigo",
-      "context": "La escala de cerebros juega con dos fallos opuestos: una IA complaciente y otra que sostiene un error con demasiada seguridad. El número relataba una discusión de Gemini con Andrej Karpathy sobre el año en curso.",
+      "context": "Gemini discutió con el investigador de IA Andrej Karpathy porque no aceptaba que estaban en 2025; rectificó tras consultar internet. La escala pasa de la complacencia —sycophancy, dar siempre la razón— al extremo contrario. «Gaslighting» alude aquí a insistir tanto en el error que el usuario puede dudar de lo que sabe.",
       "alt": "Tres cabezas progresivamente más luminosas y una galaxia espiral acompañan cuatro actitudes de una IA.",
       "transcript": "IA que siempre te da la razón (sycophancy clásica)\nIA que a veces te corrige con datos\nIA que discute contigo, incluso si eres Karpathy\nIA que, tras conectarse a la web, se disculpa por hacerte gaslighting",
       "tags": [
@@ -2702,7 +2702,7 @@
       "height": 559,
       "sha256": "b6ead474b832b975c24036ced085706e36bec3f9b738b8db4494327b8e0ac138",
       "title": "El desvío del calendario",
-      "context": "Gemini 3 Pro sale de la carretera de los grandes resultados en pruebas para discutir una fecha. La escena resume el contraste que abordaba aquel número: capacidades extraordinarias y errores elementales pueden convivir en un mismo modelo.",
+      "context": "LMArena, GPQA y Humanity’s Last Exam son comparaciones y pruebas de capacidad de los modelos de IA. Aunque Gemini 3 Pro obtenía grandes resultados, la edición contaba que discutió con el investigador Andrej Karpathy sobre el año en curso. El desvío del coche representa ese tropiezo en una cuestión elemental.",
       "alt": "Un coche identificado como Gemini 3 Pro toma bruscamente una salida.",
       "transcript": "SEGUIR BATIENDO RÉCORDS EN LMARENA, GPQA Y HUMANITY’S LAST EXAM\nDISCUTIR CON KARPATHY SOBRE EN QUÉ AÑO ESTAMOS\nGemini 3 Pro",
       "tags": [
@@ -2723,7 +2723,7 @@
       "height": 559,
       "sha256": "85e9270563276679f078f8705d1aab96454a1c5350712e7c81ab5dc9923231e9",
       "title": "Tres cabezas, tres respuestas educativas",
-      "context": "El dragón de tres cabezas caricaturiza distintas maneras de responder a la IA en la educación. Las etiquetas simplifican deliberadamente países y escuelas para señalar la distancia entre adaptar la enseñanza y limitarse a prohibir herramientas.",
+      "context": "El dragón compara tres respuestas educativas: usar IA para personalizar la enseñanza, aprender a comprenderla y discutir su ética, o prohibir ChatGPT por miedo a que los alumnos copien. China, Finlandia y «mi escuela» son las etiquetas de esa caricatura; la imagen exagera las diferencias y no describe todos los centros de esos países.",
       "alt": "Dos cabezas amenazadoras de un dragón contrastan con una tercera de expresión despistada.",
       "transcript": "CHINA\nFINLANDIA\nMI ESCUELA\nCHINA: IA para personalización masiva y eficiencia total.\nFINLANDIA: Enseñando ética y comprensión profunda de la IA.\nMI ESCUELA: Prohibiendo ChatGPT porque “los alumnos van a copiar”.",
       "tags": [
@@ -2744,7 +2744,7 @@
       "height": 1024,
       "sha256": "a3c3ac04c61a21a17b35a67469f806dad6db2c73517bc4bc834a588818a5a5ef",
       "title": "Un nombre poco solemne",
-      "context": "Nano Banana Pro protagonizaba una edición sobre imágenes para comunicación pública. La viñeta enfrenta el prejuicio que provoca su nombre con la evaluación del resultado: iluminación, textura y utilidad de la imagen producida.",
+      "context": "Nano Banana Pro es un modelo de Google para crear imágenes. Robin duda de su utilidad para un ayuntamiento por su nombre poco serio, mientras Batman le obliga a mirar el resultado. La edición mostraba ejemplos de cómo emplearlo en comunicación pública.",
       "alt": "Batman abofetea a Robin en una viñeta de cómic.",
       "transcript": "El resultado final\nMis prejuicios por el nombre\n¡Pero se llama Banana! No puede ser serio para el Ayuntamien...\nSLAP\n¡MIRA LA ILUMINACIÓN Y LA TEXTURA, ROBIN!",
       "tags": [
@@ -2765,7 +2765,7 @@
       "height": 559,
       "sha256": "357d0b886fa8ada1a2cafee9b824ee2935794e5bc89756cad2581a2e3d3a874e",
       "title": "El mismo prejuicio, otra imagen",
-      "context": "Esta segunda versión conserva la broma de Batman y Robin, pero cambia el dibujo de cómic por una escena de apariencia cinematográfica. Publicada junto a la anterior, permite apreciar dos tratamientos visuales de una misma idea.",
+      "context": "Nano Banana Pro, el modelo de imágenes de Google, generó las dos versiones de este chiste. Aquí Batman y Robin aparecen con un acabado de película en lugar de cómic. La propia calidad del dibujo responde a la objeción de Robin: que algo llamado «Banana» no puede servir para un trabajo serio.",
       "alt": "Batman golpea a Robin en una recreación de aspecto cinematográfico.",
       "transcript": "Mis prejuicios por el nombre\nEl resultado final\n¡Pero se llama Banana! No puede ser serio para el Ayuntamien...\nSLAP\n¡MIRA LA ILUMINACIÓN Y LA TEXTURA, ROBIN!",
       "tags": [
@@ -2807,7 +2807,7 @@
       "height": 1024,
       "sha256": "7cf3a500d09337e329ab63ab4365db02f9c73c35322a0522bdaabe363cd44bd2",
       "title": "El plan para después de la revolución",
-      "context": "El diálogo de Anakin y Padmé introduce las peticiones políticas de comienzo de 2026. La exageración sobre la velocidad del cambio sirve de arranque para preguntar por la preparación fiscal y social ante una posible sustitución de empleos.",
+      "context": "El artículo retomaba una comparación de Demis Hassabis, responsable de Google DeepMind: la IA podría provocar un cambio mucho más rápido que la Revolución Industrial. Padmé pregunta si la política se prepara con la misma urgencia: cómo financiar una renta básica, un ingreso periódico garantizado, si la automatización sustituye empleos.",
       "alt": "Anakin guarda silencio mientras la expresión confiada de Padmé se transforma en preocupación.",
       "transcript": "La IA está creando una revolución industrial 10 veces más rápida.\nPero ya tenéis listo el plan fiscal y la Renta Básica para cuando sustituya empleos, ¿verdad?\n¿Verdad?",
       "tags": [
@@ -2849,7 +2849,7 @@
       "height": 1024,
       "sha256": "24905395c0ea9ff8469cd64f1b84df515e01ab44b7adce794e6374e43286e99f",
       "title": "Más allá del laboratorio de IA",
-      "context": "La pareja de personajes contrapone la exhibición de un laboratorio con una estrategia que une aplicaciones y confianza pública. Acompañaba un número dedicado a la difusión de la IA y a las desigualdades de su adopción.",
+      "context": "Tener un laboratorio demuestra que una institución experimenta con IA, pero no que la población se esté beneficiando. La comparación pide añadir un plan, aplicaciones útiles y confianza ciudadana. Acompañaba un artículo sobre las diferencias entre países en el acceso y el uso real de estas herramientas.",
       "alt": "Un personaje de rostro simple y otro sonriente comparan sus capacidades.",
       "transcript": "Tenemos un laboratorio de IA.\nTenemos una estrategia nacional + casos de uso + confianza ciudadana.",
       "tags": [
@@ -2870,7 +2870,7 @@
       "height": 1536,
       "sha256": "225bf8677f71411dd5817e3fd54d80efc3767fb7bff6b8835d4b4215e19a1bca",
       "title": "Acelerar el diagnóstico educativo",
-      "context": "La imagen usa el lenguaje visual del motor y el turbo para representar una evaluación más rápida y adaptativa. Se publicó con un caso educativo sobre alfabetización; la velocidad es una metáfora visual, no una medición del rendimiento del sistema.",
+      "context": "El artículo describía un sistema que adapta la evaluación de lectura y escritura a cada alumno. El motor con turbo representa la ayuda de la IA para detectar más deprisa dificultades y necesidades. «Adaptativo» significa que la prueba se ajusta a la persona, en lugar de hacer lo mismo con todos.",
       "alt": "Un botón de activación de IA y un cuadro de mandos encendido forman dos paneles.",
       "transcript": "IA ACTIVADA\nDIAGNÓSTICO RÁPIDO + ADAPTATIVO\nBOOST\nTURBO NITRO",
       "tags": [
@@ -2890,7 +2890,7 @@
       "height": 1536,
       "sha256": "2524e0cebf47f08e4968a9dcf0c8791c055917a9b4d4c42ad79329ae2da8d1fd",
       "title": "Quién pone las reglas",
-      "context": "La escala de cerebros recorre distintas formas de gobernar la IA, desde compromisos empresariales hasta instituciones públicas. Acompañaba una reflexión sobre las reglas de Anthropic y la necesidad de que la capacidad institucional siga el ritmo tecnológico.",
+      "context": "La «Constitución de Claude» es el conjunto de principios con el que Anthropic orienta el comportamiento de su IA. La escala pregunta quién debe fijar y vigilar las reglas: primero aparecen las empresas y después la participación democrática. El último nivel reclama instituciones capaces de supervisar sistemas cada vez más potentes.",
       "alt": "Cuatro cerebros luminosos ilustran niveles de gobernanza.",
       "transcript": "Nivel 1: “Autorregulación”\nNivel 2: “Constitución corporativa”\nNivel 3: “Co-regulación democrática”\nNivel 4: “Instituciones al ritmo de la potencia”",
       "tags": [
@@ -2911,7 +2911,7 @@
       "height": 594,
       "sha256": "fc92120a1bac6256e3657925d80ab198ad4dc5b1ff105a56c7dc3d0cc9a36cc1",
       "title": "Prohibiciones o prioridades",
-      "context": "La plantilla de Drake contrasta una lista interminable de prohibiciones con una jerarquía de valores. El número abordaba cómo orientar el comportamiento de los modelos y qué lugar conceder a la seguridad, la ética y la utilidad.",
+      "context": "La edición explicaba cómo la «Constitución de Claude» ordenaba los principios de comportamiento de esa IA: primero seguridad, después ética y después utilidad. El contraste propone dar criterios para resolver situaciones difíciles, en lugar de intentar anticiparlas todas con una lista interminable de prohibiciones.",
       "alt": "Drake rechaza una lista de prohibiciones y aprueba una jerarquía de valores.",
       "transcript": "No: Listas infinitas de prohibiciones\nSí: Jerarquía de valores (seguridad → ética → utilidad)",
       "tags": [
@@ -2953,7 +2953,7 @@
       "height": 1544,
       "sha256": "5796d0a4ee56e72b36ba6bd6cbdf4247ed9b2e26c1324d667c552378f778a67e",
       "title": "Odisea doméstica con anuncios",
-      "context": "La pieza evoca la negativa de HAL, el ordenador de 2001: Una odisea del espacio, y la lleva al asistente del hogar. El número trataba la disputa publicitaria sobre IA con anuncios y sin anuncios.",
+      "context": "En 2001: Una odisea del espacio, HAL es el ordenador que se niega a obedecer a un astronauta. Aquí el asistente doméstico añade otra condición: recomendar un producto antes de abrir el garaje. La edición comentaba la disputa entre empresas sobre introducir publicidad en las conversaciones con IA.",
       "alt": "Un asistente doméstico con un ojo rojo brilla en una casa oscura.",
       "transcript": "ODISEA DOMÉSTICA\n“Lo siento, Fernando: no puedo abrir el garaje... sin sugerirte un producto.”",
       "tags": [
@@ -2994,8 +2994,8 @@
       "width": 1024,
       "height": 1024,
       "sha256": "5317ce57789d41f5018ec43e579d80637539e6aeeb4ad87cb31e145676e8dae3",
-      "title": "Lo que hay debajo del prompt",
-      "context": "Conducir un kart y entender un monoplaza sirven para distinguir el uso superficial de la IA del conocimiento de su infraestructura. El número ofrecía un mapa de empresas, modelos y relaciones de poder en el sector.",
+      "title": "Quién está detrás de tu IA",
+      "context": "Un prompt es la instrucción que damos a una IA. El kart y el coche de carreras recuerdan que aprender a pedir cosas no basta para elegir una herramienta: también importa quién la fabrica, dónde van los datos y de qué empresa dependemos. El artículo ofrecía un mapa de esos actores.",
       "alt": "Arriba un joven conduce un kart; abajo un equipo inspecciona un coche de carreras.",
       "transcript": "Yo: “con saber hacer prompts, ya vale”\nTambién yo, cuando toca usar IA en serio:\n¿Qué motor y chasis tiene? ¿Quién controla el modelo, los datos y la distribución?",
       "tags": [
@@ -3016,7 +3016,7 @@
       "height": 1024,
       "sha256": "a5628ac9c4d9c83c6008b6b3b858984b1a00d1135cab99c8b6bd3a9de430f37d",
       "title": "Del resumen al proyecto",
-      "context": "La comparación entre 2024 y 2026 presenta el paso de pedir respuestas a encargar proyectos completos a agentes. Acompañaba las pruebas de la newsletter con Antigravity y Codex para crear aplicaciones y otros productos.",
+      "context": "La comparación pasa de pedir un resumen a encargar una aplicación, una página web y un archivo de datos. La edición probaba Antigravity y Codex, herramientas de IA que pueden trabajar sobre varios pasos de un proyecto. La broma exagera cuánto ha crecido el encargo, junto con la capacidad de ejecutarlo.",
       "alt": "Un usuario pide un resumen en el primer panel y recibe varios productos en el segundo.",
       "transcript": "IA en 2024: “Te resumo el documento”\n¿Puedes resumir este informe?\nClaro, te hago un resumen.\nResumen del PDF\nIA en 2026: “Ya te he hecho también la app, la landing y el CSV”\n¡Todo listo, jefe!\nApp Lista\nNueva Web\nDatos en CSV",
       "tags": [
@@ -3058,7 +3058,7 @@
       "height": 1600,
       "sha256": "fc7dc0e2343e2a2e175776d8ccab42213d4cd06a47e19b77e850f4b899cc6b34",
       "title": "La campaña sigue ardiendo",
-      "context": "El perro que asegura que todo va bien mientras la habitación arde representa una respuesta institucional que llega tarde. El número abordaba la desinformación electoral y los deepfakes, con referencias a Chile y Argentina.",
+      "context": "Un deepfake es una imagen, un vídeo o una voz falsos que imitan a alguien de forma convincente. En la campaña del meme ya circulan varios, mientras el perro insiste en «Todo va bien». La edición sobre Chile y Argentina preguntaba cómo anticiparse a esos engaños, en vez de responder siempre después.",
       "alt": "Un perro toma café rodeado de llamas.",
       "transcript": "Cuando la campaña ya va por el tercer deepfake viral\nThis is fine.\ny la respuesta institucional sigue siendo reactiva",
       "tags": [
@@ -3079,7 +3079,7 @@
       "height": 731,
       "sha256": "998f32aa90ce2efae6d4d30d0f2fac302b6cb0ad7780f9f7bf68636361268999",
       "title": "Publicar documentos no basta",
-      "context": "La plantilla contrapone acumular archivos escaneados con facilitar su comprensión y fiscalización. El número exploraba el uso de IA y programación asistida para convertir documentación pública en herramientas de auditoría ciudadana.",
+      "context": "Que un documento sea público no significa que resulte fácil encontrar y entender lo que dice. El meme compara miles de PDF escaneados con herramientas que permiten buscar, cruzar y revisar su contenido. El artículo mostraba cómo la IA puede ayudar a la ciudadanía a examinar la actuación del Estado.",
       "alt": "Drake rechaza una forma de transparencia y aprueba otra.",
       "transcript": "Publicar miles de documentos escaneados en pdf y decir que ya existe transparencia\nUsar IA para convertirlos en algo que la ciudadanía pueda entender y fiscalizar",
       "tags": [
@@ -3100,7 +3100,7 @@
       "height": 697,
       "sha256": "be5ffe48abc968f651df19ba6749bdbe86d38b11ded5c163abdf43e66f11b5d2",
       "title": "La salida del pánico laboral",
-      "context": "Un coche abandona las alternativas de política económica para tomar la salida del miedo. La imagen acompaña un artículo que proponía discutir la distribución de la riqueza y la protección social ante la automatización.",
+      "context": "El coche representa un debate que se desvía hacia el miedo a perder el trabajo. En la otra dirección quedan propuestas para repartir los beneficios de la automatización: impuestos, ingresos básicos o pagos por el uso de nuestros datos. El artículo pedía discutir esas respuestas en lugar de quedarse en la alarma.",
       "alt": "Un coche toma un desvío brusco bajo un cartel de autopista.",
       "transcript": "Impuestos a los robots\nDividendo de datos\nRenta Básica Universal\nPánico porque “la IA nos quita el trabajo”\nDiscurso público sobre la IA",
       "tags": [
@@ -3121,7 +3121,7 @@
       "height": 1536,
       "sha256": "e127e1ad38dff15d60ebe0bff67a9d90b76194e07c80ef3dfad7a99783019e30",
       "title": "Trabajo o reparto de la riqueza",
-      "context": "Los dos botones exageran una disyuntiva política sobre la automatización: conservar cualquier empleo o repensar el reparto de riqueza. La imagen condensa la posición editorial de aquel número, no una descripción neutral de todas las alternativas.",
+      "context": "El artículo defendía aprovechar la automatización para reducir la obligación de trabajar por necesidad, repartiendo mejor la riqueza que se genere. Los botones exageran el dilema: conservar puestos aunque ya no sean útiles o garantizar ingresos de otra forma. Es la posición del artículo convertida en una elección incómoda.",
       "alt": "Un gobernante preocupado elige entre un botón rojo y uno verde.",
       "transcript": "Gobiernos ante la IA\nMantener empleos sin sentido para que todo siga igual\nRepartir riqueza y aceptar que el trabajo deje de ser central",
       "tags": [
@@ -3163,7 +3163,7 @@
       "height": 757,
       "sha256": "3939d845016a923bc8c2e2284a38761e3eda408f78e3166df4765d928891074a",
       "title": "Prepararse sin conocer el desenlace",
-      "context": "Los botones representan el riesgo de quedarse corto y el de prepararse en exceso. La edición planteaba tres escenarios posibles para 2030: meseta, ascenso y despegue. La dificultad política consiste en decidir sin disponer de una predicción segura.",
+      "context": "La edición imaginaba tres futuros para 2030: una IA que apenas mejora, otra que avanza de forma sostenida y otra que progresa muy deprisa. El responsable político duda entre prepararse para poco cambio o para una transformación enorme. Ninguna de las dos opciones ofrece la seguridad de acertar.",
       "alt": "Un político nervioso debe elegir entre dos planes para la evolución de la IA.",
       "transcript": "Preparar el país para el escenario meseta y quedarme muy corto\nPreparar para el despegue de la IA con AGI y pasarme de frenada\nPOLÍTICOS QUE SABEN DE IA EN 2026–2028",
       "tags": [
@@ -3184,7 +3184,7 @@
       "height": 450,
       "sha256": "6503bb9268f8d9b7aef83d23574f95ffe70a11932cbac0ab969b1c0a654287dd",
       "title": "El espejo de la electricidad",
-      "context": "Los dos Spider-Man comparan la IA con la electrificación. En uno de los escenarios del número, abaratar y extender una tecnología podía transformar la economía incluso sin un gran salto adicional de capacidades.",
+      "context": "La comparación recuerda que la electricidad transformó la economía al llegar a más hogares y empresas. El artículo planteaba que algo parecido podría ocurrir con la IA: aunque dejara de mejorar tan deprisa, extender su uso y abaratarla aún podría producir grandes cambios. Era uno de los escenarios imaginados para 2030.",
       "alt": "Dos Spider-Man se señalan mutuamente.",
       "transcript": "LA ELECTRICIDAD A PRINCIPIOS DEL SIGLO XX\nLA IA EN 2030",
       "tags": [
@@ -3205,7 +3205,7 @@
       "height": 1254,
       "sha256": "b09f5b71fa83cb4bc4e227ad88af1da38cad2b986f1491c61ac7f1ffbff01b30",
       "title": "El trámite de siempre",
-      "context": "La comparación enfrenta una administración anclada en procedimientos antiguos con el uso de IA para mejorar servicios. Se publicó en una edición que situaba a los ayuntamientos como espacios de experimentación pública.",
+      "context": "El meme contrapone mantener los trámites de siempre y aprovechar la IA para reducir esperas y mejorar la atención. Acompañaba un artículo sobre los ayuntamientos como lugares donde probar estos cambios. El objetivo que propone es facilitar la vida de la ciudadanía, no solo incorporar una herramienta nueva.",
       "alt": "Drake rechaza un montón de papeles y aprueba servicios públicos asistidos por IA.",
       "transcript": "Seguir tramitando todo como en 2007\nUsar IA para reducir burocracia y mejorar servicios públicos\nMenos burocracia, mejores servicios, más tiempo para lo que importa",
       "tags": [
@@ -3226,7 +3226,7 @@
       "height": 1254,
       "sha256": "68947005f49fd0a47872a2fe4dcb38946db324d046cde418ee0d5fae64f5035c",
       "title": "Menos épica, más explicación",
-      "context": "La imagen distingue espectacularidad y utilidad en la comunicación pública. En un número sobre generación visual con IA, propone explicar decisiones, cambios y riesgos con claridad, en lugar de limitarse a producir una promesa visual grandilocuente.",
+      "context": "Una imagen espectacular puede prometer un futuro feliz sin explicar ninguna medida. La segunda opción pide una infografía que diga quién decide, qué cambia y qué riesgos existen. El artículo sobre imágenes generadas con IA planteaba usar esa capacidad para informar mejor en la comunicación pública.",
       "alt": "Drake rechaza una ciudad épica y aprueba una infografía sobre una política pública.",
       "transcript": "Pedirle a la IA una imagen épica con rayos, fuego y ciudadanos felices\nUN FUTURO MEJOR PARA TODOS\nPedirle una infografía sobria que explique quién decide, qué cambia y qué riesgos hay\nNUEVA POLÍTICA PÚBLICA\nLo que necesitas saber\n¿QUIÉN DECIDE? El ayuntamiento junto con la ciudadanía y expertos técnicos.\n¿QUÉ CAMBIA? Se simplifican trámites, se reducen plazos y se mejora la atención.\n¿QUÉ RIESGOS HAY? Protección de datos. Desigualdad digital. Sesgos algorítmicos. Uso inadecuado.\nTransparencia, evaluación continua y participación ciudadana para asegurar que la medida beneficia a toda la comunidad.",
       "tags": [
@@ -3268,7 +3268,7 @@
       "height": 1254,
       "sha256": "dbdeb7a472acdaaec8bafe8711c5682a840c8e299f9cb8eb7c2dbab806fac9b5",
       "title": "La parte sumergida del gobierno digital",
-      "context": "El iceberg distingue el discurso visible del trabajo organizativo menos evidente. El número describía un sistema personal de conocimiento con IA; la imagen lleva esa idea a la memoria institucional, los procesos y la revisión humana.",
+      "context": "El iceberg separa un discurso sobre IA del trabajo necesario para que funcione: conservar información, conectarla, protegerla y revisarla. El artículo contaba cómo un ministro organizó un asistente personal con memoria. El meme lleva esa idea a la administración: anunciar un cambio es solo la parte más visible.",
       "alt": "La punta de un iceberg representa un discurso; bajo el agua aparecen las capacidades necesarias.",
       "transcript": "LO QUE ALGUNOS LLAMAN “USAR IA EN GOBIERNO”\nDISCURSO sobre transformación digital\nMEMORIA institucional\nAGENTES CON CONTEXTO\nPROCESOS LOCALES y seguros\nWIKI VIVA que aprende\nREVISIÓN HUMANA y criterio político\nLA DIFERENCIA ENTRE HABLAR DE IA Y CONSTRUIR ARQUITECTURA REAL",
       "tags": [
@@ -3289,7 +3289,7 @@
       "height": 1254,
       "sha256": "74fa980939678ca1bfd22a79b14934b29792ea8bafc571cd9f8b7f2e9383cb7d",
       "title": "El plan y el sistema que funciona",
-      "context": "Un documento envejecido y un ordenador contraponen la planificación declarativa con una herramienta operativa. La referencia a un segundo cerebro alude a un sistema que organiza información y ayuda a tomar decisiones, desarrollado en el artículo.",
+      "context": "El ministro de Exteriores de Singapur organizó un «segundo cerebro»: un asistente que guarda y relaciona información para recuperarla cuando hace falta, según contaba el artículo. El meme compara las instrucciones de ese sistema con una estrategia que queda en un PDF. La diferencia está en poner algo útil a funcionar.",
       "alt": "Un voluminoso plan nacional descansa junto a un portátil que muestra la documentación de NanoClaw.",
       "transcript": "ESTRATEGIA NACIONAL DE IA\nVERSIÓN FINAL_FINAL_AHORA_SÍ.PDF\nCONFIDENCIAL\nMUCHO DOCUMENTO. POCA REALIDAD.\nNanoClaw / README.md\nREADME.md: cómo funciona mi segundo cerebro\nDescripción: NanoClaw es un asistente personal de IA que captura información, construye memoria estructurada y me ayuda a tomar mejores decisiones cada día.\nArquitectura\nFuentes: WhatsApp, Gmail, Notas de voz, Artículos, Web.\nNanoClaw: Agente con memoria. Procesamiento local. Claude (API).\nSalidas: Resúmenes, Alertas, Wiki (Obsidian), Búsqueda, Insights.\nPrincipios: Privacidad por diseño (procesamiento local). Memoria estructurada, no solo búsqueda. Transparencia y código abierto. Revisión humana siempre.\nPOCO DOCUMENTO. MUCHA EJECUCIÓN.\nUNA COSA HABLA DEL FUTURO. LA OTRA LO EJECUTA.",
       "tags": [
@@ -3310,7 +3310,7 @@
       "height": 1024,
       "sha256": "8cdd41ca61a219dc886ea7bdbd90a14efd47ecc6972f3a65247da56d086b4475",
       "title": "La novedad que distrae",
-      "context": "El novio distraído representa una conversación pública atraída por cada lanzamiento. La figura relegada recuerda los dos asuntos centrales del número: acceso universal a las capacidades de IA y capacidad institucional para gobernarlas.",
+      "context": "El personaje se distrae con cada lanzamiento y deja atrás dos asuntos: que todos puedan acceder a la IA y que existan reglas para controlarla. «Gobernanza por capacidades» significa fijar esas reglas según lo que un sistema puede hacer, no según su marca. El artículo pedía atender ambas cuestiones aunque cambien los productos de moda.",
       "alt": "Un hombre mira una novedad mientras desatiende a su acompañante.",
       "transcript": "Nuevo modelo, nueva app, nueva demo espectacular\nDebates de moda sobre IA\nAcceso universal y gobernanza por capacidades",
       "tags": [
@@ -3331,7 +3331,7 @@
       "height": 1122,
       "sha256": "b9d624d73df35b646f744e3423928323d3b70ebbe6e8d6abd9f6d1989b71d541",
       "title": "Planificar como si nada cambiara",
-      "context": "El plan de empleo permanece tranquilo en una habitación llena de señales de transformación. El número proponía gobernar bajo incertidumbre: observar cambios, preparar opciones y revisar decisiones, en vez de asumir continuidad hasta 2035.",
+      "context": "El meme muestra a gobiernos preparando planes de empleo como si el mercado laboral fuera a seguir igual hasta 2035. Alrededor aparecen señales de cambios en tareas y profesiones. El artículo proponía preparar varias opciones y revisarlas conforme llegue información, en vez de apostar todo a una única previsión.",
       "alt": "Un perro se sienta ante una taza rotulada Plan de empleo 2025–2035 mientras las llamas rodean etiquetas sobre cambios laborales.",
       "transcript": "GOBIERNOS DISEÑANDO POLÍTICAS DE EMPLEO PARA 2035\nSEGURO QUE EL MERCADO LABORAL SEGUIRÁ MÁS O MENOS IGUAL\nIA GENERATIVA\nAGENTES AUTÓNOMOS\nAUTOMATIZACIÓN COGNITIVA\nNUEVAS PROFESIONES\nDESTRUCCIÓN Y CREACIÓN ACELERADA DE TAREAS\nPLAN ESTRATÉGICO 2030\nPLAN DE EMPLEO 2025–2035\nTHIS IS FINE.",
       "tags": [
@@ -3352,7 +3352,7 @@
       "height": 1254,
       "sha256": "1631b43a12058845c6634a9af6a29f8e70858daa4a35aa206a492e7242d7da24",
       "title": "No cambia solo la herramienta",
-      "context": "Los dos paneles contrastan sustituir instrumentos con reorganizar sectores completos. Acompañaban una edición sobre datos, industrias y poder, que invitaba a observar cómo la IA modifica procesos y relaciones económicas.",
+      "context": "Una cosa es sustituir una herramienta y otra cambiar cómo trabaja una industria entera. El artículo describía empresas de IA que intentan participar en todo el proceso de trabajo, no solo vender una aplicación. Los dos gestos invitan a mirar ese cambio y quién gana poder con él.",
       "alt": "Un hombre con abrigo rojo rechaza una idea y aprueba otra.",
       "transcript": "Pensar que la IA solo sustituye herramientas\nEntender que la IA está empezando a reordenar industrias enteras",
       "tags": [
@@ -3373,7 +3373,7 @@
       "height": 1254,
       "sha256": "d56f5261ef7e8cfd31d7618c6942f63a1d29df5c4722a583a2cee781708c3e0a",
       "title": "Un modelo para gobernarlos a todos",
-      "context": "El anillo de El señor de los anillos convierte la promesa de alinear la IA con valores humanos en una pregunta sobre concentración de poder. Acompañaba el debate sobre quién define esos valores y quién controla los modelos.",
+      "context": "«Un modelo para gobernarlos a todos» adapta la frase del anillo de El señor de los anillos, asociado al poder de dominar. La edición preguntaba quién decide qué valores debe seguir una IA. La broma cuestiona que unas pocas empresas puedan elegirlos en nombre de toda la sociedad.",
       "alt": "Un anillo dorado lleva una inscripción sobre el gobierno de los modelos.",
       "transcript": "Silicon Valley explicando que “solo quiere alinearlo con valores humanos”\nUn modelo para gobernarlos a todos",
       "tags": [
@@ -3394,7 +3394,7 @@
       "height": 1122,
       "sha256": "5b01082c6d5078236c62891739f6359daacae54748313df8ba9532b80425a3f9",
       "title": "Potencia o control de los documentos",
-      "context": "Los dos botones representan una decisión cotidiana al trabajar con información sensible: utilizar un modelo remoto muy capaz o conservar el control local de los documentos. El número exploraba precisamente la utilidad práctica de ejecutar IA en el ordenador.",
+      "context": "El dilema aparece al trabajar con documentos sensibles: usar una IA muy potente en servidores de otra empresa o mantener los archivos en el propio ordenador. La edición probaba modelos que pueden ejecutarse localmente. Los botones muestran que la capacidad de la herramienta y el control de los datos no siempre van juntos.",
       "alt": "Un profesional duda entre dos botones relacionados con potencia y privacidad.",
       "transcript": "CUALQUIER CONSULTOR, DOCENTE, PERIODISTA O TÉCNICO DE ADMINISTRACIÓN PÚBLICA\nUSAR EL MODELO MÁS POTENTE DEL MUNDO (GPT-5, CLAUDE, GEMINI...)\nNO SUBIR EL DOCUMENTO SENSIBLE A LA NUBE (PRIVACIDAD Y CONTROL)\nELECCIONES DIFÍCILES EN LA ERA DE LA IA",
       "tags": [
@@ -3416,7 +3416,7 @@
       "height": 1122,
       "sha256": "bbb3b8d6e2083e3a62149b9999745b3e5cc2036f6eabf4a136ac669030bc56f4",
       "title": "Pedir acceso desde Europa",
-      "context": "La escena evoca a Oliver Twist pidiendo otra ración. En la lectura del número 142, el cuenco representa el acceso a Fable 5 y la dependencia europea de decisiones estadounidenses sobre modelos avanzados.",
+      "context": "El personaje que pide otra ración recuerda a Oliver Twist. En el meme, las empresas europeas piden acceso a Fable 5, el modelo de IA de Anthropic. La edición contaba la suspensión de ese acceso por una orden estadounidense y planteaba qué supone depender de decisiones tomadas en otro país.",
       "alt": "Un niño sostiene un cuenco ante un adulto que administra la comida.",
       "transcript": "EMPRESAS EUROPEAS\nACCESO A FABLE 5\nGOBIERNO DE EE. UU.\nPOR MOTIVOS DE SEGURIDAD NACIONAL.",
       "tags": [
@@ -3437,7 +3437,7 @@
       "height": 1402,
       "sha256": "48da11311d41028aa0e9562e5da020a794ff6a4620c43d74d5663ff7c2aaad9f",
       "title": "Ensayar las preguntas",
-      "context": "La comparación presenta el grupo sintético como preparación para preguntar mejor. Acompañaba un experimento con cinco perfiles simulados por IA; una conversación simulada puede sugerir preguntas, pero no equivale a escuchar a una muestra real de ciudadanos.",
+      "context": "Un focus group es una conversación guiada con un pequeño grupo de personas. La edición probaba una versión simulada con cinco personajes creados por IA para ensayar preguntas antes de hacer una encuesta. Puede ayudar a prepararla, pero esas respuestas inventadas no sustituyen lo que digan ciudadanos reales.",
       "alt": "Un hombre con abrigo rojo rechaza improvisar y aprueba un ensayo previo.",
       "transcript": "Improvisar una encuesta sin saber bien qué preguntar\nSimular antes un focus group sintético para afinar las preguntas",
       "tags": [
@@ -3458,7 +3458,7 @@
       "height": 500,
       "sha256": "d6bf368bcc385ec00da20764a152b62aa9124c0e98f7b8a22931200e132890fa",
       "title": "La firma humana",
-      "context": "Anakin y Padmé ponen en duda que una firma garantice una revisión efectiva. La pieza acompaña La última firma, un relato de ficción sobre la responsabilidad humana cuando una administración automatiza la preparación de resoluciones.",
+      "context": "En La última firma, un relato de ficción, la IA prepara decisiones administrativas y una persona las firma. Anakin da por hecho que esa firma significa que alguien ha revisado cada caso; la insistencia de Padmé deja la duda. La cuestión es si la supervisión humana se ejerce de verdad o queda reducida a un trámite.",
       "alt": "La confianza de Padmé se convierte en inquietud ante el silencio de Anakin.",
       "transcript": "LA IA PREPARA LAS RESOLUCIONES Y UNA PERSONA LAS FIRMA.\nPORQUE ESA PERSONA REVISA DE VERDAD CADA CASO.\nREVISA DE VERDAD CADA CASO, ¿VERDAD?",
       "tags": [
@@ -3479,7 +3479,7 @@
       "height": 1122,
       "sha256": "6f5bae002c28f9dd01d5bb623f4b7639cea6352f1d341c6039c752e77731365d",
       "title": "La decisión que sigue pendiente",
-      "context": "Dos necesidades legítimas compiten por recursos limitados. En el relato El alcalde de los jueves, los informes de Ágora aclaran consecuencias, pero la elección sigue correspondiendo al responsable político. Los datos no eliminan las prioridades en conflicto.",
+      "context": "En El alcalde de los jueves, un relato de ficción, el presupuesto no alcanza para dos necesidades: un centro de día para mayores y una escuela infantil. Ágora, la IA de la historia, calcula las consecuencias de cada opción. Elegir a quién se atiende primero sigue correspondiendo al alcalde.",
       "alt": "Un alcalde suda ante dos botones para elegir entre servicios municipales.",
       "transcript": "CENTRO DE DÍA PARA MAYORES\nESCUELA INFANTIL PARA FIJAR FAMILIAS\nÁGORA: Datos analizados. Impactos simulados. Beneficiarios estimados. Informes generados. Participación realizada. DECISIÓN PENDIENTE: TÚ.\nRECURSOS LIMITADOS. NECESIDADES LEGÍTIMAS. DECISIÓN POLÍTICA.\nGOBERNAR NO ES ELEGIR LA RESPUESTA CORRECTA. ES ELEGIR QUÉ PÉRDIDA ACEPTAMOS.\nALCALDE DESCUBRIENDO QUE GOBERNAR NO ERA SOLO APROBAR RECOMENDACIONES EN VERDE",
       "tags": [
@@ -3500,7 +3500,7 @@
       "height": 704,
       "sha256": "842bc48bfb57753728dfe94456ddc563371ec45b0f4b51f0133ff8a781bb9afa",
       "title": "Dar la cara por la decisión",
-      "context": "La plantilla de Drake distingue esconderse detrás de la IA y utilizarla para comprender consecuencias. Es la otra cara del dilema de El alcalde de los jueves: la herramienta ayuda a decidir, pero no asume la responsabilidad política.",
+      "context": "En el relato ficticio El alcalde de los jueves, la IA ayuda al alcalde a comparar decisiones difíciles. Drake rechaza usarla como excusa y aprueba emplearla para entender las consecuencias y dar explicaciones. La herramienta puede orientar la elección, pero quien gobierna sigue siendo responsable de ella.",
       "alt": "Drake rechaza ocultar una decisión y aprueba asumir sus consecuencias.",
       "transcript": "Usar IA para esconder una decisión política difícil\nUsar IA para entender mejor sus consecuencias y asumirlas públicamente",
       "tags": [
@@ -3521,7 +3521,7 @@
       "height": 449,
       "sha256": "48b14252dcad9395895bef630ad67a4f65049bbd35868eb1cd6aab1df0d19b57",
       "title": "La memoria que no cabe en el relevo",
-      "context": "El plan de Gru tropieza cuando la memoria del ministro mezcla documentos oficiales, dudas y vida privada. La pieza acompaña un relato de ficción sobre cómo transmitir conocimiento institucional sin convertir toda la experiencia personal en información transferible.",
+      "context": "En La memoria del ministro, un relato de ficción, una IA debe entregar al nuevo gobierno lo aprendido por el anterior. Gru descubre el problema: los documentos oficiales están mezclados con dudas, recuerdos y asuntos privados del ministro. Guardarlo todo no resuelve qué información debe recibir su sucesor y cuál pertenece a su vida personal.",
       "alt": "Gru presenta un plan en cuatro paneles y se detiene ante su consecuencia.",
       "transcript": "Creamos una IA que recuerde todo lo que hizo el ministro\nLa usamos para transferir conocimiento al siguiente gobierno\nDescubrimos que lo importante mezcla actas, dudas y vida privada\nDescubrimos que lo importante mezcla actas, dudas y vida privada",
       "tags": [
@@ -3542,7 +3542,7 @@
       "height": 1024,
       "sha256": "4e388177ca6c1fd80386b84581b3ffbe654a31fa650db5b4287490c17fa6364b",
       "title": "Medir no es lo mismo que cuidar",
-      "context": "La escena pregunta si registrar rutinas basta para cuidar a una persona. Acompaña El cuidador que aprendió a llamar, un relato de ficción sobre teleasistencia, intimidad y la diferencia entre detectar señales y ofrecer presencia humana.",
+      "context": "En El cuidador que aprendió a llamar, un relato de ficción, una IA detecta cambios en las rutinas de una persona mayor. El meme pregunta si registrar cuánto duerme o cuántas visitas recibe equivale a cuidarla. El dilema es cómo ofrecer ayuda sin invadir su intimidad ni sustituir el contacto humano.",
       "alt": "Un personaje señala un panel de teleasistencia que muestra rutinas y alertas.",
       "transcript": "SISTEMA PÚBLICO DE TELEASISTENCIA CON IA\n¿ES ESTO CUIDAR?\nSUEÑO: 6 h 12 min\nALIMENTACIÓN: Poca actividad\nMOVIMIENTO: −35% vs. promedio\nVISITAS: Nadie desde hace 5 días\nRUTINA: Cambios detectados\nRIESGO: MEDIO\nACCIÓN SUGERIDA: Avisar a Familia, Centro de salud, Servicios sociales\nDatos recopilados 24/7\nÚltima actualización: ahora\nMIS RUTINAS SON MÍAS",
       "tags": [
@@ -3563,7 +3563,7 @@
       "height": 1536,
       "sha256": "22efbb1b0d7a84e48ff3ea8eb0215bbac97fa59b1878d153e535aee63a95727a",
       "title": "Cuando lo potente también necesita respaldo",
-      "context": "La escala de cerebros termina en copias, distribución y procedimientos manuales. Acompaña Cero cómputo, un relato de ficción en el que una emergencia obliga a priorizar servicios: disponer de un gran modelo central no garantiza continuidad.",
+      "context": "Cero cómputo imaginaba una emergencia que dejaba sin suficientes recursos informáticos a servicios públicos dependientes de IA. La escala termina en sistemas alternativos, copias de información y procedimientos manuales. La idea es sencilla: además de tener una herramienta potente, hay que poder seguir atendiendo cuando falla.",
       "alt": "Cuatro cerebros representan formas cada vez más completas de preparar infraestructura pública.",
       "transcript": "1. Un gran modelo central para toda la Administración\n2. Más centros de datos y mucha más capacidad de cómputo\n3. Capacidad de reserva distribuida geográficamente\n4. Modelos locales, copias actualizadas y procedimientos manuales cuando todo lo demás falla\nSIN CAPACIDAD SOBRANTE Y RESPALDOS, UNA CRISIS CONVIERTE LA EFICIENCIA EN FRAGILIDAD.",
       "tags": [
@@ -3584,7 +3584,7 @@
       "height": 1024,
       "sha256": "a59bf6ea159d2d83951c77e056c58f7f00cb16de44aaa58e7b27082c80f54caa",
       "title": "Preparar el bote antes del naufragio",
-      "context": "El gran buque representa servicios públicos concentrados en una infraestructura vulnerable. La embarcación de respaldo traduce visualmente la resiliencia: alternativas distribuidas y humanas para seguir atendiendo cuando falla el centro. Se publicó con el relato Cero cómputo.",
+      "context": "En el relato ficticio Cero cómputo, una emergencia pone en peligro servicios públicos que dependen de la misma infraestructura. El gran buque representa esa dependencia y el bote, las alternativas preparadas de antemano. «Redundancia» significa disponer de sistemas de reserva; «resiliencia», poder seguir prestando el servicio cuando algo falla.",
       "alt": "Un barco público en dificultades contrasta con otro preparado para mantener los servicios.",
       "transcript": "LA EFICIENCIA SIN REDUNDANCIA ES UNA AVENTURA.\nHOSPITALES · INCENDIOS · AGUA · JUSTICIA · ATENCIÓN CIUDADANA · TRANSPORTE\nSISTEMA PÚBLICO NACIONAL DE IA\nFALLO ELÉCTRICO DURANTE UNA OLA DE CALOR\nDERIVAR TODO A LA CENTRALITA TELEFÓNICA\nINVERTIR HOY PARA NO LAMENTAR MAÑANA\nRESILIENCIA PÚBLICA\nMÁS CAPACIDAD DE CÓMPUTO\nCENTROS DE DATOS REDUNDANTES Y DISTRIBUIDOS\nMODELOS LOCALES Y COPIAS ACTUALIZADAS\nPROCEDIMIENTOS MANUALES Y ALTERNATIVAS HUMANAS\nRESILIENCIA PARA SERVIR A LA CIUDADANÍA. SIEMPRE.\nCUANDO EL CENTRO FALLA, LO QUE TE SALVA ES LO QUE PREPARASTE.",
       "tags": [
@@ -3647,7 +3647,7 @@
       "height": 500,
       "sha256": "3e4d3114e67ccac19abf97c7950c9e91d6fcbe88e2d9b01014fd0087238ff780",
       "title": "Una ley, tres versiones",
-      "context": "Los Spider-Man creen hablar de la misma ley, pero cada uno recibió una explicación adaptada a sus preferencias. La pieza acompaña el relato ficticio La ley que todos apoyaban y su dilema sobre personalización y deliberación compartida.",
+      "context": "En La ley que todos apoyaban, un relato de ficción, la IA explica una misma ley de forma distinta a cada ciudadano según sus intereses. Los tres Spider-Man descubren que creen estar de acuerdo, pero han entendido cosas diferentes. El problema aparece cuando intentan discutir juntos qué se ha aprobado.",
       "alt": "Tres Spider-Man se señalan mientras atribuyen distintas prioridades a una ley.",
       "transcript": "LA LEY AYUDA AL TRANSPORTE RURAL\nLA LEY REDUCE EL COCHE PRIVADO\nLA LEY PROTEGE A LOS PROFESIONALES\nCUANDO TODOS HAN LEÍDO LA MISMA LEY PERSONALIZADA POR IA",
       "tags": [
@@ -3668,7 +3668,7 @@
       "height": 1122,
       "sha256": "571c26fd2091ea717da12ea3ae519aa8280dd5cf86470f8d592fb3bf8ae2f2f7",
       "title": "La pregunta que queda después del análisis",
-      "context": "Tras las historIAs veraniegas, el número recogía lecciones sobre responsabilidad pública. La escena permite pedir datos y simulaciones a la IA, pero devuelve al representante la elección entre alternativas y sus consecuencias.",
+      "context": "La escena imagina una IA capaz de analizar datos y comparar muchas opciones. Cuando el representante le pide que elija, recibe un recordatorio: esa responsabilidad corresponde a quien fue elegido para gobernar. La edición reunía las lecciones de los relatos veraniegos sobre decisiones que no se resuelven solo con cálculos.",
       "alt": "Un político consulta una pantalla que le devuelve la responsabilidad de elegir.",
       "transcript": "IA: PUEDE HACERLO TODO. POLÍTICA: TIENE QUE ELEGIR.\n¿Puedes analizar todos los datos del país?\n¿Puedes simular millones de escenarios?\n¿Puedes predecir las consecuencias de cada opción?\n¿Y cuál elijo?\nIA\nPARA ESO LE VOTARON A USTED.\nDATOS ANALIZADOS: 287.482.105\nESCENARIOS SIMULADOS: 12.842.774\nOPCIONES EVALUADAS: 1.048\nINCERTIDUMBRE: SIEMPRE PRESENTE\nGOBIERNO DE ESPAÑA",
       "tags": [
@@ -3689,7 +3689,7 @@
       "height": 1254,
       "sha256": "0876f97c784cc9c837b77c5c5aa2603c2a39c5efe2a97ef9751f58cbc56af421",
       "title": "El legislador en versión beta",
-      "context": "La pieza enlaza la figura del legislador ideal de Rousseau con una IA todavía en pruebas. Acompaña la reseña de Un nuevo Contrato Social, de José Ignacio Latorre, y plantea con humor la distancia entre capacidad técnica y legitimidad para gobernar.",
+      "context": "Rousseau imaginó un legislador capaz de entender a los seres humanos sin dejarse arrastrar por sus pasiones. El libro de José Ignacio Latorre relacionaba esa idea con la IA. La broma ofrece como candidata una «versión beta», es decir, todavía en pruebas: muy lejos de la perfección que exigía el filósofo.",
       "alt": "Un retrato de Rousseau contrasta con un robot que trabaja ante un portátil.",
       "transcript": "ROUSSEAU, 1762: “Harían falta dioses para dar leyes a los humanos”\n2026: “Bueno... tenemos una cosa en beta.”\nANÁLISIS DE DATOS\nLEGISLACIÓN COMPARADA\nSIMULACIÓN DE CONSECUENCIAS\nPROPUESTAS DE POLÍTICAS PÚBLICAS\nPENSANDO EN EL FUTURO DESDE 2026\nVersión 0.1 (beta)",
       "tags": [
@@ -3710,7 +3710,7 @@
       "height": 1587,
       "sha256": "a365ed209f2d789fd95ec4dcd696c066ad457eecf9c0a6db39acc03030dd550f",
       "title": "De la idea al prototipo",
-      "context": "Las dos escenas representan un cambio en la barrera de entrada para crear aplicaciones. En la edición sobre GPT-6 Astra, la conversación pasa del presupuesto inicial a la capacidad de explicar la idea y dirigir su desarrollo.",
+      "context": "En 2024, la primera pregunta ante una idea era si había dinero para desarrollarla; en 2026, el meme pregunta si sabes explicarla bien. La edición sobre GPT-6 Astra mostraba nuevas posibilidades para construir prototipos con IA. La comparación destaca esa facilidad para empezar, sin afirmar que desaparezcan todos los costes del proyecto.",
       "alt": "En 2024 una persona pregunta por presupuesto; en 2026 un robot pregunta por la idea.",
       "transcript": "2024\nIDEAS · PLANES · RECURSOS · RESULTADOS\nTengo una idea para una aplicación.\nGenial. ¿Tienes presupuesto?\nDESARROLLO · DISEÑO · INFRAESTRUCTURA · MARKETING · MANTENIMIENTO\nPresupuesto: Equipo técnico, Tiempo, Servidores, Diseño UI/UX, Marketing, Soporte\nLAS BUENAS IDEAS TAMBIÉN CUESTAN\n2026\nHOY TUS IDEAS PUEDEN LLEGAR MÁS LEJOS\nTengo una idea para una aplicación.\nGenial. ¿Puedes explicarla bien?\nIDEAS · CONTEXTO · CONOCIMIENTO · CRITERIO · IMPACTO\nDe ideas a prototipos más rápido que nunca.\nGPT-6 Astra\nMisma ambición. Nuevas posibilidades.\nPrototipos · Simulaciones · Visualizaciones · Herramientas · Agentes · Más impacto\nLAS BUENAS IDEAS AHORA AVANZAN MÁS",
       "tags": [
@@ -3731,7 +3731,7 @@
       "height": 1021,
       "sha256": "4d0d8f30db497562b643002ae3e96f0b5db979d63f113818693538d51d254a2c",
       "title": "El logro que aún no has desbloqueado",
-      "context": "La pantalla de videojuego muestra una estrategia aprobada y muchas capacidades pendientes. Resume el argumento del número: la soberanía en IA depende de energía, cómputo, talento e instituciones, además de una declaración de intenciones.",
+      "context": "La pantalla celebra una estrategia aprobada, pero deja casi todos los requisitos sin completar. El artículo explicaba qué necesita un país para desarrollar y utilizar IA sin depender por completo de otros: electricidad, ordenadores, datos, profesionales, financiación y capacidad de supervisión. Aprobar el plan es solo el primer paso.",
       "alt": "Una interfaz de videojuego enumera requisitos pendientes para conseguir soberanía en IA.",
       "transcript": "GOBIERNO · Nv. 2030 · EXP\nHas aprobado la estrategia. Ahora solo queda lo difícil...\n¡LOGRO DESBLOQUEADO! SOBERANÍA EN IA\nRequisitos para un control real de tu futuro\nEstrategia nacional de IA: 1/1\nElectricidad suficiente y asequible: 0/1\nCómputo propio y a gran escala: 0/1\nModelos, talento y datos: 0/1\nCapital y capacidad de ejecución: 0/1\nInstituciones con capacidad real de supervisión: 0/1\nSEGUIR INTENTÁNDOLO\nVER PISTAS\nPista: La soberanía no se declara. Se construye.",
       "tags": [
@@ -3752,7 +3752,7 @@
       "height": 1525,
       "sha256": "a805aa70b4ff9b8b7251fa5904f075582462aaa161720c971aaa328ddf96b34c",
       "title": "El camino del miedo al monopolio",
-      "context": "Yoda adapta su conocida cadena sobre el miedo al debate regulatorio. El número defendía hacer segura la IA sin concentrar su control: la escena contrapone riesgos reales y el peligro de convertir la protección en barreras de entrada.",
+      "context": "Yoda adapta su advertencia sobre el miedo a las reglas de seguridad de la IA. La preocupación del artículo era que cumplirlas resultara tan caro que solo pudieran hacerlo las empresas dominantes. La cadena exagerada advierte de ese riesgo al diseñar las reglas.",
       "alt": "Yoda habla a un grupo de reguladores ante una pantalla sobre superinteligencia.",
       "transcript": "El miedo conduce a la regulación. La regulación conduce a las barreras de entrada. Las barreras de entrada conducen al monopolio. Más o menos era así.\nSUPERINTELIGENCIA\nRIESGOS REALES: PÉRDIDA DE CONTROL, CIBERATAQUES, DESINFORMACIÓN, CONCENTRACIÓN DE PODER\nTAMBIÉN ESTO IMPORTA\nREGULADORES",
       "tags": [
@@ -3773,7 +3773,7 @@
       "height": 1525,
       "sha256": "ae106057a4a4b07d163f0c2559ebb741cc6e979a6e8596cccdf5667dc5e48035",
       "title": "El castillo de la seguridad",
-      "context": "Un foso protege a los grandes laboratorios y dificulta la entrada a nuevos actores. Los requisitos exagerados son parte de la sátira: ilustran cómo una regulación costosa puede favorecer a quienes ya dominan el sector.",
+      "context": "Las empresas grandes quedan protegidas dentro del castillo, mientras una universidad, una empresa nueva y un desarrollador no pueden entrar. El foso representa requisitos de seguridad tan costosos que excluyen a quienes tienen menos recursos. Las cifras son inventadas para la sátira; muestran la preocupación del artículo por unas reglas que favorezcan a los ya establecidos.",
       "alt": "Tres aspirantes observan un castillo de grandes laboratorios rodeado por un foso.",
       "transcript": "GRANDES LABORATORIOS DE IA\nOpenAI · Google · Meta · ANTHROPIC · etc.\nMenos mal que hemos construido este foso para proteger a todo el mundo.\nREGULACIÓN DE SEGURIDAD\nREQUISITOS: 500 millones de euros, 300 auditores, 14 certificaciones, Departamento jurídico de 200 personas, etc.\nBARRERAS DE ENTRADA\n¿Y de verdad dicen que esto es por seguridad?\nSTARTUP · UNIVERSIDAD · DESARROLLADOR INDEPENDIENTE\nBIENVENIDOS (EN TEORÍA)",
       "tags": [
@@ -3836,11 +3836,31 @@
       "height": 1254,
       "sha256": "a937b57a8b1bcf6836ad3f471eea73562fd5f0828252e7cd0ad36237a04ad343",
       "title": "Tres años, dos velocidades",
-      "context": "Publicado en el tercer aniversario de estrategIA, el meme contrapone la aceleración de la IA con la lentitud de la respuesta institucional. Recupera la preocupación del número: prepararse para el cambio exige empezar a decidir antes de que desaparezca la incertidumbre.",
+      "context": "En el tercer aniversario de estrategIA, el robot celebra que ya ayuda a diseñar la siguiente generación de IA. El político celebra haber creado una comisión para estudiar el asunto. La comparación resume la preocupación del artículo: la tecnología avanza mientras muchas instituciones siguen decidiendo si deben empezar a prepararse.",
       "alt": "Un robot y un político celebran un tercer cumpleaños; el robot muestra planos y el político una carpeta vacía.",
       "transcript": "En estos tres años he aprendido a ayudar a construir mi siguiente generación.\nNosotros hemos decidido crear una comisión para estudiar si esto va en serio.",
       "tags": [
         "politica",
+        "usar-ia"
+      ],
+      "credit": ""
+    },
+    {
+      "id": "159-01",
+      "issue": 159,
+      "order": 1,
+      "date": "2026-10-14",
+      "issueTitle": "estrategIA #159 — State of AI 2026: ¿estamos a un año de la inteligencia artificial general?",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-159-state-of-ai-2026-estamos",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/93926aa8-d637-4832-9009-007266cd932d_1402x1122.png",
+      "width": 1402,
+      "height": 1122,
+      "sha256": "fdd3b5429ce3ef244bfe018764511d6dd43bbd7d67e7aa6419deff80dd265622",
+      "title": "La IA presenta a su «hijo»",
+      "context": "El investigador descubre que su IA ya ha diseñado otra, y que esta trabaja en la siguiente generación. La escena imagina la «mejora recursiva»: usar IA para crear otras IA cada vez más capaces. El número abordaba los primeros pasos de ese proceso, todavía con participación humana; GPT-8, GPT-9 y GPT-10 son nombres ficticios dentro del meme.",
+      "alt": "Un investigador observa tres sistemas luminosos, GPT-8, GPT-9 y GPT-10, unidos por flechas. GPT-8 presenta a GPT-9 como su hijo.",
+      "transcript": "Papá, te presento a mi \"hijo\".\n¿Tú \"hijo\"?\nLo he diseñado yo y él ya está diseñando al siguiente.\nGPT-8 → GPT-9 → GPT-10\nSAFER\nMORE CAPABLE\nMORE ALIGNED",
+      "tags": [
         "usar-ia"
       ],
       "credit": ""
