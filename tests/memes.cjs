@@ -31,6 +31,37 @@ async function main(){
   if(!await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)) console.log(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,class:e.className,width:e.getBoundingClientRect().width,right:e.getBoundingClientRect().right,text:e.textContent.slice(0,65)})).slice(0,12)));
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Gallery text 200% no overflow ${width}`);
  }
+ await page.setViewportSize({width:320,height:844});await page.goto(base);
+ await page.locator('#filter-toggle').focus();await page.keyboard.press('Enter');
+ check(await page.locator('#theme').evaluate(e=>e===document.activeElement),'Opening mobile filters moves keyboard focus into controls');
+ await page.locator('#theme').selectOption('usar-ia');
+ check(await page.locator('#theme').evaluate(e=>e.getBoundingClientRect().width>=innerWidth-42),'Mobile theme uses a full row for readable selection');
+ await page.keyboard.press('Tab');check(await page.locator('#year').evaluate(e=>e===document.activeElement),'Mobile filters continue in logical keyboard order');
+ await page.screenshot({path:path.join(output,'filters-320.png')});
+ await page.goto(base+'?q=159#meme-159-01');
+ await page.waitForFunction(()=>document.activeElement.closest('#meme-159-01'));
+ check(await page.locator('#meme-159-01 a').evaluate(e=>e===document.activeElement),'Returning to gallery restores focus to the selected meme');
+ for(const width of [320,390,1440]){
+  await page.setViewportSize({width,height:1000});await page.goto(base+'002-02/');
+  await page.locator('#enlarge').click();await page.locator('.lightbox-body img').evaluate(i=>i.decode());
+  const fitted=await page.locator('.lightbox-body img').evaluate(i=>i.getBoundingClientRect().width);
+  await page.locator('#zoom-image').click();
+  check(await page.locator('.lightbox-body img').evaluate((i,w)=>i.getBoundingClientRect().width>=w*1.99,fitted),`Viewer doubles image width ${width}`);
+  check(await page.locator('.lightbox-body').evaluate(e=>e.scrollWidth>e.clientWidth||e.scrollHeight>e.clientHeight),`Enlarged image can be scrolled ${width}`);
+  await page.locator('.lightbox-body').focus();await page.keyboard.press('End');
+  await page.waitForFunction(()=>document.querySelector('.lightbox-body').scrollTop>0);
+  check(await page.locator('.lightbox-body').evaluate(e=>e.scrollTop>0),`Keyboard can explore enlarged image ${width}`);
+  await page.screenshot({path:path.join(output,`zoom-${width}.png`)});
+  check((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations.length===0,`Open zoom dialog accessibility ${width}`);
+  await page.locator('#zoom-image').click();
+  check(await page.locator('.lightbox-body img').evaluate((i,w)=>Math.abs(i.getBoundingClientRect().width-w)<2,fitted),`Viewer returns to fitted image ${width}`);
+  await page.addStyleTag({content:'html{font-size:200%!important}'});
+  check(await page.locator('#close-lightbox').evaluate(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight}),`Viewer close remains visible with 200% text ${width}`);
+  await page.keyboard.press('Escape');
+  check(await page.locator('#enlarge').evaluate(e=>e===document.activeElement),`Viewer restores focus ${width}`);
+  await page.locator('#enlarge').click();
+  check(await page.locator('#zoom-image').getAttribute('aria-pressed')==='false',`Reopened viewer starts fitted ${width}`);
+ }
  await page.setViewportSize({width:1440,height:1000});await page.goto(base);
  await page.locator('#query').fill('87 fortalezas');await page.waitForFunction(()=>document.querySelector('#result-count').textContent==='1 meme encontrado');
  check(await page.locator('#gallery .meme-card:visible').getAttribute('data-id')==='157-01','Search finds a phrase inside the image');

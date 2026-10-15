@@ -11,7 +11,7 @@
     const reset=document.getElementById('reset'), empty=document.getElementById('empty');
     const filterToggle=document.getElementById('filter-toggle'),extra=document.getElementById('filters-extra');
     filterToggle.hidden=false;
-    filterToggle.addEventListener('click',()=>{const open=filterToggle.getAttribute('aria-expanded')!=='true';filterToggle.setAttribute('aria-expanded',String(open));extra.classList.toggle('is-open',open);});
+    filterToggle.addEventListener('click',()=>{const open=filterToggle.getAttribute('aria-expanded')!=='true';filterToggle.setAttribute('aria-expanded',String(open));extra.classList.toggle('is-open',open);if(open)theme.focus();});
     const haystacks=new Map(data.map(item=>[item.id,normalize([item.title,item.context,item.transcript,item.issueTitle,...item.tags].join(' '))]));
     let limit=18, filtered=[], timer;
     function readURL(){ const params=new URLSearchParams(location.search);search.value=params.get('q')||'';theme.value=params.get('tema')||'';if(theme.selectedIndex<0)theme.value='';year.value=params.get('ano')||'';if(year.selectedIndex<0)year.value='';order.value=params.get('orden')==='antiguos'?'antiguos':'recientes';limit=Math.max(18,Math.min(data.length,Number(params.get('n'))||18)); }
@@ -41,7 +41,7 @@
     more.addEventListener('click',()=>{const firstNew=filtered[limit];limit+=18;render();if(firstNew)cards.get(firstNew.id).querySelector('a').focus({preventScroll:true});});
     grid.addEventListener('click',event=>{const card=event.target.closest('.meme-card');if(card)safeStore.set('estrategia-memes-position',{id:card.dataset.id,scroll:scrollY,url:location.pathname+location.search});});
     addEventListener('popstate',()=>{readURL();render(false);});
-    if(location.hash.startsWith('#meme-')){const card=document.getElementById(location.hash.slice(1));if(card){const index=filtered.findIndex(x=>'meme-'+x.id===card.id);if(index>=limit){limit=Math.ceil((index+1)/18)*18;render(false);}requestAnimationFrame(()=>card.scrollIntoView({behavior:'instant',block:'start'}));}}
+    if(location.hash.startsWith('#meme-')){const card=document.getElementById(location.hash.slice(1));if(card){const index=filtered.findIndex(x=>'meme-'+x.id===card.id);if(index>=limit){limit=Math.ceil((index+1)/18)*18;render(false);}if(index>=0)requestAnimationFrame(()=>{card.scrollIntoView({behavior:'instant',block:'start'});card.querySelector('a').focus({preventScroll:true});});}}
   }
   const detail=document.querySelector('[data-meme-id]');
   if(detail){
@@ -58,9 +58,16 @@
     }
     const dialog=document.getElementById('lightbox'), trigger=document.getElementById('enlarge'), close=document.getElementById('close-lightbox');
     if(dialog&&typeof dialog.showModal==='function'){
+      const zoom=document.getElementById('zoom-image'),viewport=dialog.querySelector('.lightbox-body'),img=viewport.querySelector('img'),hint=document.getElementById('zoom-hint');
+      function setZoom(expanded){
+        if(expanded)img.style.setProperty('--zoom-width',`${img.getBoundingClientRect().width*2}px`);
+        viewport.classList.toggle('is-zoomed',expanded);zoom.setAttribute('aria-pressed',String(expanded));zoom.textContent=expanded?'Ajustar imagen':'Ampliar 2×';hint.hidden=!expanded;
+        viewport.scrollTop=0;viewport.scrollLeft=0;
+      }
+      zoom.addEventListener('click',()=>setZoom(zoom.getAttribute('aria-pressed')!=='true'));
       trigger.addEventListener('click',event=>{event.preventDefault();dialog.showModal();document.body.style.overflow='hidden';close.focus();});
       close.addEventListener('click',()=>dialog.close());
-      dialog.addEventListener('close',()=>{document.body.style.overflow='';trigger.focus({preventScroll:true});});
+      dialog.addEventListener('close',()=>{setZoom(false);document.body.style.overflow='';trigger.focus({preventScroll:true});});
       dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
     }
     const copy=document.getElementById('copy-link');copy.hidden=false;

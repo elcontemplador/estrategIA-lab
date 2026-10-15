@@ -11,3 +11,13 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media print{.site-header,.tools,.results-bar,.load-area,.detail-actions,.piece-navigation,.related,.site-footer,.image-caption,.breadcrumb,.copy-status{display:none!important}.wrap{width:100%}.detail-layout{display:block}.detail-art{max-width:70%;margin:auto}.detail-copy h1{font-size:24pt}.context-block p{font-size:11pt}.transcription{display:block}.meme-card{break-inside:avoid}.archive-grid{grid-template-columns:repeat(2,1fr)}body{background:white}}
 .about p > a{display:inline-block;min-height:44px;padding-block:10px}
+
+/* Keep the viewer controls available while the enlarged image scrolls. */
+.lightbox[open]{display:flex;flex-direction:column}
+.lightbox-head{flex:none;flex-wrap:wrap}
+.lightbox-body{height:auto;flex:1;min-height:0}
+.lightbox-body.is-zoomed{display:block}
+.lightbox-body.is-zoomed img{width:var(--zoom-width);max-width:none;max-height:none;height:auto}
+.zoom-hint{flex:none;margin:0;padding:8px 14px;font-size:.8rem;line-height:1.4;border-top:1px solid #555}
+.piece-navigation [data-next]{margin-left:auto}
+@media(max-width:520px){.search input{font-size:1rem}.filter-group{grid-template-columns:1fr}.filter.order-filter{display:block}.filter.order-filter label{margin-bottom:8px}.filter.order-filter select{width:100%;min-height:48px}.filter select{font-size:.85rem}}
