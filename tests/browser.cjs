@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
 const { chromium } = require('playwright');
+const { default: AxeBuilder } = require('@axe-core/playwright');
 
 const root = path.resolve(__dirname, '../docs');
 const prefix = '/estrategIA-lab/';
@@ -48,6 +49,54 @@ async function main() {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(base, { waitUntil: 'networkidle' });
     check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
+    const catalogue = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/projects.json'), 'utf8'));
+    check(await page.locator('#catalog-filters').isVisible(), 'Catalogue filters are enhanced with JavaScript');
+    check(await page.locator('.project-usage').count() === 10, 'Each project offers a proposed teaching activity');
+    check(await page.locator('.catalog-index a').count() === 10, 'Compact index links to every project');
+    const types = await page.locator('#filter-type option').evaluateAll(xs => xs.map(x => x.value));
+    const audiences = await page.locator('#filter-audience option').evaluateAll(xs => xs.map(x => x.value));
+    for (const type of types) {
+      for (const audience of audiences) {
+        await page.selectOption('#filter-type', type);
+        await page.selectOption('#filter-audience', audience);
+        const expected = catalogue.projects.filter(x => (!type || x.type === type) && (!audience || x.audiences.includes(audience))).map(x => x.id);
+        const actual = await page.locator('.project-card:visible').evaluateAll(xs => xs.map(x => x.id));
+        check(JSON.stringify(actual) === JSON.stringify(expected), `Catalogue intersection ${type}/${audience}`);
+        check(await page.locator('.catalog-index li:visible').count() === expected.length, 'Index follows filtered results');
+        check(await page.locator('#catalog-empty').isVisible() === (expected.length === 0), 'Empty state follows filter results');
+      }
+    }
+    await page.locator('#catalog-filters button[type="reset"]').click();
+    check(await page.locator('.project-card:visible').count() === 10, 'Reset restores the complete catalogue');
+    await page.locator('#filter-type').focus();
+    await page.keyboard.press('a');
+    await page.keyboard.press('Tab');
+    check(await page.locator('#filter-audience').evaluate(x => x === document.activeElement), 'Native catalogue filters support keyboard focus');
+    await page.selectOption('#filter-type', 'archivo');
+    await page.locator('.start-routes a[href="#analizador-discursos"]').click();
+    check(await page.locator('#analizador-discursos').isVisible(), 'A route reveals a project excluded by filters');
+    check(await page.locator('#analizador-discursos').evaluate(x => x === document.activeElement), 'Route moves keyboard focus to its project');
+    await page.selectOption('#filter-type', 'archivo');
+    await page.evaluate(() => { location.hash = 'app-estoica'; });
+    await page.waitForFunction(() => !document.getElementById('app-estoica').hidden);
+    check(await page.locator('#filter-type').inputValue() === '', 'Saved project fragments clear incompatible filters');
+    const qa = path.resolve(process.env.LAB_CATALOG_QA_OUTPUT || 'qa/catalogue');
+    fs.mkdirSync(qa, { recursive: true });
+    const accessibility = [];
+    for (const width of [390, 1440]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(base, { waitUntil: 'networkidle' });
+      await page.screenshot({ path: path.join(qa, `home-${width}.png`), fullPage: true });
+      await page.locator('.catalog-explorer').screenshot({ path: path.join(qa, `catalogue-${width}.png`) });
+      await page.locator('#archivo-memes .project-usage summary').click();
+      await page.locator('#archivo-memes').screenshot({ path: path.join(qa, `usage-${width}.png`) });
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Open activity does not overflow at ${width}`);
+      const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+      accessibility.push({ width, violations: axe.violations });
+      check(axe.violations.length === 0, `Homepage automatic accessibility at ${width}: ${JSON.stringify(axe.violations.map(x => x.id))}`);
+    }
+    fs.writeFileSync(path.join(qa, 'accessibility.json'), JSON.stringify(accessibility, null, 2) + '\n');
+    await page.goto(base, { waitUntil: 'networkidle' });
     check(await page.locator('.project-card').count() === 10, 'Ten projects, including the meme archive, remain accessible');
     check(await page.locator('#archivo-memes a[href="memes/"]').count() === 1, 'The meme archive is linked from the LAB');
     check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
@@ -191,6 +240,10 @@ async function main() {
     const plain = await nojs.newPage();
     await plain.goto(base);
     check(await plain.locator('.project-card').count() === 10, 'All projects remain accessible without JavaScript');
+    check(!await plain.locator('#catalog-filters').isVisible(), 'No inactive filter controls without JavaScript');
+    check(await plain.locator('.catalog-index a').count() === 10 && await plain.locator('.start-routes a').count() >= 8, 'Index and routes work without JavaScript');
+    await plain.locator('#archivo-memes .project-usage summary').click();
+    check(await plain.locator('#archivo-memes .project-usage').getAttribute('open') !== null, 'Teaching activities open without JavaScript');
     check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
     check(await plain.locator('#laboratorio').isVisible() && await plain.locator('#archivo-ingles .project-scope').isVisible(), 'Editorial context and English scope remain visible without JavaScript');
     await plain.goto(base + 'renta-basica/');
@@ -201,6 +254,7 @@ async function main() {
     const sections = plain.locator('.reveal');
     check(await sections.count() >= 12, 'Guide sections preserved');
     check(await sections.evaluateAll(xs => xs.every(x => getComputedStyle(x).opacity === '1')), 'Guide remains readable without JavaScript');
+    fs.writeFileSync(path.join(qa, 'results.json'), JSON.stringify({ passed: true, checks, source: process.env.LAB_BASE_URL || 'local docs', accessibility }, null, 2) + '\n');
     console.log(`PASS: ${checks} browser checks (${process.env.LAB_BASE_URL ? 'published site' : 'local docs'}).`);
   } finally {
     await browser.close();

@@ -153,27 +153,55 @@ La portada explica qué es estrategIA y cómo se relacionan la newsletter en Sub
 la presentación y los recursos de ALEPH y este laboratorio. Ese contexto permanece
 visible antes del catálogo y conserva la mirada política y el propósito editorial.
 
-Las nueve fichas explican el propósito de los proyectos, con vistas previas, requisitos,
+Las fichas explican el propósito de los proyectos, con vistas previas, requisitos,
 límites y acciones disponibles. El archivo web en inglés figura como proyecto de acceso
 internacional a los artículos principales traducidos; su alcance se explica a la vista.
 No contiene el resto de secciones de los números completos ni otra suscripción semanal.
 
-`docs/home.js` añade solo mejoras progresivas: ajusta el margen de los enlaces internos
+El catálogo ofrece tres recorridos (entender, decidir y construir), un índice compacto y
+filtros por tipo de proyecto y público. Cada ficha incluye una propuesta de uso didáctico,
+con objetivo, duración orientativa y dos preguntas. Son sugerencias para adaptar al grupo,
+no actividades cuya eficacia se haya comprobado en el aula. No amplían las licencias de
+los materiales enlazados.
+
+`docs/home.js` añade mejoras progresivas: filtra fichas e índice, anuncia el número de
+resultados, permite restablecer el catálogo y revela cualquier ficha enlazada por un
+recorrido aunque el filtro activo la oculte. También ajusta el margen de los enlaces internos
 a la cabecera y limita el destacado del tercer aniversario a octubre de 2026, en la zona
 horaria de Madrid. Al terminar el mes, el juego permanece en el catálogo. Sin JavaScript,
 la promoción conserva su fecha explícita y todos los proyectos, enlaces y condiciones
 siguen accesibles. No hay analítica ni llamadas a modelos de IA.
 
-La fecha de revisión de las fichas no es la fecha de creación o de publicación de cada
-proyecto. Actualícela cuando vuelva a comprobar el catálogo; no la regenere automáticamente.
+`data/projects.json` es la fuente editable de la clasificación, los recorridos, las
+propuestas de uso, la nota de revisión y el historial de novedades. El HTML de las fichas
+conserva sus descripciones, acciones y condiciones. Después de editar los datos, ejecuta:
+
+```sh
+python scripts/build_home.py
+python -m unittest discover -s tests -p "test_build_home.py"
+python tests/validate_site.py
+npm test
+```
+
+El generador actualiza solo los bloques delimitados y los metadatos de las fichas;
+comprueba que identificadores, títulos y orden coinciden con el HTML y los lanzamientos.
+`python scripts/build_home.py --check` falla si la portada está desfasada sin escribirla.
+El validador general y CI ejecutan esta comprobación. Para incorporar un proyecto,
+añade su ficha HTML, su entrada en `projects.json` y la evidencia en `project-launches.json`.
+
+La fecha y el alcance de revisión se introducen explícitamente en `projects.json`.
+No son la fecha de creación o de publicación de cada proyecto ni se actualizan al generar
+la página. La revisión de estructura y navegación del 17 de octubre no recertifica el
+contenido de todos los proyectos ni sus enlaces externos.
 Cada ficha muestra también el mes y año de su primera publicación accesible. Las fuentes
 y los criterios están en `data/project-launches.json`. No cambie esa fecha al actualizar
 un proyecto o incorporarlo al catálogo. En archivos, corresponde al lanzamiento de la web,
 no a las fechas de sus contenidos. Mantenga el dato en el HTML de portada; la ficha de memes
-lo recupera de ese JSON al ejecutar `scripts/build_memes.py`.
+lo recupera de ese JSON al ejecutar `scripts/build_memes.py`. Este script ejecuta después
+el generador del catálogo para conservar la clasificación y la propuesta de uso de la ficha.
 Conserve las capturas como vistas previas reales, los activos originales y sus atribuciones.
-La incorporación del monográfico de renta básica el 2 de octubre de 2026 se distingue
-de la revisión de las otras ocho fichas, realizada el 1 de octubre de 2026.
+Se conserva la revisión de ocho fichas del 1 de octubre de 2026 y se distinguen las altas
+de renta básica (2 de octubre) y del archivo de memes (15 de octubre).
 
 ## Mantener el archivo de memes
 

@@ -32,6 +32,8 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - name: Comprobar archivos, enlaces y descargas
         run: python tests/validate_site.py
+      - name: Probar generación del catálogo
+        run: python -m unittest discover -s tests -p "test_build_home.py"
       - name: Probar recorridos y accesibilidad basica
         run: npm test
       - name: Probar archivo de memes
