@@ -1,0 +1,59 @@
+{
+  "review": {
+    "date": "2026-10-17", "scope": "estructura y navegación del catálogo",
+    "previous": {"date": "2026-10-01", "count": 8, "scope": "fichas y enlaces"}
+  },
+  "routes": [
+    {"id": "entender", "label": "Entender", "description": "Aclara conceptos, reconoce relatos y pon a prueba lo aprendido.", "projects": ["guia-ia", "archivo-memes", "reto-estrategia"]},
+    {"id": "decidir", "label": "Decidir", "description": "Compara alternativas y discute sus consecuencias para las instituciones.", "projects": ["renta-basica", "ribera-del-molino", "agora-2032"]},
+    {"id": "construir", "label": "Construir", "description": "Explora procesos de desarrollo y los límites de una herramienta creada con IA.", "projects": ["analizador-discursos", "app-estoica"]}
+  ],
+  "changelog": [
+    {"date": "2026-10-17", "text": "Recorridos, filtros y propuestas de uso didáctico para facilitar la exploración del catálogo."},
+    {"date": "2026-10-15", "text": "Incorporación de Los memes de estrategIA: un archivo visual con contexto y enlaces a los números originales.", "project": "archivo-memes"},
+    {"date": "2026-10-02", "text": "Incorporación del monográfico «Renta básica en la era de la IA», con investigación, escenarios, calculadora ilustrativa, agenda de gobierno y dossier descargable.", "project": "renta-basica"},
+    {"date": "2026-10-01", "text": "Recuperación del contexto y el propósito del LAB, presentación del archivo de artículos en inglés como proyecto, fichas con vistas previas y acciones directas, regreso de Ágora 2032 al catálogo y mejoras de lectura y navegación en móvil."}
+  ],
+  "projects": [
+    {
+      "id": "archivo-memes", "title": "Los memes de estrategIA", "type": "archivo", "audiences": ["docencia", "comunicacion"],
+      "usage": {"objective": "Comparar cómo el humor representa las promesas y los conflictos de la IA a partir de dos memes y sus contextos originales.", "duration": "20–30 minutos", "questions": ["¿Qué idea sobre la IA presupone cada meme?", "¿Qué se pierde al compartir la imagen sin su contexto?"]}
+    },
+    {
+      "id": "renta-basica", "title": "Renta básica en la era de la IA", "type": "monografico", "audiences": ["docencia", "administracion", "consultoria"],
+      "usage": {"objective": "Distinguir evidencia, hipótesis y decisiones políticas al comparar alternativas de protección de ingresos.", "duration": "45–60 minutos", "questions": ["¿Qué supuestos cambian más el resultado de la calculadora ilustrativa?", "¿Qué evidencia faltaría antes de proponer una medida para un territorio real?"]}
+    },
+    {
+      "id": "reto-estrategia", "title": "El reto estrategIA", "type": "juego", "audiences": ["docencia", "comunicacion"],
+      "usage": {"objective": "Usar una partida para detectar dudas y contrastar después las explicaciones y fuentes de tres preguntas.", "duration": "25–40 minutos", "questions": ["¿Qué respuesta te ha hecho revisar una idea previa?", "¿Cómo comprobarías si una respuesta sigue vigente?"]}
+    },
+    {
+      "id": "ribera-del-molino", "title": "La ribera del Molino", "type": "prototipo", "audiences": ["docencia", "administracion", "consultoria"],
+      "usage": {"objective": "Comparar dos alternativas de un caso municipal ficticio e identificar intereses, incertidumbres y criterios de decisión.", "duration": "30–45 minutos", "questions": ["¿Qué beneficios y riesgos prioriza cada voz?", "¿Qué datos y participación necesitaría un ayuntamiento antes de decidir?"]}
+    },
+    {
+      "id": "historias", "title": "Archivo historIAs", "type": "archivo", "audiences": ["docencia", "comunicacion"],
+      "usage": {"objective": "Leer un relato como punto de partida para debatir un dilema institucional y formular una alternativa al desenlace.", "duration": "30–45 minutos", "questions": ["¿Qué decisión concentra el dilema del relato?", "¿Qué alternativa cambiaría sus consecuencias y para quién?"]}
+    },
+    {
+      "id": "guia-ia", "title": "Qué es la inteligencia artificial", "type": "guia", "audiences": ["docencia", "administracion", "comunicacion", "consultoria"],
+      "usage": {"objective": "Construir un vocabulario compartido de IA y aplicarlo a un caso de uso de la propia organización.", "duration": "30–45 minutos", "questions": ["¿Qué puede y qué no puede resolver la herramienta en ese caso?", "¿Dónde debería intervenir una persona para revisar el resultado?"]}
+    },
+    {
+      "id": "agora-2032", "title": "Ágora 2032", "type": "prototipo", "audiences": ["docencia", "administracion", "consultoria"],
+      "usage": {"objective": "Contrastar decisiones de una ciudad ficticia y discutir qué valores institucionales orientan cada elección.", "duration": "30–45 minutos", "questions": ["¿Qué valores entran en tensión en la decisión elegida?", "¿Qué consecuencias del prototipo requerirían contraste fuera de la ficción?"]}
+    },
+    {
+      "id": "app-estoica", "title": "App estoica", "type": "aplicacion", "audiences": ["docencia", "consultoria"],
+      "usage": {"objective": "Examinar el proceso documentado de una aplicación creada con IA y redactar un pequeño encargo con criterios de aceptación.", "duration": "30–45 minutos", "questions": ["¿Cómo convertirías una idea en requisitos comprobables?", "¿Qué revisiones necesitaría una aplicación antes de ofrecerla a otras personas?"]}
+    },
+    {
+      "id": "analizador-discursos", "title": "Analizador de discursos", "type": "herramienta", "audiences": ["docencia", "comunicacion", "consultoria"],
+      "usage": {"objective": "Contrastar una lectura humana de un discurso con las detecciones candidatas del analizador, usando un texto público.", "duration": "40–60 minutos", "questions": ["¿Qué fragmentos señalados requieren más contexto?", "¿Qué diferencias aparecen entre detectar un patrón e interpretar una intención?"]}
+    },
+    {
+      "id": "archivo-ingles", "title": "Archivo web de artículos en inglés", "type": "archivo", "audiences": ["docencia", "comunicacion", "consultoria"],
+      "usage": {"objective": "Comparar un artículo traducido con su original español y situar sus argumentos en la fecha en que se publicaron.", "duration": "30–45 minutos", "questions": ["¿Qué referencias dependen del contexto y la fecha del original?", "¿Qué matices conviene comprobar al trasladar el análisis a otro público?"]}
+    }
+  ]
+}

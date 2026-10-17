@@ -2,12 +2,15 @@
 import json
 import re
 import subprocess
+import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1] / 'docs'
+# Generated catalogue metadata must match the editable JSON; never update review dates here.
+subprocess.run([sys.executable, str(ROOT.parent / 'scripts/build_home.py'), '--check'], check=True)
 SITE = 'https://elcontemplador.github.io/estrategIA-lab/'
 errors = []
 

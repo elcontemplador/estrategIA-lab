@@ -70,3 +70,7 @@ for path in ['']+[x['id']+'/' for x in items]:
  url=ET.SubElement(root,'{'+NS+'}url');ET.SubElement(url,'{'+NS+'}loc').text=BASE+path;ET.SubElement(url,'{'+NS+'}lastmod').text=catalog['compiledDate']
 ET.indent(tree);tree.write(sitemap,encoding='utf-8',xml_declaration=True)
 print(f'Built gallery and {len(items)} detail pages; LAB card and sitemap updated.')
+
+# Restore the catalogue metadata and activity after replacing the generated meme card.
+from build_home import main as build_home
+raise SystemExit(build_home([]))
