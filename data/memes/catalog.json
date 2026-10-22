@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 159,
-  "cutoffDate": "2026-10-14",
-  "compiledDate": "2026-10-15",
+  "cutoffIssue": 160,
+  "cutoffDate": "2026-10-21",
+  "compiledDate": "2026-10-22",
   "items": [
     {
       "id": "001-01",
@@ -3861,6 +3861,27 @@
       "alt": "Un investigador observa tres sistemas luminosos, GPT-8, GPT-9 y GPT-10, unidos por flechas. GPT-8 presenta a GPT-9 como su hijo.",
       "transcript": "Papá, te presento a mi \"hijo\".\n¿Tú \"hijo\"?\nLo he diseñado yo y él ya está diseñando al siguiente.\nGPT-8 → GPT-9 → GPT-10\nSAFER\nMORE CAPABLE\nMORE ALIGNED",
       "tags": [
+        "usar-ia"
+      ],
+      "credit": ""
+    },
+    {
+      "id": "160-01",
+      "issue": 160,
+      "order": 1,
+      "date": "2026-10-21",
+      "issueTitle": "estrategIA #160 — ¿Puede la inteligencia artificial enseñarnos a escuchar a los ciudadanos?",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-160-puede-la-inteligencia",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/9683ba17-0817-40e9-85e7-a40c3f42e56f_1536x1024.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "82de88d648a27122ed617c2ac6166e8ab0f219dd2b3bbdf425039af1e3af8772",
+      "title": "Escuchar solo a quienes nos dan la razón",
+      "context": "El número se preguntaba si la IA puede ayudarnos a escuchar mejor a los ciudadanos. La viñeta enfrenta la capacidad de analizar millones de conversaciones con la tentación de atender solo a quienes nos dan la razón. Los diez millones de conversaciones diarias forman parte de la sátira, no describen una capacidad verificada de una herramienta concreta.",
+      "alt": "En una sala de análisis con pantallas, personas y robots, un técnico presenta una IA a una mujer que pregunta si puede escuchar solo a quienes le dan la razón.",
+      "transcript": "¡Con esta IA podemos analizar diez millones de conversaciones ciudadanas al día!\nImpresionante. ¿Y se puede configurar para que solo escuche las que nos dan la razón?\nCONVERSACIONES CIUDADANAS\n10.000.000 por día\nVivienda\nSalud\nEmpleo\nSeguridad\nCorrupción\nCAMPAÑA 202X",
+      "tags": [
+        "politica",
         "usar-ia"
       ],
       "credit": ""
