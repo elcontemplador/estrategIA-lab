@@ -9,6 +9,7 @@
     {"id": "construir", "label": "Construir", "description": "Explora procesos de desarrollo y los límites de una herramienta creada con IA.", "projects": ["analizador-discursos", "app-estoica"]}
   ],
   "changelog": [
+    {"date": "2026-10-22", "text": "Incorporación del meme del número 160: escuchar solo a quienes nos dan la razón.", "project": "archivo-memes"},
     {"date": "2026-10-17", "text": "Recorridos, filtros y propuestas de uso didáctico para facilitar la exploración del catálogo."},
     {"date": "2026-10-15", "text": "Incorporación de Los memes de estrategIA: un archivo visual con contexto y enlaces a los números originales.", "project": "archivo-memes"},
     {"date": "2026-10-02", "text": "Incorporación del monográfico «Renta básica en la era de la IA», con investigación, escenarios, calculadora ilustrativa, agenda de gobierno y dossier descargable.", "project": "renta-basica"},

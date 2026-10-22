@@ -27,7 +27,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
-- Los memes de estrategIA: archivo visual de 185 imágenes de los primeros 159 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/
+- Los memes de estrategIA: archivo visual de 186 imágenes de los primeros 160 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/
 
 - Renta básica en la era de la IA, monográfico sobre una posible transición hacia el postrabajo: https://elcontemplador.github.io/estrategIA-lab/renta-basica/
 - El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
