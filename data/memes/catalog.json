@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 160,
-  "cutoffDate": "2026-10-21",
-  "compiledDate": "2026-10-22",
+  "cutoffIssue": 161,
+  "cutoffDate": "2026-10-28",
+  "compiledDate": "2026-10-29",
   "items": [
     {
       "id": "001-01",
@@ -3883,6 +3883,27 @@
       "tags": [
         "politica",
         "usar-ia"
+      ],
+      "credit": ""
+    },
+    {
+      "id": "161-01",
+      "issue": 161,
+      "order": 1,
+      "date": "2026-10-28",
+      "issueTitle": "estrategIA #161 — La inteligencia artificial cambia las reglas de la ciberseguridad y exige decisiones en horas",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-161-la-inteligencia-artificial",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/6c340f28-8dd4-4e6b-9d17-534af643afcf_1536x1024.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "dcfb6a11af4516dab6f0e8a9a70c70b5e0416a8299b29c3f18118ea6ca789799",
+      "title": "La autorización para actuar de urgencia",
+      "context": "El número trataba de la necesidad de responder en horas a las amenazas de ciberseguridad. La viñeta imagina una oficina en la que proteger los servidores requiere completar varios trámites mientras el ataque está en curso. La sátira señala la importancia de preparar de antemano quién puede actuar y con qué autoridad; el formulario y la cuenta atrás forman parte de la escena ficticia.",
+      "alt": "En una oficina llena de expedientes, una mujer señala un gran botón rojo para proteger servidores. Un hombre impide pulsarlo sin autorización mientras las pantallas avisan de un ataque en curso.",
+      "transcript": "¿Y no podemos pulsarlo directamente?\nNo sin autorización para activar el procedimiento de urgencia.\nATAQUE EN CURSO\n00:27:16\nHORAS MINUTOS SEGUNDOS\nPROTEGER SERVIDORES\nPARA UTILIZAR ESTE BOTÓN:\n1 Rellene el formulario B-37\n2 Solicite autorización al órgano competente\n3 Adjunte informe técnico\n4 Espere la validación\nINFORME TÉCNICO\nAUTORIZACIÓN\nCOMUNICACIÓN\nPROCEDIMIENTO DE URGENCIA",
+      "tags": [
+        "politica",
+        "regulacion"
       ],
       "credit": ""
     }

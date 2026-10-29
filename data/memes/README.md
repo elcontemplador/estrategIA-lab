@@ -2,7 +2,7 @@
 
 Fuente editable: `catalog.json`. La web generada está en `docs/memes/` y se integra en la portada existente del LAB.
 
-La edición vigente contiene 186 imágenes de 156 de los primeros 160 números, hasta el 21 de octubre de 2026. Los números 13, 65, 117 y 118 son ediciones especiales sin meme independiente incluido. Se excluyen cinco banners de patrocinio. Las secuencias contenidas en una imagen permanecen juntas; las variantes publicadas como imágenes diferentes tienen fichas propias.
+La edición vigente contiene 187 imágenes de 157 de los primeros 161 números, hasta el 28 de octubre de 2026. Los números 13, 65, 117 y 118 son ediciones especiales sin meme independiente incluido. Se excluyen cinco banners de patrocinio. Las secuencias contenidas en una imagen permanecen juntas; las variantes publicadas como imágenes diferentes tienen fichas propias.
 
 Cada registro conserva el enlace a la newsletter, fecha, enlace a la imagen original, dimensiones y SHA-256 del original. El título, contexto, descripción visual, transcripción, etiquetas y créditos se prepararon para este archivo. Las imágenes y textos fueron revisados visualmente por asistentes; ello no equivale a aprobación editorial humana.
 

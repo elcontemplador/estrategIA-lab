@@ -21,8 +21,8 @@ async function main(){
  await page.goto(base);await page.waitForSelector('#archive-filters:visible');
  check(await page.locator('#gallery .meme-card:visible').count()===18,'Initial gallery loads 18 pieces');
  check(await page.locator('#gallery .meme-card').count()===catalog.items.length,'Every included piece exists in server-rendered gallery');
- check(await page.locator('#result-count').innerText()==='186 memes','Correct reconciled count');
- const ids=new Set(catalog.items.map(x=>x.id));check(ids.size===186,'Unique catalogue IDs');
+ check(await page.locator('#result-count').innerText()==='187 memes','Correct reconciled count');
+ const ids=new Set(catalog.items.map(x=>x.id));check(ids.size===187,'Unique catalogue IDs');
  for(const excluded of ['080-03','087-02','102-02','126-02','127-02'])check(!ids.has(excluded),`Sponsor image excluded: ${excluded}`);
  for(const width of [320,390,768,1024,1440]){
   await page.setViewportSize({width,height:900});await page.goto(base);await page.waitForSelector('#archive-filters:visible');
@@ -38,9 +38,9 @@ async function main(){
  check(await page.locator('#theme').evaluate(e=>e.getBoundingClientRect().width>=innerWidth-42),'Mobile theme uses a full row for readable selection');
  await page.keyboard.press('Tab');check(await page.locator('#year').evaluate(e=>e===document.activeElement),'Mobile filters continue in logical keyboard order');
  await page.screenshot({path:path.join(output,'filters-320.png')});
- await page.goto(base+'?q=160#meme-160-01');
- await page.waitForFunction(()=>document.activeElement.closest('#meme-160-01'));
- check(await page.locator('#meme-160-01 a').evaluate(e=>e===document.activeElement),'Returning to gallery restores focus to the selected meme');
+ await page.goto(base+'?q=161#meme-161-01');
+ await page.waitForFunction(()=>document.activeElement.closest('#meme-161-01'));
+ check(await page.locator('#meme-161-01 a').evaluate(e=>e===document.activeElement),'Returning to gallery restores focus to the selected meme');
  for(const width of [320,390,1440]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'002-02/');
   await page.locator('#enlarge').click();await page.locator('.lightbox-body img').evaluate(i=>i.decode());
@@ -67,11 +67,11 @@ async function main(){
  check(await page.locator('#gallery .meme-card:visible').getAttribute('data-id')==='157-01','Search finds a phrase inside the image');
  await page.locator('#query').fill('#158');await page.waitForFunction(()=>document.querySelector('#meme-158-01').hidden===false);
  check(await page.locator('#gallery .meme-card:visible').count()===1,'Exact issue-number search');
- await page.locator('#query').fill('#160');await page.waitForFunction(()=>document.querySelector('#result-count').textContent==='1 meme encontrado'&&!document.querySelector('#meme-160-01').hidden);
- check(await page.locator('#gallery .meme-card:visible').getAttribute('data-id')==='160-01','New issue 160 is searchable');
- check(catalog.cutoffIssue===160&&catalog.cutoffDate==='2026-10-21','Archive cutoff matches publication of issue 160');
- check(await page.locator('.scope-label').innerText()==='Números 1–160 · Imágenes completas, sin recortes','Visible issue range updated');
- check((await page.locator('#sobre-el-archivo').innerText()).includes('21 de octubre de 2026'),'Visible cutoff date updated');
+ await page.locator('#query').fill('#161');await page.waitForFunction(()=>document.querySelector('#result-count').textContent==='1 meme encontrado'&&!document.querySelector('#meme-161-01').hidden);
+ check(await page.locator('#gallery .meme-card:visible').getAttribute('data-id')==='161-01','New issue 161 is searchable');
+ check(catalog.cutoffIssue===161&&catalog.cutoffDate==='2026-10-28','Archive cutoff matches publication of issue 161');
+ check(await page.locator('.scope-label').innerText()==='Números 1–161 · Imágenes completas, sin recortes','Visible issue range updated');
+ check((await page.locator('#sobre-el-archivo').innerText()).includes('28 de octubre de 2026'),'Visible cutoff date updated');
  await page.locator('#query').fill('estrategIA 2');await page.waitForFunction(()=>document.querySelector('#result-count').textContent==='2 memes encontrados');
  check(await page.locator('#gallery .meme-card:visible').count()===2,'Multiple memes in one issue');
  await page.locator('#reset').click();await page.locator('#theme').selectOption('politica');await page.locator('#year').selectOption('2026');
@@ -87,25 +87,25 @@ async function main(){
  await page.locator('[data-back]').click();await page.waitForURL('**/memes/**');
  check(await page.locator('#order').inputValue()==='antiguos'&&await page.locator('#gallery .meme-card:visible').count()===36,'Return retains sort and loaded batch');
  check(await page.locator(`#meme-${selected}`).isVisible(),'Return restores selected card');
- await page.goto(base+'160-01/');
- check(await page.locator('time').first().getAttribute('datetime')==='2026-10-21','New meme keeps actual publication date');
- check((await page.locator('.context-block').innerText()).includes('quienes nos dan la razón'),'New meme explains the technical reference');
- check(await page.locator('.detail-actions a.button').getAttribute('href')==='https://estrategiabyaleph.substack.com/p/estrategia-160-puede-la-inteligencia','New meme links to its published issue');
+ await page.goto(base+'161-01/');
+ check(await page.locator('time').first().getAttribute('datetime')==='2026-10-28','New meme keeps actual publication date');
+ check((await page.locator('.context-block').innerText()).includes('quién puede actuar'),'New meme explains the technical reference');
+ check(await page.locator('.detail-actions a.button').getAttribute('href')==='https://estrategiabyaleph.substack.com/p/estrategia-161-la-inteligencia-artificial','New meme links to its published issue');
  await page.goto(base+'158-01/');await page.locator('#enlarge').click();check(await page.locator('#lightbox').evaluate(d=>d.open),'Accessible zoom dialog opens');
  await page.keyboard.press('Escape');check(!await page.locator('#lightbox').evaluate(d=>d.open),'Escape closes zoom');check(await page.locator('#enlarge').evaluate(e=>e===document.activeElement),'Zoom restores keyboard focus');
  await page.locator('.transcription summary').click();check((await page.locator('#transcript').innerText()).includes('comisión'),'Image transcription available');
  await page.locator('#copy-link').click();await page.waitForFunction(()=>document.getElementById('copy-status').textContent.length>0);check((await page.locator('#copy-status').innerText()).length>0,'Copy link reports result or accessible fallback');
  check((await page.locator('a.button').getAttribute('href')).includes('/p/estrategia-158-'),'Detail links to the original issue');
- for(const route of ['', '160-01/','158-01/','002-02/','034-01/','098-02/','135-01/']){
+ for(const route of ['', '161-01/','158-01/','002-02/','034-01/','098-02/','135-01/']){
   for(const width of [390,1440]){
    await page.setViewportSize({width,height:1000});await page.goto(base+route);await page.waitForLoadState('networkidle');
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`No overflow ${route||'gallery'} at ${width}`);
    const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
    fs.writeFileSync(path.join(output,`axe-${route.replace('/','')||'gallery'}-${width}.json`),JSON.stringify(axe.violations,null,2));
    check(axe.violations.length===0,`Axe accessibility ${route||'gallery'} at ${width}: ${axe.violations.map(v=>v.id).join(',')}`);
-   if(route==='160-01/'){
+   if(route==='161-01/'){
     await page.locator('.detail-art img').evaluate(img=>img.decode());
-    await page.screenshot({path:path.join(output,`issue-160-${width}.png`),fullPage:true});
+    await page.screenshot({path:path.join(output,`issue-161-${width}.png`),fullPage:true});
    }
   }
  }
@@ -119,7 +119,7 @@ async function main(){
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Detail mobile fit: '+item.id);
  }
  const plain=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}}),plainPage=await plain.newPage();await plainPage.goto(base);
- check(await plainPage.locator('#gallery .meme-card:visible').count()===186,'Complete archive works without JavaScript');
+ check(await plainPage.locator('#gallery .meme-card:visible').count()===187,'Complete archive works without JavaScript');
  await plainPage.goto(base+'158-01/');check(await plainPage.locator('h1').isVisible(),'Direct detail works without JavaScript');await plainPage.locator('.transcription summary').click();check(await plainPage.locator('#transcript').isVisible(),'Native transcription works without JavaScript');
  check(errors.length===0,'No uncaught browser errors');await plain.close();await context.close();
  fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({status:'passed',checks,results,limitations:['Automated accessibility checks are not a complete human audit.']},null,2));console.log(`PASS: ${checks} meme-archive checks`);
