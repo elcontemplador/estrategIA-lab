@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 161,
-  "cutoffDate": "2026-10-28",
-  "compiledDate": "2026-10-29",
+  "cutoffIssue": 162,
+  "cutoffDate": "2026-11-04",
+  "compiledDate": "2026-11-05",
   "items": [
     {
       "id": "001-01",
@@ -3906,6 +3906,27 @@
         "regulacion"
       ],
       "credit": ""
+    },
+    {
+      "id": "162-01",
+      "issue": 162,
+      "order": 1,
+      "date": "2026-11-04",
+      "issueTitle": "estrategIA #162 — La paradoja de trabajar con IA: ¿pensamos mejor o simplemente trabajamos más rápido?",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-162-la-paradoja-de-trabajar",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/bed1b187-34e3-4ae0-9d4e-d8a61b162fe8_1254x1254.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c8d85502d199196d25f2f61ef60bebd0a080d89479755301d0feef1a686b1d60",
+      "title": "Crítica sí, pero no tanta",
+      "context": "El artículo de Andrés Ferraro Sastre proponía pedir a la IA que cuestione nuestras ideas para ayudarnos a pensar mejor. En la viñeta, un usuario solicita una crítica sincera, se abruma ante las objeciones y prefiere volver a una respuesta complaciente. Los 27 problemas pertenecen a la escena ficticia: la broma apunta a nuestra dificultad para aceptar las críticas que hemos pedido.",
+      "alt": "Cuatro viñetas muestran a un hombre que pide a ChatGPT que critique su proyecto. Un robot enumera problemas; el hombre se alarma y termina pidiendo que vuelva a ser como antes.",
+      "transcript": "ChatGPT, quiero que seas completamente crítico con mi proyecto. No me des la razón por complacencia.\nHe encontrado 27 problemas graves en tu propuesta.\n1. Viabilidad económica dudosa\n2. Supuestos no justificados\n3. Riesgos regulatorios elevados\n4. Competencia subestimada\n5. Falta de evidencias\n6. Sesgos en el análisis\n7. Escalabilidad poco realista\n8. Problemas éticos\n9. Dependencia de terceros\n10. Impacto reputacional\n…\nVale... Vuelve a ser como antes.",
+      "tags": [
+        "trabajo",
+        "usar-ia"
+      ],
+      "credit": "La imagen muestra el logotipo de OpenAI; su presencia no implica autoría de la viñeta."
     }
   ],
   "specialIssues": [
