@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 162,
-  "cutoffDate": "2026-11-04",
-  "compiledDate": "2026-11-05",
+  "cutoffIssue": 163,
+  "cutoffDate": "2026-11-11",
+  "compiledDate": "2026-11-12",
   "items": [
     {
       "id": "001-01",
@@ -3927,6 +3927,27 @@
         "usar-ia"
       ],
       "credit": "La imagen muestra el logotipo de OpenAI; su presencia no implica autoría de la viñeta."
+    },
+    {
+      "id": "163-01",
+      "issue": 163,
+      "order": 1,
+      "date": "2026-11-11",
+      "issueTitle": "estrategIA #163 — De la co-inteligencia a la co-existencia: las nuevas lecciones de Ethan Mollick sobre la IA",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-163-de-la-co-inteligencia",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/b0718748-fc29-4d9a-b518-7a1d820192bf_1448x1086.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "329a6d91d6635d9f4138732165f02dc690f7936f7d11cac3df784dcc748a303a",
+      "title": "Otro agente para coordinar a los agentes",
+      "context": "El número repasaba tres formas de trabajar con IA descritas por Ethan Mollick: el centauro reparte tareas entre persona y máquina, el cíborg las entrelaza y el invocador delega trabajos en agentes. La viñeta lleva esta última forma al absurdo: dirigir tantos agentes acaba exigiendo otro que los coordine. La escena satiriza la sobrecarga que puede acompañar al aumento de productividad.",
+      "alt": "Tres paneles comparan a una persona que reparte tareas con un robot, una mujer cíborg que trabaja junto a la IA y un invocador desbordado por seis agentes que realizan tareas distintas.",
+      "transcript": "CENTAURO\nTú haces una parte, yo hago otra.\nESTRATEGIA Y CREATIVIDAD\nDefinir enfoque\nAportar ideas\nTomar decisiones\nANÁLISIS Y EJECUCIÓN\nInvestigar\nProcesar datos\nGenerar borradores\nCÍBORG\nLo hacemos juntos.\nINVOCADOR\n¡NECESITO OTRO AGENTE PARA COORDINAR A LOS AGENTES!\nAGENTE INVESTIGADOR\nAGENTE ANÁLISIS\nAGENTE REDACCIÓN\nAGENTE DISEÑO\nAGENTE REVISIÓN\nAGENTE PLANIFICACIÓN",
+      "tags": [
+        "trabajo",
+        "usar-ia"
+      ],
+      "credit": ""
     }
   ],
   "specialIssues": [
