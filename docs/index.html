@@ -120,7 +120,7 @@
           <h2 id="projects-title">Proyectos para leer, probar y discutir</h2>
           <p>Algunos ensayan aplicaciones de la IA; otros utilizan la ficción para pensar dilemas o hacen más accesible el archivo de estrategIA. Sus fichas explican qué aportan, cómo acceder y dónde leer el contexto.</p>
           <!-- catalog:review:start -->
-<p class="review-date">El catálogo reúne 10 proyectos. Revisión de estructura y navegación del catálogo: <time datetime="2026-10-17">17 de octubre de 2026</time>.</p>
+<p class="review-date">El catálogo reúne 11 proyectos. Revisión de estructura y navegación del catálogo: <time datetime="2026-10-17">17 de octubre de 2026</time>.</p>
 <!-- catalog:review:end -->
         </div>
         <!-- catalog:explorer:start -->
@@ -141,6 +141,7 @@
 <h4>Decidir</h4>
 <p>Compara alternativas y discute sus consecuencias para las instituciones.</p>
 <ul>
+<li><a href="#entre-programas">Entre programas</a></li>
 <li><a href="#renta-basica">Renta básica en la era de la IA</a></li>
 <li><a href="#ribera-del-molino">La ribera del Molino</a></li>
 <li><a href="#agora-2032">Ágora 2032</a></li>
@@ -182,8 +183,9 @@
 </div>
 <button type="reset">Mostrar todos</button>
 </form>
-<p id="catalog-status" role="status" aria-live="polite" aria-atomic="true">10 proyectos</p>
+<p id="catalog-status" role="status" aria-live="polite" aria-atomic="true">11 proyectos</p>
 <nav class="catalog-index" aria-label="Índice de proyectos"><ul>
+<li data-project-link="entre-programas"><a href="#entre-programas">Entre programas</a></li>
 <li data-project-link="archivo-memes"><a href="#archivo-memes">Los memes de estrategIA</a></li>
 <li data-project-link="renta-basica"><a href="#renta-basica">Renta básica en la era de la IA</a></li>
 <li data-project-link="reto-estrategia"><a href="#reto-estrategia">El reto estrategIA</a></li>
@@ -199,6 +201,33 @@
 </div>
 <!-- catalog:explorer:end -->
         <div class="project-list">
+          <article id="entre-programas" class="project-card" aria-labelledby="entre-programas-title" data-type="herramienta" data-audiences="docencia administracion comunicacion consultoria">
+            <figure class="project-media"><img src="assets/entre-programas-preview.webp" alt="Portada de Entre programas con acceso a la comparación de propuestas y sus fuentes" width="640" height="400" loading="lazy"></figure>
+            <div class="project-copy">
+              <p class="project-type">Leer y contrastar propuestas</p>
+              <h3 id="entre-programas-title">Entre programas</h3>
+              <p>Una web para explorar y comparar propuestas de las elecciones generales españolas de 2026. Permite leer fichas sobre un mismo asunto, buscar términos en los documentos y abrir el pasaje original. Un cuaderno personal guarda las fichas y notas en el navegador. Incluye un dosier de consulta sobre las propuestas de inteligencia artificial.</p>
+              <div class="project-meta"><span>Comparador electoral</span><span>Navegador · sin cuenta</span></div><p class="project-launch">Lanzamiento · <time datetime="2026-11">noviembre de 2026</time></p>
+              <details class="project-details"><summary>Cómo se hizo y alcance</summary><p>Creada con asistencia de IA y revisiones separadas del contenido y del funcionamiento. Las fichas sintetizan una selección de propuestas y remiten a sus fuentes; no sustituyen la lectura del programa ni puntúan a los partidos. Las fuentes parciales y los documentos pendientes se identifican en la web. Compartir el cuaderno no incluye las notas personales.</p></details>
+<!-- catalog:usage:start -->
+<details class="project-details project-usage">
+<summary>Usar en clase o en tu institución</summary>
+<p>Propuesta didáctica para adaptar al grupo. Duración orientativa: 30–45 minutos.</p>
+<p><strong>Objetivo:</strong> Comparar propuestas sobre un mismo asunto y contrastar sus condiciones y alcance con los documentos originales.</p>
+<ul>
+<li>¿Qué compromete expresamente cada propuesta y qué deja sin concretar?</li>
+<li>¿Qué cambia al leer el pasaje completo frente a su ficha resumida?</li>
+</ul>
+</details>
+<!-- catalog:usage:end -->
+            </div>
+            <div class="project-actions" aria-label="Acciones de Entre programas">
+              <a class="text-link" href="https://entre-programas-29n.elcontemplador.chatgpt.site/">Comparar programas</a>
+              <a class="text-link subtle" href="https://entre-programas-29n.elcontemplador.chatgpt.site/dosier-ia-29n.pdf">Consultar el dosier de IA<span class="action-note">PDF</span></a>
+              <a class="context-link" href="https://entre-programas-29n.elcontemplador.chatgpt.site/#metodo">Fuentes y método</a>
+            </div>
+          </article>
+
           <article id="archivo-memes" class="project-card" aria-labelledby="memes-title" data-type="archivo" data-audiences="docencia comunicacion">
             <figure class="project-media"><img src="memes/assets/163-01-thumb.webp" alt="Tres paneles comparan a una persona que reparte tareas con un robot, una mujer cíborg que trabaja junto a la IA y un invocador desbordado por seis agentes que realizan tareas distintas." width="1448" height="1086" loading="lazy" style="object-fit:contain"></figure>
             <div class="project-copy"><p class="project-type">Mirar la IA con humor</p><h3 id="memes-title">Los memes de estrategIA</h3><p>189 memes y viñetas de nuestros primeros 163 números. Las imágenes completas, con una explicación breve de su contexto y un enlace a la newsletter en la que aparecieron. Busca una frase, un tema o una edición y recorre lo que hemos contado sobre IA, política y gobierno.</p><div class="project-meta"><span>Archivo visual</span><span>Navegador · sin cuenta</span></div><p class="project-launch">Lanzamiento · <time datetime="2026-10">octubre de 2026</time></p>
@@ -504,6 +533,7 @@
           <details id="uso" class="usage"><summary>Uso, licencias y cómo citar</summary><p>Los materiales de este repositorio se publican bajo <a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/LICENSE">CC BY-NC 4.0</a>, salvo los activos con <a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/docs/assets/ATTRIBUTIONS.md">condiciones y atribuciones propias</a>. Cada proyecto externo tiene sus propias condiciones. Poder consultar el código no concede por sí solo permiso para reutilizarlo; las atribuciones y los derechos de terceros se conservan.</p><p class="citation">Nieto Lobato, F. y Martín Diez, P. <cite>estrategIA lab</cite>. Institución Educativa ALEPH. <a href="https://elcontemplador.github.io/estrategIA-lab/">https://elcontemplador.github.io/estrategIA-lab/</a>.</p><a href="https://github.com/elcontemplador/estrategIA-lab/blob/main/CITATION.cff">Consultar la ficha de cita</a></details>
           <!-- catalog:changelog:start -->
 <details class="changelog"><summary>Actualizaciones del laboratorio</summary>
+<p><time datetime="2026-11-18">18 de noviembre de 2026</time>: Incorporación de Entre programas: comparación por asuntos, búsqueda en fuentes electorales y cuaderno personal, con un dosier específico de propuestas sobre IA.</p>
 <p><time datetime="2026-11-12">12 de noviembre de 2026</time>: Incorporación del meme del número 163: otro agente para coordinar a los agentes.</p>
 <p><time datetime="2026-11-05">5 de noviembre de 2026</time>: Incorporación del meme del número 162: crítica sí, pero no tanta.</p>
 <p><time datetime="2026-10-29">29 de octubre de 2026</time>: Incorporación del meme del número 161: la autorización para actuar de urgencia.</p>

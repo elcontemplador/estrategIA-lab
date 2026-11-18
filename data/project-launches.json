@@ -2,6 +2,14 @@
   "verifiedOn": "2026-10-15",
   "criterion": "Mes de primera publicación accesible del proyecto enlazado, no de creación del repositorio, anuncio de un prototipo, incorporación al LAB ni publicación de sus contenidos originales.",
   "projects": {
+    "entre-programas": {
+      "month": "2026-11",
+      "evidence": [
+        "https://entre-programas-29n.elcontemplador.chatgpt.site/"
+      ],
+      "note": "Acceso público del comparador de las generales de 2026 comprobado en noviembre. Incorporación al catálogo LAB: 18 de noviembre de 2026.",
+      "verifiedOn": "2026-11-18"
+    },
     "archivo-memes": {
       "month": "2026-10",
       "evidence": ["https://github.com/elcontemplador/estrategIA-lab/actions/runs/38689345136"],

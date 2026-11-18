@@ -51,8 +51,8 @@ async function main() {
     check(await page.locator('h1').innerText() === 'estrategIA lab', 'The homepage identifies the laboratory');
     const catalogue = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/projects.json'), 'utf8'));
     check(await page.locator('#catalog-filters').isVisible(), 'Catalogue filters are enhanced with JavaScript');
-    check(await page.locator('.project-usage').count() === 10, 'Each project offers a proposed teaching activity');
-    check(await page.locator('.catalog-index a').count() === 10, 'Compact index links to every project');
+    check(await page.locator('.project-usage').count() === catalogue.projects.length, 'Each project offers a proposed teaching activity');
+    check(await page.locator('.catalog-index a').count() === catalogue.projects.length, 'Compact index links to every project');
     const types = await page.locator('#filter-type option').evaluateAll(xs => xs.map(x => x.value));
     const audiences = await page.locator('#filter-audience option').evaluateAll(xs => xs.map(x => x.value));
     for (const type of types) {
@@ -67,7 +67,7 @@ async function main() {
       }
     }
     await page.locator('#catalog-filters button[type="reset"]').click();
-    check(await page.locator('.project-card:visible').count() === 10, 'Reset restores the complete catalogue');
+    check(await page.locator('.project-card:visible').count() === catalogue.projects.length, 'Reset restores the complete catalogue');
     await page.locator('#filter-type').focus();
     await page.keyboard.press('a');
     await page.keyboard.press('Tab');
@@ -97,7 +97,7 @@ async function main() {
     }
     fs.writeFileSync(path.join(qa, 'accessibility.json'), JSON.stringify(accessibility, null, 2) + '\n');
     await page.goto(base, { waitUntil: 'networkidle' });
-    check(await page.locator('.project-card').count() === 10, 'Ten projects, including the meme archive, remain accessible');
+    check(await page.locator('.project-card').count() === catalogue.projects.length, 'All catalogue projects remain accessible');
     check(await page.locator('#archivo-memes a[href="memes/"]').count() === 1, 'The meme archive is linked from the LAB');
     check(await page.locator('.english-resource').getAttribute('href') === 'https://elcontemplador.github.io/estrategia-english/', 'English reading edition link');
     check(await page.locator('#laboratorio').isVisible(), 'The laboratory context is visible before the catalogue');
@@ -239,9 +239,9 @@ async function main() {
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base);
-    check(await plain.locator('.project-card').count() === 10, 'All projects remain accessible without JavaScript');
+    check(await plain.locator('.project-card').count() === catalogue.projects.length, 'All projects remain accessible without JavaScript');
     check(!await plain.locator('#catalog-filters').isVisible(), 'No inactive filter controls without JavaScript');
-    check(await plain.locator('.catalog-index a').count() === 10 && await plain.locator('.start-routes a').count() >= 8, 'Index and routes work without JavaScript');
+    check(await plain.locator('.catalog-index a').count() === catalogue.projects.length && await plain.locator('.start-routes a').count() >= 8, 'Index and routes work without JavaScript');
     await plain.locator('#archivo-memes .project-usage summary').click();
     check(await plain.locator('#archivo-memes .project-usage').getAttribute('open') !== null, 'Teaching activities open without JavaScript');
     check(await plain.locator('.english-resource').isVisible(), 'English edition remains accessible without JavaScript');
