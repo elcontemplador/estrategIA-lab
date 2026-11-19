@@ -9,6 +9,7 @@
     {"id": "construir", "label": "Construir", "description": "Explora procesos de desarrollo y los límites de una herramienta creada con IA.", "projects": ["analizador-discursos", "app-estoica"]}
   ],
   "changelog": [
+    {"date": "2026-11-19", "text": "Incorporación del meme del número 164 sobre programas electorales e inteligencia artificial.", "project": "archivo-memes"},
     {"date": "2026-11-18", "text": "Incorporación de Entre programas: comparación por asuntos, búsqueda en fuentes electorales y cuaderno personal, con un dosier específico de propuestas sobre IA.", "project": "entre-programas"},
     {"date": "2026-11-12", "text": "Incorporación del meme del número 163: otro agente para coordinar a los agentes.", "project": "archivo-memes"},
     {"date": "2026-11-05", "text": "Incorporación del meme del número 162: crítica sí, pero no tanta.", "project": "archivo-memes"},

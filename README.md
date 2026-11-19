@@ -29,7 +29,7 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 - Entre programas: comparación de propuestas electorales con referencias a las fuentes y dosier de IA: https://entre-programas-29n.elcontemplador.chatgpt.site/
 
-- Los memes de estrategIA: archivo visual de 189 imágenes de los primeros 163 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/
+- Los memes de estrategIA: archivo visual de 190 imágenes de los primeros 164 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/
 
 - Renta básica en la era de la IA, monográfico sobre una posible transición hacia el postrabajo: https://elcontemplador.github.io/estrategIA-lab/renta-basica/
 - El reto estrategIA, concurso de cultura general sobre IA: https://elcontemplador.github.io/reto-estrategia-ia/
