@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 163,
-  "cutoffDate": "2026-11-11",
-  "compiledDate": "2026-11-12",
+  "cutoffIssue": 164,
+  "cutoffDate": "2026-11-18",
+  "compiledDate": "2026-11-19",
   "items": [
     {
       "id": "001-01",
@@ -3945,6 +3945,27 @@
       "transcript": "CENTAURO\nTú haces una parte, yo hago otra.\nESTRATEGIA Y CREATIVIDAD\nDefinir enfoque\nAportar ideas\nTomar decisiones\nANÁLISIS Y EJECUCIÓN\nInvestigar\nProcesar datos\nGenerar borradores\nCÍBORG\nLo hacemos juntos.\nINVOCADOR\n¡NECESITO OTRO AGENTE PARA COORDINAR A LOS AGENTES!\nAGENTE INVESTIGADOR\nAGENTE ANÁLISIS\nAGENTE REDACCIÓN\nAGENTE DISEÑO\nAGENTE REVISIÓN\nAGENTE PLANIFICACIÓN",
       "tags": [
         "trabajo",
+        "usar-ia"
+      ],
+      "credit": ""
+    },
+    {
+      "id": "164-01",
+      "issue": 164,
+      "order": 1,
+      "date": "2026-11-18",
+      "issueTitle": "estrategIA #164 — Qué proponen los partidos españoles sobre inteligencia artificial en sus programas electorales",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-164-que-proponen-los-partidos",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/d845527b-fad8-487b-9c75-ed2f3a3cc18c_1448x1086.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "fd309a8370d51485f37f7bd02c626aa2aaf8e0adf299b5a54435e30b2f5df46b",
+      "title": "Los humanos también alucinan",
+      "context": "El número analiza las propuestas sobre inteligencia artificial de varios programas electorales. La viñeta imagina a una IA que revisa esos documentos y responde que los humanos también «alucinan»: una sátira sobre la distancia que puede existir entre las promesas y su realización.",
+      "alt": "Una persona entrevista a un robot que analiza programas electorales de PP, PSOE, Vox y Frente Amplio. El robot responde que los humanos también alucinan.",
+      "transcript": "¿Qué has descubierto?\nAnalizando compromisos sobre inteligencia artificial...\nAdopción empresarial\nAdministración pública\nEmpleo y formación\nQue los humanos también alucinan.\nPROGRAMAS ELECTORALES\nPP\nPSOE\nVOX\nFRENTE AMPLIO",
+      "tags": [
+        "politica",
         "usar-ia"
       ],
       "credit": ""
