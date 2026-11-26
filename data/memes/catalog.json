@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "cutoffIssue": 164,
-  "cutoffDate": "2026-11-18",
-  "compiledDate": "2026-11-19",
+  "cutoffIssue": 165,
+  "cutoffDate": "2026-11-25",
+  "compiledDate": "2026-11-26",
   "items": [
     {
       "id": "001-01",
@@ -3967,6 +3967,27 @@
       "tags": [
         "politica",
         "usar-ia"
+      ],
+      "credit": ""
+    },
+    {
+      "id": "165-01",
+      "issue": 165,
+      "order": 1,
+      "date": "2026-11-25",
+      "issueTitle": "estrategIA #165 — La legislatura de la inteligencia artificial: lo que pedimos a quien gobierne",
+      "issueUrl": "https://estrategiabyaleph.substack.com/p/estrategia-165-la-legislatura-de",
+      "originalUrl": "https://substack-post-media.s3.amazonaws.com/public/images/5c5ce2e9-1211-4102-8e9c-0bc6f0ca0c4a_1280x853.png",
+      "width": 1280,
+      "height": 853,
+      "sha256": "b706f94808043db1e61f60aea63f3289ef5da4c36899c766e644a7df2777a573",
+      "title": "Una comisión para prepararse",
+      "context": "El número plantea cómo deberían prepararse las instituciones ante distintos escenarios de desarrollo de la inteligencia artificial. Esta rueda de prensa ficticia satiriza la lentitud de una respuesta basada en constituir comisiones; los plazos y las declaraciones son parte del chiste, no una predicción ni una declaración real.",
+      "alt": "Una rueda de prensa ficticia muestra a una portavoz ante periodistas. Le preguntan por la posible llegada de la superinteligencia en 2029 y 2027; ella responde con la creación urgente de una comisión.",
+      "transcript": "Meme de la semana en estrategIA\nGOBIERNO DE ESPAÑA\nPLAN NACIONAL DE IA 2027-2031\n¿Qué harán si llega la superinteligencia en 2029?\nTenemos previsto crear una comisión para estudiar la posibilidad de elaborar un plan.\n¿Y si llega en 2027?\nEntonces convocaremos la comisión con carácter urgente.\nPRESIDENCIA DEL GOBIERNO",
+      "tags": [
+        "politica",
+        "regulacion"
       ],
       "credit": ""
     }
