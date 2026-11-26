@@ -5,10 +5,11 @@
   },
   "routes": [
     {"id": "entender", "label": "Entender", "description": "Aclara conceptos, reconoce relatos y pon a prueba lo aprendido.", "projects": ["guia-ia", "archivo-memes", "reto-estrategia"]},
-    {"id": "decidir", "label": "Decidir", "description": "Compara alternativas y discute sus consecuencias para las instituciones.", "projects": ["entre-programas", "renta-basica", "ribera-del-molino", "agora-2032"]},
+    {"id": "decidir", "label": "Decidir", "description": "Compara alternativas y discute sus consecuencias para las instituciones.", "projects": ["legislatura-ia", "entre-programas", "renta-basica", "ribera-del-molino", "agora-2032"]},
     {"id": "construir", "label": "Construir", "description": "Explora procesos de desarrollo y los límites de una herramienta creada con IA.", "projects": ["analizador-discursos", "app-estoica"]}
   ],
   "changelog": [
+    {"date": "2026-11-26", "text": "La legislatura de la inteligencia artificial reúne los cinco principios que estrategIA propuso al Gobierno que saliera de las elecciones generales de 2026, la infografía del número 165 y cinco preguntas para hacer balance.", "project": "legislatura-ia"},
     {"date": "2026-11-26", "text": "Incorporación del meme del número 165 sobre la preparación institucional ante la IA.", "project": "archivo-memes"},
     {"date": "2026-11-19", "text": "Incorporación del meme del número 164 sobre programas electorales e inteligencia artificial.", "project": "archivo-memes"},
     {"date": "2026-11-18", "text": "Incorporación de Entre programas: comparación por asuntos, búsqueda en fuentes electorales y cuaderno personal, con un dosier específico de propuestas sobre IA.", "project": "entre-programas"},
@@ -22,6 +23,17 @@
     {"date": "2026-10-01", "text": "Recuperación del contexto y el propósito del LAB, presentación del archivo de artículos en inglés como proyecto, fichas con vistas previas y acciones directas, regreso de Ágora 2032 al catálogo y mejoras de lectura y navegación en móvil."}
   ],
   "projects": [
+    {
+      "id": "legislatura-ia", "title": "La legislatura de la inteligencia artificial", "type": "monografico", "audiences": ["docencia", "administracion", "comunicacion", "consultoria"],
+      "usage": {
+        "objective": "Elegir uno de los principios y acordar qué pruebas harían falta para valorar su aplicación durante la legislatura.",
+        "duration": "15–20 minutos",
+        "questions": [
+          "¿Qué decisión concreta podría tomar una administración para aplicar ese principio?",
+          "¿Qué documentos o resultados permitirían comprobar qué cambió para la ciudadanía?"
+        ]
+      }
+    },
     {
       "id": "entre-programas",
       "title": "Entre programas",

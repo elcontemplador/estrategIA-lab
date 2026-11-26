@@ -27,6 +27,8 @@ fuente activa. No se deben copiar cambios directamente a esa rama.
 
 ## Proyectos enlazados
 
+- [La legislatura de la inteligencia artificial](docs/legislatura-ia/index.html) reúne los cinco principios del número 165, la infografía original y preguntas para hacer balance de las decisiones de gobierno.
+
 - Entre programas: comparación de propuestas electorales con referencias a las fuentes y dosier de IA: https://entre-programas-29n.elcontemplador.chatgpt.site/
 
 - Los memes de estrategIA: archivo visual de 191 imágenes de los primeros 165 números, con contexto, búsqueda y enlaces a la newsletter: https://elcontemplador.github.io/estrategIA-lab/memes/

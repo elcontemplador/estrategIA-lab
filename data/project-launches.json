@@ -2,6 +2,11 @@
   "verifiedOn": "2026-10-15",
   "criterion": "Mes de primera publicación accesible del proyecto enlazado, no de creación del repositorio, anuncio de un prototipo, incorporación al LAB ni publicación de sus contenidos originales.",
   "projects": {
+    "legislatura-ia": {
+      "month": "2026-11",
+      "evidence": ["https://elcontemplador.github.io/estrategIA-lab/legislatura-ia/"],
+      "note": "Publicación de la página del LAB el 26 de noviembre de 2026. El artículo original apareció en estrategIA n.º 165 el 25 de noviembre de 2026."
+    },
     "entre-programas": {
       "month": "2026-11",
       "evidence": [
